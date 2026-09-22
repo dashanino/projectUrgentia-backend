@@ -2,7 +2,6 @@ from flask import Flask
 from app.routes.health_routes import health_bp
 from config import Config
 from app.extensions import db, migrate, jwt
-from app.routes.lost_item_routes import lost_item_bp
 
 def create_app():
     app = Flask(__name__)
@@ -18,8 +17,4 @@ def create_app():
         url_prefix='/api'
     )
 
-    app.register_blueprint(
-            lost_item_bp,
-            url_prefix='/api'
-        )
     return app

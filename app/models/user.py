@@ -22,12 +22,12 @@ class User(db.Model):
         unique=True
     )
 
-    first_name = db.Column(
+    first_names = db.Column(
         db.String(100),
         nullable=False
     )
 
-    last_name = db.Column(
+    last_names = db.Column(
         db.String(100),
         nullable=False
     )

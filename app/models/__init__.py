@@ -1,6 +1,5 @@
 from app.models.user import User
 from app.models.user_nn import UserNN
-from app.models.lost_item import LostItem
 
 from app.models.patients import Patient
 from app.models.populations import Population

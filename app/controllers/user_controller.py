@@ -1,28 +1,116 @@
 from flask import jsonify, request
 
-from app.services.user_service import create_user_service
+from app.services.user_service import (
+    create_user,
+    get_user_by_id,
+    get_user_by_email,
+    update_user,
+    deactivate_user
+)
 
-def create_user():
+def create_user_controller():
 
     data = request.get_json()
+    if not data:
+        return jsonify({"error": "Falta llenar los campos del request"}), 400
 
-    user = create_user_service(
-        document_type=data.get("document_type"),
-        document_number=data.get("document_number"),
-        first_names=data.get("first_names"),
-        last_names=data.get("last_names"),
-        email=data.get("email"),
-        phone=data.get("phone"),
-        password=data.get("password"),
+    required_fields = [
+        "document_type",
+        "document_number",
+        "first_names",
+        "last_names",
+        "email",
+        "phone",
+        "password",
+    ]
         
-    )
+    
+    missing = [field for field in required_fields if not data.get(field)]
+    if missing:
+        return jsonify({
+            "error": f"Faltan los campos requeridos: {', '.join(missing)}"
+        }), 400
 
-    return jsonify({
+    try:
+        user = create_user(
+            document_type=data["document_type"],
+            document_number=data["document_number"],
+            first_names=data["first_names"],
+            last_names=data["last_names"],
+            email=data["email"],
+            phone=data["phone"],
+            password=data["password"],
+        )
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 409
+
+    return jsonify(user_to_dict(user)), 201
+
+
+def get_user_controller(user_id):
+    user = get_user_by_id(user_id)
+
+    if user is None:
+        return jsonify({"error": "User not found"}), 404
+
+    return jsonify(user_to_dict(user)), 200
+
+
+def get_user_by_email_controller():
+    email = request.args.get("email")
+
+    if not email:
+        return jsonify({"error": "Query param 'email' is required"}), 400
+
+    user = get_user_by_email(email)
+
+    if user is None:
+        return jsonify({"error": "User not found"}), 404
+
+    return jsonify(user_to_dict(user)), 200
+
+
+def update_user_controller(user_id):
+    data = request.get_json(silent=True)
+
+    if not data:
+        return jsonify({"error": "Request body is required"}), 400
+
+    try:
+        user = update_user(
+            user_id=user_id,
+            first_name=data.get("first_name"),
+            last_name=data.get("last_name"),
+            email=data.get("email"),
+            phone=data.get("phone"),
+        )
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 404
+
+    return jsonify(user_to_dict(user)), 200
+
+
+def deactivate_user_controller(user_id):
+    try:
+        user = deactivate_user(user_id)
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 404
+
+    return jsonify(user_to_dict(user)), 200
+
+
+def user_to_dict(user):
+    #NO RETORNA EL PASSWORD hash
+    return {
         "id": user.id,
-        "email": user.email
-    }), 201
+        "document_type": user.document_type,
+        "document_number": user.document_number,
+        "first_names": user.first_names,
+        "last_names": user.last_names,
+        "email": user.email,
+        "phone": user.phone,
+        "is_active": user.is_active,
+    }
 
 
 
-def list_all():
-    pass

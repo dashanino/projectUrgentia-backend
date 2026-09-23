@@ -1,11 +1,35 @@
 from flask import Blueprint
-from app.controllers.user_controller import create_user
+from app.controllers.user_controller import (
+    create_user_controller,
+    get_user_controller,
+    get_user_by_email_controller,
+    update_user_controller,
+    deactivate_user_controller,
+)
 
-user_bp = Blueprint("users", __name__)
+user_bp = Blueprint('user', __name__)
 
 
-user_bp.route("/users", methods=["POST"])(create_user)
+@user_bp.route('/user/generate', methods=['POST'])
+def create_user_route():
+    return create_user_controller()
 
 
-# POST /api/users
-# GET /api/users
+@user_bp.route('/user/search', methods=['GET'])
+def get_user_by_email_route():
+    return get_user_by_email_controller()
+
+
+@user_bp.route('/user/<int:user_id>', methods=['GET'])
+def get_user_route(user_id):
+    return get_user_controller(user_id)
+
+
+@user_bp.route('/user/<int:user_id>', methods=['PUT'])
+def update_user_route(user_id):
+    return update_user_controller(user_id)
+
+
+@user_bp.route('/user/<int:user_id>/deactivate', methods=['PATCH'])
+def deactivate_user_route(user_id):
+    return deactivate_user_controller(user_id)

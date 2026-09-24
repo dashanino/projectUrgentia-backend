@@ -2,35 +2,24 @@ from datetime import datetime, timezone
 from app.extensions import db
 
 
-class Patient(db.Model):
-    __tablename__ = "patients"
+class EPS(db.Model):
+    __tablename__ = "eps"
 
     id = db.Column(
         db.Integer,
         primary_key=True
     )
 
-    user_id = db.Column(
-        db.Integer,
-        db.ForeignKey("users.id"),
+    name = db.Column(
+        db.String(100),
         nullable=False,
         unique=True
     )
 
-    id_eps = db.Column(
-        db.Integer,
-        db.ForeignKey("eps.id"),
-        nullable=True
-    )
-
-    birth_date = db.Column(
-        db.Date,
-        nullable=True
-    )
-
-    sex = db.Column(
-        db.String(20),
-        nullable=True
+    active = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=True
     )
 
     created_at = db.Column(
@@ -46,7 +35,7 @@ class Patient(db.Model):
         onupdate=lambda: datetime.now(timezone.utc)
     )
 
-    eps = db.relationship(
-        "EPS",
-        back_populates="patients"
+    patients = db.relationship(
+        "Patient",
+        back_populates="eps"
     )

@@ -105,3 +105,16 @@ def deactivate_user(user_id):
     db.session.commit()
 
     return user
+
+def activate_user(user_id):
+
+    user = get_user_by_id(user_id)
+
+    if user is None:
+        raise ValueError("User not found")
+
+    user.is_active = True
+
+    db.session.commit()
+
+    return user

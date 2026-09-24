@@ -5,7 +5,8 @@ from app.services.user_service import (
     get_user_by_id,
     get_user_by_email,
     update_user,
-    deactivate_user
+    deactivate_user,
+    activate_user
 )
 
 def create_user_controller():
@@ -79,8 +80,8 @@ def update_user_controller(user_id):
     try:
         user = update_user(
             user_id=user_id,
-            first_name=data.get("first_name"),
-            last_name=data.get("last_name"),
+            first_names=data.get("first_names"),
+            last_names=data.get("last_names"),
             email=data.get("email"),
             phone=data.get("phone"),
         )
@@ -93,6 +94,14 @@ def update_user_controller(user_id):
 def deactivate_user_controller(user_id):
     try:
         user = deactivate_user(user_id)
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 404
+
+    return jsonify(user_to_dict(user)), 200
+
+def activate_user_controller(user_id):
+    try:
+        user = activate_user(user_id)
     except ValueError as e:
         return jsonify({"error": str(e)}), 404
 

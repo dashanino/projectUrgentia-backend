@@ -5,6 +5,7 @@ from app.controllers.user_controller import (
     get_user_by_email_controller,
     update_user_controller,
     deactivate_user_controller,
+    activate_user_controller
 )
 
 user_bp = Blueprint('user', __name__)
@@ -15,7 +16,7 @@ def create_user_route():
     return create_user_controller()
 
 
-@user_bp.route('/user/search', methods=['GET'])
+@user_bp.route('/user/search_email', methods=['GET'])
 def get_user_by_email_route():
     return get_user_by_email_controller()
 
@@ -33,3 +34,7 @@ def update_user_route(user_id):
 @user_bp.route('/user/<int:user_id>/deactivate', methods=['PATCH'])
 def deactivate_user_route(user_id):
     return deactivate_user_controller(user_id)
+
+@user_bp.route('/user/<int:user_id>/activate', methods=['PATCH'])
+def activate_user_route(user_id):
+    return activate_user_controller(user_id)

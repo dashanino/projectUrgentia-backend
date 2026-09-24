@@ -1,7 +1,7 @@
 from app.models.user import User
 from app.models.user_nn import UserNN
 from app.models.eps import EPS
-from app.models.patients import Patient
+from app.models.patient import Patient
 from app.models.populations import Population
 from app.models.pretriages import PreTriage
 

@@ -11,6 +11,11 @@ class User(db.Model):
         primary_key=True
     )
 
+    id_role = db.Column(
+        db.Integer,
+        foreign_key=True
+    )
+
     document_type = db.Column(
         db.String(20),
         nullable=False

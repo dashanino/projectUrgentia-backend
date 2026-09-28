@@ -16,8 +16,14 @@ class Pretriage(db.Model):
     id_poblacion = db.Column(
         db.Integer,
         db.ForeignKey("poblaciones.id"),
-        nullable=True  # puede no haberse seleccionado aún al iniciar el flujo
-    )
+        nullable=False )
+
+    id_eps = db.Column(
+        db.Integer,
+        db.ForeignKey("eps.id"),
+        nullable=True 
+        )
+    
 
     estado = db.Column(
         db.String(20),
@@ -44,6 +50,7 @@ class Pretriage(db.Model):
     )
 
     user = db.relationship("User", back_populates="pretriages")
+    eps = db.relationship("EPS", back_populates = "pretriages")
     poblacion = db.relationship("Poblacion", back_populates="pretriages")
     respuestas = db.relationship("RespuestaPretriage", back_populates="pretriage")
     resultado = db.relationship("Resultado", back_populates="pretriage", uselist=False)

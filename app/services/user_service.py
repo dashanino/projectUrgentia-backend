@@ -3,45 +3,74 @@ from sqlalchemy import select, or_#select reemplaza query.filter
 from werkzeug.security import generate_password_hash #crea el hash SEGURIDAD
 
 from app.models.user import User
+from app.models.role import Role
+
 
 
 def create_user(
-    document_type,
-    document_number,
-    first_names,
-    last_names,
-    email,
-    phone,
-    password
+    id_role=None,
+    document_type=None,
+    document_number=None,
+    first_names=None,
+    last_names=None,
+    email=None,
+    phone=None,
+    password=None
 ):
-    # Una sola query trae cualquier usuario que choque en email, documento o teléfono
-    existing_users = db.session.execute(
-        select(User).where( #ASEGURA QUE SEAN UNIQUEEEEEEEEEEE
-            or_(
-                User.email == email,
-                User.document_number == document_number,
-                User.phone == phone
-            )
-        )
-    ).scalars().all()
+    es_nn = id_role is None
 
-    # Si hay coincidencias, se determina cuál campo específico causó el conflicto
-    for user in existing_users:
-        if user.email == email:
-            raise ValueError("Email already registered")
-        if user.document_number == document_number:
-            raise ValueError("Document already registered")
-        if user.phone == phone:
-            raise ValueError("Phone already registered")
+    if not es_nn:
+        # Si tiene rol, es un registro formal -> estos campos SÍ son obligatorios
+        campos_requeridos = {
+            "document_type": document_type,
+            "document_number": document_number,
+            "first_names": first_names,
+            "last_names": last_names,
+            "email": email,
+            "phone": phone,
+            "password": password,
+        }
+        faltantes = [k for k, v in campos_requeridos.items() if not v]
+        if faltantes:
+            raise ValueError(f"Missing required fields for registered user: {', '.join(faltantes)}")
+
+        # Validar que la EPS... digo, el rol exista
+        role = db.session.execute(
+            select(Role).where(Role.id == id_role)
+        ).scalar_one_or_none()
+
+        if role is None:
+            raise ValueError("Role not found")
+
+        # Una sola query trae cualquier usuario que choque en email, documento o teléfono
+        existing_users = db.session.execute(
+            select(User).where(
+                or_(
+                    User.email == email,
+                    User.document_number == document_number,
+                    User.phone == phone
+                )
+            )
+        ).scalars().all()
+
+        # Si hay coincidencias, se determina cuál campo específico causó el conflicto
+        for user in existing_users:
+            if user.email == email:
+                raise ValueError("Email already registered")
+            if user.document_number == document_number:
+                raise ValueError("Document already registered")
+            if user.phone == phone:
+                raise ValueError("Phone already registered")
 
     user = User(
+        id_role=id_role,
         document_type=document_type,
         document_number=document_number,
         first_names=first_names,
         last_names=last_names,
         email=email,
         phone=phone,
-        password_hash=generate_password_hash(password)
+        password_hash=generate_password_hash(password) if password else None
     )
 
     db.session.add(user)

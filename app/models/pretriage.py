@@ -21,7 +21,7 @@ class Pretriage(db.Model):
     id_eps = db.Column(
         db.Integer,
         db.ForeignKey("eps.id"),
-        nullable=True 
+        nullable=False 
         )
     
 
@@ -49,8 +49,29 @@ class Pretriage(db.Model):
         nullable=True
     )
 
-    user = db.relationship("User", back_populates="pretriages")
-    eps = db.relationship("EPS", back_populates = "pretriages")
-    poblacion = db.relationship("Poblacion", back_populates="pretriages")
-    respuestas = db.relationship("RespuestaPretriage", back_populates="pretriage")
-    resultado = db.relationship("Resultado", back_populates="pretriage", uselist=False)
+    # Relaciones
+user = db.relationship(
+    "User",
+    back_populates="pretriages"
+)
+
+eps = db.relationship(
+    "EPS",
+    back_populates="pretriages"
+)
+
+poblacion = db.relationship(
+    "Poblacion",
+    back_populates="pretriages"
+)
+
+respuestas = db.relationship(
+    "RespuestaPretriage",
+    back_populates="pretriage"
+)
+
+resultado = db.relationship(
+    "Result",
+    back_populates="pretriage",
+    uselist=False
+)

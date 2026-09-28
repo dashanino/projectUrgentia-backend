@@ -74,3 +74,5 @@ class User(db.Model):
         default=lambda: datetime.now(timezone.utc),
         onupdate=lambda: datetime.now(timezone.utc)
     )
+
+    role = db.relationship("Role", back_populates="user")

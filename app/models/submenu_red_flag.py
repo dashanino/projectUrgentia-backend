@@ -31,4 +31,4 @@ class SubmenuRedFlag(db.Model):
         onupdate=lambda: datetime.now(timezone.utc)
     )
 
-    red_flag = db.relationship("RedFlag", back_populates="submenu_items")
+    red_flag = db.relationship("RedFlag", back_populates="submenu")

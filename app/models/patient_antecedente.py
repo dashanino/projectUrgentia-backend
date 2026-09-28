@@ -25,8 +25,8 @@ class PatientAntecedente(db.Model):
         default=lambda: datetime.now(timezone.utc)
     )
 
-    paciente = db.relationship("Patient", backref="antecedentes_asociados")
-    antecedente = db.relationship("Antecedente", back_populates="pacientes")
+    paciente = db.relationship("Patient", back_populates="antecedentes_asociados")
+    antecedente = db.relationship("Antecedente",back_populates="pacientes")
 
     __table_args__ = (
         db.UniqueConstraint("id_paciente", "id_antecedente", name="uq_paciente_antecedente"),

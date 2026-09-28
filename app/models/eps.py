@@ -23,3 +23,5 @@ class EPS(db.Model):
     )
 
     patients = db.relationship("Patient", back_populates="eps")
+    pretriages = db.relationship("Pretriage", back_populates="eps"
+)

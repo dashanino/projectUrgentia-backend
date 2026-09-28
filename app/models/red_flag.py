@@ -15,7 +15,6 @@ class RedFlag(db.Model):
 
     name = db.Column(db.String(150), nullable=False)
     description = db.Column(db.Text, nullable=True)
-    
     is_active = db.Column(db.Boolean, nullable=False, default=True)
 
     created_at = db.Column(

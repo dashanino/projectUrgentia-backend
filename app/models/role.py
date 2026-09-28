@@ -23,4 +23,4 @@ class Role(db.Model):
         onupdate=lambda: datetime.now(timezone.utc)
     )
 
-    users = db.relationship("User", back_populates="role")
+    user = db.relationship("User", back_populates="role")

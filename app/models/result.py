@@ -25,3 +25,4 @@ class Result(db.Model):
     )
 
     pretriage = db.relationship("Pretriage", back_populates="resultado")
+    

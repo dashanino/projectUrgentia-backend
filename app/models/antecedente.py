@@ -8,7 +8,7 @@ class Antecedente(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
     name = db.Column(db.String(150), nullable=False, unique=True)
-    
+
     description = db.Column(db.Text, nullable=True)
 
     is_active = db.Column(
@@ -30,6 +30,6 @@ class Antecedente(db.Model):
     )
 
     pacientes = db.relationship(
-        "PacienteAntecedente",
+        "PatientAntecedente",
         back_populates="antecedente"
     )

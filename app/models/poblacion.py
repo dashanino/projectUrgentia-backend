@@ -24,3 +24,5 @@ class Poblacion(db.Model):
     )
 
     red_flags = db.relationship("RedFlag", back_populates="poblacion")
+    pretriages = db.relationship( "Pretriage", back_populates="poblacion"
+)

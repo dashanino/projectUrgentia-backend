@@ -1,14 +1,13 @@
 from app.extensions import db
-from sqlalchemy import select, or_#select reemplaza query.filter
-from werkzeug.security import generate_password_hash #crea el hash SEGURIDAD
+from sqlalchemy import select, or_
+from werkzeug.security import generate_password_hash
 
 from app.models.user import User
 from app.models.role import Role
 
 
-
 def create_user(
-    id_role=None,
+    id_role,
     document_type=None,
     document_number=None,
     first_names=None,
@@ -17,10 +16,29 @@ def create_user(
     phone=None,
     password=None
 ):
-    es_nn = id_role is None
+    # Comprobar que el rol exista
+    role = db.session.execute(
+        select(Role).where(Role.id == id_role)
+    ).scalar_one_or_none()
 
-    if not es_nn:
-        # Si tiene rol, es un registro formal -> estos campos SÍ son obligatorios
+    if role is None:
+        raise ValueError("Role not found")
+
+    # Usuario no registrado
+    if id_role == 2:
+
+        user = User(
+            id_role=2
+        )
+
+        db.session.add(user)
+        db.session.commit()
+
+        return user
+
+    # Registro de paciente
+    if id_role == 1:
+
         campos_requeridos = {
             "document_type": document_type,
             "document_number": document_number,
@@ -28,21 +46,22 @@ def create_user(
             "last_names": last_names,
             "email": email,
             "phone": phone,
-            "password": password,
+            "password": password
         }
-        faltantes = [k for k, v in campos_requeridos.items() if not v]
+
+        faltantes = [
+            campo
+            for campo, valor in campos_requeridos.items()
+            if not valor
+        ]
+
         if faltantes:
-            raise ValueError(f"Missing required fields for registered user: {', '.join(faltantes)}")
+            raise ValueError(
+                "Missing required fields: "
+                + ", ".join(faltantes)
+            )
 
-        # Validar que la EPS... digo, el rol exista
-        role = db.session.execute(
-            select(Role).where(Role.id == id_role)
-        ).scalar_one_or_none()
-
-        if role is None:
-            raise ValueError("Role not found")
-
-        # Una sola query trae cualquier usuario que choque en email, documento o teléfono
+        # Comprobar datos duplicados
         existing_users = db.session.execute(
             select(User).where(
                 or_(
@@ -53,30 +72,36 @@ def create_user(
             )
         ).scalars().all()
 
-        # Si hay coincidencias, se determina cuál campo específico causó el conflicto
         for user in existing_users:
+
             if user.email == email:
                 raise ValueError("Email already registered")
+
             if user.document_number == document_number:
                 raise ValueError("Document already registered")
+
             if user.phone == phone:
                 raise ValueError("Phone already registered")
 
-    user = User(
-        id_role=id_role,
-        document_type=document_type,
-        document_number=document_number,
-        first_names=first_names,
-        last_names=last_names,
-        email=email,
-        phone=phone,
-        password_hash=generate_password_hash(password) if password else None
+        user = User(
+            id_role=1,
+            document_type=document_type,
+            document_number=document_number,
+            first_names=first_names,
+            last_names=last_names,
+            email=email,
+            phone=phone,
+            password_hash=generate_password_hash(password)
+        )
+
+        db.session.add(user)
+        db.session.commit()
+
+        return user
+
+    raise ValueError(
+        "This service only creates patients and UserNN"
     )
-
-    db.session.add(user)
-    db.session.commit()
-
-    return user
 
 
 def get_user_by_id(user_id):

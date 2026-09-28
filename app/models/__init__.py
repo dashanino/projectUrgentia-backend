@@ -1,2 +1,13 @@
 from app.models.user import User
 from app.models.antecedente import Antecedente
+from app.models.eps import EPS
+from app.models.poblacion import Poblacion
+from app.models.red_flag import RedFlag
+from app.models.role import Role
+from app.models.patient_antecedente import PatientAntecedente
+from app.models.respuesta_pretriage import RespuestaPretriage
+from app.models.result import Result
+from app.models.pretriage import Pretriage
+from app.models.patient import Patient
+
+from app.models.submenu_red_flag import SubmenuRedFlag

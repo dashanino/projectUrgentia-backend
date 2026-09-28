@@ -14,7 +14,7 @@ class User(db.Model):
     id_role = db.Column(
         db.Integer,
         db.ForeignKey("roles.id"),
-        nullable=True
+        nullable=False
     )
 
     document_type = db.Column(

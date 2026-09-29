@@ -9,5 +9,5 @@ from app.models.respuesta_pretriage import RespuestaPretriage
 from app.models.result import Result
 from app.models.pretriage import Pretriage
 from app.models.patient import Patient
-
+from .pretriage_antecedente import PretriageAntecedente
 from app.models.submenu_red_flag import SubmenuRedFlag

@@ -33,3 +33,7 @@ class Antecedente(db.Model):
         "PatientAntecedente",
         back_populates="antecedente"
     )
+    pretriages_asociados = db.relationship(
+        "PretriageAntecedente",
+        back_populates="antecedente"
+    )

@@ -16,12 +16,13 @@ class Pretriage(db.Model):
     id_poblacion = db.Column(
         db.Integer,
         db.ForeignKey("poblaciones.id"),
-        nullable=False )
+        nullable=True
+    )
 
     id_eps = db.Column(
         db.Integer,
         db.ForeignKey("eps.id"),
-        nullable=False 
+        nullable=True 
         )
     
 
@@ -74,4 +75,8 @@ class Pretriage(db.Model):
         "Result",
         back_populates="pretriage",
         uselist=False
+    )
+    antecedentes_asociados = db.relationship(
+        "PretriageAntecedente",
+        back_populates="pretriage"
     )

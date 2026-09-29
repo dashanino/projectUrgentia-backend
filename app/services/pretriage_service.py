@@ -1,4 +1,5 @@
 from sqlalchemy import select
+from flask_jwt_extended import create_access_token
 
 from app.extensions import db
 from app.models.user import User
@@ -23,8 +24,6 @@ def iniciar_pretriage_nn():
         )
 
         db.session.add(user_nn)
-
-        # Obtener el ID sin confirmar la transacción
         db.session.flush()
 
         # 3. Crear el pretriaje asociado
@@ -34,11 +33,29 @@ def iniciar_pretriage_nn():
         )
 
         db.session.add(pretriage)
+        db.session.flush()
 
-        # 4. Guardar ambos registros
+        # 4. Obtener los identificadores
+        id_user = user_nn.id
+        id_pretriage = pretriage.id
+
+        # 5. Confirmar los registros
         db.session.commit()
 
-        return user_nn, pretriage
+        # 6. Generar el token JWT
+        access_token = create_access_token(
+            identity=str(id_user),
+            additional_claims={
+                "id_pretriage": id_pretriage,
+                "tipo_acceso": "emergencia"
+            }
+        )
+
+        return {
+            "id_user": id_user,
+            "id_pretriage": id_pretriage,
+            "access_token": access_token
+        }
 
     except Exception:
         db.session.rollback()

@@ -1,21 +1,107 @@
-from flask import jsonify
+
+import traceback
+
+from flask import jsonify, request
+from flask_jwt_extended import get_jwt, get_jwt_identity
+
+from app.extensions import db
+from app.models.pretriage import Pretriage
+
 from app.services.pretriage_service import iniciar_pretriage_nn
+from app.services.pretriage_antecedente_service import guardar_antecedentes_nn
 
 
 def iniciar_pretriage_nn_controller():
     try:
-        user_nn, pretriage = iniciar_pretriage_nn()
+        # 1. Crear el usuario NN, su pretriaje y generar el token
+        resultado = iniciar_pretriage_nn()
 
+        # 2. Devolver la respuesta
         return jsonify({
             "message": "Pretriaje iniciado correctamente",
-            "id_user": user_nn.id,
-            "id_pretriage": pretriage.id
+            "id_user": resultado["id_user"],
+            "id_pretriage": resultado["id_pretriage"],
+            "access_token": resultado["access_token"]
         }), 201
 
     except ValueError as e:
-        return jsonify({"error": str(e)}), 400
+        # Error de validación
+        return jsonify({
+            "error": str(e)
+        }), 400
 
     except Exception:
+        # Mostrar el error completo en la terminal
+        traceback.print_exc()
+
+        # Devolver una respuesta genérica a Postman
         return jsonify({
             "error": "No se pudo iniciar el pretriaje"
+        }), 500
+def guardar_antecedentes_nn_controller(id_pretriage):
+    try:
+        # 1. Obtener los antecedentes enviados
+        data = request.get_json(silent=True)
+
+        if not isinstance(data, dict):
+            return jsonify({
+                "error": "Debes enviar un JSON válido"
+            }), 400
+
+        if "id_antecedentes" not in data:
+            return jsonify({
+                "error": "Falta el campo id_antecedentes"
+            }), 400
+
+        # 2. Obtener los datos del token JWT
+        id_user_token = get_jwt_identity()
+        claims = get_jwt()
+
+        # 3. Verificar que sea un acceso de emergencias
+        if claims.get("tipo_acceso") != "emergencia":
+            return jsonify({
+                "error": "El token no corresponde a un acceso de emergencias"
+            }), 403
+
+        # 4. Verificar que el token corresponda al pretriaje
+        if claims.get("id_pretriage") != id_pretriage:
+            return jsonify({
+                "error": "No tienes permiso para modificar este pretriaje"
+            }), 403
+
+        # 5. Verificar que el usuario sea el propietario
+        pretriage = db.session.get(Pretriage, id_pretriage)
+
+        if pretriage is None:
+            return jsonify({
+                "error": "El pretriaje no existe"
+            }), 404
+
+        if str(pretriage.id_user) != str(id_user_token):
+            return jsonify({
+                "error": "No tienes permiso para modificar este pretriaje"
+            }), 403
+
+        # 6. Guardar los antecedentes
+        resultado = guardar_antecedentes_nn(
+            id_pretriage=id_pretriage,
+            ids_antecedentes=data["id_antecedentes"]
+        )
+
+        # 7. Devolver la respuesta
+        return jsonify({
+            "message": "Antecedentes guardados correctamente",
+            **resultado
+        }), 200
+
+    except ValueError as e:
+        return jsonify({
+            "error": str(e)
+        }), 400
+
+    except Exception:
+        traceback.print_exc()
+
+        return jsonify({
+            "error": "No se pudieron guardar los antecedentes"
         }), 500

@@ -75,4 +75,6 @@ class User(db.Model):
         onupdate=lambda: datetime.now(timezone.utc)
     )
 
-    role = db.relationship("Role", back_populates="user")
+    role = db.relationship("Role", back_populates="users")
+    pretriages = db.relationship("Pretriage", back_populates="user")
+    patient = db.relationship("Patient", back_populates="user", uselist=False)

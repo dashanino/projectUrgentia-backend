@@ -49,29 +49,29 @@ class Pretriage(db.Model):
         nullable=True
     )
 
-    # Relaciones
-user = db.relationship(
-    "User",
-    back_populates="pretriages"
-)
+        # Relaciones
+    user = db.relationship(
+        "User",
+        back_populates="pretriages"
+    )
 
-eps = db.relationship(
-    "EPS",
-    back_populates="pretriages"
-)
+    eps = db.relationship(
+        "EPS",
+        back_populates="pretriages"
+    )
 
-poblacion = db.relationship(
-    "Poblacion",
-    back_populates="pretriages"
-)
+    poblacion = db.relationship(
+        "Poblacion",
+        back_populates="pretriages"
+    )
 
-respuestas = db.relationship(
-    "RespuestaPretriage",
-    back_populates="pretriage"
-)
+    respuestas = db.relationship(
+        "RespuestaPretriage",
+        back_populates="pretriage"
+    )
 
-resultado = db.relationship(
-    "Result",
-    back_populates="pretriage",
-    uselist=False
-)
+    resultado = db.relationship(
+        "Result",
+        back_populates="pretriage",
+        uselist=False
+    )

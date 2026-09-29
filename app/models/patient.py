@@ -41,8 +41,8 @@ class Patient(db.Model):
     eps = db.relationship("EPS", back_populates="patients")
 
     antecedentes_asociados = db.relationship(
-        "PacienteAntecedente",
-        back_populates="paciente"
+        "PatientAntecedente",
+        back_populates="patient"
     )
 
     # cirugias = db.relationship("Cirugia", back_populates="paciente")

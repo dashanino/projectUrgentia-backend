@@ -2,6 +2,7 @@ from flask import Flask
 from app.routes.health_routes import health_bp
 from app.routes.user_routes import user_bp
 from app.routes.patient_routes import patient_bp
+from app.routes.pretriage_routes import pretriage_bp
 from config import Config
 from app.extensions import db, migrate, jwt
 
@@ -17,5 +18,6 @@ def create_app():
     app.register_blueprint(health_bp, url_prefix='/api')
     app.register_blueprint(user_bp, url_prefix='/api')
     app.register_blueprint(patient_bp, url_prefix='/api')
+    app.register_blueprint(pretriage_bp, url_prefix='/api')
 
     return app

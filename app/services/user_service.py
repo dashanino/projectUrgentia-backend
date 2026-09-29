@@ -20,6 +20,7 @@ def create_user(
     role = db.session.execute(
         select(Role).where(Role.id == id_role)
     ).scalar_one_or_none()
+    
 
     if role is None:
         raise ValueError("Role not found")
@@ -96,6 +97,7 @@ def create_user(
 
         db.session.add(user)
         db.session.commit()
+        
 
         return user
 

@@ -11,9 +11,19 @@ from app.services.user_service import (
 
 def create_user_controller():
 
-    data = request.get_json()
+    data = request.get_json(silent=True)
+
     if not data:
-        return jsonify({"error": "Falta llenar los campos del request"}), 400
+        return jsonify({
+            "error": "Falta llenar los campos del request"
+        }), 400
+
+    id_role = data.get("id_role")
+
+    if id_role is None:
+        return jsonify({
+            "error": "El campo id_role es obligatorio"
+        }), 400
 
     required_fields = [
         "document_type",
@@ -24,26 +34,40 @@ def create_user_controller():
         "phone",
         "password",
     ]
-        
-    
-    missing = [field for field in required_fields if not data.get(field)]
-    if missing:
-        return jsonify({
-            "error": f"Faltan los campos requeridos: {', '.join(missing)}"
-        }), 400
+
+    # Los campos son obligatorios para pacientes
+    if id_role == 1:
+
+        missing = [
+            field
+            for field in required_fields
+            if not data.get(field)
+        ]
+
+        if missing:
+            return jsonify({
+                "error": (
+                    "Faltan los campos requeridos: "
+                    + ", ".join(missing)
+                )
+            }), 400
 
     try:
         user = create_user(
-            document_type=data["document_type"],
-            document_number=data["document_number"],
-            first_names=data["first_names"],
-            last_names=data["last_names"],
-            email=data["email"],
-            phone=data["phone"],
-            password=data["password"],
+            id_role=id_role,
+            document_type=data.get("document_type"),
+            document_number=data.get("document_number"),
+            first_names=data.get("first_names"),
+            last_names=data.get("last_names"),
+            email=data.get("email"),
+            phone=data.get("phone"),
+            password=data.get("password"),
         )
+
     except ValueError as e:
-        return jsonify({"error": str(e)}), 409
+        return jsonify({
+            "error": str(e)
+        }), 409
 
     return jsonify(user_to_dict(user)), 201
 

@@ -30,4 +30,4 @@ class RedFlag(db.Model):
     )
 
     poblacion = db.relationship("Poblacion", back_populates="red_flags")
-    submenu_items = db.relationship("SubmenuRedFlag", back_populates="red_flag")
+    submenu = db.relationship("SubmenuRedFlag", back_populates="red_flag")

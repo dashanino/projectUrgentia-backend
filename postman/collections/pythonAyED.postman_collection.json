@@ -1,0 +1,359 @@
+{
+  "info": {
+    "_postman_id": "2842d238-fb04-432d-ab4f-58a4806380e2",
+    "name": "pythonAyED",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "js cosas",
+      "item": [
+        {
+          "name": "healthcheck",
+          "id": "3c4f5a94-f5f4-4a55-94a8-34366e0d87a4",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/healthcheck",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "healthcheck"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "agregar appointments",
+          "id": "fceeb139-0bc4-4925-b1b5-1986a8d7db0f",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"doctor_id\":2,\r\n    \"veterinary_id\":2,\r\n    \"pet_id\":6,\r\n    \"user_id\":6,\r\n    \"mp_id\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/appointments/addAppointments",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "appointments",
+                "addAppointments"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "b2b4246d-43c9-40e3-a187-a0f31c59cfed"
+    },
+    {
+      "name": "New Request",
+      "id": "5007d5a9-197a-4d83-9e5c-45bf8eb6a0e0",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "?host=http://127.0.0.1:5000/testMessage",
+          "query": [
+            {
+              "key": "host",
+              "value": "http://127.0.0.1:5000/testMessage",
+              "description": "http://127.0.0.1:5000/testMessage"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "10ed63d5-3ff5-4efc-a87b-f7cbfef09a25",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/testMessage",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "testMessage"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Getusers",
+      "id": "92eda135-5f00-4aed-8be0-028153c5c9f0",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/getAllUsers",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "getAllUsers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Users",
+      "id": "ff33470f-5815-44e9-8340-555311ebbf86",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"name\":\"Mishelada\",\r\n\"last_name\":\"lala\",\r\n\"identification\":\"06174\",\r\n\"age\":42,\r\n\"email\":\"mishelada@gmail.com\",\r\n\"phone\":\"3160512\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{host}}/addUsers",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "addUsers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete Users",
+      "id": "476ba243-799c-4972-af5b-f406b613cff0",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/deleteUsers/:patient_id",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "deleteUsers",
+            ":patient_id"
+          ],
+          "variable": [
+            {
+              "key": "patient_id",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getPatientbyId",
+      "id": "c945a949-5f12-4232-b680-c9719bf64d8d",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/getPatient/:patient_id",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "getPatient",
+            ":patient_id"
+          ],
+          "variable": [
+            {
+              "key": "patient_id",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdatePatient",
+      "id": "45c9554a-a576-4183-9b3e-a984b5963c80",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":2,\r\n    \"name\":\"Fabian\",\r\n    \"last_name\":\"Corrales\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{host}}/updatePatient",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "updatePatient"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete with identification",
+      "id": "ab9b668a-6cf7-4890-bcb2-66db3b7bd7c0",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/deleteIdentification/:patient_identification",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "deleteIdentification",
+            ":patient_identification"
+          ],
+          "variable": [
+            {
+              "key": "patient_identification",
+              "value": "7224"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update with Last Name",
+      "id": "64a97574-6384-4c6c-a749-e7e2ae5f942c",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"last_name\":\"Perez\",\r\n    \"age\":61\r\n    \r\n}\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{host}}/updateLastName",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "updateLastName"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get patient with email",
+      "id": "4955b660-292d-4cdb-aa00-0d8bef53be5c",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/getPatientEmail/:patient_email",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "getPatientEmail",
+            ":patient_email"
+          ],
+          "variable": [
+            {
+              "key": "patient_email",
+              "value": "gus_crois@gmail.com"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test message",
+      "id": "cb949d11-450f-4198-8509-3ff23e5334f4",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/testMessage",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "testMessage"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "05ec75d7-8937-437e-ab70-b4b465aa03df",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "b9d92507-6061-4b6c-a17f-d136ddcd67cb",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "get all appointments",
+      "id": "c7641ede-482d-4bea-bcaf-3de7c638bb45",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/api/veterinary/getAll",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "veterinary",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

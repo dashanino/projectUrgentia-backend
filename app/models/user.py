@@ -1,6 +1,7 @@
 from datetime import datetime, timezone
 
 from app.extensions import db
+from werkzeug.security import check_password_hash, generate_password_hash
 
 
 class User(db.Model):
@@ -78,3 +79,12 @@ class User(db.Model):
     role = db.relationship("Role", back_populates="users")
     pretriages = db.relationship("Pretriage", back_populates="user")
     patient = db.relationship("Patient", back_populates="user", uselist=False)
+
+    def set_password(self, password): #GUARDA CONTRASEÑA ENCRIPTADA EN BASE DE DATOS
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password): #REVISA SI COINCIDEN
+        return check_password_hash(
+            self.password_hash,
+            password
+        )

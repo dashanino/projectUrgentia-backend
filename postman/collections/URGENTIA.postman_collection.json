@@ -1,0 +1,185 @@
+{
+  "info": {
+    "_postman_id": "1bd741a9-1ce5-4a73-a808-2df9c63064db",
+    "name": "URGENTIA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CREAR USUARIOS",
+      "id": "bb44d91f-e849-4e36-bf87-56054347c210",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"document_type\": \"CC\",\r\n  \"document_number\": \"123\",\r\n  \"first_names\": \"Dasha Michelle\",\r\n  \"last_names\": \"Nino Torres\",\r\n  \"email\": \"dasha@test.com\",\r\n  \"phone\": \"3001234567\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/user/generate",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "user",
+            "generate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get user-id",
+      "id": "8a17ef0e-decc-4f3e-aad9-68f43062ff81",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/user/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "user",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get user-correo",
+      "id": "7f100e16-8869-419e-aca1-8b4c76764661",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/user/search_email?email=dasha@test.com",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "user",
+            "search_email"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "dasha@test.com"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deactivate user",
+      "id": "ea7c0d59-99d9-4f4d-a1e6-1419958461fb",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/user/1/deactivate",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "user",
+            "1",
+            "deactivate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "activate user",
+      "id": "a9316b03-f7e8-479c-8d5b-8512329adae7",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/user/1/activate",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "user",
+            "1",
+            "activate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update datos user",
+      "id": "834edddb-442e-4bee-9e0f-d5989587ed88",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"phone\": \"3168120184\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/user/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "user",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

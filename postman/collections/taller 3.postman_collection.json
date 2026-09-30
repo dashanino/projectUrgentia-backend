@@ -1,0 +1,201 @@
+{
+  "info": {
+    "_postman_id": "72a678ec-6bc2-4390-81c1-02966748d26a",
+    "name": "taller 3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "veterinary",
+      "item": [
+        {
+          "name": "getveterinary",
+          "id": "150dadb5-718d-4e2c-8aae-0bbbc554dd64",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/veterinary/getAll",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "veterinary",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "postvet",
+          "id": "114c273a-f80b-44a5-b099-0c0a2330f436",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"My_vet_5\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/veterinary/addVeterinary",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "veterinary",
+                "addVeterinary"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "7b5b88fd-8964-4916-83df-5cab57b0e105",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Lalalu\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/users/addusers",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "addusers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "fc8f8487-2aeb-44b8-86c8-28ad0bf9e64f",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Ballooooo\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/pets/addpets",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "pets",
+                "addpets"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delvet",
+          "id": "42074fd5-7518-4292-83f4-66941b612e6c",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "1fc0806f-233b-4117-99cd-4765cfcf8db2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/pets/getPets/:user_id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "pets",
+                "getPets",
+                ":user_id"
+              ],
+              "variable": [
+                {
+                  "key": "user_id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "45107fa2-c993-4acf-9952-b3901285f486",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\":1,\r\n    \"name\":\"CES_PET\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/pets/updatename",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "pets",
+                "updatename"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "1028b0f2-ce7a-4ecb-b521-c45091c32788"
+    },
+    {
+      "name": "New Request",
+      "id": "4e9611d8-5839-40d1-9265-1fb612aa9286",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

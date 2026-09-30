@@ -7,11 +7,12 @@ from app.controllers.user_controller import (
     deactivate_user_controller,
     activate_user_controller
 )
-
+# from flask_jwt_extended import jwt_required
 user_bp = Blueprint('user', __name__)
 
 
 @user_bp.route('/user/generate', methods=['POST'])
+#@jwt_required #guardar el token creando admin y luego agregando el jwt.
 def create_user_route():
     return create_user_controller()
 

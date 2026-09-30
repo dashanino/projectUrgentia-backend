@@ -6,7 +6,7 @@ from app.models.user import User
 from app.models.role import Role
 
 
-def create_user(
+def create_user( #CREA USUARIOS DE TODO TIPO. ADMIN/DOCTOR PACIENTE. NECESITA EL TOKEN PARA EVITAR PROBLEMS
     id_role,
     document_type=None,
     document_number=None,
@@ -113,11 +113,6 @@ def get_user_by_id(user_id):
     ).scalar_one_or_none()
 
 
-def get_user_by_email(email):
-
-    return db.session.execute(
-        select(User).where(User.email == email)
-    ).scalar_one_or_none()
 
 
 def update_user(

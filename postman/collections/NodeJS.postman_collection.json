@@ -1,0 +1,146 @@
+{
+  "info": {
+    "_postman_id": "feb2cafe-0c96-4edb-be36-18d5159fddd0",
+    "name": "NodeJS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "sync",
+      "id": "0dc6952a-9397-4073-a20f-5d49b2aba840",
+      "request": {
+        "method": "HEAD",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/db/sync",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "db",
+            "sync"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Getall",
+      "id": "d0255ea7-abd8-4d5f-9d34-43b1e71241fd",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/user/getAll",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "user",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "send",
+      "id": "2078d175-380b-4914-bdc3-f78102d0da00",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"dashamnino@gmail.com\",\r\n    \"userId\": 2,\r\n    \"questId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{host}}/email/send",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "email",
+            "send"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get lista de mercado",
+      "id": "352a35a8-89ba-4d34-9bc9-06cce34a7930",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"age\":45,\r\n    \"weight\":50,\r\n    \"height\":145,\r\n    \"gender\":\"femenino\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{host}}/user/generateMarketList",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "user",
+            "generateMarketList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateResponse",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "7c21093d-ae7c-46e6-bd72-9dbae81405a3",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "723d6022-02c1-480c-bee4-187181e2c830",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"prompt\":\"¿qué día es hoy?\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "generate"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

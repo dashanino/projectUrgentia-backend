@@ -1,0 +1,95 @@
+{
+  "info": {
+    "_postman_id": "adf698d3-2e44-4c8a-80e6-4a722704cc8c",
+    "name": "AgentIA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "health",
+      "id": "21b78ffb-619c-4417-931a-8ecb85978aae",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "analyzeImage",
+      "id": "fe686978-2f7e-4e86-a58f-bf3a52fcae9a",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "prompt",
+              "value": "Describe brevemente los objetos en la imágen",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/C:/Users/dasha/Downloads/images.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/vision/analyze",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "vision",
+            "analyze"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createResponseUser",
+      "id": "f2813ff9-5f6b-4aab-aee4-c5cd5197f9e1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"prompt\":\"cómo me llamo??\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "generate"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

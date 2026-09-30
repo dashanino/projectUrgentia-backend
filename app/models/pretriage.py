@@ -80,3 +80,7 @@ class Pretriage(db.Model):
         "PretriageAntecedente",
         back_populates="pretriage"
     )
+    banderas_seleccionadas = db.relationship(
+    "PretriageRedFlag",
+    back_populates="pretriage" 
+    )

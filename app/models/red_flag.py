@@ -7,12 +7,6 @@ class RedFlag(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
 
-    id_poblacion = db.Column(
-        db.Integer,
-        db.ForeignKey("poblaciones.id"),
-        nullable=False
-    )
-
     name = db.Column(db.String(150), nullable=False)
     description = db.Column(db.Text, nullable=True)
     is_active = db.Column(db.Boolean, nullable=False, default=True)
@@ -29,5 +23,8 @@ class RedFlag(db.Model):
         onupdate=lambda: datetime.now(timezone.utc)
     )
 
-    poblacion = db.relationship("Poblacion", back_populates="red_flags")
+    
     submenu = db.relationship("SubmenuRedFlag", back_populates="red_flag")
+    poblaciones_asociadas = db.relationship("PoblacionRedFlag", back_populates="red_flag")
+    pretriages_asociados = db.relationship("PretriageRedFlag", back_populates="red_flag")
+

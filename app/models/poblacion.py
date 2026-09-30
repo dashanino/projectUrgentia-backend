@@ -23,6 +23,5 @@ class Poblacion(db.Model):
         onupdate=lambda: datetime.now(timezone.utc)
     )
 
-    red_flags = db.relationship("RedFlag", back_populates="poblacion")
-    pretriages = db.relationship( "Pretriage", back_populates="poblacion"
-)
+    banderas_asociadas = db.relationship( "PoblacionRedFlag", back_populates="poblacion")
+    pretriages = db.relationship( "Pretriage", back_populates="poblacion")

@@ -5,6 +5,8 @@ from app.extensions import db
 from app.models.user import User
 from app.models.role import Role
 from app.models.pretriage import Pretriage
+from app.models.poblacion import Poblacion
+
 
 
 def iniciar_pretriage_nn():
@@ -55,6 +57,50 @@ def iniciar_pretriage_nn():
             "id_user": id_user,
             "id_pretriage": id_pretriage,
             "access_token": access_token
+        }
+
+    except Exception:
+        db.session.rollback()
+        raise
+def guardar_poblacion_nn(id_pretriage, id_user, id_poblacion):
+
+    # 1. Buscar el pretriaje existente
+    pretriage = db.session.get(Pretriage, id_pretriage)
+
+    if pretriage is None:
+        raise ValueError("El pretriaje no existe")
+
+    # 2. Comprobar que pertenece al usuario del token
+    if pretriage.id_user != id_user:
+        raise PermissionError(
+            "No tienes permiso para modificar este pretriaje"
+        )
+
+    # 3. Comprobar que sigue en curso
+    if pretriage.estado != "iniciado":
+        raise ValueError(
+            "El pretriaje no está en estado iniciado"
+        )
+
+    # 4. Buscar la población seleccionada
+    poblacion = db.session.get(Poblacion, id_poblacion)
+
+    if poblacion is None:
+        raise ValueError("La población no existe")
+
+    if not poblacion.is_active:
+        raise ValueError("La población no está activa")
+
+    try:
+        # 5. Actualizar el pretriaje existente
+        pretriage.id_poblacion = poblacion.id
+
+        db.session.commit()
+
+        return {
+            "id_pretriage": pretriage.id,
+            "id_poblacion": poblacion.id,
+            "poblacion": poblacion.name
         }
 
     except Exception:

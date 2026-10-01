@@ -13,3 +13,5 @@ from .pretriage_antecedente import PretriageAntecedente
 from app.models.submenu_red_flag import SubmenuRedFlag
 from app.models.poblacion_red_flag import PoblacionRedFlag
 from app.models.pretriage_red_flag import PretriageRedFlag
+from app.models.triage_rule import TriageRule
+from app.models.triage_rule_antecedente import TriageRuleAntecedente

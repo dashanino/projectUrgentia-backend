@@ -11,7 +11,7 @@ from app.services.user_service import create_user
 from app.models.role import Role
 
 
-def register_user(document_type, document_number, first_names, last_names, email, phone, password): 
+def register_service(document_type, document_number, first_names, last_names, email, phone, password): 
     #CREA SIEMPRE PACIENTES!
     # Busca el rol "patient" — nunca permite que el registro público elija el rol
     patient_role = db.session.execute(

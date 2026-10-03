@@ -10,7 +10,7 @@ from app.models.user import User
 
 
 # Datos de ejemplo: reemplazar antes de ejecutar.
-# Roles disponibles: admin, patient, doctor.
+# Roles disponibles: admin, patient, doctor, usernn.
 USERS = [
     {
         'document_type': 'CC',
@@ -36,7 +36,16 @@ USERS = [
         'role': 'usernn',
         'is_active': True,
     },
-    
+    {
+        'document_type': 'CC',
+        'document_number': '3333',
+        'first_names': 'Doctor',
+        'last_names': 'Ejemplo',
+        'email': 'doctor@urgentia.com',
+        'phone': '3000000002',
+        'role': 'doctor',
+        'is_active': True,
+    },
 ]
 
 
@@ -49,21 +58,48 @@ def seed_users():
 
         try:
             for item in USERS:
+                role_name = item.get('role')
+                is_active = item.get('is_active', True)
+
+                if not isinstance(is_active, bool):
+                    raise ValueError(f"is_active debe ser True o False para el rol '{role_name}'.")
+
+                role = db.session.execute(
+                    db.select(Role).where(Role.name == role_name)
+                ).scalar_one_or_none()
+
+                if role is None:
+                    raise ValueError(
+                        f"El rol '{role_name}' no existe. Ejecuta el seed de roles primero."
+                    )
+                if not role.is_active:
+                    raise ValueError(f"El rol '{role_name}' está inactivo.")
+
+                # --- Caso especial: usuario NN, sin datos personales ---
+                if role_name == 'usernn':
+                    user = User(
+                        id_role=role.id,
+                        is_active=is_active,
+                    )
+                    db.session.add(user)
+                    db.session.flush()
+                    created += 1
+                    print("Usuario NN creado.")
+                    continue
+
+                # --- Resto de roles (admin, patient, doctor): requieren datos completos ---
                 values = {}
-                for field in ('document_type', 'document_number', 'first_names', 'last_names', 'email', 'phone', 'role'):
+                for field in ('document_type', 'document_number', 'first_names', 'last_names', 'email', 'phone'):
                     value = item.get(field)
                     if not isinstance(value, str) or not value.strip():
-                        raise ValueError(f"El campo '{field}' es obligatorio y debe ser texto.")
+                        raise ValueError(f"El campo '{field}' es obligatorio y debe ser texto para el rol '{role_name}'.")
                     values[field] = value.strip()
-                    if field != 'role' and len(values[field]) > 150:
+                    if len(values[field]) > 150:
                         raise ValueError(f"El campo '{field}' excede el límite de caracteres.")
 
                 email = values['email'].lower()
                 document_number = values['document_number']
                 phone = values['phone']
-                is_active = item.get('is_active', True)
-                if not isinstance(is_active, bool):
-                    raise ValueError(f"is_active debe ser True o False para {email}.")
 
                 existing = db.session.execute(
                     db.select(User).where(
@@ -79,17 +115,6 @@ def seed_users():
                     print(f"Omitido: {email}; documento, teléfono o correo ya registrado.")
                     skipped += 1
                     continue
-
-                role = db.session.execute(
-                    db.select(Role).where(Role.name == values['role'])
-                ).scalar_one_or_none()
-
-                if role is None:
-                    raise ValueError(
-                        f"El rol '{values['role']}' no existe. Ejecuta el seed de roles primero."
-                    )
-                if not role.is_active:
-                    raise ValueError(f"El rol '{values['role']}' está inactivo.")
 
                 password = item.get('password')
                 if password is None:
@@ -112,7 +137,6 @@ def seed_users():
                     password_hash=generate_password_hash(password),
                 )
                 db.session.add(user)
-                # Permite detectar duplicados dentro de la misma lista.
                 db.session.flush()
                 created += 1
 

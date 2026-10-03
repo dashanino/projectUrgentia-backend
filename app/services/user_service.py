@@ -6,7 +6,7 @@ from app.models.user import User
 from app.models.role import Role
 
 
-def create_user( #CREA USUARIOS DE TODO TIPO. ADMIN/DOCTOR PACIENTE. NECESITA EL TOKEN PARA EVITAR PROBLEMS
+def create_user( #CREA USUARIOS: USERNN Y PATIENT
     id_role,
     document_type=None,
     document_number=None,
@@ -26,10 +26,10 @@ def create_user( #CREA USUARIOS DE TODO TIPO. ADMIN/DOCTOR PACIENTE. NECESITA EL
         raise ValueError("Role not found")
 
     # Usuario no registrado
-    if id_role == 2:
+    if role.name == "usernn":
 
         user = User(
-            id_role=2
+            id_role=role.id
         )
 
         db.session.add(user)
@@ -38,7 +38,7 @@ def create_user( #CREA USUARIOS DE TODO TIPO. ADMIN/DOCTOR PACIENTE. NECESITA EL
         return user
 
     # Registro de paciente
-    if id_role == 1:
+    if role.name == "patient":
 
         campos_requeridos = {
             "document_type": document_type,
@@ -85,7 +85,7 @@ def create_user( #CREA USUARIOS DE TODO TIPO. ADMIN/DOCTOR PACIENTE. NECESITA EL
                 raise ValueError("Phone already registered")
 
         user = User(
-            id_role=1,
+            id_role=role.id,
             document_type=document_type,
             document_number=document_number,
             first_names=first_names,

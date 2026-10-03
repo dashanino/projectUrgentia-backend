@@ -3,7 +3,7 @@ from flask import jsonify, request
 from app.services.user_service import (
     create_user,
     get_user_by_id,
-    get_user_by_email,
+    
     update_user,
     deactivate_user,
     activate_user

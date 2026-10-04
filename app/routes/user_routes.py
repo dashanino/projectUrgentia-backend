@@ -2,7 +2,6 @@ from flask import Blueprint
 from app.controllers.user_controller import (
     create_user_controller,
     get_user_controller,
-    get_user_by_email_controller,
     update_user_controller,
     deactivate_user_controller,
     activate_user_controller
@@ -15,11 +14,6 @@ user_bp = Blueprint('user', __name__)
 #@jwt_required #guardar el token creando admin y luego agregando el jwt.
 def create_user_route():
     return create_user_controller()
-
-
-@user_bp.route('/user/search_email', methods=['GET'])
-def get_user_by_email_route():
-    return get_user_by_email_controller()
 
 
 @user_bp.route('/user/<int:user_id>', methods=['GET'])

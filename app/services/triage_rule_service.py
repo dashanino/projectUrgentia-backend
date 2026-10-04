@@ -66,61 +66,68 @@ def evaluar_reglas_triaje(id_pretriage, id_user):
             "Debes seleccionar al menos una bandera roja"
         )
 
-    # 4. Buscar reglas candidatas:
-    # misma población + cualquiera de las banderas seleccionadas
-    reglas = (
-        db.session.query(TriageRule)
-        .filter(
-            TriageRule.id_poblacion == pretriage.id_poblacion,
-            TriageRule.id_bandera.in_(ids_banderas)
-        )
-        .all()
-    )
+        # 4. Evaluar cada bandera roja seleccionada
+    for id_bandera in ids_banderas:
 
-    # 5. Revisar las reglas
-    #
-    # IMPORTANTE:
-    # los antecedentes deben coincidir EXACTAMENTE.
-    for regla in reglas:
-
-        antecedentes_regla = (
-            db.session.query(
-                TriageRuleAntecedente.id_antecedente
-            )
+        # Buscar las reglas que correspondan a:
+        # población del usuario + bandera actual
+        reglas = (
+            db.session.query(TriageRule)
             .filter(
-                TriageRuleAntecedente.id_regla == regla.id
+                TriageRule.id_poblacion == pretriage.id_poblacion,
+                TriageRule.id_bandera == id_bandera
             )
             .all()
         )
 
-        ids_antecedentes_regla = {
-            fila.id_antecedente
-            for fila in antecedentes_regla
-        }
+        # 5. Buscar cuál regla tiene exactamente
+        # los mismos antecedentes del usuario
+        for regla in reglas:
 
-        # Esta regla no corresponde al usuario
-        if ids_antecedentes_regla != ids_antecedentes:
-            continue
+            antecedentes_regla = (
+                db.session.query(
+                    TriageRuleAntecedente.id_antecedente
+                )
+                .filter(
+                    TriageRuleAntecedente.id_regla == regla.id
+                )
+                .all()
+            )
 
-        # Encontramos una coincidencia exacta
-        if regla.alta_prioridad:
+            ids_antecedentes_regla = {
+                fila.id_antecedente
+                for fila in antecedentes_regla
+            }
 
+            # Los antecedentes deben coincidir exactamente
+            if ids_antecedentes_regla != ids_antecedentes:
+                continue
+
+            # Encontramos la regla exacta
             bandera = db.session.get(
                 RedFlag,
                 regla.id_bandera
             )
 
-            return {
-                "id_pretriage": id_pretriage,
-                "alta_prioridad": True,
-                "accion": "alerta",
-                "bandera_activadora": {
-                    "id_bandera": bandera.id,
-                    "name": bandera.name
-                }
-            }
+            # Si es alta prioridad, detener inmediatamente
+            if regla.alta_prioridad:
 
-    # 6. Llegamos aquí solamente si ninguna regla exacta dio Sí
+                return {
+                    "id_pretriage": id_pretriage,
+                    "alta_prioridad": True,
+                    "accion": "alerta",
+                    "regla_activadora": regla.id,
+                    "bandera_activadora": {
+                        "id_bandera": bandera.id,
+                        "name": bandera.name
+                    }
+                }
+
+            # Si es False, esta bandera no activa
+            # alta prioridad y continúa con la siguiente.
+            break
+
+    # 6. Ninguna de las banderas dio alta prioridad
     return {
         "id_pretriage": id_pretriage,
         "alta_prioridad": False,

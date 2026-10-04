@@ -81,19 +81,6 @@ def get_user_controller(user_id):
     return jsonify(user_to_dict(user)), 200
 
 
-def get_user_by_email_controller():
-    email = request.args.get("email")
-
-    if not email:
-        return jsonify({"error": "Query param 'email' is required"}), 400
-
-    user = get_user_by_email(email)
-
-    if user is None:
-        return jsonify({"error": "User not found"}), 404
-
-    return jsonify(user_to_dict(user)), 200
-
 
 def update_user_controller(user_id):
     data = request.get_json(silent=True)

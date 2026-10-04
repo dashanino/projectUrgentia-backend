@@ -3,7 +3,7 @@ from app.controllers.auth_controller import login_controller, register_controlle
 
 auth_bp = Blueprint('auth', __name__)
 
-@auth_bp.route('/auth/login', methods=['GET'])
+@auth_bp.route('/auth/login', methods=['POST'])
 def login_route():
     return login_controller()
 

@@ -180,6 +180,18 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "ai_agent",
+      "id": "5c3565f8-28ed-4a82-b67f-8bc5ec2a01d8",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
     }
   ]
 }

@@ -10,22 +10,22 @@ from app.models.triage_rule_antecedente import TriageRuleAntecedente
 from app.models.red_flag import RedFlag
 
 
-def evaluar_reglas_triaje(id_pretriage, id_user):
+def evaluar_reglas_triage(id_pretriage, id_user):
 
-    # 1. Buscar el pretriaje
+    # 1. Buscar el pretriage
     pretriage = db.session.get(Pretriage, id_pretriage)
 
     if pretriage is None:
-        raise ValueError("El pretriaje no existe")
+        raise ValueError("El pretriage no existe")
 
     if pretriage.id_user != id_user:
         raise PermissionError(
-            "No tienes permiso para consultar este pretriaje"
+            "No tienes permiso para consultar este pretriage"
         )
 
     if pretriage.estado != "iniciado":
         raise ValueError(
-            "El pretriaje ya no se encuentra iniciado"
+            "El pretriage ya no se encuentra iniciado"
         )
 
     if pretriage.id_poblacion is None:

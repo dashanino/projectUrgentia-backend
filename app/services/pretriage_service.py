@@ -28,7 +28,7 @@ def iniciar_pretriage_nn():
         db.session.add(user_nn)
         db.session.flush()
 
-        # 3. Crear el pretriaje asociado
+        # 3. Crear el pretriage asociado
         pretriage = Pretriage(
             id_user=user_nn.id,
             estado="iniciado"
@@ -64,22 +64,22 @@ def iniciar_pretriage_nn():
         raise
 def guardar_poblacion_nn(id_pretriage, id_user, id_poblacion):
 
-    # 1. Buscar el pretriaje existente
+    # 1. Buscar el pretriage existente
     pretriage = db.session.get(Pretriage, id_pretriage)
 
     if pretriage is None:
-        raise ValueError("El pretriaje no existe")
+        raise ValueError("El pretriage no existe")
 
     # 2. Comprobar que pertenece al usuario del token
     if pretriage.id_user != id_user:
         raise PermissionError(
-            "No tienes permiso para modificar este pretriaje"
+            "No tienes permiso para modificar este pretriage"
         )
 
     # 3. Comprobar que sigue en curso
     if pretriage.estado != "iniciado":
         raise ValueError(
-            "El pretriaje no está en estado iniciado"
+            "El pretriage no está en estado iniciado"
         )
 
     # 4. Buscar la población seleccionada
@@ -92,7 +92,7 @@ def guardar_poblacion_nn(id_pretriage, id_user, id_poblacion):
         raise ValueError("La población no está activa")
 
     try:
-        # 5. Actualizar el pretriaje existente
+        # 5. Actualizar el pretriage existente
         pretriage.id_poblacion = poblacion.id
 
         db.session.commit()

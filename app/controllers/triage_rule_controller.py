@@ -5,11 +5,11 @@ from flask_jwt_extended import (
     get_jwt
 )
 
-from app.services.triage_rule_service import evaluar_reglas_triaje
+from app.services.triage_rule_service import evaluar_reglas_triage
 
 
 @jwt_required()
-def evaluar_reglas_triaje_controller(id_pretriage):
+def evaluar_reglas_triage_controller(id_pretriage):
     try:
         # Obtener usuario y datos del token
         id_user = int(get_jwt_identity())
@@ -21,17 +21,17 @@ def evaluar_reglas_triaje_controller(id_pretriage):
                 "error": "Este endpoint requiere acceso de emergencia"
             }), 403
 
-        # Verificar que el pretriaje del token
+        # Verificar que el pretriage del token
         # sea el mismo que se quiere evaluar
         id_pretriage_token = claims.get("id_pretriage")
 
         if id_pretriage_token != id_pretriage:
             return jsonify({
-                "error": "No tienes permiso para evaluar este pretriaje"
+                "error": "No tienes permiso para evaluar este pretriage"
             }), 403
 
         # Evaluar las reglas
-        resultado = evaluar_reglas_triaje(
+        resultado = evaluar_reglas_triage(
             id_pretriage=id_pretriage,
             id_user=id_user
         )
@@ -50,6 +50,6 @@ def evaluar_reglas_triaje_controller(id_pretriage):
 
     except Exception as e:
         return jsonify({
-            "error": "Ocurrió un error al evaluar las reglas de triaje",
+            "error": "Ocurrió un error al evaluar las reglas de triage",
             "detalle": str(e)
         }), 500

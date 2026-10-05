@@ -12,12 +12,12 @@ from app.services.pretriage_red_flag_service import guardar_banderas_rojas_nn
 
 def iniciar_pretriage_nn_controller():
     try:
-        # 1. Crear el usuario NN, su pretriaje y generar el token
+        # 1. Crear el usuario NN, su pretriage y generar el token
         resultado = iniciar_pretriage_nn()
 
         # 2. Devolver la respuesta
         return jsonify({
-            "message": "Pretriaje iniciado correctamente",
+            "message": "pretriage iniciado correctamente",
             "id_user": resultado["id_user"],
             "id_pretriage": resultado["id_pretriage"],
             "access_token": resultado["access_token"]
@@ -35,7 +35,7 @@ def iniciar_pretriage_nn_controller():
 
         # Devolver una respuesta genérica a Postman
         return jsonify({
-            "error": "No se pudo iniciar el pretriaje"
+            "error": "No se pudo iniciar el pretriage"
         }), 500
 def guardar_antecedentes_nn_controller(id_pretriage):
     try:
@@ -62,10 +62,10 @@ def guardar_antecedentes_nn_controller(id_pretriage):
                 "error": "El token no corresponde a un acceso de emergencias"
             }), 403
 
-        # 4. Verificar que el token corresponda al pretriaje
+        # 4. Verificar que el token corresponda al pretriage
         if claims.get("id_pretriage") != id_pretriage:
             return jsonify({
-                "error": "No tienes permiso para modificar este pretriaje"
+                "error": "No tienes permiso para modificar este pretriage"
             }), 403
 
         # 5. Verificar que el usuario sea el propietario
@@ -73,12 +73,12 @@ def guardar_antecedentes_nn_controller(id_pretriage):
 
         if pretriage is None:
             return jsonify({
-                "error": "El pretriaje no existe"
+                "error": "El pretriage no existe"
             }), 404
 
         if str(pretriage.id_user) != str(id_user_token):
             return jsonify({
-                "error": "No tienes permiso para modificar este pretriaje"
+                "error": "No tienes permiso para modificar este pretriage"
             }), 403
 
         # 6. Guardar los antecedentes
@@ -118,10 +118,10 @@ def guardar_poblacion_nn_controller(id_pretriage):
                 "error": "El token no corresponde a un acceso de emergencias"
             }), 403
 
-        # 3. Comprobar que el token corresponde al pretriaje
+        # 3. Comprobar que el token corresponde al pretriage
         if claims.get("id_pretriage") != id_pretriage:
             return jsonify({
-                "error": "No tienes permiso para modificar este pretriaje"
+                "error": "No tienes permiso para modificar este pretriage"
             }), 403
 
         # 4. Obtener la población enviada
@@ -181,10 +181,10 @@ def obtener_banderas_rojas_controller(id_pretriage):
                 "error": "El token no corresponde a un acceso de emergencias"
             }), 403
 
-        # 3. Verificar que el token corresponda al pretriaje
+        # 3. Verificar que el token corresponda al pretriage
         if claims.get("id_pretriage") != id_pretriage:
             return jsonify({
-                "error": "No tienes permiso para consultar este pretriaje"
+                "error": "No tienes permiso para consultar este pretriage"
             }), 403
 
         # 4. Consultar las banderas rojas
@@ -226,10 +226,10 @@ def guardar_banderas_rojas_nn_controller(id_pretriage):
                 "error": "El token no corresponde a un acceso de emergencias"
             }), 403
 
-        # 3. Verificar que el token corresponde al pretriaje
+        # 3. Verificar que el token corresponde al pretriage
         if claims.get("id_pretriage") != id_pretriage:
             return jsonify({
-                "error": "No tienes permiso para modificar este pretriaje"
+                "error": "No tienes permiso para modificar este pretriage"
             }), 403
 
         # 4. Obtener JSON

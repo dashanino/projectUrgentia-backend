@@ -6,16 +6,16 @@ from app.models.poblacion_red_flag import PoblacionRedFlag
 
 def obtener_banderas_rojas(id_pretriage, id_user):
 
-    # 1. Buscar el pretriaje
+    # 1. Buscar el pretriage
     pretriage = db.session.get(Pretriage, id_pretriage)
 
     if pretriage is None:
-        raise ValueError("El pretriaje no existe")
+        raise ValueError("El pretriage no existe")
 
     # 2. Verificar que pertenece al usuario
     if pretriage.id_user != id_user:
         raise PermissionError(
-            "No tienes permiso para consultar este pretriaje"
+            "No tienes permiso para consultar este pretriage"
         )
 
     # 3. Verificar que ya seleccionó una población

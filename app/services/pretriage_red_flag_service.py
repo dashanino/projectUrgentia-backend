@@ -10,22 +10,22 @@ def guardar_banderas_rojas_nn(
     id_user,
     ids_banderas
 ):
-    # 1. Buscar el pretriaje
+    # 1. Buscar el pretriage
     pretriage = db.session.get(Pretriage, id_pretriage)
 
     if pretriage is None:
-        raise ValueError("El pretriaje no existe")
+        raise ValueError("El pretriage no existe")
 
     # 2. Verificar que pertenezca al usuario
     if pretriage.id_user != id_user:
         raise PermissionError(
-            "No tienes permiso para modificar este pretriaje"
+            "No tienes permiso para modificar este pretriage"
         )
 
-    # 3. Verificar que el pretriaje siga activo
+    # 3. Verificar que el pretriage siga activo
     if pretriage.estado != "iniciado":
         raise ValueError(
-            "El pretriaje ya no se encuentra iniciado"
+            "El pretriage ya no se encuentra iniciado"
         )
 
     # 4. Verificar que tenga población

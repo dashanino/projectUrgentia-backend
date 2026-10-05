@@ -18,27 +18,27 @@ ANTECEDENTES_NN = {
 
 def guardar_antecedentes_nn(id_pretriage, ids_antecedentes):
 
-    # 1. Buscar el pretriaje existente
+    # 1. Buscar el pretriage existente
     pretriage = db.session.get(Pretriage, id_pretriage)
 
     if pretriage is None:
-        raise ValueError("El pretriaje no existe")
+        raise ValueError("El pretriage no existe")
 
     # 2. Buscar el usuario asociado
     usuario = db.session.get(User, pretriage.id_user)
 
     if usuario is None:
-        raise ValueError("El usuario del pretriaje no existe")
+        raise ValueError("El usuario del pretriage no existe")
 
     # 3. Comprobar que tenga el rol usernn
     rol = db.session.get(Role, usuario.id_role)
 
     if rol is None or rol.name != "usernn":
-        raise ValueError("El pretriaje no pertenece a un usuario NN")
+        raise ValueError("El pretriage no pertenece a un usuario NN")
     
 
     if pretriage.estado != "iniciado":
-        raise ValueError("El pretriaje no está en estado iniciado")
+        raise ValueError("El pretriage no está en estado iniciado")
 
     # 2. Validar la lista recibida
     if not isinstance(ids_antecedentes, list):

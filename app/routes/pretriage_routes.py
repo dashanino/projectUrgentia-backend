@@ -9,7 +9,7 @@ from app.controllers.pretriage_controller import (
     
 )
 from app.controllers.triage_rule_controller import (
-    evaluar_reglas_triaje_controller
+    evaluar_reglas_triage_controller
 )
 
 pretriage_bp = Blueprint("pretriage", __name__)
@@ -50,8 +50,8 @@ def consultar_banderas_rojas(id_pretriage):
 def guardar_banderas_rojas(id_pretriage):
     return guardar_banderas_rojas_nn_controller(id_pretriage)
 @pretriage_bp.route(
-    "/pretriage/<int:id_pretriage>/evaluar-triaje",
+    "/pretriage/<int:id_pretriage>/evaluar-triage",
     methods=["POST"]
 )
-def evaluar_triaje(id_pretriage):
-    return evaluar_reglas_triaje_controller(id_pretriage)
+def evaluar_triage(id_pretriage):
+    return evaluar_reglas_triage_controller(id_pretriage)

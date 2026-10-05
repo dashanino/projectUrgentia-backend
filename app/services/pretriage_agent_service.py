@@ -1,4 +1,5 @@
 import os
+import json
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -13,6 +14,7 @@ load_dotenv()
 class PretriageAgentService:
 
     def __init__(self):
+
         api_key = os.getenv("OPENAI_API_KEY")
 
         if not api_key:
@@ -25,7 +27,7 @@ class PretriageAgentService:
     def evaluate(self, id_pretriage):
 
         # =========================================================
-        # 1. BUSCAR EL PRETRIAJE EN LA BASE DE DATOS
+        # 1. BUSCAR EL PRETRIAGE EN LA BASE DE DATOS
         # =========================================================
 
         pretriage = db.session.get(
@@ -35,7 +37,7 @@ class PretriageAgentService:
 
         if pretriage is None:
             raise ValueError(
-                "El pretriaje no existe"
+                "El pretriage no existe"
             )
 
         # =========================================================
@@ -44,7 +46,7 @@ class PretriageAgentService:
 
         if pretriage.poblacion is None:
             raise ValueError(
-                "El pretriaje no tiene una población seleccionada"
+                "El pretriage no tiene una población seleccionada"
             )
 
         poblacion = pretriage.poblacion.name
@@ -59,7 +61,6 @@ class PretriageAgentService:
             if asociacion.antecedente is not None
         ]
 
-        # No tener antecedentes seleccionados es válido.
         if not antecedentes:
             antecedentes_texto = "No se registraron antecedentes"
         else:
@@ -77,7 +78,7 @@ class PretriageAgentService:
 
         if not banderas:
             raise ValueError(
-                "El pretriaje no tiene banderas rojas seleccionadas"
+                "El pretriage no tiene banderas rojas seleccionadas"
             )
 
         banderas_texto = ", ".join(banderas)
@@ -87,7 +88,7 @@ class PretriageAgentService:
         # =========================================================
 
         instructions = """
-        Eres un asistente de apoyo al pretriaje basado en criterios de
+        Eres un asistente de apoyo al pretriage basado en criterios de
         Medicina de Urgencias y Emergencias.
 
         RESPONDE SIEMPRE EN ESPAÑOL.
@@ -95,27 +96,18 @@ class PretriageAgentService:
         Tu función es analizar exclusivamente la información proporcionada
         del paciente y sugerir una prioridad de atención.
 
-        Las prioridades de Urgentia son:
+        Las prioridades permitidas de Urgentia son únicamente:
 
         - alta
         - media_alta
         - media_baja
         - baja
 
-        El sistema utiliza el Emergency Severity Index (ESI) como referencia.
+        El sistema utiliza el Emergency Severity Index (ESI)
+        únicamente como referencia clínica.
 
         Estas cuatro categorías son propias de Urgentia y no deben
-        presentarse como si fueran niveles oficiales del ESI.
-
-        IMPORTANTE:
-
-        Antes de esta evaluación se ejecutaron reglas determinísticas
-        del sistema.
-
-        Ninguna de esas reglas activó una alerta inmediata.
-
-        Esto NO significa que el paciente esté clínicamente estable ni
-        permite descartar una condición grave.
+        presentarse como niveles oficiales del ESI.
 
         REGLAS:
 
@@ -136,10 +128,7 @@ class PretriageAgentService:
         - Da mayor importancia a las condiciones potencialmente graves
           y a las banderas rojas.
 
-        - No disminuyas una prioridad alta que haya sido establecida
-          previamente por reglas determinísticas.
-
-        - Esta evaluación funciona únicamente como apoyo al pretriaje
+        - Esta evaluación funciona únicamente como apoyo al pretriage
           y no reemplaza la valoración realizada por personal de salud.
 
         FUENTES DE REFERENCIA:
@@ -164,17 +153,40 @@ class PretriageAgentService:
         Si existe incertidumbre o evidencia insuficiente, declara la
         limitación en lugar de inventar una conclusión.
 
-        RESPUESTA:
+        FORMATO DE RESPUESTA:
 
-        Responde de manera clara, breve y estructurada.
+        Devuelve ÚNICAMENTE un objeto JSON válido.
 
-        Indica:
+        No utilices Markdown.
+        No utilices bloques de código.
+        No agregues texto antes ni después del JSON.
 
-        - Prioridad sugerida.
-        - Justificación breve.
-        - Si existe incertidumbre relevante.
+        Debes utilizar exactamente esta estructura:
 
-        No escribas una explicación clínica excesivamente extensa.
+        {
+            "prioridad": "alta | media_alta | media_baja | baja",
+            "justificacion": "Explicación breve de la prioridad sugerida",
+            "incertidumbre": true,
+            "detalle_incertidumbre": "Explicación breve de la incertidumbre"
+        }
+
+        El campo "prioridad" solamente puede contener uno de estos
+        cuatro valores:
+
+        alta
+        media_alta
+        media_baja
+        baja
+
+        El campo "incertidumbre" debe ser un booleano verdadero o falso.
+
+        Si no existe incertidumbre relevante, utiliza:
+
+        "incertidumbre": false
+
+        y:
+
+        "detalle_incertidumbre": null
         """
 
         # =========================================================
@@ -182,9 +194,9 @@ class PretriageAgentService:
         # =========================================================
 
         prompt = f"""
-        DATOS DEL PRETRIAJE
+        DATOS DEL PRETRIAGE
 
-        ID del pretriaje:
+        ID del pretriage:
         {id_pretriage}
 
         Tipo de población:
@@ -196,11 +208,10 @@ class PretriageAgentService:
         Banderas rojas seleccionadas:
         {banderas_texto}
 
-        Resultado previo de las reglas determinísticas:
-        No se activó una regla de alerta inmediata.
-
         Analiza exclusivamente la información anterior y sugiere
         la prioridad correspondiente.
+
+        Devuelve únicamente el objeto JSON solicitado.
         """
 
         # =========================================================
@@ -214,7 +225,65 @@ class PretriageAgentService:
         )
 
         # =========================================================
-        # 8. DEVOLVER LA RESPUESTA
+        # 8. OBTENER RESPUESTA DE LA IA
         # =========================================================
 
-        return response.output_text
+        response_text = response.output_text.strip()
+
+        # =========================================================
+        # 9. CONVERTIR LA RESPUESTA A JSON
+        # =========================================================
+
+        try:
+            result = json.loads(response_text)
+
+        except json.JSONDecodeError:
+            raise ValueError(
+                "La IA devolvió una respuesta con formato JSON inválido"
+            )
+
+        # =========================================================
+        # 10. VALIDAR LA PRIORIDAD
+        # =========================================================
+
+        prioridades_validas = {
+            "alta",
+            "media_alta",
+            "media_baja",
+            "baja"
+        }
+
+        prioridad = result.get("prioridad")
+
+        if prioridad not in prioridades_validas:
+            raise ValueError(
+                "La IA devolvió una prioridad no válida"
+            )
+
+        # =========================================================
+        # 11. VALIDAR CAMPOS OBLIGATORIOS
+        # =========================================================
+
+        if "justificacion" not in result:
+            raise ValueError(
+                "La IA no devolvió una justificación"
+            )
+
+        if "incertidumbre" not in result:
+            raise ValueError(
+                "La IA no indicó si existe incertidumbre"
+            )
+
+        if not isinstance(result["incertidumbre"], bool):
+            raise ValueError(
+                "El campo incertidumbre debe ser verdadero o falso"
+            )
+
+        if "detalle_incertidumbre" not in result:
+            result["detalle_incertidumbre"] = None
+
+        # =========================================================
+        # 12. DEVOLVER RESULTADO ESTRUCTURADO
+        # =========================================================
+
+        return result

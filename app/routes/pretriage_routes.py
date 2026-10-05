@@ -49,6 +49,8 @@ def consultar_banderas_rojas(id_pretriage):
 )
 def guardar_banderas_rojas(id_pretriage):
     return guardar_banderas_rojas_nn_controller(id_pretriage)
+
+
 @pretriage_bp.route(
     "/pretriage/<int:id_pretriage>/evaluar-triage",
     methods=["POST"]

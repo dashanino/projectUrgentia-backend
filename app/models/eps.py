@@ -7,14 +7,24 @@ class EPS(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
 
-    name = db.Column(db.String(100), nullable=False, unique=True)
-    is_active = db.Column(db.Boolean, nullable=False, default=True)
+    name = db.Column(
+        db.String(100),
+        nullable=False,
+        unique=True
+    )
+
+    is_active = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=True
+    )
 
     created_at = db.Column(
         db.DateTime(timezone=True),
         nullable=False,
         default=lambda: datetime.now(timezone.utc)
     )
+
     updated_at = db.Column(
         db.DateTime(timezone=True),
         nullable=False,
@@ -22,6 +32,19 @@ class EPS(db.Model):
         onupdate=lambda: datetime.now(timezone.utc)
     )
 
-    patients = db.relationship("Patient", back_populates="eps")
-    pretriages = db.relationship("Pretriage", back_populates="eps"
-)
+    # Relaciones
+    patients = db.relationship(
+        "Patient",
+        back_populates="eps"
+    )
+
+    pretriages = db.relationship(
+        "Pretriage",
+        back_populates="eps"
+    )
+
+    institution_eps = db.relationship(
+        "InstitutionEPS",
+        back_populates="eps",
+        cascade="all, delete-orphan"
+    )

@@ -15,3 +15,7 @@ from app.models.poblacion_red_flag import PoblacionRedFlag
 from app.models.pretriage_red_flag import PretriageRedFlag
 from app.models.triage_rule import TriageRule
 from app.models.triage_rule_antecedente import TriageRuleAntecedente
+from app.models.institution import Institution
+from app.models.institution_eps import InstitutionEPS
+from app.models.institution_service import InstitutionService
+from app.models.service import Service

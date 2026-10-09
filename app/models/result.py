@@ -14,7 +14,7 @@ class Result(db.Model):
         unique=True  # refuerza el 1:1 a nivel de base de datos
     )
 
-    nivel_triage = db.Column(db.String(10), nullable=False)  # ej: "1", "2", "3", "4", "5"
+    nivel_triage = db.Column(db.String(10), nullable=False)  
     descripcion = db.Column(db.Text, nullable=True)
     recomendacion = db.Column(db.Text, nullable=True)
 

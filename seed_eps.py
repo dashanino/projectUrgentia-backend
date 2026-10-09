@@ -12,9 +12,10 @@ Eps = [
     {'name': 'Nueva EPS'},
     {'name': 'Salud Total'},
     {'name': 'Coosalud'},
-    {'name': 'Emssanar'},
+    # {'name': 'Emssanar'}, "no opera en el valle de aburrá"
     {'name': 'Compensar'},
-    {'name': 'Famisanar'}
+    {'name': 'Famisanar'},
+    {'name': 'Savia Salud'}
 ]
  
  

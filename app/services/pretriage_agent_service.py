@@ -108,7 +108,7 @@ class PretriageAgentService:
 
         Estas cuatro categorías son propias de Urgentia y no deben
         presentarse como niveles oficiales del ESI.
-
+=
         REGLAS:
 
         - Utiliza únicamente la información proporcionada.

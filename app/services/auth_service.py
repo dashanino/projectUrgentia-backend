@@ -95,9 +95,5 @@ def login_service(document_number,password):
     if not user.check_password(password):
         return {"message": "Contraseña inválida"}
 
-    return {'message': 'login exitoso',
-            'user': {
-                'id':user.id,
-                'document_number': user.document_number
-            }}
+    return user
             

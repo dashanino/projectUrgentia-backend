@@ -1,8 +1,5 @@
 from flask import request, jsonify
-from app.services.auth_service import login_service, register_service
-
-
-from flask import request, jsonify
+from flask_jwt_extended import create_access_token
 from app.services.auth_service import login_service, register_service
 
 
@@ -49,6 +46,8 @@ def register_controller():
             id_eps=data["id_eps"],
         )
 
+    
+
     except ValueError as e:
         status = 500 if "not configured" in str(e) else 409
 
@@ -74,10 +73,19 @@ def login_controller():
     except ValueError as e:
         return jsonify({"error": str(e)}), 401
 
+    access_token = create_access_token(
+    identity=str(user.id)
+)
+
     return jsonify({
+        "message": "Login exitoso",
+        "access_token": access_token,
         "user": {
             "id": user.id,
             "document_number": user.document_number,
             "first_names": user.first_names,
+            "last_names": user.last_names,
+            "email": user.email,
+            "id_role": user.id_role
         }
     }), 200

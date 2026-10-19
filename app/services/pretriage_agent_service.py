@@ -287,3 +287,5 @@ class PretriageAgentService:
         # =========================================================
 
         return result
+    def generate_additional_questions(self, id_pretriage):
+        return id_pretriage

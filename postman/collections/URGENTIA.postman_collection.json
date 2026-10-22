@@ -88,7 +88,8 @@
           "query": [
             {
               "key": "email",
-              "value": "dasha@test.com"
+              "value": "dasha@test.com",
+              "uuid": "403f46a1-c67f-48f6-bff4-e5215c2c6718"
             }
           ]
         }
@@ -185,10 +186,32 @@
       "name": "ai_agent",
       "id": "5c3565f8-28ed-4a82-b67f-8bc5ec2a01d8",
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_pretriage\": 26\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:3000/api/pretriage-agent/evaluate",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "pretriage-agent",
+            "evaluate"
+          ]
         }
       },
       "response": []
@@ -196,6 +219,40 @@
     {
       "name": "login",
       "id": "fc4fafbd-257b-4201-94cf-5ae6e58e41cc",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"document_number\": \"1127238674\",\r\n  \"password\": \"Cherry\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sintoma de redflags",
+      "id": "c61d2f9b-974e-4928-998a-8ba9defd7c9b",
       "request": {
         "method": "GET",
         "header": [],

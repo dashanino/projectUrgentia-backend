@@ -20,6 +20,9 @@ from app.models.institution import Institution
 from app.models.institution_eps import InstitutionEPS
 from app.models.institution_service import InstitutionService
 from app.models.service import Service
+from app.models.sintoma import Sintoma
+from app.models.pretriage_sintoma import PretriageSintoma
+
 
 from app.models.tramite import Tramite
 from app.models.eps_tramite import EPSTramite

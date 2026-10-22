@@ -9,9 +9,10 @@ def sintoma_redflag_service(id_bandera):
     )
 
     return [
-        {
-            'id': sintoma.id,
-            'nombre': sintoma.name
-        }
-        for sintoma in sintomas
-    ]
+    {
+        'id': sintoma.id,
+        'nombre': sintoma.name,
+        'id_bandera': sintoma.id_bandera
+    }
+    for sintoma in sintomas
+]

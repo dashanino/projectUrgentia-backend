@@ -218,6 +218,20 @@
     },
     {
       "name": "login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = pm.response.json();",
+              "if (jsonData.access_token) {",
+              "    pm.collectionVariables.set(\"token\", jsonData.access_token);",
+              "}"
+            ]
+          }
+        }
+      ],
       "id": "fc4fafbd-257b-4201-94cf-5ae6e58e41cc",
       "request": {
         "method": "POST",
@@ -257,10 +271,84 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://127.0.0.1:3000/api/sintomas/17",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "sintomas",
+            "17"
+          ]
         }
       },
       "response": []
+    },
+    {
+      "name": "instituciones cercanas",
+      "id": "b92ad79c-3f49-4a4b-879f-ce1bd733cd8a",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/nearby?latitude=6.2442&longitude=-75.5812&prioridad=alta",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "nearby"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "6.2442",
+              "type": "text",
+              "uuid": "32b15c6d-8dbb-4fc1-bb38-503c84e0afee"
+            },
+            {
+              "key": "longitude",
+              "value": "-75.5812",
+              "type": "text",
+              "uuid": "491e5979-c024-4ff2-a347-019b440624de"
+            },
+            {
+              "key": "prioridad",
+              "value": "alta",
+              "type": "text",
+              "uuid": "d0f84519-4ae4-431f-9870-4f142eb25c72"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "id": "b67960fe-4cc2-4596-9b68-2c13c4f72cf4",
+      "key": "token",
+      "value": ""
     }
   ]
 }

@@ -94,7 +94,7 @@ def guardar_banderas_rojas_nn(
         )
 
     try:
-        # 8. Invalidar evaluación anterior
+    # 8. Invalidar evaluación anterior
         invalidar_evaluacion_reglas(pretriage)
 
         # 9. Eliminar síntomas anteriores
@@ -121,6 +121,12 @@ def guardar_banderas_rojas_nn(
 
         # 13. Confirmar todos los cambios
         db.session.commit()
+
+        # 14. Devolver resultado
+        return {
+            "id_pretriage": id_pretriage,
+            "id_banderas": ids_banderas
+        }
 
     except Exception:
         db.session.rollback()

@@ -6,8 +6,9 @@ from app.models.user import User
 from app.models.role import Role
 from app.models.pretriage import Pretriage
 from app.models.poblacion import Poblacion
-
-
+from app.services.pretriage_evaluation_service import invalidar_evaluacion_reglas
+from app.models.pretriage_red_flag import PretriageRedFlag
+from app.models.pretriage_sintoma import PretriageSintoma
 
 def iniciar_pretriage_nn():
 
@@ -92,9 +93,35 @@ def guardar_poblacion_nn(id_pretriage, id_user, id_poblacion):
         raise ValueError("La población no está activa")
 
     try:
-        # 5. Actualizar el pretriage existente
+        # 5. Invalidar la evaluación anterior.
+        # También bloquea cambios si hay una alerta
+        # o si ya comenzaron las preguntas de IA.
+        invalidar_evaluacion_reglas(pretriage)
+
+        # 6. Comprobar si realmente cambió la población
+        poblacion_cambio = (
+            pretriage.id_poblacion != poblacion.id
+        )
+
+        if poblacion_cambio:
+
+            # 7. Eliminar síntomas anteriores
+            db.session.query(PretriageSintoma).filter(
+                PretriageSintoma.id_pretriage == id_pretriage
+            ).delete(synchronize_session=False)
+
+            # 8. Eliminar banderas rojas anteriores
+            db.session.query(PretriageRedFlag).filter(
+                PretriageRedFlag.id_pretriage == id_pretriage
+            ).delete(synchronize_session=False)
+
+            # 9. Reiniciar la etapa de síntomas
+            pretriage.sintomas_completados = False
+
+        # 10. Guardar la población seleccionada
         pretriage.id_poblacion = poblacion.id
 
+        # 11. Confirmar todos los cambios
         db.session.commit()
 
         return {

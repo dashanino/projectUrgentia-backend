@@ -1,3 +1,4 @@
+
 from datetime import datetime, timezone
 from app.extensions import db
 
@@ -22,15 +23,55 @@ class Pretriage(db.Model):
     id_eps = db.Column(
         db.Integer,
         db.ForeignKey("eps.id"),
-        nullable=True 
-        )
-    
+        nullable=True
+    )
 
     estado = db.Column(
         db.String(20),
         nullable=False,
-        default="iniciado"  # iniciado, incompleto, finalizado
+        default="iniciado"
     )
+
+    # ==========================================
+    # CONTROL DE EVALUACIÓN INICIAL DE REGLAS
+    # ==========================================
+
+    reglas_evaluadas = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=False,
+        server_default=db.text("false")
+    )
+
+    alerta_reglas = db.Column(
+        db.Boolean,
+        nullable=True
+    )
+
+    fecha_evaluacion_reglas = db.Column(
+        db.DateTime(timezone=True),
+        nullable=True
+    )
+    sintomas_completados = db.Column(
+    db.Boolean,
+    nullable=False,
+    default=False,
+    server_default=db.text("false")
+    )   
+        # ==========================================
+    # SEGURIDAD DURANTE LAS PREGUNTAS DE IA
+    # ==========================================
+
+    estado_seguridad_ia = db.Column(
+        db.String(20),
+        nullable=False,
+        default="pendiente",
+        server_default="pendiente"
+    )
+
+    # ==========================================
+    # FECHAS DEL PRETRIAGE
+    # ==========================================
 
     fecha_inicio = db.Column(
         db.DateTime(timezone=True),
@@ -50,7 +91,10 @@ class Pretriage(db.Model):
         nullable=True
     )
 
-        # Relaciones
+    # ==========================================
+    # RELACIONES
+    # ==========================================
+
     user = db.relationship(
         "User",
         back_populates="pretriages"
@@ -76,11 +120,13 @@ class Pretriage(db.Model):
         back_populates="pretriage",
         uselist=False
     )
+
     antecedentes_asociados = db.relationship(
         "PretriageAntecedente",
         back_populates="pretriage"
     )
+
     banderas_seleccionadas = db.relationship(
-    "PretriageRedFlag",
-    back_populates="pretriage" 
+        "PretriageRedFlag",
+        back_populates="pretriage"
     )

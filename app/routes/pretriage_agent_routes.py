@@ -12,3 +12,12 @@ controller = PretriageAgentController()
 def evaluate():
 
     return controller.evaluate()
+@pretriage_agent_bp.route("/pretriage-agent/pregunta", methods=["POST"])
+def generar_pregunta():
+    return controller.generar_pregunta()
+@pretriage_agent_bp.route(
+    "/pretriage-agent/respuesta",
+    methods=["POST"]
+)
+def guardar_respuesta():
+    return controller.guardar_respuesta()

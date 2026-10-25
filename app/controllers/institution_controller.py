@@ -36,7 +36,7 @@ def instituciones_cercanas_controller():
                 "error": "Se requiere tipo_atencion"
             }), 400
 
-        instituciones = obtener_instituciones_cercanas(
+        instituciones = instituciones_cercanas_service(
             latitude=latitude,
             longitude=longitude,
             prioridad=prioridad,

@@ -216,3 +216,52 @@ class PretriageAgentController:
                 "ok": False,
                 "message": "No fue posible guardar la respuesta"
             }), 500
+
+    @jwt_required()
+    def clasificar_tipo_atencion(self):
+        try:
+            data = request.get_json(silent=True)
+
+            if not isinstance(data, dict):
+                return jsonify({
+                    "ok": False,
+                    "message": "Debes enviar un objeto JSON"
+                }), 400
+
+            try:
+                id_pretriage = int(data.get("id_pretriage"))
+            except (TypeError, ValueError):
+                return jsonify({
+                    "ok": False,
+                    "message": "El id_pretriage no es válido"
+                }), 400
+
+            validar_acceso_pretriage(id_pretriage)
+
+            resultado = self.service.classify_emergency_attention(
+                id_pretriage
+            )
+
+            return jsonify({
+                "ok": True,
+                "id_pretriage": id_pretriage,
+                **resultado
+            }), 200
+
+        except PermissionError as e:
+            return jsonify({
+                "ok": False,
+                "message": str(e)
+            }), 403
+
+        except ValueError as e:
+            return jsonify({
+                "ok": False,
+                "message": str(e)
+            }), 400
+
+        except Exception:
+            return jsonify({
+                "ok": False,
+                "message": "No fue posible determinar el tipo de urgencia"
+            }), 500

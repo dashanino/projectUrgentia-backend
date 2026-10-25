@@ -9,6 +9,7 @@ from app.models.pretriage import Pretriage
 from app.models.pretriage_sintoma import PretriageSintoma
 from app.models.sintoma import Sintoma
 from app.models.pregunta_ia import PreguntaIA
+from app.models.service import Service
 
 
 load_dotenv()
@@ -211,6 +212,17 @@ class PretriageAgentService:
         contexto = self.obtener_contexto_clinico(
             id_pretriage
         )
+        servicios_disponibles = [
+            nombre
+            for (nombre,) in (
+                db.session.query(Service.name)
+                .filter(Service.is_active.is_(True))
+                .order_by(Service.name)
+                .all()
+            )
+        ]
+
+        contexto["servicios_disponibles"] = servicios_disponibles
 
         # =========================================================
         # 8. INSTRUCCIONES DEL AGENTE
@@ -265,6 +277,36 @@ class PretriageAgentService:
 
         No inventes una conclusión cuando los datos
         disponibles sean insuficientes.
+        Además de la prioridad, debes determinar qué búsqueda
+        de instituciones corresponde, siguiendo estas reglas:
+
+        1. Si prioridad es alta o media_alta:
+        - Selecciona tipo_atencion_urgencias.
+        - Usa exclusivamente una de estas categorías:
+            general
+            pediatrica
+            ginecoobstetrica
+            trauma
+            neurologica
+            cardiovascular
+        - servicio_recomendado debe ser null.
+
+        2. Si prioridad es media_baja:
+        - Selecciona servicio_recomendado usando exactamente
+            uno de los nombres de servicios_disponibles recibidos.
+        - tipo_atencion_urgencias debe ser null.
+        - Si la información no permite identificar un servicio
+            con fundamento suficiente, devuelve null y explica
+            la incertidumbre.
+
+        3. Si prioridad es baja:
+        - tipo_atencion_urgencias debe ser null.
+        - servicio_recomendado debe ser null.
+
+        No asignes un servicio únicamente por la prioridad.
+        Considera los síntomas, las respuestas, la población y
+        los antecedentes proporcionados.
+        No inventes diagnósticos ni servicios.
 
         FORMATO DE RESPUESTA:
 
@@ -273,13 +315,15 @@ class PretriageAgentService:
         No utilices Markdown.
         No agregues explicaciones fuera del JSON.
 
-        La estructura debe ser:
+        La estructura debe ser (segun prioridad):
 
         {
-            "prioridad": "alta",
+            "prioridad": "media_baja",
+            "tipo_atencion_urgencias": null,
+            "servicio_recomendado": "Ortopedia",
             "justificacion": "Explicación breve",
-            "incertidumbre": true,
-            "detalle_incertidumbre": "Explicación de la incertidumbre"
+            "incertidumbre": false,
+            "detalle_incertidumbre": null
         }
 
         El campo prioridad solo puede contener:
@@ -386,6 +430,52 @@ class PretriageAgentService:
             raise ValueError(
                 "La IA devolvió una prioridad no válida"
             )
+        tipos_atencion_validos = {
+            "general",
+            "pediatrica",
+            "ginecoobstetrica",
+            "trauma",
+            "neurologica",
+            "cardiovascular",
+        }
+
+        tipo_atencion = result.get("tipo_atencion_urgencias")
+        servicio_recomendado = result.get("servicio_recomendado")
+
+        if "tipo_atencion_urgencias" not in result:
+            raise ValueError("Falta tipo_atencion_urgencias")
+
+        if "servicio_recomendado" not in result:
+            raise ValueError("Falta servicio_recomendado")
+
+        if prioridad in {"alta", "media_alta"}:
+            if tipo_atencion not in tipos_atencion_validos:
+                raise ValueError("Tipo de urgencia no válido")
+
+            if servicio_recomendado is not None:
+                raise ValueError(
+                    "No debe incluirse un servicio específico para esta prioridad"
+                )
+
+        elif prioridad == "media_baja":
+            if tipo_atencion is not None:
+                raise ValueError(
+                    "No debe incluirse un tipo de urgencias para media_baja"
+                )
+
+            if (
+                servicio_recomendado is not None
+                and servicio_recomendado not in servicios_disponibles
+            ):
+                raise ValueError(
+                    "El servicio recomendado no existe en el catálogo"
+                )
+
+        else:  # prioridad baja
+            if tipo_atencion is not None or servicio_recomendado is not None:
+                raise ValueError(
+                    "La prioridad baja no debe generar una búsqueda de instituciones"
+                )
 
         # =========================================================
         # 13. VALIDAR JUSTIFICACIÓN
@@ -432,6 +522,8 @@ class PretriageAgentService:
 
         else:
             result["detalle_incertidumbre"] = None
+
+        
 
         # =========================================================
         # 15. DEVOLVER RESULTADO
@@ -683,5 +775,79 @@ class PretriageAgentService:
             "pregunta": nueva_pregunta.pregunta,
             "orden": nueva_pregunta.orden
         }
-
     
+    def classify_emergency_attention(self, id_pretriage):
+        
+        pretriage = db.session.get(Pretriage, id_pretriage)
+
+        if pretriage is None:
+            raise ValueError("El pretriage no existe")
+
+        if pretriage.estado != "iniciado":
+            raise ValueError("El pretriage no está iniciado")
+
+        if pretriage.alerta_reglas is not True:
+            raise ValueError(
+                "Este método solo aplica a alertas detectadas por reglas"
+            )
+
+        contexto = self.obtener_contexto_clinico(id_pretriage)
+
+        instrucciones = """
+        Eres un asistente de apoyo al pretriage de Urgentia.
+
+        Analiza la información clínica para orientar la búsqueda
+        de instituciones después de que ya se haya activado una
+        alerta de alta prioridad.
+
+        No cambies la prioridad, no retrases la alerta y no
+        realices una nueva evaluación de seguridad.
+
+        Devuelve únicamente un JSON válido con el campo
+        tipo_atencion_urgencias.
+
+        Los únicos valores permitidos son:
+        general, pediatrica, ginecoobstetrica, trauma,
+        neurologica, cardiovascular.
+
+        Selecciona una categoría principal sustentada por los datos.
+        Si no hay información suficiente para justificar una categoría
+        específica, usa general. No inventes diagnósticos ni síntomas.
+        """
+
+        response = self.client.responses.create(
+            model="gpt-5.6-luna",
+            instructions=instrucciones,
+            input=json.dumps(contexto, ensure_ascii=False)
+        )
+
+        try:
+            result = json.loads(response.output_text.strip())
+        except json.JSONDecodeError:
+            raise ValueError("La IA devolvió un JSON inválido")
+
+        tipos_validos = {
+            "general",
+            "pediatrica",
+            "ginecoobstetrica",
+            "trauma",
+            "neurologica",
+            "cardiovascular",
+        }
+
+        tipo_atencion = (
+            result.get("tipo_atencion_urgencias")
+            if isinstance(result, dict)
+            else None
+        )
+
+        if tipo_atencion not in tipos_validos:
+            raise ValueError(
+                "La IA devolvió un tipo de urgencia no válido"
+            )
+
+        return {
+            "tipo_atencion_urgencias": tipo_atencion
+        }
+
+        

@@ -21,3 +21,10 @@ def generar_pregunta():
 )
 def guardar_respuesta():
     return controller.guardar_respuesta()
+
+@pretriage_agent_bp.route(
+    "/pretriage-agent/tipo-atencion",
+    methods=["POST"]
+)
+def clasificar_tipo_atencion():
+    return controller.clasificar_tipo_atencion()

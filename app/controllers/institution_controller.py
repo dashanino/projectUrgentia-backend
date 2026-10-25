@@ -1,7 +1,9 @@
 from flask import jsonify, request
 from flask_jwt_extended import jwt_required
-from app.services.institution_service import instituciones_cercanas_service
-
+from app.services.institution_service import (
+    instituciones_cercanas_service,
+    instituciones_por_servicio_cercanas_service
+)
 @jwt_required()
 def instituciones_cercanas_controller():
     try:
@@ -29,6 +31,39 @@ def instituciones_cercanas_controller():
                 "ok": False,
                 "error": "Prioridad no válida"
             }), 400
+        
+        if prioridad == "media_baja":
+            servicio_recomendado = request.args.get(
+                "servicio_recomendado"
+            )
+
+            if not servicio_recomendado:
+                return jsonify({
+                    "ok": False,
+                    "error": "Se requiere servicio_recomendado"
+                }), 400
+
+            instituciones = instituciones_por_servicio_cercanas_service(
+                latitude=latitude,
+                longitude=longitude,
+                servicio_recomendado=servicio_recomendado,
+                limite=3
+            )
+
+            return jsonify({
+                "ok": True,
+                "prioridad": prioridad,
+                "servicio_recomendado": servicio_recomendado,
+                "institutions": instituciones
+            }), 200
+
+        if prioridad not in ["alta", "media_alta"]:
+            return jsonify({
+                "ok": False,
+                "error": "Prioridad no válida para búsqueda de instituciones"
+            }), 400
+
+        tipo_atencion = request.args.get("tipo_atencion")
 
         if not tipo_atencion:
             return jsonify({
@@ -50,6 +85,13 @@ def instituciones_cercanas_controller():
             "tipo_atencion": tipo_atencion,
             "institutions": instituciones
         }), 200
+    
+    except ValueError as e:
+        return jsonify({
+            "ok": False,
+            "error": str(e)
+        }), 400
+
 
     except Exception:
         # Registra el error completo en el servidor con tu logger.

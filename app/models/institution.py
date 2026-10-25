@@ -59,3 +59,8 @@ class Institution(db.Model):
         back_populates="institution",
         cascade="all, delete-orphan"
     )
+    institution_emergency_attentions = db.relationship(
+    "InstitutionEmergencyAttention",
+    back_populates="institution",
+    cascade="all, delete-orphan"
+)

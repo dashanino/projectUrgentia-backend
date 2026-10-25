@@ -24,3 +24,5 @@ from app.models.pretriage_sintoma import PretriageSintoma
 from app.models.tramite import Tramite
 from app.models.eps_tramite import EPSTramite
 from app.models.pregunta_ia import PreguntaIA
+from app.models.emergency_attention import EmergencyAttention
+from app.models.institution_emergency_attention import InstitutionEmergencyAttention

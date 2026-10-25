@@ -15,6 +15,7 @@ from app.routes.pretriage_agent_routes import pretriage_agent_bp
 from app.routes.sintoma_routes import sintoma_bp
 from app.routes.tramite_routes import tramite_bp
 from app.routes.institution_routes import institution_bp
+from app.routes.location_routes import location_bp
 
 
 def create_app():
@@ -40,5 +41,6 @@ def create_app():
     app.register_blueprint(sintoma_bp, url_prefix='/api')
     app.register_blueprint(tramite_bp)
     app.register_blueprint(institution_bp, url_prefix='/api')
+    app.register_blueprint(location_bp, url_prefix="/api")
 
     return app

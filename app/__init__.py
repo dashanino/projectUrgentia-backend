@@ -1,5 +1,6 @@
 
 from flask import Flask
+from flask_cors import CORS
 from config import Config
 from app.extensions import db, migrate, jwt
 
@@ -19,16 +20,36 @@ from app.routes.location_routes import location_bp
 
 
 def create_app():
+    # Crear la aplicación Flask
     app = Flask(__name__)
     app.json.ensure_ascii = False
     app.config.from_object(Config)
 
+    # Permitir conexiones desde Angular
+    CORS(
+        app,
+        resources={
+            r"/api/*": {
+                "origins": [
+                    "http://localhost:4200",
+                    "http://localhost:4201",
+                    "http://localhost:59289",
+                    "http://127.0.0.1:4200",
+                    "http://127.0.0.1:4201",
+                ]
+            }
+        },
+        allow_headers=["Content-Type", "Authorization"],
+    )
+
+    # Inicializar extensiones
     db.init_app(app)
     migrate.init_app(app, db)
     jwt.init_app(app)
 
     from app import models
 
+    # Registrar rutas
     app.register_blueprint(health_bp, url_prefix='/api')
     app.register_blueprint(user_bp, url_prefix='/api')
     app.register_blueprint(auth_bp, url_prefix='/api')
@@ -41,6 +62,6 @@ def create_app():
     app.register_blueprint(sintoma_bp, url_prefix='/api')
     app.register_blueprint(tramite_bp)
     app.register_blueprint(institution_bp, url_prefix='/api')
-    app.register_blueprint(location_bp, url_prefix="/api")
+    app.register_blueprint(location_bp, url_prefix='/api')
 
     return app

@@ -15,6 +15,11 @@ from app.models.service import Service
 load_dotenv()
 
 
+class RevisionClinicaRequerida(Exception):
+    """La información no permite emitir una orientación automática confiable."""
+    pass
+
+
 class PretriageAgentService:
 
     def __init__(self):
@@ -138,13 +143,17 @@ class PretriageAgentService:
                 "porque existe una alerta de seguridad"
             )
 
-        # La evaluación automática de seguridad todavía
-        # no está implementada completamente.
-        # Se conserva este bloqueo temporal.
-        if pretriage.estado_seguridad_ia != "revisado":
+        # Verificar que la revisión de seguridad de las
+        # respuestas haya permitido continuar.
+        #
+        # "continuar" NO significa que el paciente
+        # esté fuera de peligro.
+
+        if pretriage.estado_seguridad_ia != "continuar":
             raise ValueError(
                 "No se puede realizar la evaluación final. "
-                "La comprobación de seguridad está pendiente."
+                "La revisión de seguridad está pendiente "
+                "o no autorizó continuar."
             )
 
         # =========================================================
@@ -526,7 +535,18 @@ class PretriageAgentService:
         
 
         # =========================================================
-        # 15. DEVOLVER RESULTADO
+        # 15. CONTROL DE INCERTIDUMBRE CLINICA
+        # =========================================================
+
+        if incertidumbre is True:
+            raise RevisionClinicaRequerida(
+                "La información disponible no permite emitir "
+                "una prioridad automática confiable. "
+                "Se requiere valoración por personal de salud."
+            )
+
+        # =========================================================
+        # 16. DEVOLVER RESULTADO
         # =========================================================
 
         return result
@@ -560,11 +580,6 @@ class PretriageAgentService:
                 "por una alerta de seguridad"
             )
 
-        # =========================================================
-        # 3. VERIFICAR REVISIÓN AUTOMÁTICA
-        # =========================================================
-
-        
         # =========================================================
         # 3. VERIFICAR REVISIÓN AUTOMÁTICA
         # =========================================================

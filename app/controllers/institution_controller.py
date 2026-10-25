@@ -2,7 +2,8 @@ from flask import jsonify, request
 from flask_jwt_extended import jwt_required
 from app.services.institution_service import (
     instituciones_cercanas_service,
-    instituciones_por_servicio_cercanas_service
+    instituciones_por_servicio_cercanas_service,
+    instituciones_valoracion_clinica_service
 )
 @jwt_required()
 def instituciones_cercanas_controller():
@@ -25,7 +26,7 @@ def instituciones_cercanas_controller():
             }), 400
 
         if prioridad not in [
-            "alta", "media_alta", "media_baja"
+            "alta", "media_alta", "media_baja", "revision_clinica"
         ]:
             return jsonify({
                 "ok": False,
@@ -33,6 +34,29 @@ def instituciones_cercanas_controller():
             }), 400
         
         if prioridad == "media_baja":
+
+            if prioridad == "revision_clinica":
+                eps_id = request.args.get("eps_id", type=int)
+
+                if eps_id is None or eps_id <= 0:
+                    return jsonify({
+                        "ok": False,
+                        "error": "Se requiere una EPS válida"
+                    }), 400
+
+                instituciones = instituciones_valoracion_clinica_service(
+                    latitude=latitude,
+                    longitude=longitude,
+                    eps_id=eps_id,
+                    limite=3
+                )
+
+                return jsonify({
+                    "ok": True,
+                    "prioridad": "revision_clinica",
+                    "institutions": instituciones
+                }), 200
+
             servicio_recomendado = request.args.get(
                 "servicio_recomendado"
             )

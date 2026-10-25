@@ -2,7 +2,10 @@
 from flask import request, jsonify
 from flask_jwt_extended import jwt_required
 from app.services.pretriage_safety_service import revisar_seguridad_ia
-from app.services.pretriage_agent_service import PretriageAgentService
+from app.services.pretriage_agent_service import (
+    PretriageAgentService,
+    RevisionClinicaRequerida
+)
 from app.services.pregunta_ia_service import guardar_respuesta_ia
 from app.services.pretriage_access_service import (
     validar_acceso_pretriage,
@@ -58,11 +61,14 @@ class PretriageAgentController:
                 "result": result
             }), 200
 
-        except PermissionError as e:
+        except RevisionClinicaRequerida as e:
             return jsonify({
-                "ok": False,
+                "ok": True,
+                "id_pretriage": id_pretriage,
+                "accion": "revision_clinica",
+                "prioridad": None,
                 "message": str(e)
-            }), 403
+            }), 200
 
         except ValueError as e:
             return jsonify({

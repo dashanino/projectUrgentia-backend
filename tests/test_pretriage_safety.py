@@ -4,6 +4,10 @@ import pytest
 from app.services import pretriage_safety_service as safety
 
 
+# =========================================================
+# FUNCIONES AUXILIARES
+# =========================================================
+
 def crear_pretriage(
     id_user=10,
     estado="iniciado",
@@ -27,8 +31,15 @@ def preparar_db(mocker, pretriage):
     )
 
 
+# =========================================================
+# PRUEBAS DE ACCESO Y ESTADO DEL PRETRIAGE
+# =========================================================
+
 def test_no_permite_acceso_a_otro_usuario(mocker):
-    preparar_db(mocker, crear_pretriage(id_user=10))
+    preparar_db(
+        mocker,
+        crear_pretriage(id_user=10)
+    )
 
     with pytest.raises(PermissionError):
         safety.revisar_seguridad_ia(
@@ -54,7 +65,9 @@ def test_alerta_inicial_interrumpe_revision(mocker):
 def test_alerta_ia_bloquea_revision(mocker):
     preparar_db(
         mocker,
-        crear_pretriage(estado_seguridad_ia="alerta")
+        crear_pretriage(
+            estado_seguridad_ia="alerta"
+        )
     )
 
     resultado = safety.revisar_seguridad_ia(
@@ -68,7 +81,10 @@ def test_alerta_ia_bloquea_revision(mocker):
 def test_pretriage_inexistente(mocker):
     preparar_db(mocker, None)
 
-    with pytest.raises(ValueError, match="no existe"):
+    with pytest.raises(
+        ValueError,
+        match="no existe"
+    ):
         safety.revisar_seguridad_ia(1, 10)
 
 
@@ -78,12 +94,22 @@ def test_pretriage_no_iniciado(mocker):
         crear_pretriage(estado="finalizado")
     )
 
-    with pytest.raises(ValueError, match="no está iniciado"):
+    with pytest.raises(
+        ValueError,
+        match="no está iniciado"
+    ):
         safety.revisar_seguridad_ia(1, 10)
 
 
+# =========================================================
+# PRUEBAS DE RESPUESTAS Y SEGURIDAD
+# =========================================================
+
 def test_sin_respuestas_no_autoriza_continuar(mocker):
-    preparar_db(mocker, crear_pretriage())
+    preparar_db(
+        mocker,
+        crear_pretriage()
+    )
 
     consulta = mocker.MagicMock()
     consulta.filter_by.return_value = consulta
@@ -103,13 +129,19 @@ def test_sin_respuestas_no_autoriza_continuar(mocker):
 
 def test_respuesta_registrada_sigue_pendiente(mocker):
     pretriage = crear_pretriage()
-    preparar_db(mocker, pretriage)
+
+    preparar_db(
+        mocker,
+        pretriage
+    )
 
     consulta = mocker.MagicMock()
     consulta.filter_by.return_value = consulta
     consulta.order_by.return_value = consulta
     consulta.all.return_value = [
-        SimpleNamespace(respuesta="Respuesta simulada")
+        SimpleNamespace(
+            respuesta="Respuesta simulada"
+        )
     ]
 
     mocker.patch.object(
@@ -125,15 +157,33 @@ def test_respuesta_registrada_sigue_pendiente(mocker):
 
     resultado = safety.revisar_seguridad_ia(1, 10)
 
-    assert resultado["accion"] == "revision_clinica"
+    assert (
+        resultado["accion"]
+        == "informacion_insuficiente"
+    )
+
+    assert (
+        resultado["estado_seguridad_ia"]
+        == "pendiente"
+    )
+
     assert pretriage.estado_seguridad_ia == "pendiente"
+
     commit.assert_not_called()
 
 
-def test_no_generar_pregunta_con_revision_pendiente(mocker):
-    from app.services.pretriage_agent_service import PretriageAgentService
+# =========================================================
+# PRUEBAS DE GENERACIÓN DE PREGUNTAS
+# =========================================================
 
-    agente = object.__new__(PretriageAgentService)
+def test_no_generar_pregunta_durante_revision(mocker):
+    from app.services.pretriage_agent_service import (
+        PretriageAgentService
+    )
+
+    agente = object.__new__(
+        PretriageAgentService
+    )
 
     mocker.patch.object(
         agente,
@@ -142,7 +192,7 @@ def test_no_generar_pregunta_con_revision_pendiente(mocker):
     )
 
     pretriage = crear_pretriage(
-        estado_seguridad_ia="pendiente"
+        estado_seguridad_ia="en_revision"
     )
 
     mocker.patch(
@@ -150,23 +200,50 @@ def test_no_generar_pregunta_con_revision_pendiente(mocker):
         return_value=pretriage
     )
 
-    consulta = mocker.MagicMock()
-    consulta.filter.return_value = consulta
-    consulta.first.return_value = (1,)
-
-    mocker.patch(
-        "app.services.pretriage_agent_service.db.session.query",
-        return_value=consulta
-    )
-
-    with pytest.raises(ValueError, match="revisión de seguridad"):
+    with pytest.raises(
+        ValueError,
+        match="comprobación de seguridad"
+    ):
         agente.generate_additional_questions(1)
 
 
-def test_no_evaluar_con_revision_pendiente(mocker):
-    from app.services.pretriage_agent_service import PretriageAgentService
+def test_no_generar_pregunta_con_alerta(mocker):
+    from app.services.pretriage_agent_service import (
+        PretriageAgentService
+    )
 
-    agente = object.__new__(PretriageAgentService)
+    agente = object.__new__(
+        PretriageAgentService
+    )
+
+    pretriage = crear_pretriage(
+        estado_seguridad_ia="alerta"
+    )
+
+    mocker.patch(
+        "app.services.pretriage_agent_service.db.session.get",
+        return_value=pretriage
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="alerta de seguridad"
+    ):
+        agente.generate_additional_questions(1)
+
+
+# =========================================================
+# PRUEBAS DE EVALUACIÓN FINAL
+# =========================================================
+
+def test_no_evaluar_con_revision_pendiente(mocker):
+    from app.services.pretriage_agent_service import (
+        PretriageAgentService
+    )
+
+    agente = object.__new__(
+        PretriageAgentService
+    )
 
     mocker.patch.object(
         agente,
@@ -181,33 +258,93 @@ def test_no_evaluar_con_revision_pendiente(mocker):
         )
     )
 
-    with pytest.raises(ValueError, match="revisión de seguridad"):
+    with pytest.raises(
+        ValueError,
+        match="comprobación de seguridad"
+    ):
         agente.evaluate(1)
 
+
+def test_no_evaluar_con_alerta(mocker):
+    from app.services.pretriage_agent_service import (
+        PretriageAgentService
+    )
+
+    agente = object.__new__(
+        PretriageAgentService
+    )
+
+    mocker.patch(
+        "app.services.pretriage_agent_service.db.session.get",
+        return_value=crear_pretriage(
+            estado_seguridad_ia="alerta"
+        )
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="alerta de seguridad"
+    ):
+        agente.evaluate(1)
+
+
+# =========================================================
+# PRUEBAS DE DETECCIÓN DE EXPRESIONES DE ALERTA
+# =========================================================
 
 @pytest.mark.parametrize(
     "respuesta,categoria",
     [
-        ("No puedo respirar", "dificultad_respiratoria"),
-        ("Me cuesta respirar", "dificultad_respiratoria"),
-        ("Tengo dolor fuerte en el pecho", "dolor_toracico"),
-        ("Perdí el conocimiento", "perdida_conciencia"),
-        ("Tengo sangrado abundante", "sangrado_importante"),
+        (
+            "No puedo respirar",
+            "dificultad_respiratoria"
+        ),
+        (
+            "Me cuesta respirar",
+            "dificultad_respiratoria"
+        ),
+        (
+            "Tengo dolor fuerte en el pecho",
+            "dolor_toracico"
+        ),
+        (
+            "Perdí el conocimiento",
+            "perdida_conciencia"
+        ),
+        (
+            "Tengo sangrado abundante",
+            "sangrado_importante"
+        ),
     ]
 )
-def test_detecta_expresiones_de_alerta(respuesta, categoria):
-    assert categoria in safety.detectar_alertas_texto(respuesta)
+def test_detecta_expresiones_de_alerta(
+    respuesta,
+    categoria
+):
+    assert categoria in safety.detectar_alertas_texto(
+        respuesta
+    )
 
+
+# =========================================================
+# PRUEBA DE BLOQUEO POR ALERTA DETECTADA
+# =========================================================
 
 def test_alerta_detectada_bloquea_pretriage(mocker):
     pretriage = crear_pretriage()
-    preparar_db(mocker, pretriage)
+
+    preparar_db(
+        mocker,
+        pretriage
+    )
 
     consulta = mocker.MagicMock()
     consulta.filter_by.return_value = consulta
     consulta.order_by.return_value = consulta
     consulta.all.return_value = [
-        SimpleNamespace(respuesta="No puedo respirar")
+        SimpleNamespace(
+            respuesta="No puedo respirar"
+        )
     ]
 
     mocker.patch.object(
@@ -224,6 +361,12 @@ def test_alerta_detectada_bloquea_pretriage(mocker):
     resultado = safety.revisar_seguridad_ia(1, 10)
 
     assert resultado["accion"] == "alerta"
+
     assert pretriage.estado_seguridad_ia == "alerta"
-    assert "dificultad_respiratoria" in resultado["categorias_detectadas"]
+
+    assert (
+        "dificultad_respiratoria"
+        in resultado["categorias_detectadas"]
+    )
+
     commit.assert_not_called()

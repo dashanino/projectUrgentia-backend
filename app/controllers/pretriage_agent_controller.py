@@ -132,10 +132,14 @@ class PretriageAgentController:
             }), 400
 
         except Exception:
+            import traceback
+            traceback.print_exc()
+
             return jsonify({
                 "ok": False,
                 "message": "No fue posible generar la pregunta"
             }), 500
+
 
     # =========================================================
     # 3. GUARDAR RESPUESTA DEL PACIENTE

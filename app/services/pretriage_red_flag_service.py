@@ -1,5 +1,6 @@
 
 from app.extensions import db
+
 from app.models.pretriage_sintoma import PretriageSintoma
 from app.models.pretriage import Pretriage
 from app.models.red_flag import RedFlag
@@ -24,7 +25,9 @@ def guardar_banderas_rojas_nn(
     )
 
     if pretriage is None:
-        raise ValueError("El pretriage no existe")
+        raise ValueError(
+            "El pretriage no existe"
+        )
 
     # 2. Verificar que pertenezca al usuario
     if pretriage.id_user != id_user:
@@ -58,10 +61,10 @@ def guardar_banderas_rojas_nn(
             "Todos los IDs de las banderas deben ser enteros"
         )
 
-    # Evitar IDs repetidos
+    # 6. Evitar IDs repetidos
     ids_banderas = list(set(ids_banderas))
 
-    # 6. Buscar banderas permitidas
+    # 7. Buscar banderas permitidas
     asociaciones = (
         db.session.query(PoblacionRedFlag)
         .join(
@@ -80,7 +83,7 @@ def guardar_banderas_rojas_nn(
         for asociacion in asociaciones
     }
 
-    # 7. Validar que correspondan a la población
+    # 8. Validar que correspondan a la población
     ids_invalidos = [
         id_bandera
         for id_bandera in ids_banderas
@@ -94,24 +97,26 @@ def guardar_banderas_rojas_nn(
         )
 
     try:
-    # 8. Invalidar evaluación anterior
+
+        # 9. Invalidar evaluación anterior
         invalidar_evaluacion_reglas(pretriage)
 
-        # 9. Eliminar síntomas anteriores
+        # 10. Eliminar síntomas anteriores
         db.session.query(PretriageSintoma).filter(
             PretriageSintoma.id_pretriage == id_pretriage
         ).delete(synchronize_session=False)
 
-        # 10. Reiniciar la etapa de síntomas
+        # 11. Reiniciar la etapa de síntomas
         pretriage.sintomas_completados = False
 
-        # 11. Eliminar banderas anteriores
+        # 12. Eliminar banderas anteriores
         db.session.query(PretriageRedFlag).filter(
             PretriageRedFlag.id_pretriage == id_pretriage
         ).delete(synchronize_session=False)
 
-        # 12. Guardar nuevas banderas
+        # 13. Guardar nuevas banderas
         for id_bandera in ids_banderas:
+
             seleccion = PretriageRedFlag(
                 id_pretriage=id_pretriage,
                 id_bandera=id_bandera
@@ -119,15 +124,16 @@ def guardar_banderas_rojas_nn(
 
             db.session.add(seleccion)
 
-        # 13. Confirmar todos los cambios
+        # 14. Confirmar todos los cambios
         db.session.commit()
 
-        # 14. Devolver resultado
+        # 15. Devolver resultado al controlador
         return {
             "id_pretriage": id_pretriage,
             "id_banderas": ids_banderas
         }
 
     except Exception:
+        # Revertir cambios si ocurre un error
         db.session.rollback()
         raise

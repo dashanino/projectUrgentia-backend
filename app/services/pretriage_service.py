@@ -104,6 +104,8 @@ def guardar_poblacion_nn(id_pretriage, id_user, id_poblacion):
         )
 
         if poblacion_cambio:
+            pretriage.banderas_completadas = False
+            pretriage.sintomas_completados = False
 
             # 7. Eliminar síntomas anteriores
             db.session.query(PretriageSintoma).filter(

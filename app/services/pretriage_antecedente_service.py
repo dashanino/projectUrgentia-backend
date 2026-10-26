@@ -113,6 +113,8 @@ def guardar_antecedentes_nn(id_pretriage, ids_antecedentes):
 
             db.session.add(registro)
 
+        pretriage.antecedentes_completados = True
+
         # 10. Guardar cambios e invalidación juntos
         db.session.commit()
 

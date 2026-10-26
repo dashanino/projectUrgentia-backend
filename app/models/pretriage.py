@@ -32,6 +32,20 @@ class Pretriage(db.Model):
         default="iniciado"
     )
 
+    antecedentes_completados = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=False,
+        server_default=db.text("false")
+    )
+
+    banderas_completadas = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=False,
+        server_default=db.text("false")
+    )
+
     # ==========================================
     # CONTROL DE EVALUACIÓN INICIAL DE REGLAS
     # ==========================================

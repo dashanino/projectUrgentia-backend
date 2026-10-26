@@ -10,31 +10,54 @@ location_bp = Blueprint("location", __name__)
 @jwt_required()
 def geocode_location():
     municipio = request.args.get("municipio", "").strip()
-    direccion = request.args.get("direccion", "").strip()
+    consulta = request.args.get("direccion", "").strip()
 
-    if not municipio or not direccion:
-        return jsonify({"ok": False, "error": "Debes ingresar municipio y dirección"}), 400
-    if len(municipio) > 120 or len(direccion) > 250:
-        return jsonify({"ok": False, "error": "El municipio o la dirección son demasiado largos"}), 400
+    if not municipio or not consulta:
+        return jsonify({
+            "ok": False,
+            "error": "Indica el municipio y una dirección o nombre de lugar.",
+        }), 400
+
+    if len(municipio) > 120 or len(consulta) > 250:
+        return jsonify({
+            "ok": False,
+            "error": "El municipio o la búsqueda son demasiado largos.",
+        }), 400
 
     try:
-        resultado = geocodificar_direccion(municipio=municipio, direccion=direccion)
-        if resultado is None:
+        candidatos = geocodificar_direccion(municipio, consulta)
+        if not candidatos:
+            # La consulta se procesó correctamente; cero coincidencias no es
+            # un fallo de la ruta. Devolver 200 evita un error HTTP rojo y deja
+            # que Angular presente el mensaje útil dentro del formulario.
             return jsonify({
-                "ok": False,
+                "ok": True,
+                "query": consulta,
+                "municipio": municipio,
+                "candidates": [],
                 "error": (
-                    "No encontramos la vía en el municipio indicado. "
-                    "Verifica los datos o utiliza tu ubicación GPS."
+                    "No encontramos coincidencias para esa búsqueda. "
+                    "Prueba con el nombre oficial completo, agrega una dirección "
+                    "o utiliza el GPS."
                 ),
-            }), 404
-        return jsonify({"ok": True, **resultado}), 200
+            }), 200
+
+        # La API devuelve candidatos y NO fija automáticamente coordenadas en el primer
+        # resultado. Angular debe mostrar la lista y pedir al usuario que elija uno.
+        return jsonify({
+            "ok": True,
+            "query": consulta,
+            "municipio": municipio,
+            "candidates": candidatos,
+        }), 200
+
     except ValueError as exc:
         return jsonify({"ok": False, "error": str(exc)}), 400
     except RuntimeError as exc:
+        return jsonify({"ok": False, "error": str(exc)}), 502
+    except Exception:
+        # No se exponen trazas internas al cliente.
         return jsonify({
             "ok": False,
-            "error": (
-                "No fue posible consultar el servicio de mapas. "
-                "Inténtalo de nuevo o utiliza tu ubicación GPS."
-            ),
-        }), 502
+            "error": "No fue posible buscar la ubicación. Inténtalo nuevamente.",
+        }), 500

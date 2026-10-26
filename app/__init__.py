@@ -3,7 +3,7 @@ from flask import Flask
 from flask_cors import CORS
 from config import Config
 from app.extensions import db, migrate, jwt
-
+from app.routes.medical_profile_routes import medical_profile_bp
 from app.routes.health_routes import health_bp
 from app.routes.user_routes import user_bp
 from app.routes.patient_routes import patient_bp
@@ -63,5 +63,6 @@ def create_app():
     app.register_blueprint(tramite_bp)
     app.register_blueprint(institution_bp, url_prefix='/api')
     app.register_blueprint(location_bp, url_prefix='/api')
+    app.register_blueprint(medical_profile_bp, url_prefix='/api')
 
     return app

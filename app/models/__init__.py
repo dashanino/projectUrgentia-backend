@@ -26,3 +26,4 @@ from app.models.eps_tramite import EPSTramite
 from app.models.pregunta_ia import PreguntaIA
 from app.models.emergency_attention import EmergencyAttention
 from app.models.institution_emergency_attention import InstitutionEmergencyAttention
+from app.models.medical_profile import MedicalProfile

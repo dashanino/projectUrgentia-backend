@@ -460,21 +460,36 @@ class PretriageAgentService:
         PROHIBIDO usar bloques de código Markdown (no uses ```json ni ```). No agregues texto ni explicaciones fuera del objeto JSON.
 
         Estructura estricta del JSON:
-        {
-            "prioridad": "media_baja", 
-            "tipo_atencion_urgencias": null,
-            "servicio_recomendado": "Ortopedia",
-            "justificacion": "Explicación breve de la decisión basada solo en los datos proporcionados.",
-            "incertidumbre": false,
-            "detalle_incertidumbre": null,
-            "pregunta_siguiente": null
-        }
+            {
+                "prioridad": "media_baja",
+                "tipo_atencion_urgencias": null,
+                "servicio_recomendado": "Ortopedia",
+                "justificacion": "Recomendación breve y neutral, basada en los datos registrados.",
+                "resumen_informacion": "Resumen de los síntomas, antecedentes relevantes y respuestas que proporcionó el paciente.",
+                "incertidumbre": false,
+                "detalle_incertidumbre": null,
+                "pregunta_siguiente": null
+            }
 
         Nota sobre campos:
         - "prioridad" puede ser "alta", "media_alta", "media_baja", "baja" o null (solo si la incertidumbre es tan alta que impide clasificar).
         - "incertidumbre" debe ser un booleano (true/false). Si es true, detalla el motivo en "detalle_incertidumbre".
         - "pregunta_siguiente" debe contener la cadena de texto con la pregunta si el proceso sigue abierto, de lo contrario null.
-        """
+        - "justificacion": debe contener como máximo dos frases.
+
+        Explica la orientación recomendada y su principal motivo.
+        Usa un tono neutral, directo y respetuoso. No repitas toda
+        la historia clínica ni afirmes diagnósticos no confirmados.
+
+        - "resumen_informacion": resume en español los datos
+        explícitamente registrados: población, antecedentes
+        relevantes, síntomas y respuestas del cuestionario.
+        Incluye duración, intensidad y signos vitales únicamente
+        cuando estén presentes en las respuestas.
+        No inventes información ni conviertas datos desconocidos
+        en síntomas negados. No afirmes que el paciente está fuera
+        de peligro.
+            """
 
 
         # =========================================================
@@ -689,6 +704,15 @@ class PretriageAgentService:
         # =========================================================
 
         justificacion = result.get("justificacion")
+
+        resumen = result.get("resumen_informacion")
+
+        if not isinstance(resumen, str) or not resumen.strip():
+            raise ValueError(
+                "La IA no devolvió un resumen de información válido"
+            )
+
+        result["resumen_informacion"] = resumen.strip()
 
         if (
             not isinstance(justificacion, str)

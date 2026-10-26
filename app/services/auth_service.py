@@ -83,17 +83,15 @@ def register_service(
     }
 
 
-def login_service(document_number,password):
-    user = (
-        User.query.filter_by(
-            document_number=document_number
-        ).first()
-    )
-    if not user:
-        return {"message": "documento inválido"}
+def login_service(document_number, password):
+    user = User.query.filter_by(
+        document_number=document_number
+    ).first()
+
+    if user is None:
+        raise ValueError("Documento inválido")
 
     if not user.check_password(password):
-        return {"message": "Contraseña inválida"}
+        raise ValueError("Contraseña incorrecta")
 
     return user
-            

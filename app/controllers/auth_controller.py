@@ -69,6 +69,8 @@ def login_controller():
             data["document_number"],
             data["password"]
         )
+        print("TIPO DE USER:", type(user))
+        print("CLAVES DE USER:", list(user.keys()) if isinstance(user, dict) else "No es diccionario")
 
     except ValueError as e:
         return jsonify({"error": str(e)}), 401
@@ -86,6 +88,8 @@ def login_controller():
             "first_names": user.first_names,
             "last_names": user.last_names,
             "email": user.email,
-            "id_role": user.id_role
+            "id_role": user.id_role,
+            "id_eps": user.patient.id_eps if user.patient else None
         }
+        
     }), 200

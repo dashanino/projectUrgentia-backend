@@ -543,6 +543,80 @@ class PretriageAgentService:
                 "La IA no devolvió un objeto JSON válido"
             )
 
+        
+        # Si falta información, solicitar una pregunta adicional.
+        pregunta_siguiente = result.get("pregunta_siguiente")
+        prioridad_candidata = result.get("prioridad")
+
+        necesita_aclaracion = (
+            (
+                isinstance(pregunta_siguiente, str)
+                and bool(pregunta_siguiente.strip())
+            )
+            or result.get("incertidumbre") is True
+            or prioridad_candidata is None
+        )
+
+        if necesita_aclaracion:
+            total_preguntas = (
+                db.session.query(PreguntaIA)
+                .filter_by(id_pretriage=id_pretriage)
+                .count()
+            )
+
+            # Evitar un cuestionario indefinido.
+            # Si diez preguntas no bastan, solicitar revisión clínica.
+            MAX_PREGUNTAS = 10
+
+            if total_preguntas >= MAX_PREGUNTAS:
+                raise RevisionClinicaRequerida(
+                    "No fue posible establecer una orientación "
+                    "confiable después de recopilar información "
+                    "adicional. Se requiere valoración clínica."
+                )
+
+            # Si la IA no propuso una pregunta, utilizar
+            # una pregunta general de seguimiento.
+            if (
+                not isinstance(pregunta_siguiente, str)
+                or not pregunta_siguiente.strip()
+            ):
+                pregunta_siguiente = (
+                    "¿Has notado algún otro síntoma o cambio "
+                    "importante relacionado con tu molestia principal?"
+                )
+
+            ultima_pregunta = (
+                db.session.query(PreguntaIA)
+                .filter_by(id_pretriage=id_pretriage)
+                .order_by(PreguntaIA.orden.desc())
+                .first()
+            )
+
+            nueva_pregunta = PreguntaIA(
+                id_pretriage=id_pretriage,
+                pregunta=pregunta_siguiente.strip(),
+                orden=(
+                    ultima_pregunta.orden + 1
+                    if ultima_pregunta
+                    else 1
+                )
+            )
+
+            db.session.add(nueva_pregunta)
+
+            # El cuestionario debe continuar con la nueva pregunta.
+            pretriage.estado_seguridad_ia = "continuar"
+            db.session.commit()
+
+            return {
+                "accion": "pregunta_adicional",
+                "id_pregunta": nueva_pregunta.id,
+                "pregunta": nueva_pregunta.pregunta,
+                "orden": nueva_pregunta.orden
+            }
+
+
         # =========================================================
         # 12. VALIDAR PRIORIDAD
         # =========================================================
@@ -722,42 +796,24 @@ class PretriageAgentService:
         # Si la última pregunta fue respondida,
         # revisar TODAS las respuestas antes de continuar.
         if preguntas:
-
             ultima = preguntas[-1]
 
-            if ultima.respuesta is not None:
+         # La revisión de seguridad ya se realizó
+        # en guardar_respuesta(). Aquí solo validamos
+        # que haya autorizado continuar.
 
-                from app.services.pretriage_safety_service import (
-                    revisar_seguridad_ia
-                )
-
-                revision = revisar_seguridad_ia(
-                    id_pretriage=id_pretriage,
-                    id_user=pretriage.id_user
-                )
-
-                accion = revision.get("accion")
-
-                if accion == "alerta":
-                    db.session.commit()
-
+            if preguntas and preguntas[-1].respuesta is not None:
+                if pretriage.estado_seguridad_ia == "alerta":
                     raise ValueError(
-                        "Se identificó una posible señal de alarma. "
-                        "El cuestionario debe interrumpirse."
+                        "El cuestionario está bloqueado por una alerta "
+                        "de seguridad."
                     )
 
-                if accion != "continuar":
-                    db.session.commit()
-
+                if pretriage.estado_seguridad_ia != "continuar":
                     raise ValueError(
-                        revision.get(
-                            "mensaje",
-                            "La revisión automática no autorizó "
-                            "continuar con el cuestionario."
-                        )
+                        "La revisión de seguridad todavía no ha "
+                        "autorizado continuar con el cuestionario."
                     )
-
-                db.session.commit()
 
         # =========================================================
         # 4. DEVOLVER UNA PREGUNTA QUE AÚN ESTÁ PENDIENTE
@@ -790,7 +846,7 @@ class PretriageAgentService:
         # Se permiten cinco preguntas en total.
         if orden > 5:
             if (
-                len(preguntas) != 5
+                len(preguntas) < 5
                 or any(
                     pregunta.respuesta is None
                     for pregunta in preguntas

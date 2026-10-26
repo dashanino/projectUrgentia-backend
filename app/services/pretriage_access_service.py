@@ -4,51 +4,50 @@ from app.models.pretriage import Pretriage
 
 
 def validar_acceso_pretriage(id_pretriage):
-
-    # 1. Validar el tipo de acceso
     claims = get_jwt()
 
-    if claims.get("tipo_acceso") != "emergencia":
-        raise PermissionError(
-            "Este endpoint requiere acceso de emergencia"
-        )
-
-    # 2. Validar identidad y pretriage del token
     try:
         id_user = int(get_jwt_identity())
-        id_pretriage_token = int(
-            claims.get("id_pretriage")
-        )
     except (TypeError, ValueError):
-        raise PermissionError(
-            "El token no contiene un acceso válido"
-        )
+        raise PermissionError("Token inválido")
 
-    if id_pretriage_token != id_pretriage:
-        raise PermissionError(
-            "El pretriage no corresponde al token"
-        )
-
-    # 3. Consultar el pretriage
-    pretriage = db.session.get(
-        Pretriage,
-        id_pretriage
-    )
+    pretriage = db.session.get(Pretriage, id_pretriage)
 
     if pretriage is None:
-        raise ValueError(
-            "El pretriage no existe"
-        )
+        raise ValueError("El pretriage no existe")
 
     if pretriage.id_user != id_user:
         raise PermissionError(
-            "No tienes permiso para consultar este pretriage"
+            "No tienes permiso para acceder a este pretriage"
         )
 
     if pretriage.estado != "iniciado":
-        raise ValueError(
-            "El pretriage no está iniciado"
-        )
+        raise ValueError("El pretriage no está iniciado")
+
+    if claims.get("tipo_acceso") == "emergencia":
+        try:
+            id_pretriage_token = int(claims.get("id_pretriage"))
+        except (TypeError, ValueError):
+            raise PermissionError("Token de emergencia inválido")
+
+        if id_pretriage_token != id_pretriage:
+            raise PermissionError(
+                "El pretriage no corresponde al token"
+            )
+
+    elif claims.get("tipo_acceso") is None:
+        from app.models.patient import Patient
+
+        patient = db.session.query(Patient).filter_by(
+            user_id=id_user
+        ).first()
+
+        if patient is None:
+            raise PermissionError(
+                "Se requiere una cuenta de paciente registrada"
+            )
+    else:
+        raise PermissionError("Tipo de acceso no permitido")
 
     return id_user
 

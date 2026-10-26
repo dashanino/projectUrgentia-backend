@@ -1,5 +1,5 @@
 from flask import Blueprint
-
+from flask_jwt_extended import jwt_required
 from app.controllers.sintoma_controller import sintoma_redflag_controller
 from app.controllers.pretriage_sintoma_controller import (
     guardar_sintomas_pretriage_controller
@@ -22,6 +22,6 @@ def obtener_sintomas_por_red_flag(id_bandera):
     "/pretriage/<int:id_pretriage>/sintomas",
     methods=["POST"]
 )
+@jwt_required()
 def guardar_sintomas(id_pretriage):
     return guardar_sintomas_pretriage_controller(id_pretriage)
-

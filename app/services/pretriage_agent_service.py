@@ -13,7 +13,9 @@ from app.models.service import Service
 from app.models.antecedente import Antecedente
 from app.models.red_flag import RedFlag
 from app.models.poblacion_red_flag import PoblacionRedFlag
-
+from datetime import date
+from app.models.patient import Patient
+from app.models.medical_profile import MedicalProfile
 
 load_dotenv()
 
@@ -244,6 +246,69 @@ class PretriageAgentService:
                 )
             }
         }
+                # ==========================================
+        # 7. PERFIL MÉDICO DEL PACIENTE REGISTRADO
+        # ==========================================
+
+        perfil_medico = None
+
+        patient = (
+            db.session.query(Patient)
+            .filter_by(user_id=pretriage.id_user)
+            .first()
+        )
+
+        if patient is not None:
+
+            medical_profile = (
+                db.session.query(MedicalProfile)
+                .filter_by(patient_id=patient.id)
+                .first()
+            )
+
+            edad = None
+
+            if patient.birth_date is not None:
+                hoy = date.today()
+                nacimiento = patient.birth_date
+
+                edad = (
+                    hoy.year
+                    - nacimiento.year
+                    - (
+                        (hoy.month, hoy.day)
+                        < (nacimiento.month, nacimiento.day)
+                    )
+                )
+
+            perfil_medico = {
+                "edad": edad,
+                "sexo": patient.sex,
+                "medicamentos": (
+                    medical_profile.medications
+                    if medical_profile else []
+                ),
+                "alergias": (
+                    medical_profile.allergies
+                    if medical_profile else []
+                ),
+                "hospitalizaciones": (
+                    medical_profile.hospitalizations
+                    if medical_profile else []
+                ),
+                "cirugias": (
+                    medical_profile.surgeries
+                    if medical_profile else []
+                ),
+                "peso_kg": (
+                    medical_profile.weight_kg
+                    if medical_profile else None
+                ),
+                "estatura_cm": (
+                    medical_profile.height_cm
+                    if medical_profile else None
+                )
+            }
 
         return {
             "id_pretriage": id_pretriage,
@@ -252,7 +317,8 @@ class PretriageAgentService:
             "banderas_rojas": banderas,
             "sintomas": nombres_sintomas,
             "selecciones": selecciones,
-            "historial_preguntas": historial
+            "historial_preguntas": historial,
+            "perfil_medico": perfil_medico
         }
 
 
@@ -512,13 +578,35 @@ class PretriageAgentService:
 
         Analiza la información registrada.
 
-        Considera:
-        - Población.
-        - Antecedentes.
-        - Banderas rojas.
+                Considera:
+        - Población del paciente.
+        - Antecedentes médicos registrados.
+        - Banderas rojas identificadas.
         - Síntomas seleccionados.
-        - Preguntas anteriores.
-        - Respuestas del paciente.
+        - Preguntas anteriores y respuestas del paciente.
+
+        Si existe un perfil_medico, considera también:
+        - Edad y sexo.
+        - Medicamentos actuales.
+        - Alergias registradas.
+        - Cirugías previas.
+        - Hospitalizaciones.
+        - Peso y estatura, únicamente cuando sean
+          relevantes para la evaluación.
+
+        Utiliza estos datos para identificar posibles
+        factores de riesgo, interacciones o condiciones
+        que requieran mayor precaución.
+
+        No inventes enfermedades, alergias,
+        tratamientos ni diagnósticos.
+
+        Si perfil_medico es null o un campo está vacío,
+        no supongas que el paciente carece de esa
+        condición o antecedente.
+
+        No reduzcas una prioridad de riesgo establecida
+        por las reglas clínicas del sistema.
 
         No interpretes la ausencia de información como
         ausencia de riesgo.

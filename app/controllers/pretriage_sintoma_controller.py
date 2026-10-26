@@ -1,7 +1,7 @@
 
 from flask import request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity, get_jwt
-
+from app.services.pretriage_access_service import validar_acceso_pretriage
 from app.services.pretriage_sintoma_service import guardar_sintomas_pretriage
 
 
@@ -9,30 +9,7 @@ from app.services.pretriage_sintoma_service import guardar_sintomas_pretriage
 def guardar_sintomas_pretriage_controller(id_pretriage):
 
     try:
-        id_user = int(get_jwt_identity())
-        claims = get_jwt()
-
-        # Verificar acceso de emergencia
-        if claims.get("tipo_acceso") != "emergencia":
-            return jsonify({
-                "ok": False,
-                "error": "Este endpoint requiere acceso de emergencia"
-            }), 403
-
-        # Verificar que el token pertenezca al pretriage
-        try:
-            id_pretriage_token = int(claims.get("id_pretriage"))
-        except (TypeError, ValueError):
-            return jsonify({
-                "ok": False,
-                "error": "El token no contiene un pretriage válido"
-            }), 403
-
-        if id_pretriage_token != id_pretriage:
-            return jsonify({
-                "ok": False,
-                "error": "No tienes permiso para modificar este pretriage"
-            }), 403
+        id_user = validar_acceso_pretriage(id_pretriage)
 
         data = request.get_json(silent=True)
 

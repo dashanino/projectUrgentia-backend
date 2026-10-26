@@ -8,7 +8,7 @@ from app.services.pretriage_antecedente_service import guardar_antecedentes_nn
 from app.services.pretriage_service import guardar_poblacion_nn
 from app.services.red_flag_service import obtener_banderas_rojas
 from app.services.pretriage_red_flag_service import guardar_banderas_rojas_nn
-
+from app.services.pretriage_access_service import validar_acceso_pretriage
 
 def iniciar_pretriage_nn_controller():
     try:
@@ -109,21 +109,7 @@ def guardar_poblacion_nn_controller(id_pretriage):
 
     try:
         # 1. Obtener los datos del token
-        claims = get_jwt()
-        id_user = int(get_jwt_identity())
-
-        # 2. Validar que sea un acceso de emergencias
-        if claims.get("tipo_acceso") != "emergencia":
-            return jsonify({
-                "error": "El token no corresponde a un acceso de emergencias"
-            }), 403
-
-        # 3. Comprobar que el token corresponde al pretriage
-        if claims.get("id_pretriage") != id_pretriage:
-            return jsonify({
-                "error": "No tienes permiso para modificar este pretriage"
-            }), 403
-
+        id_user = validar_acceso_pretriage(id_pretriage)
         # 4. Obtener la población enviada
         datos = request.get_json(silent=True)
 
@@ -171,21 +157,7 @@ def guardar_poblacion_nn_controller(id_pretriage):
 def obtener_banderas_rojas_controller(id_pretriage):
 
     try:
-        # 1. Obtener los datos del token JWT
-        claims = get_jwt()
-        id_user = int(get_jwt_identity())
-
-        # 2. Verificar que sea un acceso de emergencias
-        if claims.get("tipo_acceso") != "emergencia":
-            return jsonify({
-                "error": "El token no corresponde a un acceso de emergencias"
-            }), 403
-
-        # 3. Verificar que el token corresponda al pretriage
-        if claims.get("id_pretriage") != id_pretriage:
-            return jsonify({
-                "error": "No tienes permiso para consultar este pretriage"
-            }), 403
+        id_user = validar_acceso_pretriage(id_pretriage)
 
         # 4. Consultar las banderas rojas
         resultado = obtener_banderas_rojas(
@@ -216,21 +188,7 @@ def obtener_banderas_rojas_controller(id_pretriage):
 def guardar_banderas_rojas_nn_controller(id_pretriage):
 
     try:
-        # 1. Obtener datos del token
-        claims = get_jwt()
-        id_user = int(get_jwt_identity())
-
-        # 2. Verificar acceso de emergencia
-        if claims.get("tipo_acceso") != "emergencia":
-            return jsonify({
-                "error": "El token no corresponde a un acceso de emergencias"
-            }), 403
-
-        # 3. Verificar que el token corresponde al pretriage
-        if claims.get("id_pretriage") != id_pretriage:
-            return jsonify({
-                "error": "No tienes permiso para modificar este pretriage"
-            }), 403
+        id_user = validar_acceso_pretriage(id_pretriage)
 
         # 4. Obtener JSON
         data = request.get_json(silent=True)

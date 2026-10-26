@@ -33,33 +33,38 @@ def instituciones_cercanas_controller():
                 "error": "Prioridad no válida"
             }), 400
         
-        if prioridad == "media_baja":
+                # REVISIÓN CLÍNICA
+        if prioridad == "revision_clinica":
 
-            if prioridad == "revision_clinica":
-                eps_id = request.args.get("eps_id", type=int)
+            eps_id = request.args.get("eps_id", type=int)
 
-                if eps_id is None or eps_id <= 0:
-                    return jsonify({
-                        "ok": False,
-                        "error": "Se requiere una EPS válida"
-                    }), 400
-
-                instituciones = instituciones_valoracion_clinica_service(
-                    latitude=latitude,
-                    longitude=longitude,
-                    eps_id=eps_id,
-                    limite=3
-                )
-
+            if eps_id is None or eps_id <= 0:
                 return jsonify({
-                    "ok": True,
-                    "prioridad": "revision_clinica",
-                    "institutions": instituciones
-                }), 200
+                    "ok": False,
+                    "error": "Se requiere una EPS válida"
+                }), 400
+
+            instituciones = instituciones_valoracion_clinica_service(
+                latitude=latitude,
+                longitude=longitude,
+                eps_id=eps_id,
+                limite=3
+            )
+
+            return jsonify({
+                "ok": True,
+                "prioridad": "revision_clinica",
+                "institutions": instituciones
+            }), 200
+
+        # PRIORIDAD MEDIA BAJA: SERVICIO RECOMENDADO
+        if prioridad == "media_baja":
 
             servicio_recomendado = request.args.get(
                 "servicio_recomendado"
             )
+
+            eps_id = request.args.get("eps_id", type=int)
 
             if not servicio_recomendado:
                 return jsonify({
@@ -67,16 +72,23 @@ def instituciones_cercanas_controller():
                     "error": "Se requiere servicio_recomendado"
                 }), 400
 
+            if eps_id is not None and eps_id <= 0:
+                return jsonify({
+                    "ok": False,
+                    "error": "La EPS enviada no es válida"
+                }), 400
+
             instituciones = instituciones_por_servicio_cercanas_service(
                 latitude=latitude,
                 longitude=longitude,
                 servicio_recomendado=servicio_recomendado,
+                eps_id=eps_id,
                 limite=3
             )
 
             return jsonify({
                 "ok": True,
-                "prioridad": prioridad,
+                "prioridad": "media_baja",
                 "servicio_recomendado": servicio_recomendado,
                 "institutions": instituciones
             }), 200

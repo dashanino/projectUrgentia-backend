@@ -124,7 +124,11 @@ def guardar_banderas_rojas_nn(
 
             db.session.add(seleccion)
 
-        # 14. Confirmar todos los cambios
+        # 14. Marcar la etapa de banderas rojas como completada
+        # Incluso cuando el paciente selecciona "Ninguno de los anteriores".
+        pretriage.banderas_completadas = True
+
+        # 15. Confirmar todos los cambios
         db.session.commit()
 
         # 15. Devolver resultado al controlador

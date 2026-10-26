@@ -191,12 +191,35 @@ def upload_profile_photo():
 @jwt_required()
 def delete_profile_photo():
     user, patient = current_patient()
+
     if user is None or patient is None:
         return jsonify({'error': 'Perfil de paciente no encontrado'}), 404
-    profile = db.session.execute(select(MedicalProfile).where(MedicalProfile.patient_id == patient.id)).scalar_one_or_none()
-    if profile and profile.photo_filename:
-        previous = profile.photo_filename
+
+    profile = db.session.execute(
+        select(MedicalProfile).where(
+            MedicalProfile.patient_id == patient.id
+        )
+    ).scalar_one_or_none()
+
+    if profile is None or not profile.photo_filename:
+        return jsonify({'message': 'No hay foto de perfil'}), 200
+
+    previous = profile.photo_filename
+
+    try:
+        profile.photo_filename = None
+        db.session.commit()
+    except Exception:
+        db.session.rollback()
+        current_app.logger.exception('Error al eliminar foto')
+        return jsonify({'error': 'No se pudo eliminar la foto'}), 500
+
+    try:
+        (_photo_folder() / previous).unlink(missing_ok=True)
+    except OSError:
+        current_app.logger.exception('No se pudo borrar el archivo de foto')
+
     return jsonify({
-        "message": "Foto eliminada correctamente",
-        "photo_url": None
+        'message': 'Foto eliminada correctamente',
+        'photo_url': None
     }), 200

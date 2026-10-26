@@ -69,6 +69,11 @@ class PretriageAgentController:
                 "prioridad": None,
                 "message": str(e)
             }), 200
+        except PermissionError as e:
+            return jsonify({
+                "ok": False,
+                "message": str(e)
+            }), 403
 
         except ValueError as e:
             return jsonify({

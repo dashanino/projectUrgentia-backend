@@ -119,6 +119,7 @@ def instituciones_por_servicio_cercanas_service(
     latitude,
     longitude,
     servicio_recomendado,
+    eps_id=None,
     limite=3
 ):
     if not isinstance(servicio_recomendado, str):
@@ -139,7 +140,7 @@ def instituciones_por_servicio_cercanas_service(
             "El servicio recomendado no existe o está inactivo"
         )
 
-    instituciones = (
+    consulta = (
         Institution.query
         .join(
             InstitutionService,
@@ -152,9 +153,23 @@ def instituciones_por_servicio_cercanas_service(
             Institution.latitude.isnot(None),
             Institution.longitude.isnot(None)
         )
-        .distinct()
-        .all()
     )
+
+    # Filtrar por EPS cuando esté disponible
+    if eps_id is not None:
+        consulta = (
+            consulta
+            .join(
+                InstitutionEPS,
+                InstitutionEPS.institution_id == Institution.id
+            )
+            .filter(
+                InstitutionEPS.eps_id == eps_id,
+                InstitutionEPS.is_active.is_(True)
+            )
+        )
+
+    instituciones = consulta.distinct().all()
 
     resultados = []
 

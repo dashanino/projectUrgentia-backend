@@ -1222,14 +1222,31 @@ class PretriageAgentService:
         # =========================================================
 
         respuesta_ia = self.client.responses.create(
-            model="gpt-5.6-luna",
-            instructions=instrucciones,
-            input=json.dumps(
-                contexto,
-                ensure_ascii=False,
-                indent=2
-            )
-        )
+        model="gpt-5.6-luna",
+        instructions=instrucciones,
+        input=json.dumps(
+            contexto,
+            ensure_ascii=False,
+            indent=2
+        ),
+        text={
+            "format": {
+                "type": "json_schema",
+                "name": "pregunta_pretriage",
+                "strict": True,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "pregunta": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["pregunta"],
+                    "additionalProperties": False
+                }
+            }
+        }
+    )
 
         # =========================================================
         # 11. VALIDAR RESPUESTA

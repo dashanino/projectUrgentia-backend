@@ -6,7 +6,7 @@ from app.services.pretriage_agent_service import (
     PretriageAgentService,
     RevisionClinicaRequerida
 )
-from app.services.pregunta_ia_service import guardar_respuesta_ia
+from app.services.pregunta_ia_service import guardar_respuesta_ia, guardar_respuestas_ia
 from app.services.pretriage_access_service import (
     validar_acceso_pretriage,
     validar_evaluacion_inicial
@@ -226,6 +226,89 @@ class PretriageAgentController:
             return jsonify({
                 "ok": False,
                 "message": "No fue posible guardar la respuesta"
+            }), 500
+
+
+    @jwt_required()
+    def guardar_respuestas(self):
+
+        try:
+
+            data = request.get_json(silent=True)
+
+            if not isinstance(data, dict):
+                return jsonify({
+                    "ok": False,
+                    "message": "Debes enviar un objeto JSON"
+                }), 400
+
+            try:
+                id_pretriage = int(
+                    data.get("id_pretriage")
+                )
+            except (TypeError, ValueError):
+
+                return jsonify({
+                    "ok": False,
+                    "message": "El id_pretriage no es válido"
+                }), 400
+
+            respuestas = data.get("respuestas")
+
+            id_user = validar_acceso_pretriage(
+                id_pretriage
+            )
+
+            validar_evaluacion_inicial(
+                id_pretriage,
+                requerir_sintomas=True
+            )
+
+            resultado = guardar_respuestas_ia(
+                id_pretriage=id_pretriage,
+                respuestas=respuestas,
+                id_user=id_user
+            )
+
+            # UNA sola revisión para todo el bloque.
+            revision = revisar_seguridad_ia(
+                id_pretriage=id_pretriage,
+                id_user=id_user
+            )
+
+            db.session.commit()
+
+            return jsonify({
+                "ok": True,
+                "resultado": resultado,
+                "revision_seguridad": revision
+            }), 200
+
+        except PermissionError as e:
+
+            db.session.rollback()
+
+            return jsonify({
+                "ok": False,
+                "message": str(e)
+            }), 403
+
+        except ValueError as e:
+
+            db.session.rollback()
+
+            return jsonify({
+                "ok": False,
+                "message": str(e)
+            }), 400
+
+        except Exception:
+
+            db.session.rollback()
+
+            return jsonify({
+                "ok": False,
+                "message": "No fue posible guardar las respuestas"
             }), 500
 
     @jwt_required()

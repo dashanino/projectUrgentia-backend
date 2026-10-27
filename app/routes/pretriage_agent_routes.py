@@ -43,6 +43,14 @@ def generar_pregunta():
 def guardar_respuesta():
     return controller.guardar_respuesta()
 
+@pretriage_agent_bp.route(
+    "/pretriage-agent/respuestas",
+    methods=["POST"]
+)
+@jwt_required()
+def guardar_respuestas():
+    return controller.guardar_respuestas()
+
 
 # 4. Clasificar el tipo de atención
 @pretriage_agent_bp.route(

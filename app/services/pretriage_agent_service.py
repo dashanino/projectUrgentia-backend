@@ -512,14 +512,55 @@ class PretriageAgentService:
         CRITERIOS DE BÚSQUEDA DE INSTITUCIONES:
         1. Si prioridad es alta o media_alta:
         - tipo_atencion_urgencias: Debe ser exactamente una de estas categorías: [general, pediatrica, ginecoobstetrica, trauma, neurologica, cardiovascular].
-        - servicio_recommended: Debe ser null.
+        - servicio_recomendado: Debe ser null.
         2. Si prioridad es media_baja:
-        - servicio_recommended: Debe ser exactamente uno de los nombres de servicios_disponibles recibidos.
+        - servicio_recomendado: Debe ser exactamente uno de los nombres de servicios_disponibles recibidos.
         - tipo_atencion_urgencias: Debe ser null.
         - Si no se puede identificar el servicio con fundamento, devuelve null.
         3. Si prioridad es baja:
         - tipo_atencion_urgencias: Debe ser null.
-        - servicio_recommended: Debe ser null.
+        - servicio_recomendado: Debe ser null.
+            ORIENTACIÓN ADMINISTRATIVA PARA PRIORIDAD BAJA:
+
+        La orientación administrativa es opcional.
+        No todas las solicitudes de prioridad baja requieren un trámite.
+
+        Primero determina la prioridad según los criterios clínicos.
+        Nunca reduzcas la prioridad para recomendar un trámite.
+
+        Solo cuando la prioridad sea "baja", no exista
+        incertidumbre clínica relevante y la solicitud
+        corresponda claramente a una gestión administrativa,
+        puedes recomendar uno de estos trámites:
+
+        - renovar-formula:
+          Renovación de una fórmula médica existente.
+
+        - asignacion-cita:
+          Solicitud de cita por consulta externa.
+
+        - autorizacion-examen:
+          Autorización de examen, procedimiento o cirugía.
+
+        - autorizacion-especialista:
+          Autorización para valoración con especialista.
+
+        - vencimiento-examen:
+          Renovación o gestión de una orden vencida de examen,
+          procedimiento o cirugía.
+
+        - vencimiento-especialista:
+          Gestión de una orden vencida para especialista.
+
+        Si el paciente necesita atención clínica, presenta
+        posibles señales de alarma o la solicitud no es clara,
+        no recomiendes un trámite como sustituto de la atención.
+
+        Si no corresponde recomendar un trámite:
+        - tramite_sugerido: null
+        - orientacion_administrativa: null
+
+        No afirmes que el trámite está aprobado o garantizado.
 
         FORMATO DE RESPUESTA:
         Devuelve ÚNICAMENTE un objeto JSON válido. 
@@ -669,7 +710,7 @@ class PretriageAgentService:
 
             # Evitar un cuestionario indefinido.
             # Si diez preguntas no bastan, solicitar revisión clínica.
-            MAX_PREGUNTAS = 10
+            MAX_PREGUNTAS = 7
 
             if total_preguntas >= MAX_PREGUNTAS:
                 raise RevisionClinicaRequerida(
@@ -856,7 +897,46 @@ class PretriageAgentService:
             )
 
         # =========================================================
-        # 16. DEVOLVER RESULTADO
+        # 16. VALIDAR ORIENTACIÓN ADMINISTRATIVA
+        # =========================================================
+
+        tramites_validos = {
+            "renovar-formula",
+            "asignacion-cita",
+            "autorizacion-examen",
+            "autorizacion-especialista",
+            "vencimiento-examen",
+            "vencimiento-especialista",
+        }
+
+        tramite = result.get("tramite_sugerido")
+        orientacion = result.get("orientacion_administrativa")
+
+        # La recomendación administrativa solamente se permite
+        # cuando la evaluación clínica concluye prioridad baja.
+        if prioridad != "baja" or incertidumbre:
+            result["tramite_sugerido"] = None
+            result["orientacion_administrativa"] = None
+
+        elif tramite is None:
+            result["tramite_sugerido"] = None
+            result["orientacion_administrativa"] = None
+
+        elif not isinstance(tramite, str) or tramite not in tramites_validos:
+            raise ValueError(
+                "La IA recomendó un trámite que no existe"
+            )
+
+        elif not isinstance(orientacion, str) or not orientacion.strip():
+            raise ValueError(
+                "La IA no proporcionó una orientación administrativa válida"
+            )
+
+        else:
+            result["tramite_sugerido"] = tramite
+            result["orientacion_administrativa"] = orientacion.strip()
+        # =========================================================
+        # 17. DEVOLVER RESULTADO
         # =========================================================
 
         return result

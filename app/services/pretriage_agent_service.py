@@ -1053,13 +1053,9 @@ class PretriageAgentService:
         1. Si prioridad es alta o media_alta:
 
         - tipo_atencion_urgencias: Debe ser exactamente una de estas categorías: [general, pediatrica, ginecoobstetrica, trauma, neurologica, cardiovascular].
-
         - servicio_recommended: Debe ser null.
-
         2. Si prioridad es media_baja:
-
         - servicio_recommended: Debe ser exactamente uno de los nombres de servicios_disponibles recibidos.
-
         - tipo_atencion_urgencias: Debe ser null.
 
         - Si no se puede identificar el servicio con fundamento, devuelve null.
@@ -1067,10 +1063,7 @@ class PretriageAgentService:
         3. Si prioridad es baja:
 
         - tipo_atencion_urgencias: Debe ser null.
-
         - servicio_recommended: Debe ser null.
-
-
 
         FORMATO DE RESPUESTA:
 
@@ -1357,6 +1350,8 @@ class PretriageAgentService:
                 .count()
             )
 
+            # Evitar un cuestionario indefinido.
+            # Si diez preguntas no bastan, solicitar revisión clínica.
             MAX_PREGUNTAS = 8
 
             if total_preguntas >= MAX_PREGUNTAS:
@@ -1648,9 +1643,7 @@ class PretriageAgentService:
 
 
         # =========================================================
-
         # 16. DEVOLVER RESULTADO
-
         # =========================================================
 
 

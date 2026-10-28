@@ -55,6 +55,35 @@ class PretriageAgentController:
                 id_pretriage=id_pretriage
             )
 
+            # Si la evaluación requiere más información, generar
+            # el bloque de preguntas antes de responder al frontend.
+            if result.get("accion") == "preguntas_adicionales":
+
+                bloque = self.service.generate_additional_questions(
+                    id_pretriage=id_pretriage
+                )
+
+                if bloque.get("accion") == "bloque_preguntas":
+                    result["preguntas"] = bloque.get("preguntas", [])
+
+                elif bloque.get("accion") == "pregunta_pendiente":
+                    result["preguntas"] = [{
+                        "id_pregunta": bloque["id_pregunta"],
+                        "pregunta": bloque["pregunta"],
+                        "orden": bloque["orden"]
+                    }]
+
+                else:
+                    raise RevisionClinicaRequerida(
+                        "No fue posible completar las preguntas adicionales. "
+                        "Se requiere valoración por personal de salud."
+                    )
+
+                if not result.get("preguntas"):
+                    raise RevisionClinicaRequerida(
+                        "No se pudieron obtener preguntas clínicas adicionales."
+                    )
+
             return jsonify({
                 "ok": True,
                 "id_pretriage": id_pretriage,

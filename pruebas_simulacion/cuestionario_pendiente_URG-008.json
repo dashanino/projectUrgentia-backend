@@ -1,0 +1,20 @@
+{
+  "id_caso": "URG-008",
+  "id_pretriage": 169,
+  "accion_ia": "pregunta",
+  "preguntas": [
+    {
+      "id_pregunta": 165,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta_sugerida_no_validada": "Fiebre alta persistente."
+    }
+  ],
+  "respuesta_original_ia": {
+    "accion": "pregunta",
+    "id_pregunta": 165,
+    "orden": 1,
+    "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando."
+  },
+  "estado": "pendiente_revision_humana",
+  "respuestas_enviadas": false
+}

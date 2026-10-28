@@ -1,0 +1,25 @@
+{
+  "id_caso": "URG-064",
+  "id_pretriage": 220,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "alerta",
+    "alta_prioridad": true,
+    "id_pretriage": 220,
+    "ok": true,
+    "origen": "reglas",
+    "resultado": {
+      "accion": "alerta",
+      "alta_prioridad": true,
+      "bandera_activadora": {
+        "id_bandera": 10,
+        "name": "No siente al bebé"
+      },
+      "id_pretriage": 220,
+      "regla_activadora": 17
+    }
+  }
+}

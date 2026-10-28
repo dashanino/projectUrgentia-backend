@@ -1,0 +1,9 @@
+{
+  "id_caso": "URG-054",
+  "id_pretriage": 213,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": false,
+  "resultado_reglas": null
+}

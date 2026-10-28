@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-020",
+  "id_pretriage": 181,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 176,
+          "respuesta": "Cefalea leve que mejora con descanso."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.6841,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 181,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe una cefalea leve que mejora con el descanso, sin otros datos asociados. No se identifican señales de alarma claras con la información disponible; sería necesario aclarar inicio, evolución y síntomas acompañantes.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.3254,
+      "respuesta_backend": {
+        "id_pretriage": 181,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 252,
+              "orden": 2,
+              "pregunta": "¿Desde cuándo tiene el dolor de cabeza y cuánto dura cada episodio?"
+            },
+            {
+              "id_pregunta": 253,
+              "orden": 3,
+              "pregunta": "¿En qué parte de la cabeza le duele y qué intensidad tiene el dolor, de 0 a 10?"
+            },
+            {
+              "id_pregunta": 254,
+              "orden": 4,
+              "pregunta": "¿El dolor se acompaña de vómitos, somnolencia inusual, debilidad, dificultad para caminar o cambios en el comportamiento?"
+            },
+            {
+              "id_pregunta": 255,
+              "orden": 5,
+              "pregunta": "¿Ha presentado fiebre, congestión nasal, dolor de oído, problemas de visión o una enfermedad reciente?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:51:34.039659+00:00",
+  "pregunta_pendiente": "¿El dolor se acompaña de vómitos, somnolencia inusual, debilidad, dificultad para caminar o cambios en el comportamiento?"
+}

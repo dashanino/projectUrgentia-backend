@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-047",
+  "id_pretriage": 206,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 194,
+          "respuesta": "Dolor abdominal progresivo en la parte inferior derecha."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.9239,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 206,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal_preocupante"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "El dolor abdominal progresivo en la parte inferior derecha puede requerir valoración médica urgente. Faltan datos sobre intensidad, duración, fiebre, vómitos, rigidez abdominal, sangrado y otros síntomas asociados.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 8.7202,
+      "respuesta_backend": {
+        "id_pretriage": 206,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 312,
+              "orden": 2,
+              "pregunta": "¿Hace cuánto comenzó el dolor en la parte inferior derecha del abdomen y qué tan intenso es, de 0 a 10?"
+            },
+            {
+              "id_pregunta": 313,
+              "orden": 3,
+              "pregunta": "¿Ha tenido fiebre o escalofríos, desmayo, confusión o debilidad marcada junto con el dolor?"
+            },
+            {
+              "id_pregunta": 314,
+              "orden": 4,
+              "pregunta": "¿Ha presentado náuseas o vómitos, sangre en el vómito o en las heces, o heces negras?"
+            },
+            {
+              "id_pregunta": 315,
+              "orden": 5,
+              "pregunta": "¿El abdomen se siente muy duro o extremadamente sensible, y ha tenido cambios importantes para evacuar u orinar desde que comenzó el dolor?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:10:44.430713+00:00",
+  "pregunta_pendiente": "¿Ha tenido fiebre o escalofríos, desmayo, confusión o debilidad marcada junto con el dolor?"
+}

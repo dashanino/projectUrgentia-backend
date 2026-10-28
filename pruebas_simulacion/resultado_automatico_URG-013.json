@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-013",
+  "id_pretriage": 174,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 169,
+          "respuesta": "Cefalea moderada de inicio gradual."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.8416,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 174,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "La cefalea se describe como moderada y de inicio gradual, sin señales de alarma adicionales aportadas. Se requiere aclarar evolución, síntomas neurológicos asociados, fiebre, traumatismo y otros signos relevantes.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 7.7987,
+      "respuesta_backend": {
+        "id_pretriage": 174,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 224,
+              "orden": 2,
+              "pregunta": "¿Qué edad tiene el niño y desde cuándo comenzó el dolor de cabeza?"
+            },
+            {
+              "id_pregunta": 225,
+              "orden": 3,
+              "pregunta": "¿En qué parte de la cabeza siente el dolor y ha ido aumentando, disminuyendo o se mantiene igual?"
+            },
+            {
+              "id_pregunta": 226,
+              "orden": 4,
+              "pregunta": "¿Ha presentado vómitos, somnolencia inusual, confusión, debilidad, dificultad para caminar o cambios en su comportamiento?"
+            },
+            {
+              "id_pregunta": 227,
+              "orden": 5,
+              "pregunta": "¿El dolor empeora al despertar, al toser o hacer esfuerzo, o le impide dormir o realizar sus actividades habituales?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:50:10.052643+00:00",
+  "pregunta_pendiente": "¿En qué parte de la cabeza siente el dolor y ha ido aumentando, disminuyendo o se mantiene igual?"
+}

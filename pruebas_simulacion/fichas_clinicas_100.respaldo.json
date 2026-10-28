@@ -1,0 +1,3054 @@
+[
+  {
+    "id_caso": "URG-002",
+    "poblacion": "Niño",
+    "edad": 4,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dificultad respiratoria grave.",
+    "historia_clinica": "Niño de 4 años con dificultad respiratoria intensa desde hace 30 minutos. Presenta respiración rápida, hundimiento de las costillas y dificultad para hablar o llorar con normalidad. Su cuidadora refiere que los síntomas están empeorando.",
+    "datos_clinicos": {
+      "inicio": "Hace 30 minutos",
+      "duracion": "30 minutos",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": "Empeoramiento progresivo",
+      "sintomas_asociados": [
+        "Dificultad respiratoria intensa",
+        "Respiración rápida",
+        "Hundimiento de las costillas",
+        "Dificultad para hablar o llorar normalmente"
+      ],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [
+        "Dificultad respiratoria intensa",
+        "Hundimiento de las costillas",
+        "Dificultad para hablar o llorar normalmente"
+      ],
+      "informacion_adicional": [],
+      "fuente_informacion": "Cuidadora"
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "extraido_pendiente_revision",
+    "datos_especificos_poblacion": {
+      "cuidador": "Cuidadora, relación no especificada",
+      "signos_respiratorios": [
+        "Respiración rápida",
+        "Hundimiento de las costillas",
+        "Dificultad para hablar o llorar normalmente"
+      ],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-003",
+    "poblacion": "Niño",
+    "edad": 8,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor abdominal intenso.",
+    "historia_clinica": "Niña de 8 años con dolor abdominal intenso de intensidad 9/10 desde hace tres horas. El dolor se localiza principalmente en la parte inferior derecha del abdomen. Presenta vómitos repetidos y dolor importante al caminar. Su cuidadora refiere empeoramiento progresivo.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "9/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-004",
+    "poblacion": "Niño",
+    "edad": 6,
+    "sexo": "Masculino",
+    "motivo_consulta": "Fiebre alta con confusión y somnolencia.",
+    "historia_clinica": "Niño de 6 años con temperatura de 40,0 °C desde hace cuatro horas. Su cuidadora refiere somnolencia marcada, dificultad para mantenerlo despierto y respuestas confusas. No se dispone de otros signos vitales.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-005",
+    "poblacion": "Niño",
+    "edad": 11,
+    "sexo": "Femenino",
+    "motivo_consulta": "Cefalea súbita intensa con vómitos.",
+    "historia_clinica": "Niña de 11 años con dolor de cabeza súbito de intensidad 10/10 desde hace 40 minutos. Presenta vómitos repetidos y dificultad para mantenerse de pie debido al malestar. Su cuidadora refiere que nunca había presentado un dolor de cabeza de esta intensidad.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "40 minutos",
+      "intensidad_dolor": "10/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-006",
+    "poblacion": "Niño",
+    "edad": 2,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dificultad respiratoria con labios azulados.",
+    "historia_clinica": "Niño de 2 años con dificultad respiratoria intensa desde hace 20 minutos. Su cuidadora observa coloración azulada alrededor de los labios, respiración rápida y disminución de la actividad. Los síntomas persisten.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "20 minutos",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-007",
+    "poblacion": "Niño",
+    "edad": 9,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal progresivo.",
+    "historia_clinica": "Niño de 9 años con dolor abdominal de intensidad 7/10 desde hace ocho horas. Comenzó alrededor del ombligo y posteriormente se localizó en la parte inferior derecha del abdomen. Presenta náuseas, disminución del apetito y dolor al caminar. Niega sangrado.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "8 horas",
+      "intensidad_dolor": "7/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-008",
+    "poblacion": "Niño",
+    "edad": 5,
+    "sexo": "Femenino",
+    "motivo_consulta": "Fiebre alta persistente.",
+    "historia_clinica": "Niña de 5 años con fiebre de hasta 39,5 °C desde hace dos días. Presenta cansancio, disminución del apetito y menor consumo de líquidos. Está despierta, responde adecuadamente y no presenta dificultad respiratoria. La cuidadora refiere que ha orinado menos de lo habitual.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "2 dias",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-009",
+    "poblacion": "Niño",
+    "edad": 10,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dificultad respiratoria moderada.",
+    "historia_clinica": "Niño de 10 años con dificultad respiratoria desde hace tres horas, acompañada de tos. Respira más rápido de lo habitual y refiere sensación de falta de aire al caminar. Puede hablar en frases completas. Niega coloración azulada de los labios.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-010",
+    "poblacion": "Niño",
+    "edad": 7,
+    "sexo": "Femenino",
+    "motivo_consulta": "Cefalea intensa acompañada de vómitos.",
+    "historia_clinica": "Niña de 7 años con cefalea de intensidad 8/10 desde hace cuatro horas. El dolor comenzó gradualmente y se acompaña de dos episodios de vómito y sensibilidad a la luz. Está orientada y no presenta pérdida del conocimiento. No se ha documentado si tiene rigidez de cuello.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": "8/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-011",
+    "poblacion": "Niño",
+    "edad": 3,
+    "sexo": "Masculino",
+    "motivo_consulta": "Fiebre y vómitos con menor ingesta de líquidos.",
+    "historia_clinica": "Niño de 3 años con fiebre de hasta 39,0 °C desde hace 24 horas y cuatro episodios de vómito. Su cuidadora refiere menor consumo de líquidos y disminución de la cantidad de orina. Está despierto y responde a estímulos, pero se encuentra más decaído de lo habitual.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "24 horas",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-012",
+    "poblacion": "Niño",
+    "edad": 8,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal leve y estable.",
+    "historia_clinica": "Niño de 8 años con dolor abdominal alrededor del ombligo de intensidad 4/10 desde hace cuatro horas. El dolor es intermitente y no ha aumentado. Niega fiebre, vómitos y diarrea. Puede caminar, comer y beber normalmente.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-013",
+    "poblacion": "Niño",
+    "edad": 10,
+    "sexo": "Femenino",
+    "motivo_consulta": "Cefalea moderada de inicio gradual.",
+    "historia_clinica": "Niña de 10 años con dolor de cabeza bilateral de intensidad 5/10 desde hace cinco horas. El dolor comenzó gradualmente y no ha empeorado. Niega fiebre, vómitos, confusión, alteraciones visuales y debilidad. Está activa y orientada.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "5 horas",
+      "intensidad_dolor": "5/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-014",
+    "poblacion": "Niño",
+    "edad": 6,
+    "sexo": "Masculino",
+    "motivo_consulta": "Fiebre leve con congestión nasal.",
+    "historia_clinica": "Niño de 6 años con temperatura máxima de 38,2 °C desde hace un día, congestión nasal y dolor leve de garganta. Está activo, juega normalmente y tolera alimentos y líquidos. Niega dificultad respiratoria, vómitos y somnolencia.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "1 dia",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-015",
+    "poblacion": "Niño",
+    "edad": 11,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor abdominal intermitente.",
+    "historia_clinica": "Niña de 11 años con dolor abdominal difuso de intensidad 4/10 desde hace seis horas. El dolor aparece por momentos y no ha empeorado. Niega fiebre, vómitos, diarrea y sangrado. Puede caminar normalmente y tolera líquidos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "6 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-016",
+    "poblacion": "Niño",
+    "edad": 7,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor de cabeza recurrente sin cambios.",
+    "historia_clinica": "Niño de 7 años con cefalea de intensidad 4/10 desde hace tres horas. Su cuidadora refiere episodios similares durante los últimos meses, sin cambios en las características del dolor. Niega fiebre, vómitos, alteraciones visuales, confusión y debilidad. Está activo.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-017",
+    "poblacion": "Niño",
+    "edad": 9,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza muy leve después de estudiar.",
+    "historia_clinica": "Niña de 9 años con cefalea bilateral de intensidad 2/10 desde hace dos horas, después de realizar actividades escolares. El dolor comenzó gradualmente y está mejorando con descanso. Niega fiebre, vómitos, confusión, alteraciones visuales y debilidad. Está activa y se comporta normalmente.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "2 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-018",
+    "poblacion": "Niño",
+    "edad": 6,
+    "sexo": "Masculino",
+    "motivo_consulta": "Molestia abdominal leve después de comer.",
+    "historia_clinica": "Niño de 6 años con molestia abdominal difusa de intensidad 2/10 después de una comida abundante. Comenzó hace una hora y está disminuyendo. Niega fiebre, vómitos, diarrea y dolor al caminar. Está activo y tolera líquidos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "1 hora",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-019",
+    "poblacion": "Niño",
+    "edad": 10,
+    "sexo": "Femenino",
+    "motivo_consulta": "Fiebre leve con congestión nasal.",
+    "historia_clinica": "Niña de 10 años con temperatura máxima de 38,0 °C desde hace doce horas, acompañada de congestión nasal y estornudos. Está activa, come y bebe normalmente. Niega dificultad respiratoria, vómitos, somnolencia y dolor torácico.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-020",
+    "poblacion": "Niño",
+    "edad": 8,
+    "sexo": "Masculino",
+    "motivo_consulta": "Cefalea leve que mejora con descanso.",
+    "historia_clinica": "Niño de 8 años con dolor de cabeza de intensidad 2/10 desde hace tres horas. El dolor comenzó gradualmente y ha mejorado después de descansar. Niega fiebre, vómitos, alteraciones visuales, confusión y debilidad. Mantiene su actividad habitual.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-021",
+    "poblacion": "Niño",
+    "edad": 11,
+    "sexo": "Femenino",
+    "motivo_consulta": "Molestia abdominal leve y transitoria.",
+    "historia_clinica": "Niña de 11 años con molestia abdominal alrededor del ombligo de intensidad 2/10 desde hace dos horas. La molestia es intermitente y ha disminuido. Niega fiebre, vómitos, diarrea y dolor al caminar. Está activa y tolera alimentos y líquidos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "2 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "cuidador": null,
+      "signos_respiratorios": [],
+      "alimentacion_hidratacion": null
+    }
+  },
+  {
+    "id_caso": "URG-022",
+    "poblacion": "Adulto",
+    "edad": 54,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor intenso y opresivo en el pecho desde hace 30 minutos.",
+    "historia_clinica": "Hombre de 54 años con dolor torácico opresivo de intensidad 9/10, iniciado hace 30 minutos en reposo. El dolor se irradia al brazo izquierdo. Presenta sudoración fría, náuseas y dificultad para respirar. No ha perdido el conocimiento.",
+    "datos_clinicos": {
+      "inicio": "Hace 30 minutos",
+      "duracion": "30 minutos",
+      "intensidad_dolor": "9/10",
+      "localizacion": "Pecho, irradiado al brazo izquierdo",
+      "evolucion": null,
+      "sintomas_asociados": [
+        "Dolor torácico opresivo",
+        "Sudoración fría",
+        "Náuseas",
+        "Dificultad respiratoria"
+      ],
+      "sintomas_negados": [
+        "Pérdida del conocimiento"
+      ],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [
+        "Dolor torácico opresivo intenso",
+        "Dificultad respiratoria"
+      ],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "extraido_pendiente_revision",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {
+        "tipo": "Opresivo",
+        "inicio": "En reposo",
+        "irradiacion": "Brazo izquierdo"
+      },
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-023",
+    "poblacion": "Adulto",
+    "edad": 42,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dificultad respiratoria intensa incluso estando en reposo.",
+    "historia_clinica": "Mujer de 42 años con dificultad respiratoria intensa de inicio reciente. Refiere que no puede completar frases sin detenerse a respirar. Presenta sensación de ahogo en reposo y empeoramiento progresivo durante la última hora.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-024",
+    "poblacion": "Adulto",
+    "edad": 38,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal súbito y extremadamente intenso.",
+    "historia_clinica": "Hombre de 38 años con dolor abdominal generalizado de inicio súbito, intensidad 10/10, constante. Refiere abdomen muy rígido y dolor intenso al mínimo movimiento. Presenta náuseas y un episodio de vómito.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "10/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-025",
+    "poblacion": "Adulto",
+    "edad": 61,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza súbito y extremadamente intenso.",
+    "historia_clinica": "Mujer de 61 años con cefalea súbita de intensidad 10/10, descrita como el peor dolor de cabeza de su vida. Comenzó hace 20 minutos. Un familiar refiere que la paciente está confundida y responde de manera incoherente.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "20 minutos",
+      "intensidad_dolor": "10/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-026",
+    "poblacion": "Adulto",
+    "edad": 57,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor torácico opresivo acompañado de desmayo.",
+    "historia_clinica": "Hombre de 57 años con dolor torácico opresivo intenso desde hace 25 minutos. Presentó pérdida transitoria del conocimiento durante aproximadamente un minuto. Al despertar continúa con dolor torácico, debilidad y sudoración fría.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "25 minutos",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-027",
+    "poblacion": "Adulto",
+    "edad": 29,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal progresivo en la parte inferior derecha.",
+    "historia_clinica": "Hombre de 29 años con dolor abdominal iniciado hace 12 horas alrededor del ombligo, que posteriormente se desplazó hacia la parte inferior derecha. Intensidad 7/10, empeora al caminar y se acompaña de náuseas y pérdida de apetito. Sin desmayo.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "12 horas",
+      "intensidad_dolor": "7/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-028",
+    "poblacion": "Adulto",
+    "edad": 46,
+    "sexo": "Femenino",
+    "motivo_consulta": "Fiebre alta persistente desde hace dos días.",
+    "historia_clinica": "Mujer de 46 años con fiebre reportada de 39,2 °C durante dos días, escalofríos, dolores musculares y debilidad. Está consciente, orientada, puede beber líquidos y no presenta dificultad respiratoria.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-029",
+    "poblacion": "Adulto",
+    "edad": 52,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor opresivo en el pecho al realizar esfuerzo.",
+    "historia_clinica": "Hombre de 52 años con episodios recientes de presión en el centro del pecho al subir escaleras. Cada episodio dura aproximadamente diez minutos y mejora con el reposo. El último episodio ocurrió hace una hora. Actualmente no tiene dolor ni dificultad respiratoria.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "1 hora",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-030",
+    "poblacion": "Adulto",
+    "edad": 34,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza intenso y persistente.",
+    "historia_clinica": "Mujer de 34 años con cefalea de intensidad 8/10 que aumentó gradualmente durante las últimas seis horas. Presenta náuseas y sensibilidad a la luz. Niega pérdida de conocimiento, confusión, debilidad de extremidades y fiebre.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "8/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-031",
+    "poblacion": "Adulto",
+    "edad": 40,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal acompañado de vómitos repetidos.",
+    "historia_clinica": "Hombre de 40 años con dolor abdominal de intensidad 7/10 desde hace ocho horas, acompañado de cinco episodios de vómito. Durante las últimas cuatro horas ha tenido dificultad para retener líquidos. Está consciente y no refiere sangre en el vómito.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "8 horas",
+      "intensidad_dolor": "7/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-032",
+    "poblacion": "Adulto",
+    "edad": 35,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal moderado desde esta mañana.",
+    "historia_clinica": "Hombre de 35 años con dolor alrededor del ombligo desde hace seis horas, intensidad 4/10, intermitente y estable. Niega fiebre, vómitos, náuseas, diarrea, distensión, síntomas urinarios y desplazamiento del dolor. Tolera alimentos y líquidos y puede caminar normalmente.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "6 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-033",
+    "poblacion": "Adulto",
+    "edad": 27,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza moderado desde hace varias horas.",
+    "historia_clinica": "Mujer de 27 años con cefalea bilateral de intensidad 5/10, iniciada gradualmente hace ocho horas. Refiere sensación de presión en la cabeza. Está orientada y niega fiebre, vómitos, alteraciones visuales, debilidad y pérdida del conocimiento.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "8 horas",
+      "intensidad_dolor": "5/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-034",
+    "poblacion": "Adulto",
+    "edad": 43,
+    "sexo": "Masculino",
+    "motivo_consulta": "Fiebre moderada y malestar general.",
+    "historia_clinica": "Hombre de 43 años con temperatura máxima reportada de 38,2 °C desde hace 24 horas, congestión nasal, dolor de garganta leve y cansancio. Puede comer, beber y realizar actividades básicas. Niega dificultad respiratoria, confusión y dolor torácico.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "24 horas",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-035",
+    "poblacion": "Adulto",
+    "edad": 31,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor abdominal tipo cólico de intensidad moderada.",
+    "historia_clinica": "Mujer de 31 años con dolor abdominal tipo cólico de intensidad 4/10 desde hace cinco horas. Es intermitente, no ha empeorado y no se localiza en un punto específico. Niega fiebre, vómitos, sangrado y síntomas urinarios. No se ha documentado posibilidad de embarazo.",
+    "datos_clinicos": {
+      "inicio": "Hace cinco horas",
+      "duracion": "Cinco horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": "Abdomen, sin localización específica",
+      "evolucion": "Intermitente, sin empeoramiento",
+      "sintomas_asociados": [
+        "Dolor abdominal tipo cólico"
+      ],
+      "sintomas_negados": [
+        "Fiebre",
+        "Vómitos",
+        "Sangrado",
+        "Síntomas urinarios"
+      ],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [
+      "posibilidad_embarazo"
+    ],
+    "estado_extraccion": "extraido_pendiente_revision",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-036",
+    "poblacion": "Adulto",
+    "edad": 48,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor de cabeza recurrente similar a episodios anteriores.",
+    "historia_clinica": "Hombre de 48 años con cefalea de intensidad 5/10 desde hace cuatro horas, de inicio gradual y características similares a episodios previos. Está orientado, puede caminar normalmente y niega fiebre, vómitos, confusión, alteraciones visuales y pérdida de fuerza.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": "5/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-037",
+    "poblacion": "Adulto",
+    "edad": 24,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza leve después de estudiar.",
+    "historia_clinica": "Mujer de 24 años con cefalea leve de intensidad 2/10, iniciada gradualmente después de varias horas de estudio. No presenta fiebre, vómitos, confusión, alteraciones visuales ni debilidad. Puede realizar sus actividades.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-038",
+    "poblacion": "Adulto",
+    "edad": 30,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal leve que aparece ocasionalmente.",
+    "historia_clinica": "Hombre de 30 años con molestia abdominal difusa de intensidad 2/10 desde hace tres horas. El dolor es intermitente y ha disminuido. Niega fiebre, vómitos, diarrea, distensión abdominal y síntomas urinarios. Tolera alimentos y líquidos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-039",
+    "poblacion": "Adulto",
+    "edad": 41,
+    "sexo": "Femenino",
+    "motivo_consulta": "Congestión nasal y temperatura ligeramente elevada.",
+    "historia_clinica": "Mujer de 41 años con temperatura máxima reportada de 37,8 °C, congestión nasal y estornudos desde ayer. No presenta dificultad respiratoria, dolor torácico, confusión ni signos de deshidratación. Se alimenta normalmente. No se ha documentado el método de medición de la temperatura.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-040",
+    "poblacion": "Adulto",
+    "edad": 26,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor de cabeza leve que mejora con el descanso.",
+    "historia_clinica": "Hombre de 26 años con cefalea de intensidad 3/10 desde hace cuatro horas, de inicio gradual. El dolor ha disminuido después de descansar. Niega fiebre, vómitos, confusión, alteraciones visuales y pérdida de fuerza.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": "3/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-041",
+    "poblacion": "Adulto",
+    "edad": 36,
+    "sexo": "Femenino",
+    "motivo_consulta": "Molestia abdominal leve después de comer.",
+    "historia_clinica": "Mujer de 36 años con molestia abdominal leve de intensidad 2/10 después de una comida abundante. Comenzó hace dos horas y está mejorando. Niega vómitos, fiebre, sangrado y síntomas urinarios. No se ha documentado posibilidad de embarazo.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "2 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [
+      "posibilidad_embarazo"
+    ],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-042",
+    "poblacion": "Adulto Mayor",
+    "edad": 76,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor intenso en el pecho y dificultad para respirar.",
+    "historia_clinica": "Hombre de 76 años con dolor torácico opresivo 9/10 desde hace 25 minutos, irradiado al brazo izquierdo, acompañado de sudoración fría, náuseas y dificultad respiratoria en reposo. Está consciente.",
+    "datos_clinicos": {
+      "inicio": "Hace 25 minutos",
+      "duracion": "25 minutos",
+      "intensidad_dolor": "9/10",
+      "localizacion": "Pecho, irradiado al brazo izquierdo",
+      "evolucion": null,
+      "sintomas_asociados": [
+        "Dolor torácico opresivo",
+        "Sudoración fría",
+        "Náuseas",
+        "Dificultad respiratoria en reposo"
+      ],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [
+        "Dolor torácico opresivo intenso",
+        "Dificultad respiratoria en reposo"
+      ],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "extraido_pendiente_revision",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {
+        "tipo": "Opresivo",
+        "irradiacion": "Brazo izquierdo"
+      },
+      "estado_conciencia": "Consciente",
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-043",
+    "poblacion": "Adulto Mayor",
+    "edad": 82,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dificultad respiratoria intensa en reposo.",
+    "historia_clinica": "Mujer de 82 años con dificultad respiratoria intensa de inicio hace una hora, progresiva. No logra completar frases sin detenerse a respirar y refiere sensación constante de ahogo incluso estando sentada.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "1 hora",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-044",
+    "poblacion": "Adulto Mayor",
+    "edad": 71,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza súbito y alteración del estado mental.",
+    "historia_clinica": "Mujer de 71 años con cefalea de inicio súbito, intensidad 10/10, hace 15 minutos. Un familiar refiere que está desorientada y responde de forma incoherente. No se ha documentado pérdida del conocimiento.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "15 minutos",
+      "intensidad_dolor": "10/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-045",
+    "poblacion": "Adulto Mayor",
+    "edad": 88,
+    "sexo": "Masculino",
+    "motivo_consulta": "Caída con golpe en la cabeza y confusión.",
+    "historia_clinica": "Hombre de 88 años que sufrió una caída desde su propia altura hace 30 minutos y se golpeó la cabeza. Un familiar refiere confusión posterior al golpe. El paciente utiliza medicamentos anticoagulantes. No se conoce si perdió el conocimiento.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "30 minutos",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-046",
+    "poblacion": "Adulto Mayor",
+    "edad": 79,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor abdominal súbito de intensidad extrema.",
+    "historia_clinica": "Mujer de 79 años con dolor abdominal generalizado de inicio súbito hace 40 minutos, intensidad 10/10, constante. Refiere abdomen rígido y dolor intenso con el movimiento. Presenta náuseas y debilidad.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "40 minutos",
+      "intensidad_dolor": "10/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-047",
+    "poblacion": "Adulto Mayor",
+    "edad": 73,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal progresivo en la parte inferior derecha.",
+    "historia_clinica": "Hombre de 73 años con dolor abdominal de 7/10 desde hace diez horas. Inicialmente era difuso y ahora se localiza en la parte inferior derecha. Presenta náuseas y pérdida de apetito. El dolor empeora al caminar. Está consciente y orientado.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "10 horas",
+      "intensidad_dolor": "7/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-048",
+    "poblacion": "Adulto Mayor",
+    "edad": 81,
+    "sexo": "Femenino",
+    "motivo_consulta": "Fiebre alta y debilidad desde hace dos días.",
+    "historia_clinica": "Mujer de 81 años con temperatura máxima de 39,1 °C desde hace dos días, escalofríos, debilidad y disminución de la ingesta de líquidos. Está orientada y puede conversar normalmente. Niega dificultad respiratoria y dolor torácico.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "2 dias",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-049",
+    "poblacion": "Adulto Mayor",
+    "edad": 69,
+    "sexo": "Femenino",
+    "motivo_consulta": "Caída con dolor intenso de cadera.",
+    "historia_clinica": "Mujer de 69 años que sufrió una caída desde su propia altura hace una hora. Presenta dolor intenso en la cadera derecha, intensidad 8/10, e incapacidad para ponerse de pie o caminar. Niega golpe en la cabeza y pérdida del conocimiento.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "1 hora",
+      "intensidad_dolor": "8/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-050",
+    "poblacion": "Adulto Mayor",
+    "edad": 77,
+    "sexo": "Masculino",
+    "motivo_consulta": "Presión en el pecho durante el esfuerzo.",
+    "historia_clinica": "Hombre de 77 años con episodios recientes de dolor opresivo en el centro del pecho al caminar. Cada episodio dura aproximadamente ocho minutos y mejora con el reposo. El último episodio ocurrió hace dos horas. Actualmente está sin dolor.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "2 horas",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-051",
+    "poblacion": "Adulto Mayor",
+    "edad": 85,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza intenso y persistente.",
+    "historia_clinica": "Mujer de 85 años con cefalea de intensidad 8/10 que comenzó gradualmente hace seis horas. Refiere náuseas, pero no ha vomitado. Está orientada y niega pérdida del conocimiento, debilidad de extremidades y confusión.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "6 horas",
+      "intensidad_dolor": "8/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-052",
+    "poblacion": "Adulto Mayor",
+    "edad": 68,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor abdominal moderado desde esta mañana.",
+    "historia_clinica": "Hombre de 68 años con dolor abdominal periumbilical intermitente de intensidad 4/10 desde hace seis horas. El dolor no ha aumentado ni se ha desplazado. Niega fiebre, vómitos, distensión y síntomas urinarios. Tolera alimentos y líquidos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "6 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-053",
+    "poblacion": "Adulto Mayor",
+    "edad": 72,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza moderado de inicio gradual.",
+    "historia_clinica": "Mujer de 72 años con cefalea bilateral de intensidad 5/10, iniciada gradualmente hace cinco horas. Está orientada y puede caminar normalmente. Niega fiebre, vómitos, alteraciones visuales, confusión y pérdida de fuerza. No se ha documentado si es una cefalea nueva.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "5 horas",
+      "intensidad_dolor": "5/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [
+      "cefalea_nueva_o_diferente"
+    ],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-054",
+    "poblacion": "Adulto Mayor",
+    "edad": 75,
+    "sexo": "Masculino",
+    "motivo_consulta": "Fiebre moderada y malestar general.",
+    "historia_clinica": "Hombre de 75 años con temperatura máxima de 38,1 °C desde hace 24 horas, congestión nasal y cansancio. Está consciente y orientado, bebe líquidos y niega dificultad respiratoria, dolor torácico y confusión.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "24 horas",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-055",
+    "poblacion": "Adulto Mayor",
+    "edad": 70,
+    "sexo": "Femenino",
+    "motivo_consulta": "Caída desde su propia altura con dolor leve de rodilla.",
+    "historia_clinica": "Mujer de 70 años que sufrió una caída desde su propia altura hace tres horas. Presenta dolor leve de rodilla derecha de intensidad 3/10. Puede caminar sin ayuda. Niega golpe en la cabeza, pérdida del conocimiento, confusión y deformidad. No se ha documentado uso de anticoagulantes.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "3/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [
+      "uso_anticoagulantes"
+    ],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-056",
+    "poblacion": "Adulto Mayor",
+    "edad": 79,
+    "sexo": "Masculino",
+    "motivo_consulta": "Molestia abdominal intermitente sin empeoramiento.",
+    "historia_clinica": "Hombre de 79 años con molestia abdominal difusa de intensidad 4/10 desde hace ocho horas. El dolor es intermitente y estable. Niega fiebre, vómitos, sangrado, distensión y dificultad para evacuar o expulsar gases. Está orientado y tolera líquidos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "8 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-057",
+    "poblacion": "Adulto Mayor",
+    "edad": 67,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza leve similar a episodios anteriores.",
+    "historia_clinica": "Mujer de 67 años con cefalea leve de intensidad 2/10, iniciada gradualmente hace tres horas. Refiere episodios similares desde hace varios años, sin cambios recientes en las características del dolor. Niega fiebre, vómitos, confusión, alteraciones visuales y debilidad.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-058",
+    "poblacion": "Adulto Mayor",
+    "edad": 74,
+    "sexo": "Masculino",
+    "motivo_consulta": "Molestia abdominal leve después de comer.",
+    "historia_clinica": "Hombre de 74 años con molestia abdominal difusa de intensidad 2/10 después de una comida abundante. Comenzó hace tres horas y ha disminuido progresivamente. Niega fiebre, vómitos, sangrado, distensión y dificultad para expulsar gases. Tolera líquidos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-059",
+    "poblacion": "Adulto Mayor",
+    "edad": 69,
+    "sexo": "Femenino",
+    "motivo_consulta": "Fiebre baja y congestión nasal desde ayer.",
+    "historia_clinica": "Mujer de 69 años con temperatura máxima reportada de 38,0 °C desde hace un día, congestión nasal y estornudos. Está orientada, se alimenta normalmente y niega dificultad respiratoria, dolor torácico y confusión.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "1 dia",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-060",
+    "poblacion": "Adulto Mayor",
+    "edad": 78,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor de cabeza leve que mejora con descanso.",
+    "historia_clinica": "Hombre de 78 años con cefalea de intensidad 3/10 desde hace cuatro horas. El dolor comenzó gradualmente y ha mejorado después de descansar. Refiere episodios similares anteriormente. Niega fiebre, vómitos, confusión, alteraciones visuales y pérdida de fuerza.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": "3/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-061",
+    "poblacion": "Adulto Mayor",
+    "edad": 72,
+    "sexo": "Femenino",
+    "motivo_consulta": "Molestia abdominal leve e intermitente.",
+    "historia_clinica": "Mujer de 72 años con molestia abdominal difusa de intensidad 2/10 desde hace cinco horas. Es intermitente y ha disminuido. Niega fiebre, vómitos, sangrado, distensión, síntomas urinarios y dificultad para evacuar. Tolera alimentos y líquidos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "5 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "dolor_toracico": {},
+      "estado_conciencia": null,
+      "riesgo_caidas": null
+    }
+  },
+  {
+    "id_caso": "URG-062",
+    "poblacion": "Embarazada",
+    "edad": 28,
+    "sexo": "Femenino",
+    "motivo_consulta": "Sangrado vaginal abundante durante el embarazo.",
+    "historia_clinica": "Gestante de 28 años, con 32 semanas de embarazo. Presenta sangrado vaginal abundante de color rojo desde hace 20 minutos, acompañado de dolor abdominal y sensación de mareo. No ha perdido el conocimiento.",
+    "datos_clinicos": {
+      "inicio": "Hace 20 minutos",
+      "duracion": "20 minutos",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [
+        "Sangrado vaginal abundante",
+        "Dolor abdominal",
+        "Mareo"
+      ],
+      "sintomas_negados": [
+        "Pérdida del conocimiento"
+      ],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [
+        "Sangrado vaginal abundante durante el embarazo"
+      ],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "extraido_pendiente_revision",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": 32,
+      "sangrado_vaginal": "Abundante, color rojo",
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-063",
+    "poblacion": "Embarazada",
+    "edad": 34,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dificultad respiratoria intensa y tos con sangre.",
+    "historia_clinica": "Gestante de 34 años con 35 semanas de embarazo. Presenta dificultad respiratoria intensa de inicio súbito hace 30 minutos, acompañada de dolor torácico y tos con sangre. Le cuesta completar frases.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "30 minutos",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-064",
+    "poblacion": "Embarazada",
+    "edad": 25,
+    "sexo": "Femenino",
+    "motivo_consulta": "No percibe movimientos fetales.",
+    "historia_clinica": "Gestante de 25 años con 38 semanas de embarazo. Refiere ausencia de movimientos fetales durante las últimas ocho horas, a pesar de que anteriormente los percibía regularmente. Niega sangrado vaginal y pérdida de líquido.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-065",
+    "poblacion": "Embarazada",
+    "edad": 31,
+    "sexo": "Femenino",
+    "motivo_consulta": "Presión arterial elevada, cefalea intensa y visión borrosa.",
+    "historia_clinica": "Gestante de 31 años con 34 semanas de embarazo. Presenta dolor de cabeza intenso de 9/10, visión borrosa y presión arterial reportada de 170/110 mmHg. Los síntomas comenzaron hace aproximadamente una hora.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "9/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-066",
+    "poblacion": "Embarazada",
+    "edad": 29,
+    "sexo": "Femenino",
+    "motivo_consulta": "Contracciones frecuentes y sangrado vaginal.",
+    "historia_clinica": "Gestante de 29 años con 30 semanas de embarazo. Presenta contracciones dolorosas cada cuatro minutos desde hace una hora, acompañadas de sangrado vaginal moderado. Refiere presión intensa en la pelvis.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "1 hora",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-067",
+    "poblacion": "Embarazada",
+    "edad": 27,
+    "sexo": "Femenino",
+    "motivo_consulta": "Contracciones regulares antes de las 37 semanas.",
+    "historia_clinica": "Gestante de 27 años con 33 semanas de embarazo. Presenta contracciones dolorosas cada diez minutos desde hace dos horas, con presión pélvica. Niega sangrado vaginal y pérdida de líquido. Percibe movimientos fetales.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "2 horas",
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-068",
+    "poblacion": "Embarazada",
+    "edad": 32,
+    "sexo": "Femenino",
+    "motivo_consulta": "Presión arterial elevada y dolor de cabeza persistente.",
+    "historia_clinica": "Gestante de 32 años con 30 semanas de embarazo. Refiere cefalea persistente de intensidad 6/10 desde hace cuatro horas y presión arterial reportada de 150/95 mmHg. Niega alteraciones visuales, convulsiones y pérdida del conocimiento.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": "6/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-069",
+    "poblacion": "Embarazada",
+    "edad": 24,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor abdominal persistente durante el embarazo.",
+    "historia_clinica": "Gestante de 24 años con 28 semanas de embarazo. Presenta dolor abdominal de intensidad 6/10 desde hace cinco horas, localizado en la parte inferior del abdomen. Niega sangrado vaginal, pérdida de líquido y fiebre. Percibe movimientos fetales habituales. No se ha determinado si presenta actividad uterina.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "5 horas",
+      "intensidad_dolor": "6/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-070",
+    "poblacion": "Embarazada",
+    "edad": 35,
+    "sexo": "Femenino",
+    "motivo_consulta": "Visión borrosa y zumbidos en los oídos.",
+    "historia_clinica": "Gestante de 35 años con 36 semanas de embarazo. Presenta visión borrosa y zumbidos en los oídos desde hace una hora. Refiere cefalea de intensidad 5/10. No dispone de una medición reciente de presión arterial. Niega pérdida del conocimiento.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "1 hora",
+      "intensidad_dolor": "5/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-071",
+    "poblacion": "Embarazada",
+    "edad": 29,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor persistente en la parte superior del abdomen.",
+    "historia_clinica": "Gestante de 29 años con 34 semanas de embarazo. Presenta dolor epigástrico persistente de intensidad 7/10 desde hace tres horas, acompañado de náuseas. Niega sangrado vaginal y pérdida de líquido. No dispone de una medición reciente de presión arterial.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "7/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [
+      "presion_arterial_actual"
+    ],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-072",
+    "poblacion": "Embarazada",
+    "edad": 26,
+    "sexo": "Femenino",
+    "motivo_consulta": "Molestia abdominal leve e intermitente.",
+    "historia_clinica": "Gestante de 26 años con 22 semanas de embarazo. Presenta molestia abdominal difusa de intensidad 3/10 desde hace cuatro horas, intermitente y sin empeoramiento. Niega sangrado vaginal, pérdida de líquido, fiebre y dolor intenso. No refiere contracciones regulares.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": "3/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-073",
+    "poblacion": "Embarazada",
+    "edad": 30,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de cabeza moderado durante el embarazo.",
+    "historia_clinica": "Gestante de 30 años con 25 semanas de embarazo. Presenta cefalea bilateral de intensidad 4/10 desde hace tres horas, de inicio gradual. Niega visión borrosa, zumbidos, dolor epigástrico y pérdida del conocimiento. No dispone de una medición reciente de presión arterial.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-074",
+    "poblacion": "Embarazada",
+    "edad": 23,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor abdominal leve que mejora con reposo.",
+    "historia_clinica": "Gestante de 23 años con 20 semanas de embarazo. Presenta molestia abdominal baja de intensidad 2/10 después de caminar durante un periodo prolongado. Ha mejorado con reposo. Niega sangrado vaginal, pérdida de líquido, fiebre y contracciones regulares.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-075",
+    "poblacion": "Embarazada",
+    "edad": 33,
+    "sexo": "Femenino",
+    "motivo_consulta": "Cefalea gradual con presión arterial normal reportada.",
+    "historia_clinica": "Gestante de 33 años con 27 semanas de embarazo. Presenta cefalea de intensidad 4/10 desde hace cuatro horas, de inicio gradual. Refiere una medición reciente de presión arterial de 115/75 mmHg. Niega visión borrosa, zumbidos, dolor epigástrico, convulsiones y pérdida del conocimiento.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "4 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-076",
+    "poblacion": "Embarazada",
+    "edad": 28,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor abdominal moderado y estable.",
+    "historia_clinica": "Gestante de 28 años con 24 semanas de embarazo. Presenta dolor abdominal difuso de intensidad 4/10 desde hace cinco horas, intermitente y estable. Niega sangrado vaginal, pérdida de líquido, fiebre y contracciones regulares. No presenta vómitos.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "5 horas",
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-077",
+    "poblacion": "Embarazada",
+    "edad": 24,
+    "sexo": "Femenino",
+    "motivo_consulta": "Molestia abdominal leve después de caminar.",
+    "historia_clinica": "Gestante de 24 años con 18 semanas de embarazo. Presenta molestia abdominal baja de intensidad 2/10 después de caminar durante una hora. La molestia ha disminuido con reposo. Niega sangrado vaginal, pérdida de líquido, fiebre y contracciones regulares.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-078",
+    "poblacion": "Embarazada",
+    "edad": 29,
+    "sexo": "Femenino",
+    "motivo_consulta": "Cefalea leve similar a episodios habituales.",
+    "historia_clinica": "Gestante de 29 años con 16 semanas de embarazo. Presenta cefalea bilateral de intensidad 2/10 desde hace dos horas, similar a episodios previos y con mejoría después de descansar. Niega visión borrosa, zumbidos, vómitos y confusión. No dispone de medición reciente de presión arterial.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "2 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-079",
+    "poblacion": "Embarazada",
+    "edad": 26,
+    "sexo": "Femenino",
+    "motivo_consulta": "Molestia abdominal leve después de comer.",
+    "historia_clinica": "Gestante de 26 años con 21 semanas de embarazo. Presenta molestia abdominal difusa de intensidad 2/10 después de una comida abundante. Ha disminuido progresivamente durante las últimas dos horas. Niega sangrado vaginal, pérdida de líquido, fiebre, vómitos y contracciones regulares.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-080",
+    "poblacion": "Embarazada",
+    "edad": 32,
+    "sexo": "Femenino",
+    "motivo_consulta": "Cefalea leve de inicio gradual.",
+    "historia_clinica": "Gestante de 32 años con 19 semanas de embarazo. Presenta cefalea de intensidad 3/10 desde hace tres horas, de inicio gradual. Niega visión borrosa, zumbidos, dolor epigástrico, vómitos y confusión. No dispone de medición reciente de presión arterial.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "3/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-081",
+    "poblacion": "Embarazada",
+    "edad": 27,
+    "sexo": "Femenino",
+    "motivo_consulta": "Molestia abdominal leve y transitoria.",
+    "historia_clinica": "Gestante de 27 años con 23 semanas de embarazo. Presenta molestia abdominal baja de intensidad 2/10, intermitente, desde hace tres horas. Ha disminuido con reposo. Niega sangrado vaginal, pérdida de líquido, fiebre y contracciones regulares.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": "3 horas",
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "semanas_gestacion": null,
+      "sangrado_vaginal": null,
+      "movimientos_fetales": null,
+      "contracciones": null
+    }
+  },
+  {
+    "id_caso": "URG-082",
+    "poblacion": "Trauma/Accidente",
+    "edad": 34,
+    "sexo": "Masculino",
+    "motivo_consulta": "Accidente de tránsito con dificultad respiratoria grave.",
+    "historia_clinica": "Hombre de 34 años involucrado en una colisión de motocicleta hace veinte minutos. Presenta dificultad respiratoria intensa, dolor torácico de intensidad 9/10 y respiración rápida. Tiene dificultad para completar frases y refiere empeoramiento progresivo.",
+    "datos_clinicos": {
+      "inicio": "Hace 20 minutos",
+      "duracion": null,
+      "intensidad_dolor": "9/10",
+      "localizacion": "Pecho",
+      "evolucion": "Empeoramiento progresivo",
+      "sintomas_asociados": [
+        "Dificultad respiratoria intensa",
+        "Dolor torácico",
+        "Respiración rápida",
+        "Dificultad para completar frases"
+      ],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [
+        "Dificultad respiratoria intensa",
+        "Dificultad para completar frases"
+      ],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "extraido_pendiente_revision",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": "Colisión de motocicleta",
+      "tiempo_desde_accidente": "20 minutos",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-083",
+    "poblacion": "Trauma/Accidente",
+    "edad": 27,
+    "sexo": "Femenino",
+    "motivo_consulta": "Herida profunda con sangrado abundante.",
+    "historia_clinica": "Mujer de 27 años que sufrió una herida profunda en el muslo derecho con un objeto cortante hace quince minutos. Presenta sangrado abundante que continúa a pesar de la presión directa inicial. Refiere mareo y debilidad.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "15 minutos",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-084",
+    "poblacion": "Trauma/Accidente",
+    "edad": 45,
+    "sexo": "Masculino",
+    "motivo_consulta": "Golpe en la cabeza con confusión.",
+    "historia_clinica": "Hombre de 45 años que sufrió una caída desde una escalera hace treinta minutos, con golpe directo en la cabeza. Un acompañante refiere que está desorientado, repite preguntas y no recuerda claramente el accidente. Presenta cefalea intensa.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "30 minutos",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-085",
+    "poblacion": "Trauma/Accidente",
+    "edad": 39,
+    "sexo": "Femenino",
+    "motivo_consulta": "Accidente con sospecha de lesión de columna.",
+    "historia_clinica": "Mujer de 39 años involucrada en un accidente de tránsito hace cuarenta minutos. Presenta dolor cervical intenso y hormigueo en ambas piernas. Refiere dificultad para moverlas después del impacto. Permanece consciente y orientada.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "40 minutos",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-086",
+    "poblacion": "Trauma/Accidente",
+    "edad": 52,
+    "sexo": "Masculino",
+    "motivo_consulta": "Quemadura extensa con dificultad respiratoria.",
+    "historia_clinica": "Hombre de 52 años expuesto a un incendio en un espacio cerrado hace veinticinco minutos. Presenta quemaduras extensas en tórax y brazos, tos y dificultad respiratoria. Refiere dolor intenso y exposición a humo.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": null,
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": null,
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    }
+  },
+  {
+    "id_caso": "URG-087",
+    "poblacion": "Trauma/Accidente",
+    "edad": 28,
+    "sexo": "Masculino",
+    "motivo_consulta": "Sospecha de fractura de muñeca.",
+    "historia_clinica": "Hombre de 28 años que cayó sobre la mano derecha hace una hora. Presenta dolor de muñeca de intensidad 8/10, hinchazón y dificultad para moverla. No presenta herida abierta ni sangrado. Refiere sensibilidad conservada en los dedos y no observa cambios en su coloración.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "8/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "1 hora",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-088",
+    "poblacion": "Trauma/Accidente",
+    "edad": 41,
+    "sexo": "Femenino",
+    "motivo_consulta": "Herida profunda en antebrazo.",
+    "historia_clinica": "Mujer de 41 años que sufrió una herida cortante en el antebrazo izquierdo hace cuarenta minutos. La herida es profunda y presenta dolor de intensidad 7/10. El sangrado disminuyó y está controlado con presión directa. Puede mover los dedos y conserva la sensibilidad.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "7/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "40 minutos",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-089",
+    "poblacion": "Trauma/Accidente",
+    "edad": 36,
+    "sexo": "Masculino",
+    "motivo_consulta": "Golpe en la cabeza con cefalea y náuseas.",
+    "historia_clinica": "Hombre de 36 años que sufrió una caída en bicicleta hace dos horas y se golpeó la cabeza. Presenta cefalea de intensidad 6/10 y náuseas. Niega pérdida del conocimiento, vómitos y confusión. Está orientado y puede caminar normalmente. No se ha documentado uso de anticoagulantes.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "6/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [
+      "uso_anticoagulantes"
+    ],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "2 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-090",
+    "poblacion": "Trauma/Accidente",
+    "edad": 47,
+    "sexo": "Femenino",
+    "motivo_consulta": "Quemadura dolorosa en antebrazo.",
+    "historia_clinica": "Mujer de 47 años que sufrió una quemadura térmica en el antebrazo derecho con agua caliente hace una hora. Presenta dolor de intensidad 7/10, enrojecimiento y algunas ampollas. La lesión está localizada en una zona limitada del antebrazo. Niega dificultad respiratoria y exposición a humo.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "7/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "1 hora",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-091",
+    "poblacion": "Trauma/Accidente",
+    "edad": 32,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor torácico después de accidente.",
+    "historia_clinica": "Hombre de 32 años involucrado en una colisión automovilística hace una hora. Presenta dolor torácico localizado de intensidad 7/10, que aumenta al respirar profundamente y al tocar la zona afectada. Puede hablar en frases completas. Niega pérdida del conocimiento. No se dispone de saturación de oxígeno ni otros signos vitales.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "7/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "1 hora",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-092",
+    "poblacion": "Trauma/Accidente",
+    "edad": 25,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de muñeca después de una caída.",
+    "historia_clinica": "Mujer de 25 años que cayó sobre la mano derecha hace tres horas. Presenta dolor de muñeca de intensidad 4/10, hinchazón leve y molestias al moverla. No observa deformidad, heridas ni cambios de color en los dedos. Conserva la sensibilidad y movilidad de los dedos. No se ha descartado una fractura.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "3 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-093",
+    "poblacion": "Trauma/Accidente",
+    "edad": 38,
+    "sexo": "Masculino",
+    "motivo_consulta": "Quemadura superficial pequeña.",
+    "historia_clinica": "Hombre de 38 años que sufrió una quemadura por contacto con una superficie caliente hace dos horas. Presenta enrojecimiento localizado en una pequeña zona del antebrazo izquierdo y dolor de intensidad 3/10. No presenta ampollas, pérdida de sensibilidad ni lesiones en otras zonas. Niega exposición a humo.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "3/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "2 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-094",
+    "poblacion": "Trauma/Accidente",
+    "edad": 30,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor de tobillo después de una torcedura.",
+    "historia_clinica": "Mujer de 30 años que sufrió una torcedura del tobillo derecho mientras caminaba hace cuatro horas. Presenta dolor de intensidad 4/10 e hinchazón leve. Puede apoyar el pie y caminar varios pasos, aunque con molestias. Niega deformidad, heridas abiertas, pérdida de sensibilidad y cambios de coloración.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "4 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-095",
+    "poblacion": "Trauma/Accidente",
+    "edad": 44,
+    "sexo": "Masculino",
+    "motivo_consulta": "Golpe leve en la cabeza.",
+    "historia_clinica": "Hombre de 44 años que se golpeó la cabeza contra una puerta hace dos horas. Presenta dolor local de intensidad 3/10. Niega pérdida del conocimiento, vómitos, confusión, alteraciones visuales y debilidad. Está orientado. No se ha documentado uso de anticoagulantes.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "3/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [
+      "uso_anticoagulantes"
+    ],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "2 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-096",
+    "poblacion": "Trauma/Accidente",
+    "edad": 35,
+    "sexo": "Femenino",
+    "motivo_consulta": "Dolor localizado en el tórax después de un golpe.",
+    "historia_clinica": "Mujer de 35 años que recibió un golpe leve en el costado del tórax durante una actividad deportiva hace tres horas. Presenta dolor localizado de intensidad 4/10 que aumenta al tocar la zona. Niega dificultad respiratoria, pérdida del conocimiento y empeoramiento progresivo. No se dispone de signos vitales.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "4/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "3 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-097",
+    "poblacion": "Trauma/Accidente",
+    "edad": 23,
+    "sexo": "Masculino",
+    "motivo_consulta": "Golpe leve en el antebrazo.",
+    "historia_clinica": "Hombre de 23 años que se golpeó el antebrazo derecho contra una mesa hace dos horas. Presenta dolor localizado de intensidad 2/10 y enrojecimiento leve. Conserva la movilidad completa del brazo y la mano. Niega deformidad, herida abierta, pérdida de sensibilidad y aumento progresivo del dolor.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "2 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-098",
+    "poblacion": "Trauma/Accidente",
+    "edad": 31,
+    "sexo": "Femenino",
+    "motivo_consulta": "Quemadura superficial pequeña.",
+    "historia_clinica": "Mujer de 31 años que sufrió una quemadura por contacto con una taza caliente hace una hora. Presenta una zona pequeña de enrojecimiento en el antebrazo, con dolor de intensidad 2/10. No presenta ampollas ni pérdida de sensibilidad. Niega exposición a humo y lesiones en otras partes del cuerpo.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "1 hora",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-099",
+    "poblacion": "Trauma/Accidente",
+    "edad": 27,
+    "sexo": "Masculino",
+    "motivo_consulta": "Torcedura leve de tobillo.",
+    "historia_clinica": "Hombre de 27 años que se torció el tobillo izquierdo mientras caminaba hace tres horas. Presenta dolor de intensidad 2/10 e hinchazón mínima. Puede apoyar el pie y caminar normalmente. Niega deformidad, heridas abiertas, pérdida de sensibilidad y cambios de coloración.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "3 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-100",
+    "poblacion": "Trauma/Accidente",
+    "edad": 40,
+    "sexo": "Femenino",
+    "motivo_consulta": "Contusión leve en la pierna.",
+    "historia_clinica": "Mujer de 40 años que recibió un golpe leve en la pierna derecha contra un mueble hace cuatro horas. Presenta dolor localizado de intensidad 2/10 y un hematoma pequeño. Puede caminar sin dificultad. Niega deformidad, herida abierta, pérdida de sensibilidad y aumento del dolor.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "4 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  },
+  {
+    "id_caso": "URG-101",
+    "poblacion": "Trauma/Accidente",
+    "edad": 29,
+    "sexo": "Masculino",
+    "motivo_consulta": "Dolor muscular leve después de una lesión deportiva.",
+    "historia_clinica": "Hombre de 29 años que sufrió una distensión muscular leve en el muslo derecho durante una actividad deportiva hace seis horas, al realizar un movimiento brusco. Presenta dolor localizado de intensidad 2/10. Puede caminar normalmente. Niega caída, golpe directo, hinchazón importante, deformidad, pérdida de fuerza y alteraciones de sensibilidad.",
+    "datos_clinicos": {
+      "inicio": null,
+      "duracion": null,
+      "intensidad_dolor": "2/10",
+      "localizacion": null,
+      "evolucion": null,
+      "sintomas_asociados": [],
+      "sintomas_negados": [],
+      "antecedentes": [],
+      "signos_vitales": {},
+      "signos_alarma": [],
+      "informacion_adicional": [],
+      "fuente_informacion": null
+    },
+    "datos_desconocidos": [],
+    "estado_extraccion": "pendiente",
+    "datos_especificos_poblacion": {
+      "mecanismo_trauma": null,
+      "tiempo_desde_accidente": "6 horas",
+      "lesiones_identificadas": [],
+      "estado_conciencia": null
+    },
+    "observaciones_extraccion": [
+      "El tiempo documentado corresponde al evento traumático. La duración independiente de los síntomas no está confirmada."
+    ]
+  }
+]

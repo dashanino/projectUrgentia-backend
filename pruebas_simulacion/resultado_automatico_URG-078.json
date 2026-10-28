@@ -1,0 +1,71 @@
+{
+  "id_caso": "URG-078",
+  "id_pretriage": 234,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 202,
+          "respuesta": "Cefalea leve similar a episodios habituales."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.6935,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 234,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "No se identificaron señales de alarma en esta revisión preliminar. Se puede continuar recopilando información, sin considerar el caso clínicamente seguro.",
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 7.8254,
+      "respuesta_backend": {
+        "id_pretriage": 234,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 336,
+              "orden": 2,
+              "pregunta": "¿De cuántas semanas de embarazo estás y es tu primer embarazo?"
+            },
+            {
+              "id_pregunta": 337,
+              "orden": 3,
+              "pregunta": "¿Cuándo comenzó esta cefalea, cuánto dura cada episodio y ha ido empeorando o mejorando?"
+            },
+            {
+              "id_pregunta": 338,
+              "orden": 4,
+              "pregunta": "¿Te has medido la presión arterial durante este episodio? Si es así, ¿qué valor obtuviste y cuándo fue la medición?"
+            },
+            {
+              "id_pregunta": 339,
+              "orden": 5,
+              "pregunta": "Además de la cefalea, ¿has presentado visión borrosa, debilidad u hormigueo, dificultad para hablar, fiebre, rigidez de cuello, sangrado vaginal, salida de líquido, contracciones o disminución de los movimientos del bebé?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:18:56.631913+00:00",
+  "pregunta_pendiente": "¿Cuándo comenzó esta cefalea, cuánto dura cada episodio y ha ido empeorando o mejorando?"
+}

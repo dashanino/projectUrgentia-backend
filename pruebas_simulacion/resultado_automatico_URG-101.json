@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-101",
+  "id_pretriage": 260,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 210,
+          "respuesta": "Dolor muscular leve después de una lesión deportiva."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.4683,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 260,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe dolor muscular leve tras una lesión deportiva, sin datos aportados de dificultad respiratoria, dolor torácico, pérdida de conciencia, sangrado importante, dolor abdominal intenso ni síntomas neurológicos. Faltan detalles sobre la lesión y su evolución, por lo que no se puede descartar por completo una situación urgente.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 7.3317,
+      "respuesta_backend": {
+        "id_pretriage": 260,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 368,
+              "orden": 2,
+              "pregunta": "¿Cuándo ocurrió la lesión y qué sucedió exactamente: golpe, caída, giro brusco o sobreesfuerzo?"
+            },
+            {
+              "id_pregunta": 369,
+              "orden": 3,
+              "pregunta": "¿En qué parte del cuerpo se localiza el dolor y se ha mantenido igual, ha mejorado o ha empeorado desde la lesión?"
+            },
+            {
+              "id_pregunta": 370,
+              "orden": 4,
+              "pregunta": "¿Puedes mover normalmente la zona lesionada y, si afecta una pierna o un pie, puedes apoyarte y caminar?"
+            },
+            {
+              "id_pregunta": 371,
+              "orden": 5,
+              "pregunta": "¿Has notado hinchazón importante, moretón, deformidad, entumecimiento, hormigueo o debilidad en la zona afectada?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:20:23.153144+00:00",
+  "pregunta_pendiente": "¿Cuándo ocurrió la lesión y qué sucedió exactamente: golpe, caída, giro brusco o sobreesfuerzo?"
+}

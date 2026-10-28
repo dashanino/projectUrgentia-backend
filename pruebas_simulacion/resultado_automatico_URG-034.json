@@ -1,0 +1,49 @@
+{
+  "id_caso": "URG-034",
+  "id_pretriage": 194,
+  "estado": "consulta_incierta",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 186,
+          "respuesta": "Fiebre moderada y malestar general."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.1364,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 194,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe fiebre moderada y malestar general, sin señales de alarma explícitas en la información disponible. Faltan datos sobre duración, temperatura exacta, edad, síntomas asociados y evolución.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 500,
+      "tiempo_http_segundos": 42.8001,
+      "respuesta_backend": {
+        "message": "No fue posible generar la pregunta",
+        "ok": false
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:00:41.695764+00:00",
+  "preguntas_enviadas": 1
+}

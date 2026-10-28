@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-033",
+  "id_pretriage": 193,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 185,
+          "respuesta": "Dolor de cabeza moderado desde hace varias horas."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.5646,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 193,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "cefalea_por_aclarar"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe dolor de cabeza moderado desde hace varias horas, sin información suficiente sobre inicio, evolución, síntomas neurológicos asociados u otras señales de alarma. Se requieren preguntas adicionales.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 10.348,
+      "respuesta_backend": {
+        "id_pretriage": 193,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 284,
+              "orden": 2,
+              "pregunta": "¿El dolor comenzó de forma repentina, alcanzando su máxima intensidad en segundos o minutos, o ha ido aumentando gradualmente?"
+            },
+            {
+              "id_pregunta": 285,
+              "orden": 3,
+              "pregunta": "¿Has presentado debilidad o adormecimiento en alguna parte del cuerpo, dificultad para hablar o entender, confusión, cambios en la visión o desmayo?"
+            },
+            {
+              "id_pregunta": 286,
+              "orden": 4,
+              "pregunta": "¿Tienes fiebre, rigidez en el cuello, vómitos repetidos o mucha sensibilidad a la luz?"
+            },
+            {
+              "id_pregunta": 287,
+              "orden": 5,
+              "pregunta": "¿Este dolor de cabeza es nuevo o diferente a otros que hayas tenido, y ocurrió después de algún golpe en la cabeza o esfuerzo intenso?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:00:25.767796+00:00",
+  "pregunta_pendiente": "¿Has presentado debilidad o adormecimiento en alguna parte del cuerpo, dificultad para hablar o entender, confusión, cambios en la visión o desmayo?"
+}

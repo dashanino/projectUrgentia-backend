@@ -1,0 +1,71 @@
+{
+  "id_caso": "URG-019",
+  "id_pretriage": 180,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 175,
+          "respuesta": "Fiebre leve con congestión nasal."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 2.9351,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 180,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "No se identificaron señales de alarma en esta revisión preliminar. Se puede continuar recopilando información, sin considerar el caso clínicamente seguro.",
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.7336,
+      "respuesta_backend": {
+        "id_pretriage": 180,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 248,
+              "orden": 2,
+              "pregunta": "¿Qué edad tiene el niño y cuánto pesa aproximadamente?"
+            },
+            {
+              "id_pregunta": 249,
+              "orden": 3,
+              "pregunta": "¿Desde cuándo tiene fiebre y cuál ha sido la temperatura máxima medida, indicando cómo se tomó?"
+            },
+            {
+              "id_pregunta": 250,
+              "orden": 4,
+              "pregunta": "¿Presenta dificultad para respirar, respiración muy rápida, hundimiento de las costillas o labios morados?"
+            },
+            {
+              "id_pregunta": 251,
+              "orden": 5,
+              "pregunta": "¿Está tomando líquidos y orinando con normalidad, y se mantiene despierto y reactivo como de costumbre?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:51:25.358903+00:00",
+  "pregunta_pendiente": "¿Qué edad tiene el niño y cuánto pesa aproximadamente?"
+}

@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-021",
+  "id_pretriage": 182,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 177,
+          "respuesta": "Molestia abdominal leve y transitoria."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.44,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 182,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe una molestia abdominal leve y transitoria, sin datos aportados de intensidad importante, progresión, abdomen rígido, sangrado u otros signos de alarma. Faltan detalles para valorar completamente el riesgo.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.0182,
+      "respuesta_backend": {
+        "id_pretriage": 182,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 256,
+              "orden": 2,
+              "pregunta": "¿En qué parte del abdomen siente la molestia el niño y desde cuándo comenzó?"
+            },
+            {
+              "id_pregunta": 257,
+              "orden": 3,
+              "pregunta": "¿La molestia aparece de forma continua o por momentos, y está aumentando, mejorando o igual?"
+            },
+            {
+              "id_pregunta": 258,
+              "orden": 4,
+              "pregunta": "¿Ha presentado vómitos, diarrea, estreñimiento o dificultad para evacuar u orinar?"
+            },
+            {
+              "id_pregunta": 259,
+              "orden": 5,
+              "pregunta": "¿El niño puede caminar y moverse normalmente, o el dolor empeora al moverse, toser o tocarle el abdomen?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:51:43.063807+00:00",
+  "pregunta_pendiente": "¿La molestia aparece de forma continua o por momentos, y está aumentando, mejorando o igual?"
+}

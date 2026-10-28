@@ -1,0 +1,16 @@
+{
+  "id_caso": "URG-092",
+  "id_pretriage": 251,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "continuar_submenu",
+    "alta_prioridad": false,
+    "id_pretriage": 251,
+    "ok": true,
+    "origen": "reglas"
+  },
+  "sintomas_registrados": true
+}

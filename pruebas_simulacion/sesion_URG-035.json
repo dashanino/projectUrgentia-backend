@@ -1,0 +1,6 @@
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc5MzE4NTI4OCwianRpIjoiYWM1ZjRmNjItZjY1YS00ZjEwLWFhMTEtMWViMGI4M2Q2ZWRiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjE3NiIsIm5iZiI6MTc5MzE4NTI4OCwiY3NyZiI6IjQxZTQ1OGMwLTk1MGQtNGY5ZC05MjAxLTIzZmFkZDJmMTQ2NiIsImV4cCI6MTc5MzE5MTI4OCwiaWRfcHJldHJpYWdlIjoxOTUsInRpcG9fYWNjZXNvIjoiZW1lcmdlbmNpYSJ9.49DIUtxjRhxT9GypQUu-2YgjMVDEmm-5OjoJhRycr2w",
+  "id_pretriage": 195,
+  "id_user": 176,
+  "message": "pretriage iniciado correctamente"
+}

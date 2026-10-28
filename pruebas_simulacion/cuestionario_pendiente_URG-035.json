@@ -1,0 +1,20 @@
+{
+  "id_caso": "URG-035",
+  "id_pretriage": 195,
+  "accion_ia": "pregunta",
+  "preguntas": [
+    {
+      "id_pregunta": 187,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta_sugerida_no_validada": "Dolor abdominal tipo cólico de intensidad moderada."
+    }
+  ],
+  "respuesta_original_ia": {
+    "accion": "pregunta",
+    "id_pregunta": 187,
+    "orden": 1,
+    "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando."
+  },
+  "estado": "pendiente_revision_humana",
+  "respuestas_enviadas": false
+}

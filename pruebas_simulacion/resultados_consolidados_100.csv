@@ -1,0 +1,101 @@
+﻿id_caso,id_pretriage,ruta_plan,estado_plan,prioridad_objetivo,prioridad_resultado,accion,preguntas,respondidas,detalle
+URG-002,157,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-003,163,ia,completado,alta,,revision_clinica,8,8,No fue posible establecer una orientación confiable después de recopilar información adicional. Se requiere valoración clínica.
+URG-004,165,pendiente_ia,pendiente_ia,alta,,error_evaluacion,1,1,ValueError: El cuestionario de IA todavía no ha finalizado
+URG-005,166,pendiente_ia,pendiente_ia,alta,,error_evaluacion,1,1,ValueError: El cuestionario de IA todavía no ha finalizado
+URG-006,167,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-007,168,pendiente_ia,pendiente_ia,media_alta,,preguntas_adicionales,5,5,"{""accion"": ""preguntas_adicionales"", ""mensaje"": ""Se requiere información adicional para determinar la orientación de pretriaje."", ""cantidad_maxima"": 3}"
+URG-008,169,pendiente_ia,pendiente_ia,media_alta,,error_evaluacion,1,1,ValueError: El cuestionario de IA todavía no ha finalizado
+URG-009,170,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-010,171,pendiente_ia,pendiente_ia,media_alta,,error_evaluacion,1,1,ValueError: El cuestionario de IA todavía no ha finalizado
+URG-011,172,pendiente_ia,pendiente_ia,media_alta,,preguntas_pendientes,1,0,
+URG-012,173,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-013,174,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-014,175,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-015,176,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-016,177,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-017,178,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-018,179,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-019,180,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-020,181,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-021,182,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-022,158,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-023,183,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-024,184,pendiente_ia,pendiente_ia,alta,,preguntas_pendientes,5,1,
+URG-025,185,pendiente_ia,pendiente_ia,alta,,preguntas_pendientes,5,1,
+URG-026,186,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-027,187,pendiente_ia,pendiente_ia,media_alta,,preguntas_pendientes,5,1,
+URG-028,188,pendiente_ia,pendiente_ia,media_alta,,preguntas_pendientes,5,1,
+URG-029,189,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-030,190,pendiente_ia,pendiente_ia,media_alta,,preguntas_pendientes,5,1,
+URG-031,191,pendiente_ia,pendiente_ia,media_alta,,error_evaluacion,1,1,ValueError: El cuestionario de IA todavía no ha finalizado
+URG-032,192,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-033,193,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-034,194,pendiente_ia,pendiente_ia,media_baja,,error_evaluacion,1,1,ValueError: El cuestionario de IA todavía no ha finalizado
+URG-035,195,pendiente_ia,pendiente_ia,media_baja,,error_evaluacion,1,1,ValueError: El cuestionario de IA todavía no ha finalizado
+URG-036,196,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,1,0,
+URG-037,197,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-038,198,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-039,159,ia,bloqueado_alerta_seguridad,baja,,alerta_reglas_o_seguridad,5,4,Alerta: no se fuerza evaluación IA
+URG-040,199,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-041,200,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-042,201,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-043,202,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-044,203,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-045,204,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-046,205,pendiente_ia,pendiente_ia,alta,,preguntas_pendientes,5,1,
+URG-047,206,pendiente_ia,pendiente_ia,media_alta,,preguntas_pendientes,5,1,
+URG-048,207,pendiente_ia,pendiente_ia,media_alta,,preguntas_pendientes,5,1,
+URG-049,208,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-050,209,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-051,210,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-052,211,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-053,212,reglas,completado,media_baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-054,213,,iniciado,media_baja,,preguntas_pendientes,0,0,
+URG-055,,,pendiente,media_baja,,sin_pretriage,0,0,
+URG-056,,,pendiente,media_baja,,sin_pretriage,0,0,
+URG-057,,,pendiente,baja,,sin_pretriage,0,0,
+URG-058,214,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-059,215,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-060,216,reglas,completado,baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-061,217,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-062,218,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-063,219,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-064,220,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-065,221,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-066,222,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-067,223,,iniciado,media_alta,,preguntas_pendientes,0,0,
+URG-068,,,pendiente,media_alta,,sin_pretriage,0,0,
+URG-069,224,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-070,225,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-071,226,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-072,228,reglas,completado,media_baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-073,229,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,1,0,
+URG-074,230,reglas,completado,media_baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-075,231,pendiente_ia,pendiente_ia,media_baja,,error_evaluacion,1,1,ValueError: El cuestionario de IA todavía no ha finalizado
+URG-076,232,reglas,completado,media_baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-077,233,reglas,completado,baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-078,234,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-079,235,reglas,completado,baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-080,237,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-081,238,reglas,completado,baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-082,239,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-083,241,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-084,242,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-085,243,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-086,245,reglas,completado,alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-087,246,pendiente_ia,pendiente_ia,media_alta,,preguntas_pendientes,5,1,
+URG-088,247,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-089,248,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-090,249,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-091,250,reglas,completado,media_alta,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-092,251,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-093,252,reglas,completado,media_baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-094,253,pendiente_ia,pendiente_ia,media_baja,,preguntas_pendientes,5,1,
+URG-095,254,reglas,completado,media_baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-096,255,reglas,completado,media_baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-097,256,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-098,257,reglas,completado,baja,,alerta_reglas_o_seguridad,0,0,Alerta: no se fuerza evaluación IA
+URG-099,258,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-100,259,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,
+URG-101,260,pendiente_ia,pendiente_ia,baja,,preguntas_pendientes,5,1,

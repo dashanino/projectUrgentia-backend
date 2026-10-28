@@ -1,0 +1,21 @@
+{
+  "id_caso": "URG-011",
+  "id_pretriage": 172,
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "id_pregunta": 167,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta": "Niño de 3 años con fiebre de hasta 39,0 °C desde hace 24 horas y cuatro episodios de vómito. Su cuidadora refiere menor consumo de líquidos y disminución de la cantidad de orina. Está despierto y responde a estímulos, pero se encuentra más decaído de lo habitual.",
+      "fecha": "2026-10-28T05:52:40.783859+00:00"
+    },
+    {
+      "evento": "envio_no_confirmado",
+      "id_pregunta": 167,
+      "duracion_seg": 0.0218,
+      "fecha": "2026-10-28T05:52:40.809590+00:00",
+      "resultado": null
+    }
+  ],
+  "estado": "envio_incierto"
+}

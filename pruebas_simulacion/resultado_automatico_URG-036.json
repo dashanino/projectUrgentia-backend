@@ -1,0 +1,27 @@
+{
+  "id_caso": "URG-036",
+  "id_pretriage": 196,
+  "estado": "envio_incierto",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 188,
+          "respuesta": "Dolor de cabeza recurrente similar a episodios anteriores."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 500,
+      "tiempo_http_segundos": 38.8438,
+      "respuesta_backend": {
+        "message": "No fue posible guardar las respuestas",
+        "ok": false
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:02:28.653680+00:00",
+  "preguntas_enviadas": 0
+}

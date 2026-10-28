@@ -1,0 +1,40 @@
+{
+  "id_caso": "URG-008",
+  "id_pretriage": 169,
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "id_pregunta": 165,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta": "Niña de 5 años con fiebre de hasta 39,5 °C desde hace dos días. Presenta cansancio, disminución del apetito y menor consumo de líquidos. Está despierta, responde adecuadamente y no presenta dificultad respiratoria. La cuidadora refiere que ha orinado menos de lo habitual.",
+      "fecha": "2026-10-28T05:49:33.932398+00:00"
+    },
+    {
+      "evento": "respuesta_confirmada",
+      "id_pregunta": 165,
+      "duracion_seg": 10.9027,
+      "fecha": "2026-10-28T05:49:44.840485+00:00",
+      "resultado": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 169,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "posible_deshidratacion",
+            "fiebre_pediatrica_persistente"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Fiebre de hasta 39,5 °C durante dos días asociada a menor consumo de líquidos y menor cantidad de orina, datos que pueden indicar deshidratación y requieren valoración médica. Está despierta, responde adecuadamente y no presenta dificultad respiratoria.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    }
+  ],
+  "estado": "revision_seguridad"
+}

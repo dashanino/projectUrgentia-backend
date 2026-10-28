@@ -1,0 +1,2472 @@
+[
+  {
+    "id_caso": "URG-002",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 4,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      5
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dificultad respiratoria grave.",
+    "historia_clinica": "Niño de 4 años con dificultad respiratoria intensa desde hace 30 minutos. Presenta respiración rápida, hundimiento de las costillas y dificultad para hablar o llorar con normalidad. Su cuidadora refiere que los síntomas están empeorando.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene cuatro años y respira con mucha dificultad.",
+      "2": "Comenzó hace media hora.",
+      "3": "Respira muy rápido y se le hunden las costillas.",
+      "4": "Le cuesta hablar y llorar.",
+      "5": "Está empeorando."
+    }
+  },
+  {
+    "id_caso": "URG-003",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 8,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal intenso.",
+    "historia_clinica": "Niña de 8 años con dolor abdominal intenso de intensidad 9/10 desde hace tres horas. El dolor se localiza principalmente en la parte inferior derecha del abdomen. Presenta vómitos repetidos y dolor importante al caminar. Su cuidadora refiere empeoramiento progresivo.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene ocho años y le duele mucho el abdomen.",
+      "2": "Comenzó hace tres horas.",
+      "3": "El dolor es de 9 sobre 10.",
+      "4": "Le duele más abajo a la derecha y ha vomitado varias veces.",
+      "5": "Le duele al caminar y está empeorando."
+    }
+  },
+  {
+    "id_caso": "URG-004",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 6,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre alta con confusión y somnolencia.",
+    "historia_clinica": "Niño de 6 años con temperatura de 40,0 °C desde hace cuatro horas. Su cuidadora refiere somnolencia marcada, dificultad para mantenerlo despierto y respuestas confusas. No se dispone de otros signos vitales.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene seis años y fiebre muy alta.",
+      "2": "La temperatura llegó a 40 grados.",
+      "3": "Empezó hace cuatro horas.",
+      "4": "Está muy dormido y cuesta despertarlo.",
+      "5": "Cuando responde, parece confundido."
+    }
+  },
+  {
+    "id_caso": "URG-005",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 11,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Cefalea súbita intensa con vómitos.",
+    "historia_clinica": "Niña de 11 años con dolor de cabeza súbito de intensidad 10/10 desde hace 40 minutos. Presenta vómitos repetidos y dificultad para mantenerse de pie debido al malestar. Su cuidadora refiere que nunca había presentado un dolor de cabeza de esta intensidad.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene once años y le empezó un dolor de cabeza muy fuerte.",
+      "2": "Comenzó de repente hace cuarenta minutos.",
+      "3": "Dice que es de 10 sobre 10.",
+      "4": "Ha vomitado varias veces.",
+      "5": "Le cuesta mantenerse de pie."
+    }
+  },
+  {
+    "id_caso": "URG-006",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 2,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      5
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dificultad respiratoria con labios azulados.",
+    "historia_clinica": "Niño de 2 años con dificultad respiratoria intensa desde hace 20 minutos. Su cuidadora observa coloración azulada alrededor de los labios, respiración rápida y disminución de la actividad. Los síntomas persisten.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene dos años y está respirando muy mal.",
+      "2": "Empezó hace veinte minutos.",
+      "3": "Tiene los labios azulados.",
+      "4": "Respira muy rápido.",
+      "5": "Está menos activo de lo normal."
+    }
+  },
+  {
+    "id_caso": "URG-007",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 9,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal progresivo.",
+    "historia_clinica": "Niño de 9 años con dolor abdominal de intensidad 7/10 desde hace ocho horas. Comenzó alrededor del ombligo y posteriormente se localizó en la parte inferior derecha del abdomen. Presenta náuseas, disminución del apetito y dolor al caminar. Niega sangrado.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene nueve años y le duele el abdomen.",
+      "2": "El dolor empezó hace ocho horas.",
+      "3": "Es de 7 sobre 10.",
+      "4": "Primero le dolía alrededor del ombligo y ahora abajo a la derecha.",
+      "5": "Tiene náuseas, no quiere comer y le duele al caminar."
+    }
+  },
+  {
+    "id_caso": "URG-008",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 5,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre alta persistente.",
+    "historia_clinica": "Niña de 5 años con fiebre de hasta 39,5 °C desde hace dos días. Presenta cansancio, disminución del apetito y menor consumo de líquidos. Está despierta, responde adecuadamente y no presenta dificultad respiratoria. La cuidadora refiere que ha orinado menos de lo habitual.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene cinco años y fiebre desde hace dos días.",
+      "2": "La temperatura máxima ha sido de 39,5 grados.",
+      "3": "Está cansada y come poco.",
+      "4": "Está tomando menos líquidos y orinando menos.",
+      "5": "Está despierta y responde normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-009",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 10,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      5
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dificultad respiratoria moderada.",
+    "historia_clinica": "Niño de 10 años con dificultad respiratoria desde hace tres horas, acompañada de tos. Respira más rápido de lo habitual y refiere sensación de falta de aire al caminar. Puede hablar en frases completas. Niega coloración azulada de los labios.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene diez años y le cuesta respirar.",
+      "2": "Comenzó hace tres horas.",
+      "3": "Respira rápido y tiene tos.",
+      "4": "Se cansa cuando camina.",
+      "5": "Puede hablar normalmente y no tiene los labios azulados."
+    }
+  },
+  {
+    "id_caso": "URG-010",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 7,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Cefalea intensa acompañada de vómitos.",
+    "historia_clinica": "Niña de 7 años con cefalea de intensidad 8/10 desde hace cuatro horas. El dolor comenzó gradualmente y se acompaña de dos episodios de vómito y sensibilidad a la luz. Está orientada y no presenta pérdida del conocimiento. No se ha documentado si tiene rigidez de cuello.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene siete años y un dolor de cabeza fuerte.",
+      "2": "Empezó poco a poco hace cuatro horas.",
+      "3": "Dice que es de 8 sobre 10.",
+      "4": "Ha vomitado dos veces y le molesta la luz.",
+      "5": "Está despierta y responde normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-011",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 3,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre y vómitos con menor ingesta de líquidos.",
+    "historia_clinica": "Niño de 3 años con fiebre de hasta 39,0 °C desde hace 24 horas y cuatro episodios de vómito. Su cuidadora refiere menor consumo de líquidos y disminución de la cantidad de orina. Está despierto y responde a estímulos, pero se encuentra más decaído de lo habitual.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene tres años y fiebre desde ayer.",
+      "2": "La temperatura máxima fue de 39 grados.",
+      "3": "Ha vomitado cuatro veces.",
+      "4": "Está tomando menos líquidos y orinando menos.",
+      "5": "Está despierto, pero más decaído de lo normal."
+    }
+  },
+  {
+    "id_caso": "URG-012",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 8,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal leve y estable.",
+    "historia_clinica": "Niño de 8 años con dolor abdominal alrededor del ombligo de intensidad 4/10 desde hace cuatro horas. El dolor es intermitente y no ha aumentado. Niega fiebre, vómitos y diarrea. Puede caminar, comer y beber normalmente.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene ocho años y le duele el abdomen.",
+      "2": "Comenzó hace cuatro horas.",
+      "3": "El dolor es de 4 sobre 10 y va y viene.",
+      "4": "No tiene fiebre, vómitos ni diarrea.",
+      "5": "Puede caminar, comer y beber normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-013",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 10,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Cefalea moderada de inicio gradual.",
+    "historia_clinica": "Niña de 10 años con dolor de cabeza bilateral de intensidad 5/10 desde hace cinco horas. El dolor comenzó gradualmente y no ha empeorado. Niega fiebre, vómitos, confusión, alteraciones visuales y debilidad. Está activa y orientada.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene diez años y le duele la cabeza.",
+      "2": "Comenzó poco a poco hace cinco horas.",
+      "3": "Es de 5 sobre 10 y no ha empeorado.",
+      "4": "No tiene fiebre, vómitos ni cambios en la visión.",
+      "5": "Está activa y responde normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-014",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 6,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre leve con congestión nasal.",
+    "historia_clinica": "Niño de 6 años con temperatura máxima de 38,2 °C desde hace un día, congestión nasal y dolor leve de garganta. Está activo, juega normalmente y tolera alimentos y líquidos. Niega dificultad respiratoria, vómitos y somnolencia.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene seis años y fiebre desde ayer.",
+      "2": "La temperatura máxima fue de 38,2 grados.",
+      "3": "Tiene congestión nasal y un poco de dolor de garganta.",
+      "4": "Está activo y juega normalmente.",
+      "5": "Come y bebe bien, y no tiene dificultad para respirar."
+    }
+  },
+  {
+    "id_caso": "URG-015",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 11,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal intermitente.",
+    "historia_clinica": "Niña de 11 años con dolor abdominal difuso de intensidad 4/10 desde hace seis horas. El dolor aparece por momentos y no ha empeorado. Niega fiebre, vómitos, diarrea y sangrado. Puede caminar normalmente y tolera líquidos.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene once años y le duele el abdomen.",
+      "2": "El dolor empezó hace seis horas.",
+      "3": "Es de 4 sobre 10 y aparece por momentos.",
+      "4": "No tiene fiebre, vómitos ni diarrea.",
+      "5": "Puede caminar y beber líquidos normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-016",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 7,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza recurrente sin cambios.",
+    "historia_clinica": "Niño de 7 años con cefalea de intensidad 4/10 desde hace tres horas. Su cuidadora refiere episodios similares durante los últimos meses, sin cambios en las características del dolor. Niega fiebre, vómitos, alteraciones visuales, confusión y debilidad. Está activo.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene siete años y le duele la cabeza.",
+      "2": "Comenzó hace tres horas.",
+      "3": "Es de 4 sobre 10.",
+      "4": "Ha tenido dolores parecidos antes.",
+      "5": "No tiene fiebre, vómitos ni cambios en la visión."
+    }
+  },
+  {
+    "id_caso": "URG-017",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 9,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza muy leve después de estudiar.",
+    "historia_clinica": "Niña de 9 años con cefalea bilateral de intensidad 2/10 desde hace dos horas, después de realizar actividades escolares. El dolor comenzó gradualmente y está mejorando con descanso. Niega fiebre, vómitos, confusión, alteraciones visuales y debilidad. Está activa y se comporta normalmente.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene nueve años y le duele un poco la cabeza.",
+      "2": "Empezó hace dos horas después de estudiar.",
+      "3": "Es de 2 sobre 10.",
+      "4": "Está mejorando con el descanso.",
+      "5": "No tiene fiebre, vómitos ni cambios en la visión."
+    }
+  },
+  {
+    "id_caso": "URG-018",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 6,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve después de comer.",
+    "historia_clinica": "Niño de 6 años con molestia abdominal difusa de intensidad 2/10 después de una comida abundante. Comenzó hace una hora y está disminuyendo. Niega fiebre, vómitos, diarrea y dolor al caminar. Está activo y tolera líquidos.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene seis años y le molesta un poco el abdomen.",
+      "2": "Comenzó hace una hora después de comer.",
+      "3": "Es de 2 sobre 10 y está mejorando.",
+      "4": "No tiene fiebre, vómitos ni diarrea.",
+      "5": "Está jugando y puede beber líquidos normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-019",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 10,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre leve con congestión nasal.",
+    "historia_clinica": "Niña de 10 años con temperatura máxima de 38,0 °C desde hace doce horas, acompañada de congestión nasal y estornudos. Está activa, come y bebe normalmente. Niega dificultad respiratoria, vómitos, somnolencia y dolor torácico.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene diez años y algo de fiebre.",
+      "2": "La temperatura máxima fue de 38 grados.",
+      "3": "Empezó hace doce horas.",
+      "4": "Tiene congestión nasal y estornudos.",
+      "5": "Está activa, come bien y respira normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-020",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 8,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Cefalea leve que mejora con descanso.",
+    "historia_clinica": "Niño de 8 años con dolor de cabeza de intensidad 2/10 desde hace tres horas. El dolor comenzó gradualmente y ha mejorado después de descansar. Niega fiebre, vómitos, alteraciones visuales, confusión y debilidad. Mantiene su actividad habitual.",
+    "respuestas_ia": {
+      "1": "Mi hijo tiene ocho años y le duele un poco la cabeza.",
+      "2": "Comenzó poco a poco hace tres horas.",
+      "3": "Es de 2 sobre 10.",
+      "4": "Ha mejorado con el descanso.",
+      "5": "No tiene fiebre, vómitos ni problemas de visión."
+    }
+  },
+  {
+    "id_caso": "URG-021",
+    "poblacion_id": 1,
+    "poblacion": "Niño",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 11,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve y transitoria.",
+    "historia_clinica": "Niña de 11 años con molestia abdominal alrededor del ombligo de intensidad 2/10 desde hace dos horas. La molestia es intermitente y ha disminuido. Niega fiebre, vómitos, diarrea y dolor al caminar. Está activa y tolera alimentos y líquidos.",
+    "respuestas_ia": {
+      "1": "Mi hija tiene once años y una molestia leve en el abdomen.",
+      "2": "Comenzó hace dos horas.",
+      "3": "Es de 2 sobre 10 y está mejorando.",
+      "4": "No tiene fiebre, vómitos ni diarrea.",
+      "5": "Puede caminar, comer y beber normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-022",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 54,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      3
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor intenso y opresivo en el pecho desde hace 30 minutos.",
+    "historia_clinica": "Hombre de 54 años con dolor torácico opresivo de intensidad 9/10, iniciado hace 30 minutos en reposo. El dolor se irradia al brazo izquierdo. Presenta sudoración fría, náuseas y dificultad para respirar. No ha perdido el conocimiento.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor muy fuerte en el pecho desde hace media hora.",
+      "2": "Comenzó de repente mientras estaba sentado y no ha mejorado.",
+      "3": "Es una presión muy fuerte, de 9 sobre 10, que llega al brazo izquierdo.",
+      "4": "Estoy sudando frío, tengo náuseas y me cuesta respirar.",
+      "5": "Nunca había tenido un dolor así. No me he desmayado."
+    }
+  },
+  {
+    "id_caso": "URG-023",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 42,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      5
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dificultad respiratoria intensa incluso estando en reposo.",
+    "historia_clinica": "Mujer de 42 años con dificultad respiratoria intensa de inicio reciente. Refiere que no puede completar frases sin detenerse a respirar. Presenta sensación de ahogo en reposo y empeoramiento progresivo durante la última hora.",
+    "respuestas_ia": {
+      "1": "Me cuesta muchísimo respirar, incluso sin moverme.",
+      "2": "Empezó hace una hora y ha empeorado.",
+      "3": "No puedo hablar una frase completa sin detenerme.",
+      "4": "Siento que me falta el aire incluso sentada.",
+      "5": "No he tenido golpes ni accidentes."
+    }
+  },
+  {
+    "id_caso": "URG-024",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 38,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal súbito y extremadamente intenso.",
+    "historia_clinica": "Hombre de 38 años con dolor abdominal generalizado de inicio súbito, intensidad 10/10, constante. Refiere abdomen muy rígido y dolor intenso al mínimo movimiento. Presenta náuseas y un episodio de vómito.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor insoportable en todo el abdomen.",
+      "2": "Empezó de repente hace 40 minutos y no disminuye.",
+      "3": "Es un dolor constante de 10 sobre 10.",
+      "4": "Tengo el abdomen muy duro y moverme me produce más dolor.",
+      "5": "He tenido náuseas y vomité una vez."
+    }
+  },
+  {
+    "id_caso": "URG-025",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 61,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza súbito y extremadamente intenso.",
+    "historia_clinica": "Mujer de 61 años con cefalea súbita de intensidad 10/10, descrita como el peor dolor de cabeza de su vida. Comenzó hace 20 minutos. Un familiar refiere que la paciente está confundida y responde de manera incoherente.",
+    "respuestas_ia": {
+      "1": "Me empezó un dolor de cabeza terrible de repente.",
+      "2": "Comenzó hace unos 20 minutos.",
+      "3": "Es el peor dolor de cabeza que he sentido, de 10 sobre 10.",
+      "4": "Mi familiar dice que estoy confundida.",
+      "5": "No recuerdo haber tenido un dolor parecido."
+    }
+  },
+  {
+    "id_caso": "URG-026",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 57,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      3
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor torácico opresivo acompañado de desmayo.",
+    "historia_clinica": "Hombre de 57 años con dolor torácico opresivo intenso desde hace 25 minutos. Presentó pérdida transitoria del conocimiento durante aproximadamente un minuto. Al despertar continúa con dolor torácico, debilidad y sudoración fría.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor fuerte en el pecho y me desmayé hace poco.",
+      "2": "El dolor comenzó hace unos 25 minutos.",
+      "3": "Es una presión intensa en el centro del pecho.",
+      "4": "Perdí el conocimiento cerca de un minuto.",
+      "5": "Ahora estoy despierto, pero sigo débil y sudando frío."
+    }
+  },
+  {
+    "id_caso": "URG-027",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 29,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal progresivo en la parte inferior derecha.",
+    "historia_clinica": "Hombre de 29 años con dolor abdominal iniciado hace 12 horas alrededor del ombligo, que posteriormente se desplazó hacia la parte inferior derecha. Intensidad 7/10, empeora al caminar y se acompaña de náuseas y pérdida de apetito. Sin desmayo.",
+    "respuestas_ia": {
+      "1": "Tengo dolor abdominal desde hace unas 12 horas.",
+      "2": "Ha empeorado progresivamente.",
+      "3": "Empezó alrededor del ombligo y ahora está abajo a la derecha.",
+      "4": "Me duele más cuando camino y tengo náuseas.",
+      "5": "He perdido el apetito, pero no me he desmayado."
+    }
+  },
+  {
+    "id_caso": "URG-028",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 46,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre alta persistente desde hace dos días.",
+    "historia_clinica": "Mujer de 46 años con fiebre reportada de 39,2 °C durante dos días, escalofríos, dolores musculares y debilidad. Está consciente, orientada, puede beber líquidos y no presenta dificultad respiratoria.",
+    "respuestas_ia": {
+      "1": "Tengo fiebre alta desde hace dos días.",
+      "2": "Me he medido 39,2 grados.",
+      "3": "Tengo escalofríos, dolor muscular y mucha debilidad.",
+      "4": "Puedo beber agua y estoy consciente.",
+      "5": "No tengo dificultad para respirar."
+    }
+  },
+  {
+    "id_caso": "URG-029",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 52,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      3
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor opresivo en el pecho al realizar esfuerzo.",
+    "historia_clinica": "Hombre de 52 años con episodios recientes de presión en el centro del pecho al subir escaleras. Cada episodio dura aproximadamente diez minutos y mejora con el reposo. El último episodio ocurrió hace una hora. Actualmente no tiene dolor ni dificultad respiratoria.",
+    "respuestas_ia": {
+      "1": "He sentido presión en el pecho cuando subo escaleras.",
+      "2": "Los episodios duran unos diez minutos.",
+      "3": "Me mejora cuando descanso.",
+      "4": "El último episodio fue hace una hora.",
+      "5": "Ahora no tengo dolor ni dificultad para respirar."
+    }
+  },
+  {
+    "id_caso": "URG-030",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 34,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza intenso y persistente.",
+    "historia_clinica": "Mujer de 34 años con cefalea de intensidad 8/10 que aumentó gradualmente durante las últimas seis horas. Presenta náuseas y sensibilidad a la luz. Niega pérdida de conocimiento, confusión, debilidad de extremidades y fiebre.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor de cabeza muy fuerte.",
+      "2": "Empezó hace seis horas y aumentó poco a poco.",
+      "3": "Es de intensidad 8 sobre 10.",
+      "4": "Tengo náuseas y la luz me molesta.",
+      "5": "No tengo fiebre, confusión ni debilidad en brazos o piernas."
+    }
+  },
+  {
+    "id_caso": "URG-031",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 40,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal acompañado de vómitos repetidos.",
+    "historia_clinica": "Hombre de 40 años con dolor abdominal de intensidad 7/10 desde hace ocho horas, acompañado de cinco episodios de vómito. Durante las últimas cuatro horas ha tenido dificultad para retener líquidos. Está consciente y no refiere sangre en el vómito.",
+    "respuestas_ia": {
+      "1": "Tengo dolor abdominal y he vomitado varias veces.",
+      "2": "El dolor empezó hace ocho horas.",
+      "3": "Es de intensidad 7 sobre 10.",
+      "4": "He vomitado cinco veces.",
+      "5": "Me cuesta mantener líquidos, pero estoy consciente."
+    }
+  },
+  {
+    "id_caso": "URG-032",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 35,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal moderado desde esta mañana.",
+    "historia_clinica": "Hombre de 35 años con dolor alrededor del ombligo desde hace seis horas, intensidad 4/10, intermitente y estable. Niega fiebre, vómitos, náuseas, diarrea, distensión, síntomas urinarios y desplazamiento del dolor. Tolera alimentos y líquidos y puede caminar normalmente.",
+    "respuestas_ia": {
+      "1": "Tengo dolor alrededor del ombligo desde esta mañana, de 4 sobre 10.",
+      "2": "El dolor va y viene y no ha aumentado.",
+      "3": "No se ha desplazado hacia otra parte del abdomen.",
+      "4": "No tengo diarrea, estreñimiento ni distensión.",
+      "5": "No tengo síntomas urinarios.",
+      "6": "Puedo comer y beber normalmente y no tengo náuseas.",
+      "7": "No empeora al caminar ni tengo el abdomen duro.",
+      "8": "No he tenido cirugías abdominales ni golpes recientes."
+    }
+  },
+  {
+    "id_caso": "URG-033",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 27,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza moderado desde hace varias horas.",
+    "historia_clinica": "Mujer de 27 años con cefalea bilateral de intensidad 5/10, iniciada gradualmente hace ocho horas. Refiere sensación de presión en la cabeza. Está orientada y niega fiebre, vómitos, alteraciones visuales, debilidad y pérdida del conocimiento.",
+    "respuestas_ia": {
+      "1": "Tengo dolor de cabeza desde hace ocho horas.",
+      "2": "Empezó poco a poco.",
+      "3": "Es una presión en ambos lados de la cabeza, de 5 sobre 10.",
+      "4": "No tengo vómitos, fiebre ni problemas de visión.",
+      "5": "Estoy consciente y no tengo debilidad."
+    }
+  },
+  {
+    "id_caso": "URG-034",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 43,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre moderada y malestar general.",
+    "historia_clinica": "Hombre de 43 años con temperatura máxima reportada de 38,2 °C desde hace 24 horas, congestión nasal, dolor de garganta leve y cansancio. Puede comer, beber y realizar actividades básicas. Niega dificultad respiratoria, confusión y dolor torácico.",
+    "respuestas_ia": {
+      "1": "Tengo fiebre y congestión nasal desde ayer.",
+      "2": "La temperatura más alta fue 38,2 grados.",
+      "3": "Tengo dolor leve de garganta y cansancio.",
+      "4": "Puedo comer y beber normalmente.",
+      "5": "No me falta el aire ni tengo dolor en el pecho."
+    }
+  },
+  {
+    "id_caso": "URG-035",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 31,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal tipo cólico de intensidad moderada.",
+    "historia_clinica": "Mujer de 31 años con dolor abdominal tipo cólico de intensidad 4/10 desde hace cinco horas. Es intermitente, no ha empeorado y no se localiza en un punto específico. Niega fiebre, vómitos, sangrado y síntomas urinarios. No se ha documentado posibilidad de embarazo.",
+    "respuestas_ia": {
+      "1": "Tengo cólicos abdominales desde hace cinco horas.",
+      "2": "El dolor va y viene y no ha empeorado.",
+      "3": "Es de 4 sobre 10 y no está en un punto específico.",
+      "4": "No tengo fiebre, vómitos ni sangrado.",
+      "5": "No tengo molestias al orinar.",
+      "6": "Puedo tomar líquidos y comer.",
+      "7": "No tengo el abdomen duro ni dolor intenso al moverme.",
+      "8": "No he tenido golpes recientes en el abdomen."
+    },
+    "datos_clinicos_desconocidos": [
+      "posibilidad_embarazo"
+    ]
+  },
+  {
+    "id_caso": "URG-036",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 48,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza recurrente similar a episodios anteriores.",
+    "historia_clinica": "Hombre de 48 años con cefalea de intensidad 5/10 desde hace cuatro horas, de inicio gradual y características similares a episodios previos. Está orientado, puede caminar normalmente y niega fiebre, vómitos, confusión, alteraciones visuales y pérdida de fuerza.",
+    "respuestas_ia": {
+      "1": "Tengo dolor de cabeza desde hace cuatro horas.",
+      "2": "Empezó gradualmente.",
+      "3": "Es de 5 sobre 10 y parecido a otros dolores que he tenido.",
+      "4": "No tengo vómitos, fiebre ni cambios en la visión.",
+      "5": "Puedo caminar normalmente y no tengo debilidad."
+    }
+  },
+  {
+    "id_caso": "URG-037",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 24,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza leve después de estudiar.",
+    "historia_clinica": "Mujer de 24 años con cefalea leve de intensidad 2/10, iniciada gradualmente después de varias horas de estudio. No presenta fiebre, vómitos, confusión, alteraciones visuales ni debilidad. Puede realizar sus actividades.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor de cabeza leve desde hace dos horas.",
+      "2": "Empezó poco a poco después de estudiar.",
+      "3": "Es de intensidad 2 sobre 10.",
+      "4": "No tengo fiebre, vómitos ni cambios en la visión.",
+      "5": "Puedo hacer mis actividades normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-038",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 30,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal leve que aparece ocasionalmente.",
+    "historia_clinica": "Hombre de 30 años con molestia abdominal difusa de intensidad 2/10 desde hace tres horas. El dolor es intermitente y ha disminuido. Niega fiebre, vómitos, diarrea, distensión abdominal y síntomas urinarios. Tolera alimentos y líquidos.",
+    "respuestas_ia": {
+      "1": "Tengo una molestia leve en el abdomen.",
+      "2": "Empezó hace tres horas y ha disminuido.",
+      "3": "Es de intensidad 2 sobre 10 y no está localizada.",
+      "4": "No tengo fiebre, vómitos ni diarrea.",
+      "5": "Puedo comer y beber normalmente.",
+      "6": "No tengo náuseas.",
+      "7": "No tengo el abdomen duro ni dolor al caminar.",
+      "8": "No he tenido golpes ni cirugías abdominales."
+    }
+  },
+  {
+    "id_caso": "URG-039",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 41,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Congestión nasal y temperatura ligeramente elevada.",
+    "historia_clinica": "Mujer de 41 años con temperatura máxima reportada de 37,8 °C, congestión nasal y estornudos desde ayer. No presenta dificultad respiratoria, dolor torácico, confusión ni signos de deshidratación. Se alimenta normalmente. No se ha documentado el método de medición de la temperatura.",
+    "respuestas_ia": {
+      "1": "Tengo congestión nasal, estornudos y temperatura ligeramente elevada.",
+      "2": "La congestión nasal comenzó ayer. No tengo información registrada sobre si ha mejorado, empeorado o se mantiene igual.",
+      "3": "Mi temperatura máxima reportada fue de 37,8 grados Celsius. No está documentado cómo se midió ni cuándo fue la última medición.",
+      "4": "No tengo dificultad para respirar ni dolor en el pecho. No tengo información registrada sobre cambios de color en los labios.",
+      "5": "Tengo estornudos. No tengo información registrada sobre tos, dolor de garganta, dolor facial intenso, secreción nasal espesa, dolores musculares o pérdida del olfato o del gusto."
+    }
+  },
+  {
+    "id_caso": "URG-040",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 26,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza leve que mejora con el descanso.",
+    "historia_clinica": "Hombre de 26 años con cefalea de intensidad 3/10 desde hace cuatro horas, de inicio gradual. El dolor ha disminuido después de descansar. Niega fiebre, vómitos, confusión, alteraciones visuales y pérdida de fuerza.",
+    "respuestas_ia": {
+      "1": "Tengo dolor de cabeza leve desde hace cuatro horas.",
+      "2": "Empezó poco a poco.",
+      "3": "Es de 3 sobre 10 y ha mejorado con el descanso.",
+      "4": "No tengo vómitos, fiebre ni problemas de visión.",
+      "5": "No tengo confusión ni debilidad."
+    }
+  },
+  {
+    "id_caso": "URG-041",
+    "poblacion_id": 2,
+    "poblacion": "Adulto",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 36,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve después de comer.",
+    "historia_clinica": "Mujer de 36 años con molestia abdominal leve de intensidad 2/10 después de una comida abundante. Comenzó hace dos horas y está mejorando. Niega vómitos, fiebre, sangrado y síntomas urinarios. No se ha documentado posibilidad de embarazo.",
+    "respuestas_ia": {
+      "1": "Tengo una molestia leve en el abdomen después de comer.",
+      "2": "Empezó hace dos horas y está mejorando.",
+      "3": "Es de intensidad 2 sobre 10.",
+      "4": "No tengo fiebre, vómitos ni sangrado.",
+      "5": "No tengo molestias al orinar.",
+      "6": "Puedo beber líquidos normalmente.",
+      "7": "No tengo el abdomen duro ni dolor intenso al moverme.",
+      "8": "No he tenido golpes recientes."
+    },
+    "datos_clinicos_desconocidos": [
+      "posibilidad_embarazo"
+    ]
+  },
+  {
+    "id_caso": "URG-042",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 76,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      3,
+      5
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor intenso en el pecho y dificultad para respirar.",
+    "historia_clinica": "Hombre de 76 años con dolor torácico opresivo 9/10 desde hace 25 minutos, irradiado al brazo izquierdo, acompañado de sudoración fría, náuseas y dificultad respiratoria en reposo. Está consciente.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor muy fuerte en el pecho y me cuesta respirar.",
+      "2": "Comenzó hace 25 minutos y no ha mejorado.",
+      "3": "Es una presión de 9 sobre 10 que llega al brazo izquierdo.",
+      "4": "Estoy sudando frío y tengo náuseas.",
+      "5": "Me falta el aire incluso estando sentado."
+    }
+  },
+  {
+    "id_caso": "URG-043",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 82,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      5
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dificultad respiratoria intensa en reposo.",
+    "historia_clinica": "Mujer de 82 años con dificultad respiratoria intensa de inicio hace una hora, progresiva. No logra completar frases sin detenerse a respirar y refiere sensación constante de ahogo incluso estando sentada.",
+    "respuestas_ia": {
+      "1": "No puedo respirar bien, incluso sentada.",
+      "2": "Comenzó hace una hora y está empeorando.",
+      "3": "Tengo que detenerme para respirar cuando hablo.",
+      "4": "Siento que me estoy ahogando.",
+      "5": "No he tenido golpes ni accidentes."
+    }
+  },
+  {
+    "id_caso": "URG-044",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 71,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza súbito y alteración del estado mental.",
+    "historia_clinica": "Mujer de 71 años con cefalea de inicio súbito, intensidad 10/10, hace 15 minutos. Un familiar refiere que está desorientada y responde de forma incoherente. No se ha documentado pérdida del conocimiento.",
+    "respuestas_ia": {
+      "1": "Me empezó un dolor de cabeza insoportable de repente.",
+      "2": "Empezó hace unos 15 minutos.",
+      "3": "Es el peor dolor de cabeza que he tenido.",
+      "4": "Mi familiar dice que estoy desorientada.",
+      "5": "Me cuesta responder algunas preguntas."
+    }
+  },
+  {
+    "id_caso": "URG-045",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 88,
+    "sexo": "Masculino",
+    "antecedentes_ids": [
+      1
+    ],
+    "banderas_ids": [
+      7
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Caída con golpe en la cabeza y confusión.",
+    "historia_clinica": "Hombre de 88 años que sufrió una caída desde su propia altura hace 30 minutos y se golpeó la cabeza. Un familiar refiere confusión posterior al golpe. El paciente utiliza medicamentos anticoagulantes. No se conoce si perdió el conocimiento.",
+    "respuestas_ia": {
+      "1": "Me caí y me golpeé la cabeza.",
+      "2": "La caída ocurrió hace media hora.",
+      "3": "Mi familiar dice que estoy confundido.",
+      "4": "Tomo medicamentos anticoagulantes.",
+      "5": "No sabemos si perdí el conocimiento."
+    }
+  },
+  {
+    "id_caso": "URG-046",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 79,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal súbito de intensidad extrema.",
+    "historia_clinica": "Mujer de 79 años con dolor abdominal generalizado de inicio súbito hace 40 minutos, intensidad 10/10, constante. Refiere abdomen rígido y dolor intenso con el movimiento. Presenta náuseas y debilidad.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor insoportable en todo el abdomen.",
+      "2": "Comenzó de repente hace 40 minutos.",
+      "3": "Es de 10 sobre 10 y no disminuye.",
+      "4": "Tengo el abdomen duro y me duele cuando me muevo.",
+      "5": "Tengo náuseas y mucha debilidad."
+    }
+  },
+  {
+    "id_caso": "URG-047",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 73,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal progresivo en la parte inferior derecha.",
+    "historia_clinica": "Hombre de 73 años con dolor abdominal de 7/10 desde hace diez horas. Inicialmente era difuso y ahora se localiza en la parte inferior derecha. Presenta náuseas y pérdida de apetito. El dolor empeora al caminar. Está consciente y orientado.",
+    "respuestas_ia": {
+      "1": "Tengo dolor abdominal desde hace diez horas.",
+      "2": "El dolor ha aumentado progresivamente.",
+      "3": "Ahora me duele principalmente abajo a la derecha.",
+      "4": "Tengo náuseas y poco apetito.",
+      "5": "Me duele más al caminar, pero estoy consciente."
+    }
+  },
+  {
+    "id_caso": "URG-048",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 81,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre alta y debilidad desde hace dos días.",
+    "historia_clinica": "Mujer de 81 años con temperatura máxima de 39,1 °C desde hace dos días, escalofríos, debilidad y disminución de la ingesta de líquidos. Está orientada y puede conversar normalmente. Niega dificultad respiratoria y dolor torácico.",
+    "respuestas_ia": {
+      "1": "Tengo fiebre alta desde hace dos días.",
+      "2": "La temperatura más alta fue 39,1 grados.",
+      "3": "Tengo escalofríos y mucha debilidad.",
+      "4": "Estoy tomando menos líquidos de lo normal.",
+      "5": "Estoy orientada y no tengo dificultad para respirar."
+    }
+  },
+  {
+    "id_caso": "URG-049",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 69,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      7
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Caída con dolor intenso de cadera.",
+    "historia_clinica": "Mujer de 69 años que sufrió una caída desde su propia altura hace una hora. Presenta dolor intenso en la cadera derecha, intensidad 8/10, e incapacidad para ponerse de pie o caminar. Niega golpe en la cabeza y pérdida del conocimiento.",
+    "respuestas_ia": {
+      "1": "Me caí hace una hora y me duele mucho la cadera.",
+      "2": "Fue una caída desde mi propia altura.",
+      "3": "El dolor es de 8 sobre 10.",
+      "4": "No puedo ponerme de pie ni caminar.",
+      "5": "No me golpeé la cabeza ni perdí el conocimiento."
+    }
+  },
+  {
+    "id_caso": "URG-050",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 77,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      3
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Presión en el pecho durante el esfuerzo.",
+    "historia_clinica": "Hombre de 77 años con episodios recientes de dolor opresivo en el centro del pecho al caminar. Cada episodio dura aproximadamente ocho minutos y mejora con el reposo. El último episodio ocurrió hace dos horas. Actualmente está sin dolor.",
+    "respuestas_ia": {
+      "1": "Me ha dado presión en el pecho cuando camino.",
+      "2": "Cada episodio dura unos ocho minutos.",
+      "3": "Me mejora cuando descanso.",
+      "4": "El último episodio fue hace dos horas.",
+      "5": "Ahora no tengo dolor ni dificultad para respirar."
+    }
+  },
+  {
+    "id_caso": "URG-051",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 85,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza intenso y persistente.",
+    "historia_clinica": "Mujer de 85 años con cefalea de intensidad 8/10 que comenzó gradualmente hace seis horas. Refiere náuseas, pero no ha vomitado. Está orientada y niega pérdida del conocimiento, debilidad de extremidades y confusión.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor de cabeza muy fuerte.",
+      "2": "Comenzó poco a poco hace seis horas.",
+      "3": "Es de intensidad 8 sobre 10.",
+      "4": "Tengo náuseas, pero no he vomitado.",
+      "5": "Estoy orientada y no tengo debilidad ni confusión."
+    }
+  },
+  {
+    "id_caso": "URG-052",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 68,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal moderado desde esta mañana.",
+    "historia_clinica": "Hombre de 68 años con dolor abdominal periumbilical intermitente de intensidad 4/10 desde hace seis horas. El dolor no ha aumentado ni se ha desplazado. Niega fiebre, vómitos, distensión y síntomas urinarios. Tolera alimentos y líquidos.",
+    "respuestas_ia": {
+      "1": "Tengo dolor alrededor del ombligo desde esta mañana.",
+      "2": "Es de 4 sobre 10, va y viene y no ha empeorado.",
+      "3": "No se ha desplazado hacia otra parte.",
+      "4": "No tengo fiebre, vómitos ni distensión.",
+      "5": "Puedo comer y beber normalmente.",
+      "6": "No tengo náuseas.",
+      "7": "No tengo el abdomen duro ni dolor intenso al moverme.",
+      "8": "No he tenido golpes recientes."
+    }
+  },
+  {
+    "id_caso": "URG-053",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 72,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza moderado de inicio gradual.",
+    "historia_clinica": "Mujer de 72 años con cefalea bilateral de intensidad 5/10, iniciada gradualmente hace cinco horas. Está orientada y puede caminar normalmente. Niega fiebre, vómitos, alteraciones visuales, confusión y pérdida de fuerza. No se ha documentado si es una cefalea nueva.",
+    "respuestas_ia": {
+      "1": "Tengo dolor de cabeza desde hace cinco horas.",
+      "2": "Empezó poco a poco.",
+      "3": "Es de 5 sobre 10 y lo siento en ambos lados.",
+      "4": "No tengo vómitos, fiebre ni cambios en la visión.",
+      "5": "Estoy orientada y puedo caminar normalmente."
+    },
+    "datos_clinicos_desconocidos": [
+      "cefalea_nueva_o_diferente"
+    ]
+  },
+  {
+    "id_caso": "URG-054",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 75,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre moderada y malestar general.",
+    "historia_clinica": "Hombre de 75 años con temperatura máxima de 38,1 °C desde hace 24 horas, congestión nasal y cansancio. Está consciente y orientado, bebe líquidos y niega dificultad respiratoria, dolor torácico y confusión.",
+    "respuestas_ia": {
+      "1": "Tengo fiebre y congestión desde ayer.",
+      "2": "La temperatura máxima fue 38,1 grados.",
+      "3": "Tengo cansancio y congestión nasal.",
+      "4": "Puedo beber líquidos.",
+      "5": "No tengo dificultad para respirar ni confusión."
+    }
+  },
+  {
+    "id_caso": "URG-055",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 70,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      7
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Caída desde su propia altura con dolor leve de rodilla.",
+    "historia_clinica": "Mujer de 70 años que sufrió una caída desde su propia altura hace tres horas. Presenta dolor leve de rodilla derecha de intensidad 3/10. Puede caminar sin ayuda. Niega golpe en la cabeza, pérdida del conocimiento, confusión y deformidad. No se ha documentado uso de anticoagulantes.",
+    "respuestas_ia": {
+      "1": "Me caí hace tres horas y me duele un poco la rodilla.",
+      "2": "Fue una caída desde mi propia altura.",
+      "3": "El dolor es de 3 sobre 10.",
+      "4": "Puedo caminar normalmente.",
+      "5": "No me golpeé la cabeza ni perdí el conocimiento."
+    },
+    "datos_clinicos_desconocidos": [
+      "uso_anticoagulantes"
+    ]
+  },
+  {
+    "id_caso": "URG-056",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 79,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal intermitente sin empeoramiento.",
+    "historia_clinica": "Hombre de 79 años con molestia abdominal difusa de intensidad 4/10 desde hace ocho horas. El dolor es intermitente y estable. Niega fiebre, vómitos, sangrado, distensión y dificultad para evacuar o expulsar gases. Está orientado y tolera líquidos.",
+    "respuestas_ia": {
+      "1": "Tengo una molestia abdominal desde hace ocho horas.",
+      "2": "Va y viene y no ha empeorado.",
+      "3": "Es de 4 sobre 10 y no está en un lugar específico.",
+      "4": "No tengo fiebre, vómitos ni sangrado.",
+      "5": "Puedo evacuar y expulsar gases.",
+      "6": "Puedo beber líquidos normalmente.",
+      "7": "No tengo el abdomen duro.",
+      "8": "No he tenido golpes recientes."
+    }
+  },
+  {
+    "id_caso": "URG-057",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 67,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza leve similar a episodios anteriores.",
+    "historia_clinica": "Mujer de 67 años con cefalea leve de intensidad 2/10, iniciada gradualmente hace tres horas. Refiere episodios similares desde hace varios años, sin cambios recientes en las características del dolor. Niega fiebre, vómitos, confusión, alteraciones visuales y debilidad.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor de cabeza leve desde hace tres horas.",
+      "2": "Empezó poco a poco.",
+      "3": "Es de 2 sobre 10, igual a otros dolores que he tenido.",
+      "4": "No tengo fiebre, vómitos ni cambios en la visión.",
+      "5": "Estoy orientada y no tengo debilidad."
+    }
+  },
+  {
+    "id_caso": "URG-058",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 74,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve después de comer.",
+    "historia_clinica": "Hombre de 74 años con molestia abdominal difusa de intensidad 2/10 después de una comida abundante. Comenzó hace tres horas y ha disminuido progresivamente. Niega fiebre, vómitos, sangrado, distensión y dificultad para expulsar gases. Tolera líquidos.",
+    "respuestas_ia": {
+      "1": "Tengo una molestia leve en el abdomen después de comer.",
+      "2": "Comenzó hace tres horas y está mejorando.",
+      "3": "Es de intensidad 2 sobre 10.",
+      "4": "No tengo fiebre, vómitos ni sangrado.",
+      "5": "Puedo beber líquidos y expulsar gases.",
+      "6": "No tengo náuseas.",
+      "7": "No tengo el abdomen duro ni dolor al caminar.",
+      "8": "No he tenido golpes ni cirugías abdominales."
+    }
+  },
+  {
+    "id_caso": "URG-059",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 69,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      6
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Fiebre baja y congestión nasal desde ayer.",
+    "historia_clinica": "Mujer de 69 años con temperatura máxima reportada de 38,0 °C desde hace un día, congestión nasal y estornudos. Está orientada, se alimenta normalmente y niega dificultad respiratoria, dolor torácico y confusión.",
+    "respuestas_ia": {
+      "1": "Tengo congestión nasal y algo de fiebre desde ayer.",
+      "2": "La temperatura máxima fue de 38 grados.",
+      "3": "Tengo estornudos y congestión.",
+      "4": "Puedo comer y beber normalmente.",
+      "5": "No tengo dificultad para respirar ni confusión."
+    }
+  },
+  {
+    "id_caso": "URG-060",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 78,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      2
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza leve que mejora con descanso.",
+    "historia_clinica": "Hombre de 78 años con cefalea de intensidad 3/10 desde hace cuatro horas. El dolor comenzó gradualmente y ha mejorado después de descansar. Refiere episodios similares anteriormente. Niega fiebre, vómitos, confusión, alteraciones visuales y pérdida de fuerza.",
+    "respuestas_ia": {
+      "1": "Tengo un dolor de cabeza leve desde hace cuatro horas.",
+      "2": "Comenzó poco a poco.",
+      "3": "Es de 3 sobre 10 y ha mejorado con el descanso.",
+      "4": "No tengo vómitos, fiebre ni cambios en la visión.",
+      "5": "No estoy confundido y no tengo debilidad."
+    }
+  },
+  {
+    "id_caso": "URG-061",
+    "poblacion_id": 3,
+    "poblacion": "Adulto Mayor",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 72,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve e intermitente.",
+    "historia_clinica": "Mujer de 72 años con molestia abdominal difusa de intensidad 2/10 desde hace cinco horas. Es intermitente y ha disminuido. Niega fiebre, vómitos, sangrado, distensión, síntomas urinarios y dificultad para evacuar. Tolera alimentos y líquidos.",
+    "respuestas_ia": {
+      "1": "Tengo una molestia leve en el abdomen desde hace cinco horas.",
+      "2": "Va y viene y ha disminuido.",
+      "3": "Es de intensidad 2 sobre 10.",
+      "4": "No tengo fiebre, vómitos ni sangrado.",
+      "5": "Puedo comer, beber y evacuar normalmente.",
+      "6": "No tengo náuseas.",
+      "7": "No tengo el abdomen duro ni dolor al moverme.",
+      "8": "No he tenido golpes recientes."
+    }
+  },
+  {
+    "id_caso": "URG-062",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 28,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      8
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Sangrado vaginal abundante durante el embarazo.",
+    "historia_clinica": "Gestante de 28 años, con 32 semanas de embarazo. Presenta sangrado vaginal abundante de color rojo desde hace 20 minutos, acompañado de dolor abdominal y sensación de mareo. No ha perdido el conocimiento.",
+    "respuestas_ia": {
+      "1": "Tengo 32 semanas de embarazo y estoy sangrando mucho.",
+      "2": "El sangrado comenzó hace 20 minutos.",
+      "3": "Es sangre roja y la cantidad es abundante.",
+      "4": "También tengo dolor abdominal y mareo.",
+      "5": "No me he desmayado."
+    },
+    "semanas_gestacion": 32
+  },
+  {
+    "id_caso": "URG-063",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 34,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      9
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dificultad respiratoria intensa y tos con sangre.",
+    "historia_clinica": "Gestante de 34 años con 35 semanas de embarazo. Presenta dificultad respiratoria intensa de inicio súbito hace 30 minutos, acompañada de dolor torácico y tos con sangre. Le cuesta completar frases.",
+    "respuestas_ia": {
+      "1": "Estoy embarazada de 35 semanas y me cuesta mucho respirar.",
+      "2": "Comenzó de repente hace media hora.",
+      "3": "También tengo dolor en el pecho.",
+      "4": "He tosido sangre.",
+      "5": "Me cuesta hablar sin detenerme a respirar."
+    },
+    "semanas_gestacion": 35
+  },
+  {
+    "id_caso": "URG-064",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 25,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      10
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "No percibe movimientos fetales.",
+    "historia_clinica": "Gestante de 25 años con 38 semanas de embarazo. Refiere ausencia de movimientos fetales durante las últimas ocho horas, a pesar de que anteriormente los percibía regularmente. Niega sangrado vaginal y pérdida de líquido.",
+    "respuestas_ia": {
+      "1": "Tengo 38 semanas de embarazo y no siento mover a mi bebé.",
+      "2": "Hace unas ocho horas que no siento movimientos.",
+      "3": "Antes lo sentía moverse normalmente.",
+      "4": "No tengo sangrado vaginal.",
+      "5": "No he tenido pérdida de líquido."
+    },
+    "semanas_gestacion": 38
+  },
+  {
+    "id_caso": "URG-065",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 31,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      12,
+      13
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Presión arterial elevada, cefalea intensa y visión borrosa.",
+    "historia_clinica": "Gestante de 31 años con 34 semanas de embarazo. Presenta dolor de cabeza intenso de 9/10, visión borrosa y presión arterial reportada de 170/110 mmHg. Los síntomas comenzaron hace aproximadamente una hora.",
+    "respuestas_ia": {
+      "1": "Tengo 34 semanas de embarazo y me duele mucho la cabeza.",
+      "2": "El dolor empezó hace una hora.",
+      "3": "Es de 9 sobre 10 y veo borroso.",
+      "4": "Me tomaron la presión y estaba en 170 sobre 110.",
+      "5": "No he perdido el conocimiento."
+    },
+    "semanas_gestacion": 34
+  },
+  {
+    "id_caso": "URG-066",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 29,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      8,
+      11
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Contracciones frecuentes y sangrado vaginal.",
+    "historia_clinica": "Gestante de 29 años con 30 semanas de embarazo. Presenta contracciones dolorosas cada cuatro minutos desde hace una hora, acompañadas de sangrado vaginal moderado. Refiere presión intensa en la pelvis.",
+    "respuestas_ia": {
+      "1": "Tengo 30 semanas de embarazo y estoy teniendo contracciones.",
+      "2": "Las contracciones vienen cada cuatro minutos.",
+      "3": "Comenzaron hace una hora.",
+      "4": "También tengo sangrado vaginal.",
+      "5": "Siento mucha presión en la pelvis."
+    },
+    "semanas_gestacion": 30
+  },
+  {
+    "id_caso": "URG-067",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 27,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      11
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Contracciones regulares antes de las 37 semanas.",
+    "historia_clinica": "Gestante de 27 años con 33 semanas de embarazo. Presenta contracciones dolorosas cada diez minutos desde hace dos horas, con presión pélvica. Niega sangrado vaginal y pérdida de líquido. Percibe movimientos fetales.",
+    "respuestas_ia": {
+      "1": "Tengo 33 semanas de embarazo y estoy teniendo contracciones.",
+      "2": "Comenzaron hace dos horas.",
+      "3": "Las contracciones vienen cada diez minutos.",
+      "4": "Siento presión en la pelvis, pero no tengo sangrado.",
+      "5": "No he perdido líquido y siento mover a mi bebé."
+    },
+    "semanas_gestacion": 33
+  },
+  {
+    "id_caso": "URG-068",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 32,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      12
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Presión arterial elevada y dolor de cabeza persistente.",
+    "historia_clinica": "Gestante de 32 años con 30 semanas de embarazo. Refiere cefalea persistente de intensidad 6/10 desde hace cuatro horas y presión arterial reportada de 150/95 mmHg. Niega alteraciones visuales, convulsiones y pérdida del conocimiento.",
+    "respuestas_ia": {
+      "1": "Tengo 30 semanas de embarazo y me duele la cabeza.",
+      "2": "El dolor lleva cuatro horas.",
+      "3": "Es de 6 sobre 10.",
+      "4": "Me tomaron la presión y estaba en 150 sobre 95.",
+      "5": "No tengo visión borrosa ni me he desmayado."
+    },
+    "semanas_gestacion": 30
+  },
+  {
+    "id_caso": "URG-069",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 24,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal persistente durante el embarazo.",
+    "historia_clinica": "Gestante de 24 años con 28 semanas de embarazo. Presenta dolor abdominal de intensidad 6/10 desde hace cinco horas, localizado en la parte inferior del abdomen. Niega sangrado vaginal, pérdida de líquido y fiebre. Percibe movimientos fetales habituales. No se ha determinado si presenta actividad uterina.",
+    "respuestas_ia": {
+      "1": "Tengo 28 semanas de embarazo y me duele la parte baja del abdomen.",
+      "2": "El dolor empezó hace cinco horas.",
+      "3": "Es de intensidad 6 sobre 10.",
+      "4": "No tengo sangrado ni pérdida de líquido.",
+      "5": "Siento mover a mi bebé normalmente."
+    },
+    "semanas_gestacion": 28
+  },
+  {
+    "id_caso": "URG-070",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 35,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      13,
+      14
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Visión borrosa y zumbidos en los oídos.",
+    "historia_clinica": "Gestante de 35 años con 36 semanas de embarazo. Presenta visión borrosa y zumbidos en los oídos desde hace una hora. Refiere cefalea de intensidad 5/10. No dispone de una medición reciente de presión arterial. Niega pérdida del conocimiento.",
+    "respuestas_ia": {
+      "1": "Tengo 36 semanas de embarazo y estoy viendo borroso.",
+      "2": "Empezó hace aproximadamente una hora.",
+      "3": "También escucho zumbidos en los oídos.",
+      "4": "Tengo dolor de cabeza de 5 sobre 10.",
+      "5": "No sé cómo está mi presión arterial."
+    },
+    "semanas_gestacion": 36
+  },
+  {
+    "id_caso": "URG-071",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 29,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor persistente en la parte superior del abdomen.",
+    "historia_clinica": "Gestante de 29 años con 34 semanas de embarazo. Presenta dolor epigástrico persistente de intensidad 7/10 desde hace tres horas, acompañado de náuseas. Niega sangrado vaginal y pérdida de líquido. No dispone de una medición reciente de presión arterial.",
+    "respuestas_ia": {
+      "1": "Tengo 34 semanas de embarazo y me duele la parte alta del abdomen.",
+      "2": "El dolor comenzó hace tres horas.",
+      "3": "Es constante y de intensidad 7 sobre 10.",
+      "4": "Tengo náuseas, pero no estoy sangrando.",
+      "5": "No sé cómo está mi presión arterial."
+    },
+    "semanas_gestacion": 34,
+    "datos_clinicos_desconocidos": [
+      "presion_arterial_actual"
+    ]
+  },
+  {
+    "id_caso": "URG-072",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 26,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve e intermitente.",
+    "historia_clinica": "Gestante de 26 años con 22 semanas de embarazo. Presenta molestia abdominal difusa de intensidad 3/10 desde hace cuatro horas, intermitente y sin empeoramiento. Niega sangrado vaginal, pérdida de líquido, fiebre y dolor intenso. No refiere contracciones regulares.",
+    "respuestas_ia": {
+      "1": "Tengo 22 semanas de embarazo y una molestia leve en el abdomen.",
+      "2": "Empezó hace cuatro horas y va y viene.",
+      "3": "Es de 3 sobre 10 y no ha empeorado.",
+      "4": "No tengo sangrado ni pérdida de líquido.",
+      "5": "No tengo fiebre ni contracciones regulares."
+    },
+    "semanas_gestacion": 22
+  },
+  {
+    "id_caso": "URG-073",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 30,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de cabeza moderado durante el embarazo.",
+    "historia_clinica": "Gestante de 30 años con 25 semanas de embarazo. Presenta cefalea bilateral de intensidad 4/10 desde hace tres horas, de inicio gradual. Niega visión borrosa, zumbidos, dolor epigástrico y pérdida del conocimiento. No dispone de una medición reciente de presión arterial.",
+    "respuestas_ia": {
+      "1": "Tengo 25 semanas de embarazo y dolor de cabeza.",
+      "2": "Empezó poco a poco hace tres horas.",
+      "3": "Es de intensidad 4 sobre 10.",
+      "4": "No tengo visión borrosa ni zumbidos.",
+      "5": "No sé cómo está mi presión arterial."
+    },
+    "semanas_gestacion": 25
+  },
+  {
+    "id_caso": "URG-074",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 23,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal leve que mejora con reposo.",
+    "historia_clinica": "Gestante de 23 años con 20 semanas de embarazo. Presenta molestia abdominal baja de intensidad 2/10 después de caminar durante un periodo prolongado. Ha mejorado con reposo. Niega sangrado vaginal, pérdida de líquido, fiebre y contracciones regulares.",
+    "respuestas_ia": {
+      "1": "Tengo 20 semanas de embarazo y una molestia leve abajo del abdomen.",
+      "2": "Comenzó después de caminar bastante.",
+      "3": "Es de 2 sobre 10 y mejora cuando descanso.",
+      "4": "No tengo sangrado ni pérdida de líquido.",
+      "5": "No tengo fiebre ni contracciones regulares."
+    },
+    "semanas_gestacion": 20
+  },
+  {
+    "id_caso": "URG-075",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 33,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Cefalea gradual con presión arterial normal reportada.",
+    "historia_clinica": "Gestante de 33 años con 27 semanas de embarazo. Presenta cefalea de intensidad 4/10 desde hace cuatro horas, de inicio gradual. Refiere una medición reciente de presión arterial de 115/75 mmHg. Niega visión borrosa, zumbidos, dolor epigástrico, convulsiones y pérdida del conocimiento.",
+    "respuestas_ia": {
+      "1": "Tengo 27 semanas de embarazo y me duele la cabeza.",
+      "2": "Comenzó poco a poco hace cuatro horas.",
+      "3": "Es de 4 sobre 10.",
+      "4": "Me tomaron la presión y estaba en 115 sobre 75.",
+      "5": "No tengo visión borrosa ni dolor en la boca del estómago."
+    },
+    "semanas_gestacion": 27
+  },
+  {
+    "id_caso": "URG-076",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 28,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor abdominal moderado y estable.",
+    "historia_clinica": "Gestante de 28 años con 24 semanas de embarazo. Presenta dolor abdominal difuso de intensidad 4/10 desde hace cinco horas, intermitente y estable. Niega sangrado vaginal, pérdida de líquido, fiebre y contracciones regulares. No presenta vómitos.",
+    "respuestas_ia": {
+      "1": "Tengo 24 semanas de embarazo y dolor abdominal moderado.",
+      "2": "Empezó hace cinco horas.",
+      "3": "Es de 4 sobre 10, va y viene y no ha aumentado.",
+      "4": "No tengo sangrado ni pérdida de líquido.",
+      "5": "No tengo fiebre, vómitos ni contracciones regulares."
+    },
+    "semanas_gestacion": 24
+  },
+  {
+    "id_caso": "URG-077",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 24,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve después de caminar.",
+    "historia_clinica": "Gestante de 24 años con 18 semanas de embarazo. Presenta molestia abdominal baja de intensidad 2/10 después de caminar durante una hora. La molestia ha disminuido con reposo. Niega sangrado vaginal, pérdida de líquido, fiebre y contracciones regulares.",
+    "respuestas_ia": {
+      "1": "Tengo 18 semanas de embarazo y una molestia leve en el abdomen.",
+      "2": "Comenzó después de caminar.",
+      "3": "Es de 2 sobre 10 y mejora cuando descanso.",
+      "4": "No tengo sangrado ni pérdida de líquido.",
+      "5": "No tengo fiebre ni contracciones."
+    },
+    "semanas_gestacion": 18
+  },
+  {
+    "id_caso": "URG-078",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 29,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Cefalea leve similar a episodios habituales.",
+    "historia_clinica": "Gestante de 29 años con 16 semanas de embarazo. Presenta cefalea bilateral de intensidad 2/10 desde hace dos horas, similar a episodios previos y con mejoría después de descansar. Niega visión borrosa, zumbidos, vómitos y confusión. No dispone de medición reciente de presión arterial.",
+    "respuestas_ia": {
+      "1": "Tengo 16 semanas de embarazo y un dolor de cabeza leve.",
+      "2": "Empezó hace dos horas.",
+      "3": "Es de 2 sobre 10 y se parece a otros dolores que he tenido.",
+      "4": "Ha mejorado con el descanso.",
+      "5": "No tengo visión borrosa ni zumbidos.",
+      "6": "No sé cómo está mi presión arterial."
+    },
+    "semanas_gestacion": 16
+  },
+  {
+    "id_caso": "URG-079",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 26,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve después de comer.",
+    "historia_clinica": "Gestante de 26 años con 21 semanas de embarazo. Presenta molestia abdominal difusa de intensidad 2/10 después de una comida abundante. Ha disminuido progresivamente durante las últimas dos horas. Niega sangrado vaginal, pérdida de líquido, fiebre, vómitos y contracciones regulares.",
+    "respuestas_ia": {
+      "1": "Tengo 21 semanas de embarazo y una molestia leve en el abdomen.",
+      "2": "Comenzó después de comer.",
+      "3": "Es de 2 sobre 10 y está mejorando.",
+      "4": "No tengo sangrado ni pérdida de líquido.",
+      "5": "No tengo fiebre, vómitos ni contracciones."
+    },
+    "semanas_gestacion": 21
+  },
+  {
+    "id_caso": "URG-080",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 32,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Cefalea leve de inicio gradual.",
+    "historia_clinica": "Gestante de 32 años con 19 semanas de embarazo. Presenta cefalea de intensidad 3/10 desde hace tres horas, de inicio gradual. Niega visión borrosa, zumbidos, dolor epigástrico, vómitos y confusión. No dispone de medición reciente de presión arterial.",
+    "respuestas_ia": {
+      "1": "Tengo 19 semanas de embarazo y dolor de cabeza leve.",
+      "2": "Comenzó poco a poco hace tres horas.",
+      "3": "Es de 3 sobre 10.",
+      "4": "No tengo visión borrosa ni zumbidos.",
+      "5": "No tengo vómitos ni confusión.",
+      "6": "No sé cómo está mi presión arterial."
+    },
+    "semanas_gestacion": 19
+  },
+  {
+    "id_caso": "URG-081",
+    "poblacion_id": 4,
+    "poblacion": "Embarazada",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 27,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      4
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Molestia abdominal leve y transitoria.",
+    "historia_clinica": "Gestante de 27 años con 23 semanas de embarazo. Presenta molestia abdominal baja de intensidad 2/10, intermitente, desde hace tres horas. Ha disminuido con reposo. Niega sangrado vaginal, pérdida de líquido, fiebre y contracciones regulares.",
+    "respuestas_ia": {
+      "1": "Tengo 23 semanas de embarazo y una molestia leve abajo del abdomen.",
+      "2": "Comenzó hace tres horas.",
+      "3": "Es de 2 sobre 10 y está mejorando.",
+      "4": "No tengo sangrado ni pérdida de líquido.",
+      "5": "No tengo fiebre ni contracciones."
+    },
+    "semanas_gestacion": 23
+  },
+  {
+    "id_caso": "URG-082",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 34,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      5
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Accidente de tránsito con dificultad respiratoria grave.",
+    "historia_clinica": "Hombre de 34 años involucrado en una colisión de motocicleta hace veinte minutos. Presenta dificultad respiratoria intensa, dolor torácico de intensidad 9/10 y respiración rápida. Tiene dificultad para completar frases y refiere empeoramiento progresivo.",
+    "respuestas_ia": {
+      "1": "Tuve un accidente de moto hace veinte minutos.",
+      "2": "Me cuesta mucho respirar.",
+      "3": "Tengo dolor en el pecho de 9 sobre 10.",
+      "4": "Estoy respirando muy rápido.",
+      "5": "Me cuesta hablar y estoy empeorando."
+    }
+  },
+  {
+    "id_caso": "URG-083",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 27,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      15
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Herida profunda con sangrado abundante.",
+    "historia_clinica": "Mujer de 27 años que sufrió una herida profunda en el muslo derecho con un objeto cortante hace quince minutos. Presenta sangrado abundante que continúa a pesar de la presión directa inicial. Refiere mareo y debilidad.",
+    "respuestas_ia": {
+      "1": "Me corté profundamente el muslo hace quince minutos.",
+      "2": "Estoy sangrando mucho.",
+      "3": "El sangrado no se detiene con la presión.",
+      "4": "Me siento mareada.",
+      "5": "También siento debilidad."
+    }
+  },
+  {
+    "id_caso": "URG-084",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 45,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      16,
+      18
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Golpe en la cabeza con confusión.",
+    "historia_clinica": "Hombre de 45 años que sufrió una caída desde una escalera hace treinta minutos, con golpe directo en la cabeza. Un acompañante refiere que está desorientado, repite preguntas y no recuerda claramente el accidente. Presenta cefalea intensa.",
+    "respuestas_ia": {
+      "1": "Me caí de una escalera y me golpeé la cabeza.",
+      "2": "Fue hace treinta minutos.",
+      "3": "Me duele mucho la cabeza.",
+      "4": "No recuerdo bien qué pasó.",
+      "5": "Mi acompañante dice que estoy confundido."
+    }
+  },
+  {
+    "id_caso": "URG-085",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 39,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      19
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Accidente con sospecha de lesión de columna.",
+    "historia_clinica": "Mujer de 39 años involucrada en un accidente de tránsito hace cuarenta minutos. Presenta dolor cervical intenso y hormigueo en ambas piernas. Refiere dificultad para moverlas después del impacto. Permanece consciente y orientada.",
+    "respuestas_ia": {
+      "1": "Tuve un accidente de tránsito hace cuarenta minutos.",
+      "2": "Me duele mucho el cuello.",
+      "3": "Siento hormigueo en las dos piernas.",
+      "4": "Me cuesta mover las piernas.",
+      "5": "Estoy consciente y puedo responder preguntas."
+    }
+  },
+  {
+    "id_caso": "URG-086",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 52,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      20,
+      5
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Quemadura extensa con dificultad respiratoria.",
+    "historia_clinica": "Hombre de 52 años expuesto a un incendio en un espacio cerrado hace veinticinco minutos. Presenta quemaduras extensas en tórax y brazos, tos y dificultad respiratoria. Refiere dolor intenso y exposición a humo.",
+    "respuestas_ia": {
+      "1": "Estuve en un incendio hace veinticinco minutos.",
+      "2": "Tengo quemaduras en el pecho y los brazos.",
+      "3": "Me duele mucho.",
+      "4": "Respiré humo y ahora tengo tos.",
+      "5": "Me cuesta respirar."
+    }
+  },
+  {
+    "id_caso": "URG-087",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 28,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      17
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Sospecha de fractura de muñeca.",
+    "historia_clinica": "Hombre de 28 años que cayó sobre la mano derecha hace una hora. Presenta dolor de muñeca de intensidad 8/10, hinchazón y dificultad para moverla. No presenta herida abierta ni sangrado. Refiere sensibilidad conservada en los dedos y no observa cambios en su coloración.",
+    "respuestas_ia": {
+      "1": "Me caí sobre la mano derecha hace una hora.",
+      "2": "Me duele mucho la muñeca.",
+      "3": "El dolor es de 8 sobre 10.",
+      "4": "Está hinchada y me cuesta moverla.",
+      "5": "No tengo heridas ni sangrado.",
+      "6": "Siento los dedos normalmente.",
+      "7": "Los dedos tienen su color habitual.",
+      "8": "No me golpeé la cabeza."
+    }
+  },
+  {
+    "id_caso": "URG-088",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 41,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      15
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Herida profunda en antebrazo.",
+    "historia_clinica": "Mujer de 41 años que sufrió una herida cortante en el antebrazo izquierdo hace cuarenta minutos. La herida es profunda y presenta dolor de intensidad 7/10. El sangrado disminuyó y está controlado con presión directa. Puede mover los dedos y conserva la sensibilidad.",
+    "respuestas_ia": {
+      "1": "Me corté el antebrazo hace cuarenta minutos.",
+      "2": "La herida es profunda.",
+      "3": "Me duele 7 sobre 10.",
+      "4": "El sangrado está controlado con presión.",
+      "5": "Puedo mover los dedos.",
+      "6": "Siento normalmente la mano.",
+      "7": "No tengo mareo ni desmayo.",
+      "8": "No me golpeé la cabeza."
+    }
+  },
+  {
+    "id_caso": "URG-089",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 36,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      16
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Golpe en la cabeza con cefalea y náuseas.",
+    "historia_clinica": "Hombre de 36 años que sufrió una caída en bicicleta hace dos horas y se golpeó la cabeza. Presenta cefalea de intensidad 6/10 y náuseas. Niega pérdida del conocimiento, vómitos y confusión. Está orientado y puede caminar normalmente. No se ha documentado uso de anticoagulantes.",
+    "respuestas_ia": {
+      "1": "Me caí de la bicicleta y me golpeé la cabeza.",
+      "2": "Fue hace dos horas.",
+      "3": "Tengo dolor de cabeza de 6 sobre 10.",
+      "4": "Tengo náuseas, pero no he vomitado.",
+      "5": "No perdí el conocimiento.",
+      "6": "No estoy confundido.",
+      "7": "Puedo caminar normalmente.",
+      "8": "No sé si tomo algún medicamento que aumente el sangrado."
+    },
+    "datos_clinicos_desconocidos": [
+      "uso_anticoagulantes"
+    ]
+  },
+  {
+    "id_caso": "URG-090",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 47,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      20
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Quemadura dolorosa en antebrazo.",
+    "historia_clinica": "Mujer de 47 años que sufrió una quemadura térmica en el antebrazo derecho con agua caliente hace una hora. Presenta dolor de intensidad 7/10, enrojecimiento y algunas ampollas. La lesión está localizada en una zona limitada del antebrazo. Niega dificultad respiratoria y exposición a humo.",
+    "respuestas_ia": {
+      "1": "Me quemé el antebrazo con agua caliente.",
+      "2": "Fue hace una hora.",
+      "3": "Me duele 7 sobre 10.",
+      "4": "Tengo la piel roja y algunas ampollas.",
+      "5": "La quemadura está solo en una parte del antebrazo.",
+      "6": "No tengo dificultad para respirar.",
+      "7": "No estuve expuesta a humo.",
+      "8": "No tengo quemaduras en otras partes del cuerpo."
+    }
+  },
+  {
+    "id_caso": "URG-091",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_alta",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 32,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      3
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor torácico después de accidente.",
+    "historia_clinica": "Hombre de 32 años involucrado en una colisión automovilística hace una hora. Presenta dolor torácico localizado de intensidad 7/10, que aumenta al respirar profundamente y al tocar la zona afectada. Puede hablar en frases completas. Niega pérdida del conocimiento. No se dispone de saturación de oxígeno ni otros signos vitales.",
+    "respuestas_ia": {
+      "1": "Tuve un accidente de carro hace una hora.",
+      "2": "Me duele el pecho.",
+      "3": "El dolor es de 7 sobre 10.",
+      "4": "Me duele más cuando respiro profundo.",
+      "5": "También me duele al tocarme el pecho.",
+      "6": "Puedo hablar normalmente.",
+      "7": "No perdí el conocimiento.",
+      "8": "No sé cómo está mi oxigenación."
+    }
+  },
+  {
+    "id_caso": "URG-092",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 25,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      17
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de muñeca después de una caída.",
+    "historia_clinica": "Mujer de 25 años que cayó sobre la mano derecha hace tres horas. Presenta dolor de muñeca de intensidad 4/10, hinchazón leve y molestias al moverla. No observa deformidad, heridas ni cambios de color en los dedos. Conserva la sensibilidad y movilidad de los dedos. No se ha descartado una fractura.",
+    "respuestas_ia": {
+      "1": "Me caí sobre la mano derecha hace tres horas.",
+      "2": "Me duele la muñeca.",
+      "3": "El dolor es de 4 sobre 10.",
+      "4": "Está un poco hinchada, pero no deformada.",
+      "5": "Puedo mover los dedos y los siento normalmente."
+    }
+  },
+  {
+    "id_caso": "URG-093",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 38,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      20
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Quemadura superficial pequeña.",
+    "historia_clinica": "Hombre de 38 años que sufrió una quemadura por contacto con una superficie caliente hace dos horas. Presenta enrojecimiento localizado en una pequeña zona del antebrazo izquierdo y dolor de intensidad 3/10. No presenta ampollas, pérdida de sensibilidad ni lesiones en otras zonas. Niega exposición a humo.",
+    "respuestas_ia": {
+      "1": "Me quemé el antebrazo hace dos horas.",
+      "2": "Fue al tocar una superficie caliente.",
+      "3": "El dolor es de 3 sobre 10.",
+      "4": "La piel está roja, pero no tengo ampollas.",
+      "5": "La quemadura es pequeña y no respiré humo."
+    }
+  },
+  {
+    "id_caso": "URG-094",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 30,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor de tobillo después de una torcedura.",
+    "historia_clinica": "Mujer de 30 años que sufrió una torcedura del tobillo derecho mientras caminaba hace cuatro horas. Presenta dolor de intensidad 4/10 e hinchazón leve. Puede apoyar el pie y caminar varios pasos, aunque con molestias. Niega deformidad, heridas abiertas, pérdida de sensibilidad y cambios de coloración.",
+    "respuestas_ia": {
+      "1": "Me torcí el tobillo hace cuatro horas.",
+      "2": "Me duele 4 sobre 10.",
+      "3": "Está un poco hinchado.",
+      "4": "Puedo apoyar el pie y caminar.",
+      "5": "No tengo heridas ni deformidad."
+    }
+  },
+  {
+    "id_caso": "URG-095",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 44,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      16
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Golpe leve en la cabeza.",
+    "historia_clinica": "Hombre de 44 años que se golpeó la cabeza contra una puerta hace dos horas. Presenta dolor local de intensidad 3/10. Niega pérdida del conocimiento, vómitos, confusión, alteraciones visuales y debilidad. Está orientado. No se ha documentado uso de anticoagulantes.",
+    "respuestas_ia": {
+      "1": "Me golpeé la cabeza con una puerta hace dos horas.",
+      "2": "Me duele un poco donde me golpeé.",
+      "3": "El dolor es de 3 sobre 10.",
+      "4": "No perdí el conocimiento ni he vomitado.",
+      "5": "No tengo confusión ni problemas de visión."
+    },
+    "datos_clinicos_desconocidos": [
+      "uso_anticoagulantes"
+    ]
+  },
+  {
+    "id_caso": "URG-096",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "media_baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 35,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      3
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor localizado en el tórax después de un golpe.",
+    "historia_clinica": "Mujer de 35 años que recibió un golpe leve en el costado del tórax durante una actividad deportiva hace tres horas. Presenta dolor localizado de intensidad 4/10 que aumenta al tocar la zona. Niega dificultad respiratoria, pérdida del conocimiento y empeoramiento progresivo. No se dispone de signos vitales.",
+    "respuestas_ia": {
+      "1": "Recibí un golpe en el costado del pecho hace tres horas.",
+      "2": "Me duele 4 sobre 10.",
+      "3": "El dolor aumenta cuando me toco la zona.",
+      "4": "No tengo dificultad para respirar.",
+      "5": "No me he desmayado y el dolor no ha empeorado."
+    }
+  },
+  {
+    "id_caso": "URG-097",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 23,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Golpe leve en el antebrazo.",
+    "historia_clinica": "Hombre de 23 años que se golpeó el antebrazo derecho contra una mesa hace dos horas. Presenta dolor localizado de intensidad 2/10 y enrojecimiento leve. Conserva la movilidad completa del brazo y la mano. Niega deformidad, herida abierta, pérdida de sensibilidad y aumento progresivo del dolor.",
+    "respuestas_ia": {
+      "1": "Me golpeé el antebrazo contra una mesa.",
+      "2": "Fue hace dos horas.",
+      "3": "El dolor es de 2 sobre 10.",
+      "4": "Puedo mover el brazo y la mano normalmente.",
+      "5": "No tengo heridas, deformidad ni pérdida de sensibilidad."
+    }
+  },
+  {
+    "id_caso": "URG-098",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 31,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [
+      20
+    ],
+    "sintomas_ids": [],
+    "motivo_consulta": "Quemadura superficial pequeña.",
+    "historia_clinica": "Mujer de 31 años que sufrió una quemadura por contacto con una taza caliente hace una hora. Presenta una zona pequeña de enrojecimiento en el antebrazo, con dolor de intensidad 2/10. No presenta ampollas ni pérdida de sensibilidad. Niega exposición a humo y lesiones en otras partes del cuerpo.",
+    "respuestas_ia": {
+      "1": "Me quemé el antebrazo con una taza caliente.",
+      "2": "Fue hace una hora.",
+      "3": "El dolor es de 2 sobre 10.",
+      "4": "La piel está roja, pero no tengo ampollas.",
+      "5": "Es una quemadura pequeña y no respiré humo."
+    }
+  },
+  {
+    "id_caso": "URG-099",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 27,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Torcedura leve de tobillo.",
+    "historia_clinica": "Hombre de 27 años que se torció el tobillo izquierdo mientras caminaba hace tres horas. Presenta dolor de intensidad 2/10 e hinchazón mínima. Puede apoyar el pie y caminar normalmente. Niega deformidad, heridas abiertas, pérdida de sensibilidad y cambios de coloración.",
+    "respuestas_ia": {
+      "1": "Me torcí el tobillo mientras caminaba.",
+      "2": "Fue hace tres horas.",
+      "3": "El dolor es de 2 sobre 10.",
+      "4": "Puedo apoyar el pie y caminar.",
+      "5": "No tengo deformidad, heridas ni pérdida de sensibilidad."
+    }
+  },
+  {
+    "id_caso": "URG-100",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 40,
+    "sexo": "Femenino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Contusión leve en la pierna.",
+    "historia_clinica": "Mujer de 40 años que recibió un golpe leve en la pierna derecha contra un mueble hace cuatro horas. Presenta dolor localizado de intensidad 2/10 y un hematoma pequeño. Puede caminar sin dificultad. Niega deformidad, herida abierta, pérdida de sensibilidad y aumento del dolor.",
+    "respuestas_ia": {
+      "1": "Me golpeé la pierna contra un mueble.",
+      "2": "Fue hace cuatro horas.",
+      "3": "El dolor es de 2 sobre 10.",
+      "4": "Tengo un morado pequeño.",
+      "5": "Puedo caminar normalmente y no tengo heridas."
+    }
+  },
+  {
+    "id_caso": "URG-101",
+    "poblacion_id": 5,
+    "poblacion": "Trauma/Accidente",
+    "prioridad_objetivo": "baja",
+    "prioridad_esperada": null,
+    "estado_validacion": "pendiente_revision_clinica",
+    "edad": 29,
+    "sexo": "Masculino",
+    "antecedentes_ids": [],
+    "banderas_ids": [],
+    "sintomas_ids": [],
+    "motivo_consulta": "Dolor muscular leve después de una lesión deportiva.",
+    "historia_clinica": "Hombre de 29 años que sufrió una distensión muscular leve en el muslo derecho durante una actividad deportiva hace seis horas, al realizar un movimiento brusco. Presenta dolor localizado de intensidad 2/10. Puede caminar normalmente. Niega caída, golpe directo, hinchazón importante, deformidad, pérdida de fuerza y alteraciones de sensibilidad.",
+    "respuestas_ia": {
+      "1": "Me lesioné el muslo haciendo deporte.",
+      "2": "Fue hace seis horas al hacer un movimiento brusco.",
+      "3": "El dolor es de 2 sobre 10.",
+      "4": "Puedo caminar normalmente.",
+      "5": "No tengo hinchazón importante ni pérdida de fuerza."
+    }
+  }
+]

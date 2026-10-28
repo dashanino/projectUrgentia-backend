@@ -1,0 +1,26 @@
+{
+  "id_caso": "URG-004",
+  "id_pretriage": 165,
+  "tipo": "posible_subdeteccion_de_signos_de_alarma",
+  "datos_observados": [
+    "Fiebre de 40 °C",
+    "Somnolencia marcada",
+    "Dificultad para mantenerlo despierto",
+    "Respuestas confusas"
+  ],
+  "accion_reglas_observada": "continuar_submenu",
+  "interpretacion": "El caso contiene signos potencialmente graves, pero la evaluación inicial no produjo una alerta de alta prioridad.",
+  "estado_revision": "pendiente_revision_clinica",
+  "modificaciones_backend": false,
+  "resultado_revision_ia": {
+    "accion": "continuar",
+    "categorias_detectadas": [
+      "alteracion_del_estado_mental",
+      "fiebre_alta_en_menor"
+    ],
+    "requiere_aclaracion": true,
+    "motivo_aclaracion": "Fiebre de 40 °C en un niño asociada a somnolencia marcada, dificultad para mantenerlo despierto y confusión, señales que requieren valoración médica urgente.",
+    "respuestas_registradas": 1
+  },
+  "continuacion_automatica_autorizada": false
+}

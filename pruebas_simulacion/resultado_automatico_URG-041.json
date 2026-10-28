@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-041",
+  "id_pretriage": 200,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 192,
+          "respuesta": "Molestia abdominal leve después de comer."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.3899,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 200,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe molestia abdominal leve después de comer, sin datos aportados de dolor intenso o progresivo, abdomen rígido, sangrado, vómitos persistentes u otros signos de alarma. La información es limitada y no permite descartar completamente una urgencia.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.8612,
+      "respuesta_backend": {
+        "id_pretriage": 200,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 304,
+              "orden": 2,
+              "pregunta": "¿En qué parte del abdomen siente la molestia y desde cuándo comenzó?"
+            },
+            {
+              "id_pregunta": 305,
+              "orden": 3,
+              "pregunta": "¿La molestia aparece, empeora o mejora después de comer, y cuánto dura cada episodio?"
+            },
+            {
+              "id_pregunta": 306,
+              "orden": 4,
+              "pregunta": "¿Ha tenido náuseas, vómitos, diarrea, estreñimiento o dificultad para expulsar gases?"
+            },
+            {
+              "id_pregunta": 307,
+              "orden": 5,
+              "pregunta": "¿Ha presentado fiebre, mareo, desmayo, coloración amarilla en la piel o los ojos, o dolor que se extiende hacia la espalda?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:10:26.982104+00:00",
+  "pregunta_pendiente": "¿La molestia aparece, empeora o mejora después de comer, y cuánto dura cada episodio?"
+}

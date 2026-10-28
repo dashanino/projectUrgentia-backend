@@ -1,0 +1,7 @@
+id_caso,id_pretriage,estado,preguntas_enviadas,tiempo_http_segundos,codigo_http,detalle
+URG-031,191,consulta_incierta,1,7.8577,500,
+URG-034,194,consulta_incierta,1,46.9365,500,
+URG-035,195,envio_incierto,0,60.0029,,
+URG-036,196,envio_incierto,0,38.8438,500,
+URG-073,229,envio_incierto,0,60.0043,,
+URG-075,231,envio_incierto,0,60.0043,,

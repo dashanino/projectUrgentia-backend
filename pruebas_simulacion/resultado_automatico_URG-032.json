@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-032",
+  "id_pretriage": 192,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 184,
+          "respuesta": "Dolor abdominal moderado desde esta mañana."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 7.8032,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 192,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe dolor abdominal moderado de inicio reciente, pero faltan datos sobre localización, evolución, intensidad progresiva, abdomen rígido, vómitos, fiebre, sangrado u otros síntomas asociados para valorar posibles señales de alarma.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 11.3582,
+      "respuesta_backend": {
+        "id_pretriage": 192,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 280,
+              "orden": 2,
+              "pregunta": "¿En qué parte del abdomen comenzó el dolor y hacia qué zona, si alguna, se extiende?"
+            },
+            {
+              "id_pregunta": 281,
+              "orden": 3,
+              "pregunta": "¿El dolor apareció de forma repentina o gradual, es continuo o va y viene, y ha empeorado desde esta mañana?"
+            },
+            {
+              "id_pregunta": 282,
+              "orden": 4,
+              "pregunta": "En una escala de 0 a 10, ¿qué intensidad tiene ahora el dolor? ¿Has presentado vómitos, fiebre, diarrea, estreñimiento o cambios al orinar?"
+            },
+            {
+              "id_pregunta": 283,
+              "orden": 5,
+              "pregunta": "Si tienes posibilidad de embarazo, ¿hay retraso menstrual, embarazo confirmado o posibilidad de estar embarazada?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:00:06.589718+00:00",
+  "pregunta_pendiente": "¿En qué parte del abdomen comenzó el dolor y hacia qué zona, si alguna, se extiende?"
+}

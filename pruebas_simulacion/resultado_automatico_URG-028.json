@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-028",
+  "id_pretriage": 188,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 181,
+          "respuesta": "Fiebre alta persistente desde hace dos días."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.775,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 188,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "fiebre_alta_persistente"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "La fiebre alta persistente durante dos días requiere aclarar la temperatura medida, la edad y los síntomas asociados; con la información disponible no se identifican por sí sola señales claras de alarma inmediata.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 8.4753,
+      "respuesta_backend": {
+        "id_pretriage": 188,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 272,
+              "orden": 2,
+              "pregunta": "¿Cuál ha sido la temperatura máxima medida, cómo la mediste y cuándo fue la última medición?"
+            },
+            {
+              "id_pregunta": 273,
+              "orden": 3,
+              "pregunta": "¿La fiebre se acompaña de escalofríos intensos, tos, dolor de garganta, dificultad para respirar, dolor al orinar, dolor abdominal, vómitos o diarrea?"
+            },
+            {
+              "id_pregunta": 274,
+              "orden": 4,
+              "pregunta": "¿Has presentado somnolencia inusual, confusión, rigidez en el cuello, dolor de cabeza intenso o manchas nuevas en la piel?"
+            },
+            {
+              "id_pregunta": 275,
+              "orden": 5,
+              "pregunta": "¿Has tomado algún medicamento para la fiebre? Indica cuál, qué dosis y si produjo alguna mejoría."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:52:35.707425+00:00",
+  "pregunta_pendiente": "¿Cuál ha sido la temperatura máxima medida, cómo la mediste y cuándo fue la última medición?"
+}

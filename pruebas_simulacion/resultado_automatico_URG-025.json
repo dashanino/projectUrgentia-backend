@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-025",
+  "id_pretriage": 185,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 179,
+          "respuesta": "Dolor de cabeza súbito y extremadamente intenso."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.1671,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 185,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "sintomas_neurologicos_agudos"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "El inicio súbito y la intensidad extrema del dolor de cabeza constituyen una posible señal de alarma que requiere valoración médica urgente.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 8.012,
+      "respuesta_backend": {
+        "id_pretriage": 185,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 264,
+              "orden": 2,
+              "pregunta": "¿Hace cuánto comenzó el dolor y alcanzó su máxima intensidad de inmediato o fue aumentando progresivamente?"
+            },
+            {
+              "id_pregunta": 265,
+              "orden": 3,
+              "pregunta": "¿Tienes actualmente debilidad o adormecimiento en alguna parte del cuerpo, dificultad para hablar o entender, confusión, pérdida del equilibrio o cambios en la visión?"
+            },
+            {
+              "id_pregunta": 266,
+              "orden": 4,
+              "pregunta": "¿Has presentado fiebre, rigidez o dolor intenso en el cuello, vómitos repetidos o mucha sensibilidad a la luz?"
+            },
+            {
+              "id_pregunta": 267,
+              "orden": 5,
+              "pregunta": "¿El dolor continúa ahora y ha empeorado, mejorado o cambiado desde que comenzó?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:52:11.041687+00:00",
+  "pregunta_pendiente": "¿Tienes actualmente debilidad o adormecimiento en alguna parte del cuerpo, dificultad para hablar o entender, confusión, pérdida del equilibrio o cambios en la visión?"
+}

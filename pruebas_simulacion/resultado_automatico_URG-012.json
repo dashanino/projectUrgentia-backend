@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-012",
+  "id_pretriage": 173,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 168,
+          "respuesta": "Dolor abdominal leve y estable."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.2181,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 173,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe dolor abdominal leve y estable, sin datos aportados de intensidad progresiva, abdomen rígido, sangrado u otros signos de deterioro. Faltan detalles clínicos para valorar completamente el riesgo.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.3644,
+      "respuesta_backend": {
+        "id_pretriage": 173,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 220,
+              "orden": 2,
+              "pregunta": "¿En qué parte exacta del abdomen siente el dolor y desde cuándo comenzó?"
+            },
+            {
+              "id_pregunta": 221,
+              "orden": 3,
+              "pregunta": "¿El dolor se ha desplazado o se extiende hacia alguna otra zona, como la espalda o la ingle?"
+            },
+            {
+              "id_pregunta": 222,
+              "orden": 4,
+              "pregunta": "¿Ha tenido vómitos, diarrea, estreñimiento o dolor al orinar desde que comenzó el dolor?"
+            },
+            {
+              "id_pregunta": 223,
+              "orden": 5,
+              "pregunta": "¿Ha podido comer, beber líquidos y realizar sus actividades habituales pese al dolor?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:49:58.455325+00:00",
+  "pregunta_pendiente": "¿El dolor se ha desplazado o se extiende hacia alguna otra zona, como la espalda o la ingle?"
+}

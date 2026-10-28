@@ -1,0 +1,25 @@
+{
+  "id_caso": "URG-093",
+  "id_pretriage": 252,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "alerta",
+    "alta_prioridad": true,
+    "id_pretriage": 252,
+    "ok": true,
+    "origen": "reglas",
+    "resultado": {
+      "accion": "alerta",
+      "alta_prioridad": true,
+      "bandera_activadora": {
+        "id_bandera": 20,
+        "name": "Quemadura"
+      },
+      "id_pretriage": 252,
+      "regla_activadora": 29
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id_caso": "URG-035",
+  "id_pretriage": 195,
+  "estado": "envio_incierto",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 187,
+          "respuesta": "Dolor abdominal tipo cólico de intensidad moderada."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": null,
+      "tiempo_http_segundos": 60.0029,
+      "respuesta_backend": {
+        "error": "HTTPConnectionPool(host='127.0.0.1', port=3000): Read timed out. (read timeout=60)"
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:01:28.642679+00:00",
+  "preguntas_enviadas": 0
+}

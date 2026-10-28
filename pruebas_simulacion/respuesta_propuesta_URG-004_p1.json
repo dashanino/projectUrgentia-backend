@@ -1,0 +1,9 @@
+{
+  "id_caso": "URG-004",
+  "id_pretriage": 165,
+  "id_pregunta": 162,
+  "orden": 1,
+  "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+  "respuesta": "Mi niño tiene fiebre de 40 grados desde hace aproximadamente cuatro horas. Está muy somnoliento, cuesta mantenerlo despierto y cuando responde parece confundido. Por eso queremos que lo valoren en urgencias.",
+  "estado": "pendiente_revision"
+}

@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-027",
+  "id_pretriage": 187,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 180,
+          "respuesta": "Dolor abdominal progresivo en la parte inferior derecha."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.5623,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 187,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal_preocupante"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "El dolor abdominal progresivo en la parte inferior derecha puede requerir valoración médica urgente; faltan datos sobre intensidad, duración y síntomas asociados.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 7.8995,
+      "respuesta_backend": {
+        "id_pretriage": 187,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 268,
+              "orden": 2,
+              "pregunta": "¿Desde cuándo comenzó el dolor en la parte inferior derecha y ha ido aumentando de manera continua o intermitente?"
+            },
+            {
+              "id_pregunta": 269,
+              "orden": 3,
+              "pregunta": "En una escala de 0 a 10, ¿qué intensidad tiene el dolor ahora y empeora al caminar, moverte o toser?"
+            },
+            {
+              "id_pregunta": 270,
+              "orden": 4,
+              "pregunta": "¿Has tenido náuseas, vómitos, pérdida del apetito o cambios recientes en las evacuaciones, como diarrea o estreñimiento?"
+            },
+            {
+              "id_pregunta": 271,
+              "orden": 5,
+              "pregunta": "¿Has presentado molestias al orinar, sangre en la orina o, si corresponde, posibilidad de embarazo o sangrado vaginal anormal?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:52:23.231886+00:00",
+  "pregunta_pendiente": "¿Has tenido náuseas, vómitos, pérdida del apetito o cambios recientes en las evacuaciones, como diarrea o estreñimiento?"
+}

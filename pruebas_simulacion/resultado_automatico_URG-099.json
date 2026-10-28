@@ -1,0 +1,71 @@
+{
+  "id_caso": "URG-099",
+  "id_pretriage": 258,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 208,
+          "respuesta": "Torcedura leve de tobillo."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.1336,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 258,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "No se identificaron señales de alarma en esta revisión preliminar. Se puede continuar recopilando información, sin considerar el caso clínicamente seguro.",
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.8653,
+      "respuesta_backend": {
+        "id_pretriage": 258,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 360,
+              "orden": 2,
+              "pregunta": "¿Cuándo ocurrió la torcedura y cómo sucedió (por ejemplo, al caminar, correr o caer)?"
+            },
+            {
+              "id_pregunta": 361,
+              "orden": 3,
+              "pregunta": "¿Puedes apoyar el pie y dar varios pasos, o el dolor te lo impide?"
+            },
+            {
+              "id_pregunta": 362,
+              "orden": 4,
+              "pregunta": "¿Has notado hinchazón, moretón o una deformidad en el tobillo o el pie?"
+            },
+            {
+              "id_pregunta": 363,
+              "orden": 5,
+              "pregunta": "¿Tienes entumecimiento, hormigueo, pérdida de sensibilidad o cambio de color en los dedos del pie?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:20:02.243130+00:00",
+  "pregunta_pendiente": "¿Cuándo ocurrió la torcedura y cómo sucedió (por ejemplo, al caminar, correr o caer)?"
+}

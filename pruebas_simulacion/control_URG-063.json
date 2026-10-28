@@ -1,0 +1,25 @@
+{
+  "id_caso": "URG-063",
+  "id_pretriage": 219,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "alerta",
+    "alta_prioridad": true,
+    "id_pretriage": 219,
+    "ok": true,
+    "origen": "reglas",
+    "resultado": {
+      "accion": "alerta",
+      "alta_prioridad": true,
+      "bandera_activadora": {
+        "id_bandera": 9,
+        "name": "Tos con sangre"
+      },
+      "id_pretriage": 219,
+      "regla_activadora": 928
+    }
+  }
+}

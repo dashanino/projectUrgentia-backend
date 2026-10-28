@@ -1,0 +1,34 @@
+{
+  "id_caso": "URG-039",
+  "id_pretriage": 159,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "continuar_ia",
+    "alta_prioridad": false,
+    "id_pretriage": 159,
+    "ok": true,
+    "origen": "reglas"
+  },
+  "sintomas_registrados": true,
+  "primera_respuesta_enviada": true,
+  "primera_pregunta_id": 144,
+  "primera_respuesta": "Congestión nasal y temperatura ligeramente elevada.",
+  "preguntas_ia_enviadas": {
+    "2": {
+      "id_pregunta": 145,
+      "respuesta": "La congestión nasal comenzó ayer. No tengo información registrada sobre si ha mejorado, empeorado o se mantiene igual."
+    },
+    "3": {
+      "id_pregunta": 146,
+      "respuesta": "Mi temperatura máxima reportada fue de 37,8 grados Celsius. No está documentado cómo se midió ni cuándo fue la última medición."
+    },
+    "4": {
+      "id_pregunta": 147,
+      "respuesta": "No tengo dificultad para respirar ni dolor en el pecho. No tengo información registrada sobre cambios de color en los labios."
+    }
+  },
+  "bloque_2_5_enviado": false
+}

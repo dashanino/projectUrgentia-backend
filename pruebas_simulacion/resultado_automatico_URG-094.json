@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-094",
+  "id_pretriage": 253,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 206,
+          "respuesta": "Dolor de tobillo después de una torcedura."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.8412,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 253,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "lesión_musculoesquelética_con_información_insuficiente"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe dolor de tobillo tras una torcedura, sin datos aportados sobre deformidad, incapacidad para apoyar, dolor intenso, hinchazón importante, herida o alteraciones de sensibilidad o circulación.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.6696,
+      "respuesta_backend": {
+        "id_pretriage": 253,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 352,
+              "orden": 2,
+              "pregunta": "¿Cuándo ocurrió la torcedura y cómo sucedió?"
+            },
+            {
+              "id_pregunta": 353,
+              "orden": 3,
+              "pregunta": "¿Puedes apoyar el pie y caminar, aunque sea con dificultad?"
+            },
+            {
+              "id_pregunta": 354,
+              "orden": 4,
+              "pregunta": "¿Has notado hinchazón, moretón, deformidad o una herida en el tobillo?"
+            },
+            {
+              "id_pregunta": 355,
+              "orden": 5,
+              "pregunta": "¿El dolor apareció de inmediato y qué tan intenso es en una escala de 0 a 10?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:19:42.439453+00:00",
+  "pregunta_pendiente": "¿Cuándo ocurrió la torcedura y cómo sucedió?"
+}

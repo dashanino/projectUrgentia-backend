@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-018",
+  "id_pretriage": 179,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 174,
+          "respuesta": "Molestia abdominal leve después de comer."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 2.8881,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 179,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe una molestia abdominal leve después de comer, sin datos suficientes sobre duración, evolución, localización o síntomas asociados. No se identifican señales claras de alarma con la información disponible.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.8324,
+      "respuesta_backend": {
+        "id_pretriage": 179,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 244,
+              "orden": 2,
+              "pregunta": "¿En qué parte del abdomen siente la molestia y desde cuándo comenzó?"
+            },
+            {
+              "id_pregunta": 245,
+              "orden": 3,
+              "pregunta": "¿La molestia aparece cada vez que come, cuánto tiempo dura y está empeorando o mejorando?"
+            },
+            {
+              "id_pregunta": 246,
+              "orden": 4,
+              "pregunta": "¿Ha presentado vómitos, diarrea, estreñimiento o cambios en las heces desde que empezó la molestia?"
+            },
+            {
+              "id_pregunta": 247,
+              "orden": 5,
+              "pregunta": "¿El niño ha tenido fiebre, dificultad para beber líquidos, menos orina de lo habitual o se ve muy decaído?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:51:15.624885+00:00",
+  "pregunta_pendiente": "¿Ha presentado vómitos, diarrea, estreñimiento o cambios en las heces desde que empezó la molestia?"
+}

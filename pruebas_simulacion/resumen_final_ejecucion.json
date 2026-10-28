@@ -1,0 +1,12 @@
+{
+  "total": 100,
+  "acciones": {
+    "alerta_reglas_o_seguridad": 44,
+    "revision_clinica": 1,
+    "error_evaluacion": 8,
+    "preguntas_adicionales": 1,
+    "preguntas_pendientes": 42,
+    "sin_pretriage": 4
+  },
+  "prioridades_obtenidas": {}
+}

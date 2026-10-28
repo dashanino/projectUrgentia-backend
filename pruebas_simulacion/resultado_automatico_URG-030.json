@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-030",
+  "id_pretriage": 190,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 182,
+          "respuesta": "Dolor de cabeza intenso y persistente."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.019,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 190,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "El dolor de cabeza intenso y persistente requiere aclarar datos como inicio súbito o progresivo, evolución, síntomas neurológicos, fiebre, traumatismo, alteraciones visuales, vómitos o pérdida de conciencia para valorar posibles señales de alarma.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 7.7569,
+      "respuesta_backend": {
+        "id_pretriage": 190,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 276,
+              "orden": 2,
+              "pregunta": "¿Cuándo comenzó el dolor de cabeza y apareció de forma súbita, alcanzando su máxima intensidad desde el inicio, o fue aumentando gradualmente?"
+            },
+            {
+              "id_pregunta": 277,
+              "orden": 3,
+              "pregunta": "¿Has presentado visión borrosa, dificultad para hablar, debilidad u hormigueo en alguna parte del cuerpo, confusión o desmayo?"
+            },
+            {
+              "id_pregunta": 278,
+              "orden": 4,
+              "pregunta": "¿Tienes fiebre, rigidez o dolor importante al mover el cuello, vómitos repetidos o mucha sensibilidad a la luz?"
+            },
+            {
+              "id_pregunta": 279,
+              "orden": 5,
+              "pregunta": "¿Has sufrido recientemente un golpe o caída que pudiera haber afectado tu cabeza, o tomas medicamentos anticoagulantes?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:52:48.973124+00:00",
+  "pregunta_pendiente": "¿Has presentado visión borrosa, dificultad para hablar, debilidad u hormigueo en alguna parte del cuerpo, confusión o desmayo?"
+}

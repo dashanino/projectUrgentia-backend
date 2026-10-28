@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-038",
+  "id_pretriage": 198,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 190,
+          "respuesta": "Dolor abdominal leve que aparece ocasionalmente."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.4944,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 198,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe dolor abdominal leve y ocasional, sin datos aportados de intensidad progresiva, abdomen rígido, sangrado u otros signos de deterioro. Faltan detalles para valorar completamente el riesgo.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.8436,
+      "respuesta_backend": {
+        "id_pretriage": 198,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 296,
+              "orden": 2,
+              "pregunta": "¿En qué parte del abdomen sientes el dolor y se extiende hacia alguna otra zona, como la espalda, el pecho o el hombro?"
+            },
+            {
+              "id_pregunta": 297,
+              "orden": 3,
+              "pregunta": "¿Desde cuándo comenzó, cuánto dura cada episodio y con qué frecuencia aparece?"
+            },
+            {
+              "id_pregunta": 298,
+              "orden": 4,
+              "pregunta": "¿Qué intensidad alcanza el dolor en una escala de 0 a 10, y qué lo desencadena o lo alivia, como comer, evacuar, moverte o descansar?"
+            },
+            {
+              "id_pregunta": 299,
+              "orden": 5,
+              "pregunta": "¿Has presentado fiebre, náuseas o vómitos, diarrea o estreñimiento, sangre en las heces, dolor o ardor al orinar, o posibilidad de embarazo?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:10:06.316348+00:00",
+  "pregunta_pendiente": "¿En qué parte del abdomen sientes el dolor y se extiende hacia alguna otra zona, como la espalda, el pecho o el hombro?"
+}

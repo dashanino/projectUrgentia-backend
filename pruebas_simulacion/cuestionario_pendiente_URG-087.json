@@ -1,0 +1,20 @@
+{
+  "id_caso": "URG-087",
+  "id_pretriage": 246,
+  "accion_ia": "pregunta",
+  "preguntas": [
+    {
+      "id_pregunta": 204,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta_sugerida_no_validada": "Sospecha de fractura de muñeca."
+    }
+  ],
+  "respuesta_original_ia": {
+    "accion": "pregunta",
+    "id_pregunta": 204,
+    "orden": 1,
+    "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando."
+  },
+  "estado": "pendiente_revision_humana",
+  "respuestas_enviadas": false
+}

@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-015",
+  "id_pretriage": 176,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 171,
+          "respuesta": "Dolor abdominal intermitente."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.2667,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 176,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "El dolor abdominal intermitente por sí solo no permite identificar una señal de alarma. Se necesita aclarar su intensidad y evolución, localización, rigidez abdominal y síntomas asociados como vómitos persistentes, fiebre, sangrado, desmayo o dificultad para respirar.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 8.7849,
+      "respuesta_backend": {
+        "id_pretriage": 176,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 232,
+              "orden": 2,
+              "pregunta": "¿En qué parte del abdomen siente el dolor el niño y desde cuándo comenzó? ¿Se desplaza hacia alguna otra zona?"
+            },
+            {
+              "id_pregunta": 233,
+              "orden": 3,
+              "pregunta": "¿Qué tan fuerte es el dolor y está aumentando, disminuyendo o aparece con alguna actividad, comida o movimiento?"
+            },
+            {
+              "id_pregunta": 234,
+              "orden": 4,
+              "pregunta": "¿El niño ha presentado fiebre medida, náuseas, vómitos o dificultad para mantener líquidos desde que comenzó el dolor?"
+            },
+            {
+              "id_pregunta": 235,
+              "orden": 5,
+              "pregunta": "¿Ha tenido cambios recientes en las evacuaciones o en la orina, como diarrea, estreñimiento, dolor al orinar o menor cantidad de orina?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:50:33.316362+00:00",
+  "pregunta_pendiente": "¿Qué tan fuerte es el dolor y está aumentando, disminuyendo o aparece con alguna actividad, comida o movimiento?"
+}

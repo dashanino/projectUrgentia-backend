@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-016",
+  "id_pretriage": 177,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 172,
+          "respuesta": "Dolor de cabeza recurrente sin cambios."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.0782,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 177,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe dolor de cabeza recurrente sin cambios, sin datos aportados de inicio súbito, intensidad extrema, síntomas neurológicos u otras señales de alarma. Faltan detalles clínicos para valorar completamente el riesgo.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 12.302,
+      "respuesta_backend": {
+        "id_pretriage": 177,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 236,
+              "orden": 2,
+              "pregunta": "¿Desde cuándo tiene estos dolores de cabeza, con qué frecuencia aparecen y cuánto dura cada episodio?"
+            },
+            {
+              "id_pregunta": 237,
+              "orden": 3,
+              "pregunta": "En una escala de 0 a 10, ¿qué intensidad tiene el dolor ahora y cuál ha sido la intensidad máxima?"
+            },
+            {
+              "id_pregunta": 238,
+              "orden": 4,
+              "pregunta": "¿El dolor se acompaña de vómitos, fiebre, rigidez de cuello, somnolencia inusual, desmayo, convulsiones, visión borrosa o dificultad para hablar o mover alguna parte del cuerpo?"
+            },
+            {
+              "id_pregunta": 239,
+              "orden": 5,
+              "pregunta": "¿Qué medicamentos o medidas le han dado para el dolor, en qué cantidad y con qué efecto?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:50:47.379144+00:00",
+  "pregunta_pendiente": "¿El dolor se acompaña de vómitos, fiebre, rigidez de cuello, somnolencia inusual, desmayo, convulsiones, visión borrosa o dificultad para hablar o mover alguna parte del cuerpo?"
+}

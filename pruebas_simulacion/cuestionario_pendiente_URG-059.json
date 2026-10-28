@@ -1,0 +1,20 @@
+{
+  "id_caso": "URG-059",
+  "id_pretriage": 215,
+  "accion_ia": "pregunta",
+  "preguntas": [
+    {
+      "id_pregunta": 198,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta_sugerida_no_validada": "Fiebre baja y congestión nasal desde ayer."
+    }
+  ],
+  "respuesta_original_ia": {
+    "accion": "pregunta",
+    "id_pregunta": 198,
+    "orden": 1,
+    "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando."
+  },
+  "estado": "pendiente_revision_humana",
+  "respuestas_enviadas": false
+}

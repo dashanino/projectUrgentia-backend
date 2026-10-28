@@ -1,0 +1,51 @@
+{
+  "id_caso": "URG-031",
+  "id_pretriage": 191,
+  "estado": "consulta_incierta",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 183,
+          "respuesta": "Dolor abdominal acompañado de vómitos repetidos."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.3001,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 191,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal_preocupante"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "El dolor abdominal acompañado de vómitos repetidos puede requerir valoración médica urgente, pero faltan datos sobre intensidad y evolución del dolor, rigidez abdominal, presencia de sangre, fiebre y tolerancia de líquidos.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 500,
+      "tiempo_http_segundos": 2.5576,
+      "respuesta_backend": {
+        "message": "No fue posible generar la pregunta",
+        "ok": false
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:53:02.765259+00:00",
+  "preguntas_enviadas": 1
+}

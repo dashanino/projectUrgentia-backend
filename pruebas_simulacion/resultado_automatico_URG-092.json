@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-092",
+  "id_pretriage": 251,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 205,
+          "respuesta": "Dolor de muñeca después de una caída."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.5459,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 251,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Dolor de muñeca tras una caída, sin datos suficientes para identificar señales de alarma. Conviene aclarar intensidad, deformidad, herida abierta, hinchazón importante, incapacidad para mover la muñeca o los dedos y pérdida de sensibilidad.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.8911,
+      "respuesta_backend": {
+        "id_pretriage": 251,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 348,
+              "orden": 2,
+              "pregunta": "¿Cuándo ocurrió la caída y cómo fue (por ejemplo, sobre la mano extendida o con un golpe directo en la muñeca)?"
+            },
+            {
+              "id_pregunta": 349,
+              "orden": 3,
+              "pregunta": "¿La muñeca se ve deformada o en una posición anormal, y en qué zona exacta notas el dolor?"
+            },
+            {
+              "id_pregunta": 350,
+              "orden": 4,
+              "pregunta": "¿Puedes mover los dedos y la muñeca, o usar la mano para agarrar objetos?"
+            },
+            {
+              "id_pregunta": 351,
+              "orden": 5,
+              "pregunta": "¿Tienes entumecimiento u hormigueo en la mano o los dedos, o notas que están fríos, pálidos o azulados?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:19:29.990476+00:00",
+  "pregunta_pendiente": "¿Cuándo ocurrió la caída y cómo fue (por ejemplo, sobre la mano extendida o con un golpe directo en la muñeca)?"
+}

@@ -1,0 +1,16 @@
+{
+  "id_caso": "URG-080",
+  "id_pretriage": 237,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "continuar_ia",
+    "alta_prioridad": false,
+    "id_pretriage": 237,
+    "ok": true,
+    "origen": "reglas"
+  },
+  "sintomas_registrados": true
+}

@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-024",
+  "id_pretriage": 184,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 178,
+          "respuesta": "Dolor abdominal súbito y extremadamente intenso."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.2025,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 184,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal_preocupante"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "El dolor abdominal súbito y extremadamente intenso puede ser una señal de alarma que requiere valoración médica urgente.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 15.2945,
+      "respuesta_backend": {
+        "id_pretriage": 184,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 260,
+              "orden": 2,
+              "pregunta": "¿Hace cuánto comenzó el dolor y alcanzó su máxima intensidad de forma inmediata o ha ido aumentando?"
+            },
+            {
+              "id_pregunta": 261,
+              "orden": 3,
+              "pregunta": "¿En qué parte exacta del abdomen se localiza el dolor y se extiende hacia la espalda, el pecho, el hombro o la ingle?"
+            },
+            {
+              "id_pregunta": 262,
+              "orden": 4,
+              "pregunta": "¿Has tenido desmayo, mareo intenso, debilidad marcada, sudor frío o palidez desde que comenzó el dolor?"
+            },
+            {
+              "id_pregunta": 263,
+              "orden": 5,
+              "pregunta": "Si tienes posibilidad de embarazo, ¿cuándo fue tu última menstruación y existe alguna posibilidad de embarazo actualmente?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:51:51.534191+00:00",
+  "pregunta_pendiente": "¿Hace cuánto comenzó el dolor y alcanzó su máxima intensidad de forma inmediata o ha ido aumentando?"
+}

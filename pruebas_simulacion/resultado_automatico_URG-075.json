@@ -1,0 +1,26 @@
+{
+  "id_caso": "URG-075",
+  "id_pretriage": 231,
+  "estado": "envio_incierto",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 201,
+          "respuesta": "Cefalea gradual con presión arterial normal reportada."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": null,
+      "tiempo_http_segundos": 60.0043,
+      "respuesta_backend": {
+        "error": "HTTPConnectionPool(host='127.0.0.1', port=3000): Read timed out. (read timeout=60)"
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:17:56.620673+00:00",
+  "preguntas_enviadas": 0
+}

@@ -1,0 +1,41 @@
+{
+  "id_caso": "URG-010",
+  "id_pretriage": 171,
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "id_pregunta": 166,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta": "Niña de 7 años con cefalea de intensidad 8/10 desde hace cuatro horas. El dolor comenzó gradualmente y se acompaña de dos episodios de vómito y sensibilidad a la luz. Está orientada y no presenta pérdida del conocimiento. No se ha documentado si tiene rigidez de cuello.",
+      "fecha": "2026-10-28T05:51:20.787425+00:00"
+    },
+    {
+      "evento": "respuesta_confirmada",
+      "id_pregunta": 166,
+      "duracion_seg": 6.1325,
+      "fecha": "2026-10-28T05:51:26.923893+00:00",
+      "resultado": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 171,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "cefalea_preocupante",
+            "vomitos_asociados",
+            "posible_sintoma_neurologico_agudo"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Cefalea intensa de inicio reciente en una niña de 7 años, asociada a vómitos y fotofobia, requiere valoración médica urgente. La ausencia de pérdida de conciencia y la orientación conservada no descartan gravedad; falta aclarar si existe rigidez de cuello u otros signos neurológicos.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    }
+  ],
+  "estado": "revision_seguridad"
+}

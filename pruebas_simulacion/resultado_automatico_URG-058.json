@@ -1,0 +1,71 @@
+{
+  "id_caso": "URG-058",
+  "id_pretriage": 214,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 197,
+          "respuesta": "Molestia abdominal leve después de comer."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.9463,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 214,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "No se identificaron señales de alarma en esta revisión preliminar. Se puede continuar recopilando información, sin considerar el caso clínicamente seguro.",
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.8515,
+      "respuesta_backend": {
+        "id_pretriage": 214,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 324,
+              "orden": 2,
+              "pregunta": "¿En qué parte del abdomen siente la molestia y desde cuándo comenzó?"
+            },
+            {
+              "id_pregunta": 325,
+              "orden": 3,
+              "pregunta": "¿La molestia es continua o aparece por momentos, y está empeorando, mejorando o igual?"
+            },
+            {
+              "id_pregunta": 326,
+              "orden": 4,
+              "pregunta": "¿Ha presentado náuseas, vómitos, diarrea, estreñimiento o dificultad para expulsar gases?"
+            },
+            {
+              "id_pregunta": 327,
+              "orden": 5,
+              "pregunta": "¿Ha notado fiebre, coloración amarilla en la piel o los ojos, mareo, desmayo o sangre en las heces?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:11:17.998035+00:00",
+  "pregunta_pendiente": "¿La molestia es continua o aparece por momentos, y está empeorando, mejorando o igual?"
+}

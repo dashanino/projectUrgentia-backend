@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-046",
+  "id_pretriage": 205,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 193,
+          "respuesta": "Dolor abdominal súbito de intensidad extrema."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.2333,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 205,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal_preocupante"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "El dolor abdominal súbito y de intensidad extrema puede indicar una situación grave que requiere valoración médica urgente.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.941,
+      "respuesta_backend": {
+        "id_pretriage": 205,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 308,
+              "orden": 2,
+              "pregunta": "¿En qué parte exacta del abdomen comenzó el dolor y hacia qué zonas se ha extendido, si es que lo ha hecho?"
+            },
+            {
+              "id_pregunta": 309,
+              "orden": 3,
+              "pregunta": "¿Hace cuánto comenzó el dolor y ha sido constante o aparece por intervalos?"
+            },
+            {
+              "id_pregunta": 310,
+              "orden": 4,
+              "pregunta": "Desde que comenzó, ¿ha presentado náuseas, vómitos, desmayo, sudoración fría o debilidad intensa?"
+            },
+            {
+              "id_pregunta": 311,
+              "orden": 5,
+              "pregunta": "¿Ha podido evacuar y expulsar gases con normalidad desde que comenzó el dolor?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:10:36.246119+00:00",
+  "pregunta_pendiente": "¿En qué parte exacta del abdomen comenzó el dolor y hacia qué zonas se ha extendido, si es que lo ha hecho?"
+}

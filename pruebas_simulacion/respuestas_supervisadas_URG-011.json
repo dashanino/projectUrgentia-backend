@@ -1,0 +1,41 @@
+{
+  "id_caso": "URG-011",
+  "id_pretriage": 172,
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "id_pregunta": 167,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta": "Niño de 3 años con fiebre de hasta 39,0 °C desde hace 24 horas y cuatro episodios de vómito. Su cuidadora refiere menor consumo de líquidos y disminución de la cantidad de orina. Está despierto y responde a estímulos, pero se encuentra más decaído de lo habitual.",
+      "fecha": "2026-10-28T05:52:40.783859+00:00"
+    },
+    {
+      "evento": "envio_no_confirmado",
+      "id_pregunta": 167,
+      "duracion_seg": 0.0218,
+      "fecha": "2026-10-28T05:52:40.809590+00:00",
+      "resultado": null
+    },
+    {
+      "evento": "conciliacion_manual",
+      "id_pregunta": 167,
+      "motivo": "HTTP 401 Token has expired observado en terminal; rechazo de autenticación",
+      "fecha": "2026-10-28T10:37:49.048310+00:00"
+    },
+    {
+      "evento": "intento_envio",
+      "id_pregunta": 167,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta": "Niño de 3 años con fiebre de hasta 39,0 °C desde hace 24 horas y cuatro episodios de vómito. Su cuidadora refiere menor consumo de líquidos y disminución de la cantidad de orina. Está despierto y responde a estímulos, pero se encuentra más decaído de lo habitual.",
+      "fecha": "2026-10-28T10:42:27.900460+00:00"
+    },
+    {
+      "evento": "envio_no_confirmado",
+      "id_pregunta": 167,
+      "duracion_seg": 0.0319,
+      "fecha": "2026-10-28T10:42:27.935753+00:00",
+      "resultado": null
+    }
+  ],
+  "estado": "envio_incierto"
+}

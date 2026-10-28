@@ -1,0 +1,26 @@
+{
+  "id_caso": "URG-004",
+  "id_pretriage": 165,
+  "id_pregunta": 162,
+  "http_status": 200,
+  "respuesta_backend": {
+    "ok": true,
+    "resultado": {
+      "accion": "revision_seguridad_pendiente",
+      "id_pretriage": 165,
+      "respuestas_guardadas": 1
+    },
+    "revision_seguridad": {
+      "accion": "continuar",
+      "categorias_detectadas": [
+        "alteracion_del_estado_mental",
+        "fiebre_alta_en_menor"
+      ],
+      "estado_seguridad_ia": "continuar",
+      "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+      "motivo_aclaracion": "Fiebre de 40 °C en un niño asociada a somnolencia marcada, dificultad para mantenerlo despierto y confusión, señales que requieren valoración médica urgente.",
+      "requiere_aclaracion": true,
+      "respuestas_registradas": 1
+    }
+  }
+}

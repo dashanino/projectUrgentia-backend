@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-052",
+  "id_pretriage": 211,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 196,
+          "respuesta": "Dolor abdominal moderado desde esta mañana."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.4339,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 211,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal_que_requiere_aclaracion"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Dolor abdominal moderado de inicio reciente, sin datos suficientes sobre localización, evolución, intensidad progresiva, abdomen rígido, vómitos, fiebre, sangrado u otros signos de alarma.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 5.6755,
+      "respuesta_backend": {
+        "id_pretriage": 211,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 320,
+              "orden": 2,
+              "pregunta": "¿En qué parte exacta del abdomen comenzó el dolor y hacia qué zona, si alguna, se ha extendido?"
+            },
+            {
+              "id_pregunta": 321,
+              "orden": 3,
+              "pregunta": "¿El dolor comenzó de forma repentina o gradual, y ha aumentado, disminuido o permanecido igual desde esta mañana?"
+            },
+            {
+              "id_pregunta": 322,
+              "orden": 4,
+              "pregunta": "¿Has tenido náuseas, vómitos, diarrea, estreñimiento o dificultad para expulsar gases desde que comenzó el dolor?"
+            },
+            {
+              "id_pregunta": 323,
+              "orden": 5,
+              "pregunta": "¿Has podido comer, beber y orinar con normalidad, y cuándo fue la última vez que evacuaste?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:11:07.876999+00:00",
+  "pregunta_pendiente": "¿En qué parte exacta del abdomen comenzó el dolor y hacia qué zona, si alguna, se ha extendido?"
+}

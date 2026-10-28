@@ -1,0 +1,25 @@
+{
+  "id_caso": "URG-006",
+  "id_pretriage": 167,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "alerta",
+    "alta_prioridad": true,
+    "id_pretriage": 167,
+    "ok": true,
+    "origen": "reglas",
+    "resultado": {
+      "accion": "alerta",
+      "alta_prioridad": true,
+      "bandera_activadora": {
+        "id_bandera": 5,
+        "name": "Dificultad Respiratoria"
+      },
+      "id_pretriage": 167,
+      "regla_activadora": 3
+    }
+  }
+}

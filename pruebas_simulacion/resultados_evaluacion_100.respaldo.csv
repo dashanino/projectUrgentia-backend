@@ -1,0 +1,5 @@
+﻿id_caso,poblacion,prioridad_objetivo,prioridad_esperada,estado_validacion,ruta_sistema,accion_sistema,prioridad_ia,numero_preguntas,estado_simulacion,error
+URG-002,Niño,alta,,pendiente_revision_clinica,reglas,alerta,,0,completado,
+URG-022,Adulto,alta,,pendiente_revision_clinica,reglas,alerta,,0,completado,
+URG-039,Adulto,baja,,pendiente_revision_clinica,ia,alerta_seguridad_ia,,4,bloqueado_alerta_seguridad,Posible falso positivo por negación de dolor torácico.
+URG-003,Niño,alta,,pendiente_revision_clinica,ia,revision_clinica,,8,completado,

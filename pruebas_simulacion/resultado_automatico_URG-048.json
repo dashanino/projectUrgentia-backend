@@ -1,0 +1,76 @@
+{
+  "id_caso": "URG-048",
+  "id_pretriage": 207,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 195,
+          "respuesta": "Fiebre alta y debilidad desde hace dos días."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.6737,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 207,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "fiebre_alta_con_debilidad"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "La fiebre alta y la debilidad durante dos días pueden requerir valoración, pero no permiten determinar una señal de alarma inmediata sin conocer la temperatura, la edad, el estado general y la presencia de dificultad respiratoria, confusión, deshidratación u otros síntomas.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.101,
+      "respuesta_backend": {
+        "id_pretriage": 207,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 316,
+              "orden": 2,
+              "pregunta": "¿Cuál ha sido la temperatura más alta, cómo la midieron y cuándo fue la última medición?"
+            },
+            {
+              "id_pregunta": 317,
+              "orden": 3,
+              "pregunta": "¿Ha presentado somnolencia inusual, confusión, desmayo o dificultad para mantenerse despierto?"
+            },
+            {
+              "id_pregunta": 318,
+              "orden": 4,
+              "pregunta": "¿Tiene dificultad para respirar, dolor en el pecho, labios morados o respiración más rápida de lo habitual?"
+            },
+            {
+              "id_pregunta": 319,
+              "orden": 5,
+              "pregunta": "¿Además de la debilidad, tiene tos, dolor al orinar, dolor abdominal, vómitos, diarrea, dolor de cabeza intenso, rigidez del cuello o manchas en la piel?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:10:57.089097+00:00",
+  "pregunta_pendiente": "¿Cuál ha sido la temperatura más alta, cómo la midieron y cuándo fue la última medición?"
+}

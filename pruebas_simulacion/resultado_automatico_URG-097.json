@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-097",
+  "id_pretriage": 256,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 207,
+          "respuesta": "Golpe leve en el antebrazo."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.4171,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 256,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe un golpe leve en el antebrazo, sin datos sobre dolor intenso, deformidad, sangrado importante, pérdida de sensibilidad o dificultad para moverlo. Se necesita más información para valorar posibles señales de alarma.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.8461,
+      "respuesta_backend": {
+        "id_pretriage": 256,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 356,
+              "orden": 2,
+              "pregunta": "¿Cuándo ocurrió el golpe y cómo sucedió exactamente (por ejemplo, caída, choque o impacto con un objeto)?"
+            },
+            {
+              "id_pregunta": 357,
+              "orden": 3,
+              "pregunta": "¿Tienes dolor en el antebrazo? Si es así, ¿qué intensidad tiene de 0 a 10 y ha aumentado desde el golpe?"
+            },
+            {
+              "id_pregunta": 358,
+              "orden": 4,
+              "pregunta": "¿Notas hinchazón, moretón, herida, sangrado o alguna deformidad en el antebrazo?"
+            },
+            {
+              "id_pregunta": 359,
+              "orden": 5,
+              "pregunta": "¿Puedes mover normalmente la muñeca, el codo y los dedos, y sientes hormigueo, entumecimiento o cambios de color o temperatura en la mano?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:19:51.963673+00:00",
+  "pregunta_pendiente": "¿Cuándo ocurrió el golpe y cómo sucedió exactamente (por ejemplo, caída, choque o impacto con un objeto)?"
+}

@@ -1,0 +1,71 @@
+{
+  "id_caso": "URG-059",
+  "id_pretriage": 215,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 198,
+          "respuesta": "Fiebre baja y congestión nasal desde ayer."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 2.7172,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 215,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "No se identificaron señales de alarma en esta revisión preliminar. Se puede continuar recopilando información, sin considerar el caso clínicamente seguro.",
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.9317,
+      "respuesta_backend": {
+        "id_pretriage": 215,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 328,
+              "orden": 2,
+              "pregunta": "¿Cuál ha sido la temperatura máxima medida y con qué método la midieron?"
+            },
+            {
+              "id_pregunta": 329,
+              "orden": 3,
+              "pregunta": "¿Desde cuándo comenzó la fiebre y con qué frecuencia se ha presentado?"
+            },
+            {
+              "id_pregunta": 330,
+              "orden": 4,
+              "pregunta": "¿Ha tenido escalofríos intensos, debilidad marcada o un empeoramiento rápido de su estado general?"
+            },
+            {
+              "id_pregunta": 331,
+              "orden": 5,
+              "pregunta": "Además de la congestión nasal, ¿presenta tos, dificultad para respirar, dolor de garganta u otros síntomas?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:11:26.807613+00:00",
+  "pregunta_pendiente": "¿Cuál ha sido la temperatura máxima medida y con qué método la midieron?"
+}

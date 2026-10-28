@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-061",
+  "id_pretriage": 217,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 199,
+          "respuesta": "Molestia abdominal leve e intermitente."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.0574,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 217,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe molestia abdominal leve e intermitente, sin datos aportados de dolor intenso o progresivo, abdomen rígido, sangrado, vómitos persistentes u otros signos de alarma. La información es limitada y requiere уточación clínica posterior.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.7083,
+      "respuesta_backend": {
+        "id_pretriage": 217,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 332,
+              "orden": 2,
+              "pregunta": "¿Desde cuándo comenzó la molestia abdominal y con qué frecuencia aparece o cuánto dura cada episodio?"
+            },
+            {
+              "id_pregunta": 333,
+              "orden": 3,
+              "pregunta": "¿En qué parte exacta del abdomen la siente y se desplaza hacia la espalda, el pecho o alguna otra zona?"
+            },
+            {
+              "id_pregunta": 334,
+              "orden": 4,
+              "pregunta": "¿Ha presentado náuseas, fiebre, escalofríos, color amarillo en la piel u ojos, o cambios recientes en la orina?"
+            },
+            {
+              "id_pregunta": 335,
+              "orden": 5,
+              "pregunta": "¿Cuándo fue su última evacuación y ha podido expulsar gases con normalidad?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:11:34.468464+00:00",
+  "pregunta_pendiente": "¿En qué parte exacta del abdomen la siente y se desplaza hacia la espalda, el pecho o alguna otra zona?"
+}

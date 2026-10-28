@@ -1,0 +1,1038 @@
+[
+  {
+    "id_caso": "URG-012",
+    "id_pretriage": 173,
+    "preguntas": [
+      {
+        "id_pregunta": 220,
+        "orden": 2,
+        "pregunta": "¿En qué parte exacta del abdomen siente el dolor y desde cuándo comenzó?"
+      },
+      {
+        "id_pregunta": 221,
+        "orden": 3,
+        "pregunta": "¿El dolor se ha desplazado o se extiende hacia alguna otra zona, como la espalda o la ingle?"
+      },
+      {
+        "id_pregunta": 222,
+        "orden": 4,
+        "pregunta": "¿Ha tenido vómitos, diarrea, estreñimiento o dolor al orinar desde que comenzó el dolor?"
+      },
+      {
+        "id_pregunta": 223,
+        "orden": 5,
+        "pregunta": "¿Ha podido comer, beber líquidos y realizar sus actividades habituales pese al dolor?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-013",
+    "id_pretriage": 174,
+    "preguntas": [
+      {
+        "id_pregunta": 224,
+        "orden": 2,
+        "pregunta": "¿Qué edad tiene el niño y desde cuándo comenzó el dolor de cabeza?"
+      },
+      {
+        "id_pregunta": 225,
+        "orden": 3,
+        "pregunta": "¿En qué parte de la cabeza siente el dolor y ha ido aumentando, disminuyendo o se mantiene igual?"
+      },
+      {
+        "id_pregunta": 226,
+        "orden": 4,
+        "pregunta": "¿Ha presentado vómitos, somnolencia inusual, confusión, debilidad, dificultad para caminar o cambios en su comportamiento?"
+      },
+      {
+        "id_pregunta": 227,
+        "orden": 5,
+        "pregunta": "¿El dolor empeora al despertar, al toser o hacer esfuerzo, o le impide dormir o realizar sus actividades habituales?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-014",
+    "id_pretriage": 175,
+    "preguntas": [
+      {
+        "id_pregunta": 228,
+        "orden": 2,
+        "pregunta": "¿Qué edad tiene el niño y cuánto pesa aproximadamente?"
+      },
+      {
+        "id_pregunta": 229,
+        "orden": 3,
+        "pregunta": "¿Desde cuándo tiene fiebre, cuál ha sido la temperatura más alta medida y cómo se la midieron?"
+      },
+      {
+        "id_pregunta": 230,
+        "orden": 4,
+        "pregunta": "¿Está respirando con normalidad o presenta respiración rápida, hundimiento de las costillas, quejido o dificultad para respirar?"
+      },
+      {
+        "id_pregunta": 231,
+        "orden": 5,
+        "pregunta": "¿Está despierto y comportándose como de costumbre, y ha podido beber líquidos y orinar normalmente?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-015",
+    "id_pretriage": 176,
+    "preguntas": [
+      {
+        "id_pregunta": 232,
+        "orden": 2,
+        "pregunta": "¿En qué parte del abdomen siente el dolor el niño y desde cuándo comenzó? ¿Se desplaza hacia alguna otra zona?"
+      },
+      {
+        "id_pregunta": 233,
+        "orden": 3,
+        "pregunta": "¿Qué tan fuerte es el dolor y está aumentando, disminuyendo o aparece con alguna actividad, comida o movimiento?"
+      },
+      {
+        "id_pregunta": 234,
+        "orden": 4,
+        "pregunta": "¿El niño ha presentado fiebre medida, náuseas, vómitos o dificultad para mantener líquidos desde que comenzó el dolor?"
+      },
+      {
+        "id_pregunta": 235,
+        "orden": 5,
+        "pregunta": "¿Ha tenido cambios recientes en las evacuaciones o en la orina, como diarrea, estreñimiento, dolor al orinar o menor cantidad de orina?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-016",
+    "id_pretriage": 177,
+    "preguntas": [
+      {
+        "id_pregunta": 236,
+        "orden": 2,
+        "pregunta": "¿Desde cuándo tiene estos dolores de cabeza, con qué frecuencia aparecen y cuánto dura cada episodio?"
+      },
+      {
+        "id_pregunta": 237,
+        "orden": 3,
+        "pregunta": "En una escala de 0 a 10, ¿qué intensidad tiene el dolor ahora y cuál ha sido la intensidad máxima?"
+      },
+      {
+        "id_pregunta": 238,
+        "orden": 4,
+        "pregunta": "¿El dolor se acompaña de vómitos, fiebre, rigidez de cuello, somnolencia inusual, desmayo, convulsiones, visión borrosa o dificultad para hablar o mover alguna parte del cuerpo?"
+      },
+      {
+        "id_pregunta": 239,
+        "orden": 5,
+        "pregunta": "¿Qué medicamentos o medidas le han dado para el dolor, en qué cantidad y con qué efecto?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-017",
+    "id_pretriage": 178,
+    "preguntas": [
+      {
+        "id_pregunta": 240,
+        "orden": 2,
+        "pregunta": "¿Desde cuándo tiene el dolor de cabeza y comenzó de forma gradual o repentina?"
+      },
+      {
+        "id_pregunta": 241,
+        "orden": 3,
+        "pregunta": "¿En qué parte de la cabeza le duele, qué intensidad tiene ahora y está empeorando o mejorando?"
+      },
+      {
+        "id_pregunta": 242,
+        "orden": 4,
+        "pregunta": "¿Ha presentado vómitos, fiebre, rigidez en el cuello, somnolencia inusual, desmayo, confusión, visión borrosa o dificultad para hablar o caminar?"
+      },
+      {
+        "id_pregunta": 243,
+        "orden": 5,
+        "pregunta": "¿Tuvo algún golpe en la cabeza recientemente o el dolor aparece después de leer, usar pantallas o hacer alguna actividad específica?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-018",
+    "id_pretriage": 179,
+    "preguntas": [
+      {
+        "id_pregunta": 244,
+        "orden": 2,
+        "pregunta": "¿En qué parte del abdomen siente la molestia y desde cuándo comenzó?"
+      },
+      {
+        "id_pregunta": 245,
+        "orden": 3,
+        "pregunta": "¿La molestia aparece cada vez que come, cuánto tiempo dura y está empeorando o mejorando?"
+      },
+      {
+        "id_pregunta": 246,
+        "orden": 4,
+        "pregunta": "¿Ha presentado vómitos, diarrea, estreñimiento o cambios en las heces desde que empezó la molestia?"
+      },
+      {
+        "id_pregunta": 247,
+        "orden": 5,
+        "pregunta": "¿El niño ha tenido fiebre, dificultad para beber líquidos, menos orina de lo habitual o se ve muy decaído?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-019",
+    "id_pretriage": 180,
+    "preguntas": [
+      {
+        "id_pregunta": 248,
+        "orden": 2,
+        "pregunta": "¿Qué edad tiene el niño y cuánto pesa aproximadamente?"
+      },
+      {
+        "id_pregunta": 249,
+        "orden": 3,
+        "pregunta": "¿Desde cuándo tiene fiebre y cuál ha sido la temperatura máxima medida, indicando cómo se tomó?"
+      },
+      {
+        "id_pregunta": 250,
+        "orden": 4,
+        "pregunta": "¿Presenta dificultad para respirar, respiración muy rápida, hundimiento de las costillas o labios morados?"
+      },
+      {
+        "id_pregunta": 251,
+        "orden": 5,
+        "pregunta": "¿Está tomando líquidos y orinando con normalidad, y se mantiene despierto y reactivo como de costumbre?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-020",
+    "id_pretriage": 181,
+    "preguntas": [
+      {
+        "id_pregunta": 252,
+        "orden": 2,
+        "pregunta": "¿Desde cuándo tiene el dolor de cabeza y cuánto dura cada episodio?"
+      },
+      {
+        "id_pregunta": 253,
+        "orden": 3,
+        "pregunta": "¿En qué parte de la cabeza le duele y qué intensidad tiene el dolor, de 0 a 10?"
+      },
+      {
+        "id_pregunta": 254,
+        "orden": 4,
+        "pregunta": "¿El dolor se acompaña de vómitos, somnolencia inusual, debilidad, dificultad para caminar o cambios en el comportamiento?"
+      },
+      {
+        "id_pregunta": 255,
+        "orden": 5,
+        "pregunta": "¿Ha presentado fiebre, congestión nasal, dolor de oído, problemas de visión o una enfermedad reciente?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-021",
+    "id_pretriage": 182,
+    "preguntas": [
+      {
+        "id_pregunta": 256,
+        "orden": 2,
+        "pregunta": "¿En qué parte del abdomen siente la molestia el niño y desde cuándo comenzó?"
+      },
+      {
+        "id_pregunta": 257,
+        "orden": 3,
+        "pregunta": "¿La molestia aparece de forma continua o por momentos, y está aumentando, mejorando o igual?"
+      },
+      {
+        "id_pregunta": 258,
+        "orden": 4,
+        "pregunta": "¿Ha presentado vómitos, diarrea, estreñimiento o dificultad para evacuar u orinar?"
+      },
+      {
+        "id_pregunta": 259,
+        "orden": 5,
+        "pregunta": "¿El niño puede caminar y moverse normalmente, o el dolor empeora al moverse, toser o tocarle el abdomen?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-024",
+    "id_pretriage": 184,
+    "preguntas": [
+      {
+        "id_pregunta": 260,
+        "orden": 2,
+        "pregunta": "¿Hace cuánto comenzó el dolor y alcanzó su máxima intensidad de forma inmediata o ha ido aumentando?"
+      },
+      {
+        "id_pregunta": 261,
+        "orden": 3,
+        "pregunta": "¿En qué parte exacta del abdomen se localiza el dolor y se extiende hacia la espalda, el pecho, el hombro o la ingle?"
+      },
+      {
+        "id_pregunta": 262,
+        "orden": 4,
+        "pregunta": "¿Has tenido desmayo, mareo intenso, debilidad marcada, sudor frío o palidez desde que comenzó el dolor?"
+      },
+      {
+        "id_pregunta": 263,
+        "orden": 5,
+        "pregunta": "Si tienes posibilidad de embarazo, ¿cuándo fue tu última menstruación y existe alguna posibilidad de embarazo actualmente?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-025",
+    "id_pretriage": 185,
+    "preguntas": [
+      {
+        "id_pregunta": 264,
+        "orden": 2,
+        "pregunta": "¿Hace cuánto comenzó el dolor y alcanzó su máxima intensidad de inmediato o fue aumentando progresivamente?"
+      },
+      {
+        "id_pregunta": 265,
+        "orden": 3,
+        "pregunta": "¿Tienes actualmente debilidad o adormecimiento en alguna parte del cuerpo, dificultad para hablar o entender, confusión, pérdida del equilibrio o cambios en la visión?"
+      },
+      {
+        "id_pregunta": 266,
+        "orden": 4,
+        "pregunta": "¿Has presentado fiebre, rigidez o dolor intenso en el cuello, vómitos repetidos o mucha sensibilidad a la luz?"
+      },
+      {
+        "id_pregunta": 267,
+        "orden": 5,
+        "pregunta": "¿El dolor continúa ahora y ha empeorado, mejorado o cambiado desde que comenzó?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-027",
+    "id_pretriage": 187,
+    "preguntas": [
+      {
+        "id_pregunta": 268,
+        "orden": 2,
+        "pregunta": "¿Desde cuándo comenzó el dolor en la parte inferior derecha y ha ido aumentando de manera continua o intermitente?"
+      },
+      {
+        "id_pregunta": 269,
+        "orden": 3,
+        "pregunta": "En una escala de 0 a 10, ¿qué intensidad tiene el dolor ahora y empeora al caminar, moverte o toser?"
+      },
+      {
+        "id_pregunta": 270,
+        "orden": 4,
+        "pregunta": "¿Has tenido náuseas, vómitos, pérdida del apetito o cambios recientes en las evacuaciones, como diarrea o estreñimiento?"
+      },
+      {
+        "id_pregunta": 271,
+        "orden": 5,
+        "pregunta": "¿Has presentado molestias al orinar, sangre en la orina o, si corresponde, posibilidad de embarazo o sangrado vaginal anormal?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-028",
+    "id_pretriage": 188,
+    "preguntas": [
+      {
+        "id_pregunta": 272,
+        "orden": 2,
+        "pregunta": "¿Cuál ha sido la temperatura máxima medida, cómo la mediste y cuándo fue la última medición?"
+      },
+      {
+        "id_pregunta": 273,
+        "orden": 3,
+        "pregunta": "¿La fiebre se acompaña de escalofríos intensos, tos, dolor de garganta, dificultad para respirar, dolor al orinar, dolor abdominal, vómitos o diarrea?"
+      },
+      {
+        "id_pregunta": 274,
+        "orden": 4,
+        "pregunta": "¿Has presentado somnolencia inusual, confusión, rigidez en el cuello, dolor de cabeza intenso o manchas nuevas en la piel?"
+      },
+      {
+        "id_pregunta": 275,
+        "orden": 5,
+        "pregunta": "¿Has tomado algún medicamento para la fiebre? Indica cuál, qué dosis y si produjo alguna mejoría."
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-030",
+    "id_pretriage": 190,
+    "preguntas": [
+      {
+        "id_pregunta": 276,
+        "orden": 2,
+        "pregunta": "¿Cuándo comenzó el dolor de cabeza y apareció de forma súbita, alcanzando su máxima intensidad desde el inicio, o fue aumentando gradualmente?"
+      },
+      {
+        "id_pregunta": 277,
+        "orden": 3,
+        "pregunta": "¿Has presentado visión borrosa, dificultad para hablar, debilidad u hormigueo en alguna parte del cuerpo, confusión o desmayo?"
+      },
+      {
+        "id_pregunta": 278,
+        "orden": 4,
+        "pregunta": "¿Tienes fiebre, rigidez o dolor importante al mover el cuello, vómitos repetidos o mucha sensibilidad a la luz?"
+      },
+      {
+        "id_pregunta": 279,
+        "orden": 5,
+        "pregunta": "¿Has sufrido recientemente un golpe o caída que pudiera haber afectado tu cabeza, o tomas medicamentos anticoagulantes?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-032",
+    "id_pretriage": 192,
+    "preguntas": [
+      {
+        "id_pregunta": 280,
+        "orden": 2,
+        "pregunta": "¿En qué parte del abdomen comenzó el dolor y hacia qué zona, si alguna, se extiende?"
+      },
+      {
+        "id_pregunta": 281,
+        "orden": 3,
+        "pregunta": "¿El dolor apareció de forma repentina o gradual, es continuo o va y viene, y ha empeorado desde esta mañana?"
+      },
+      {
+        "id_pregunta": 282,
+        "orden": 4,
+        "pregunta": "En una escala de 0 a 10, ¿qué intensidad tiene ahora el dolor? ¿Has presentado vómitos, fiebre, diarrea, estreñimiento o cambios al orinar?"
+      },
+      {
+        "id_pregunta": 283,
+        "orden": 5,
+        "pregunta": "Si tienes posibilidad de embarazo, ¿hay retraso menstrual, embarazo confirmado o posibilidad de estar embarazada?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-033",
+    "id_pretriage": 193,
+    "preguntas": [
+      {
+        "id_pregunta": 284,
+        "orden": 2,
+        "pregunta": "¿El dolor comenzó de forma repentina, alcanzando su máxima intensidad en segundos o minutos, o ha ido aumentando gradualmente?"
+      },
+      {
+        "id_pregunta": 285,
+        "orden": 3,
+        "pregunta": "¿Has presentado debilidad o adormecimiento en alguna parte del cuerpo, dificultad para hablar o entender, confusión, cambios en la visión o desmayo?"
+      },
+      {
+        "id_pregunta": 286,
+        "orden": 4,
+        "pregunta": "¿Tienes fiebre, rigidez en el cuello, vómitos repetidos o mucha sensibilidad a la luz?"
+      },
+      {
+        "id_pregunta": 287,
+        "orden": 5,
+        "pregunta": "¿Este dolor de cabeza es nuevo o diferente a otros que hayas tenido, y ocurrió después de algún golpe en la cabeza o esfuerzo intenso?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-037",
+    "id_pretriage": 197,
+    "preguntas": [
+      {
+        "id_pregunta": 292,
+        "orden": 2,
+        "pregunta": "¿Desde cuándo comenzó el dolor de cabeza y cuánto tiempo dura cada episodio?"
+      },
+      {
+        "id_pregunta": 293,
+        "orden": 3,
+        "pregunta": "¿En qué parte de la cabeza lo sientes y cómo ha cambiado desde que empezó: está igual, mejorando o empeorando?"
+      },
+      {
+        "id_pregunta": 294,
+        "orden": 4,
+        "pregunta": "Además del dolor, ¿has tenido náuseas o vómitos, sensibilidad a la luz o al ruido, o debilidad u hormigueo en alguna parte del cuerpo?"
+      },
+      {
+        "id_pregunta": 295,
+        "orden": 5,
+        "pregunta": "¿Tomaste algún medicamento, descansaste o hiciste alguna otra medida para aliviarlo? ¿Te ayudó?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-038",
+    "id_pretriage": 198,
+    "preguntas": [
+      {
+        "id_pregunta": 296,
+        "orden": 2,
+        "pregunta": "¿En qué parte del abdomen sientes el dolor y se extiende hacia alguna otra zona, como la espalda, el pecho o el hombro?"
+      },
+      {
+        "id_pregunta": 297,
+        "orden": 3,
+        "pregunta": "¿Desde cuándo comenzó, cuánto dura cada episodio y con qué frecuencia aparece?"
+      },
+      {
+        "id_pregunta": 298,
+        "orden": 4,
+        "pregunta": "¿Qué intensidad alcanza el dolor en una escala de 0 a 10, y qué lo desencadena o lo alivia, como comer, evacuar, moverte o descansar?"
+      },
+      {
+        "id_pregunta": 299,
+        "orden": 5,
+        "pregunta": "¿Has presentado fiebre, náuseas o vómitos, diarrea o estreñimiento, sangre en las heces, dolor o ardor al orinar, o posibilidad de embarazo?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-040",
+    "id_pretriage": 199,
+    "preguntas": [
+      {
+        "id_pregunta": 300,
+        "orden": 2,
+        "pregunta": "¿Cuándo comenzó el dolor de cabeza y cuánto dura cada episodio?"
+      },
+      {
+        "id_pregunta": 301,
+        "orden": 3,
+        "pregunta": "¿En qué parte de la cabeza lo sientes y qué intensidad tiene de 0 a 10?"
+      },
+      {
+        "id_pregunta": 302,
+        "orden": 4,
+        "pregunta": "¿Has presentado junto con el dolor vómitos, fiebre, rigidez de cuello, desmayo, confusión, debilidad, adormecimiento, cambios en la visión o dificultad para hablar?"
+      },
+      {
+        "id_pregunta": 303,
+        "orden": 5,
+        "pregunta": "¿El dolor comenzó después de un golpe, esfuerzo físico intenso o actividad sexual, o es un dolor diferente a los que has tenido antes?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-041",
+    "id_pretriage": 200,
+    "preguntas": [
+      {
+        "id_pregunta": 304,
+        "orden": 2,
+        "pregunta": "¿En qué parte del abdomen siente la molestia y desde cuándo comenzó?"
+      },
+      {
+        "id_pregunta": 305,
+        "orden": 3,
+        "pregunta": "¿La molestia aparece, empeora o mejora después de comer, y cuánto dura cada episodio?"
+      },
+      {
+        "id_pregunta": 306,
+        "orden": 4,
+        "pregunta": "¿Ha tenido náuseas, vómitos, diarrea, estreñimiento o dificultad para expulsar gases?"
+      },
+      {
+        "id_pregunta": 307,
+        "orden": 5,
+        "pregunta": "¿Ha presentado fiebre, mareo, desmayo, coloración amarilla en la piel o los ojos, o dolor que se extiende hacia la espalda?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-046",
+    "id_pretriage": 205,
+    "preguntas": [
+      {
+        "id_pregunta": 308,
+        "orden": 2,
+        "pregunta": "¿En qué parte exacta del abdomen comenzó el dolor y hacia qué zonas se ha extendido, si es que lo ha hecho?"
+      },
+      {
+        "id_pregunta": 309,
+        "orden": 3,
+        "pregunta": "¿Hace cuánto comenzó el dolor y ha sido constante o aparece por intervalos?"
+      },
+      {
+        "id_pregunta": 310,
+        "orden": 4,
+        "pregunta": "Desde que comenzó, ¿ha presentado náuseas, vómitos, desmayo, sudoración fría o debilidad intensa?"
+      },
+      {
+        "id_pregunta": 311,
+        "orden": 5,
+        "pregunta": "¿Ha podido evacuar y expulsar gases con normalidad desde que comenzó el dolor?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-047",
+    "id_pretriage": 206,
+    "preguntas": [
+      {
+        "id_pregunta": 312,
+        "orden": 2,
+        "pregunta": "¿Hace cuánto comenzó el dolor en la parte inferior derecha del abdomen y qué tan intenso es, de 0 a 10?"
+      },
+      {
+        "id_pregunta": 313,
+        "orden": 3,
+        "pregunta": "¿Ha tenido fiebre o escalofríos, desmayo, confusión o debilidad marcada junto con el dolor?"
+      },
+      {
+        "id_pregunta": 314,
+        "orden": 4,
+        "pregunta": "¿Ha presentado náuseas o vómitos, sangre en el vómito o en las heces, o heces negras?"
+      },
+      {
+        "id_pregunta": 315,
+        "orden": 5,
+        "pregunta": "¿El abdomen se siente muy duro o extremadamente sensible, y ha tenido cambios importantes para evacuar u orinar desde que comenzó el dolor?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-048",
+    "id_pretriage": 207,
+    "preguntas": [
+      {
+        "id_pregunta": 316,
+        "orden": 2,
+        "pregunta": "¿Cuál ha sido la temperatura más alta, cómo la midieron y cuándo fue la última medición?"
+      },
+      {
+        "id_pregunta": 317,
+        "orden": 3,
+        "pregunta": "¿Ha presentado somnolencia inusual, confusión, desmayo o dificultad para mantenerse despierto?"
+      },
+      {
+        "id_pregunta": 318,
+        "orden": 4,
+        "pregunta": "¿Tiene dificultad para respirar, dolor en el pecho, labios morados o respiración más rápida de lo habitual?"
+      },
+      {
+        "id_pregunta": 319,
+        "orden": 5,
+        "pregunta": "¿Además de la debilidad, tiene tos, dolor al orinar, dolor abdominal, vómitos, diarrea, dolor de cabeza intenso, rigidez del cuello o manchas en la piel?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-052",
+    "id_pretriage": 211,
+    "preguntas": [
+      {
+        "id_pregunta": 320,
+        "orden": 2,
+        "pregunta": "¿En qué parte exacta del abdomen comenzó el dolor y hacia qué zona, si alguna, se ha extendido?"
+      },
+      {
+        "id_pregunta": 321,
+        "orden": 3,
+        "pregunta": "¿El dolor comenzó de forma repentina o gradual, y ha aumentado, disminuido o permanecido igual desde esta mañana?"
+      },
+      {
+        "id_pregunta": 322,
+        "orden": 4,
+        "pregunta": "¿Has tenido náuseas, vómitos, diarrea, estreñimiento o dificultad para expulsar gases desde que comenzó el dolor?"
+      },
+      {
+        "id_pregunta": 323,
+        "orden": 5,
+        "pregunta": "¿Has podido comer, beber y orinar con normalidad, y cuándo fue la última vez que evacuaste?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-058",
+    "id_pretriage": 214,
+    "preguntas": [
+      {
+        "id_pregunta": 324,
+        "orden": 2,
+        "pregunta": "¿En qué parte del abdomen siente la molestia y desde cuándo comenzó?"
+      },
+      {
+        "id_pregunta": 325,
+        "orden": 3,
+        "pregunta": "¿La molestia es continua o aparece por momentos, y está empeorando, mejorando o igual?"
+      },
+      {
+        "id_pregunta": 326,
+        "orden": 4,
+        "pregunta": "¿Ha presentado náuseas, vómitos, diarrea, estreñimiento o dificultad para expulsar gases?"
+      },
+      {
+        "id_pregunta": 327,
+        "orden": 5,
+        "pregunta": "¿Ha notado fiebre, coloración amarilla en la piel o los ojos, mareo, desmayo o sangre en las heces?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-059",
+    "id_pretriage": 215,
+    "preguntas": [
+      {
+        "id_pregunta": 328,
+        "orden": 2,
+        "pregunta": "¿Cuál ha sido la temperatura máxima medida y con qué método la midieron?"
+      },
+      {
+        "id_pregunta": 329,
+        "orden": 3,
+        "pregunta": "¿Desde cuándo comenzó la fiebre y con qué frecuencia se ha presentado?"
+      },
+      {
+        "id_pregunta": 330,
+        "orden": 4,
+        "pregunta": "¿Ha tenido escalofríos intensos, debilidad marcada o un empeoramiento rápido de su estado general?"
+      },
+      {
+        "id_pregunta": 331,
+        "orden": 5,
+        "pregunta": "Además de la congestión nasal, ¿presenta tos, dificultad para respirar, dolor de garganta u otros síntomas?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-061",
+    "id_pretriage": 217,
+    "preguntas": [
+      {
+        "id_pregunta": 332,
+        "orden": 2,
+        "pregunta": "¿Desde cuándo comenzó la molestia abdominal y con qué frecuencia aparece o cuánto dura cada episodio?"
+      },
+      {
+        "id_pregunta": 333,
+        "orden": 3,
+        "pregunta": "¿En qué parte exacta del abdomen la siente y se desplaza hacia la espalda, el pecho o alguna otra zona?"
+      },
+      {
+        "id_pregunta": 334,
+        "orden": 4,
+        "pregunta": "¿Ha presentado náuseas, fiebre, escalofríos, color amarillo en la piel u ojos, o cambios recientes en la orina?"
+      },
+      {
+        "id_pregunta": 335,
+        "orden": 5,
+        "pregunta": "¿Cuándo fue su última evacuación y ha podido expulsar gases con normalidad?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-078",
+    "id_pretriage": 234,
+    "preguntas": [
+      {
+        "id_pregunta": 336,
+        "orden": 2,
+        "pregunta": "¿De cuántas semanas de embarazo estás y es tu primer embarazo?"
+      },
+      {
+        "id_pregunta": 337,
+        "orden": 3,
+        "pregunta": "¿Cuándo comenzó esta cefalea, cuánto dura cada episodio y ha ido empeorando o mejorando?"
+      },
+      {
+        "id_pregunta": 338,
+        "orden": 4,
+        "pregunta": "¿Te has medido la presión arterial durante este episodio? Si es así, ¿qué valor obtuviste y cuándo fue la medición?"
+      },
+      {
+        "id_pregunta": 339,
+        "orden": 5,
+        "pregunta": "Además de la cefalea, ¿has presentado visión borrosa, debilidad u hormigueo, dificultad para hablar, fiebre, rigidez de cuello, sangrado vaginal, salida de líquido, contracciones o disminución de los movimientos del bebé?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-080",
+    "id_pretriage": 237,
+    "preguntas": [
+      {
+        "id_pregunta": 340,
+        "orden": 2,
+        "pregunta": "¿De cuántas semanas de embarazo estás?"
+      },
+      {
+        "id_pregunta": 341,
+        "orden": 3,
+        "pregunta": "¿Qué intensidad tiene actualmente la cefalea, en una escala de 0 a 10, y ha aumentado o cambiado desde que comenzó?"
+      },
+      {
+        "id_pregunta": 342,
+        "orden": 4,
+        "pregunta": "¿Has presentado visión borrosa o destellos, debilidad u hormigueo en alguna parte del cuerpo, dificultad para hablar, confusión, desmayo o vómitos?"
+      },
+      {
+        "id_pregunta": 343,
+        "orden": 5,
+        "pregunta": "¿Te han medido la presión arterial durante este episodio? Si es así, ¿qué valor obtuviste y cuándo fue la medición?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-087",
+    "id_pretriage": 246,
+    "preguntas": [
+      {
+        "id_pregunta": 344,
+        "orden": 2,
+        "pregunta": "¿Cuándo ocurrió el accidente y cómo se lesionó la muñeca?"
+      },
+      {
+        "id_pregunta": 345,
+        "orden": 3,
+        "pregunta": "¿En qué parte de la muñeca siente el dolor y qué tan intenso es, de 0 a 10?"
+      },
+      {
+        "id_pregunta": 346,
+        "orden": 4,
+        "pregunta": "¿Puede mover los dedos y la muñeca, o agarrar objetos, aunque sea con dificultad?"
+      },
+      {
+        "id_pregunta": 347,
+        "orden": 5,
+        "pregunta": "¿Tiene entumecimiento u hormigueo, o nota los dedos fríos, pálidos o azulados?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-092",
+    "id_pretriage": 251,
+    "preguntas": [
+      {
+        "id_pregunta": 348,
+        "orden": 2,
+        "pregunta": "¿Cuándo ocurrió la caída y cómo fue (por ejemplo, sobre la mano extendida o con un golpe directo en la muñeca)?"
+      },
+      {
+        "id_pregunta": 349,
+        "orden": 3,
+        "pregunta": "¿La muñeca se ve deformada o en una posición anormal, y en qué zona exacta notas el dolor?"
+      },
+      {
+        "id_pregunta": 350,
+        "orden": 4,
+        "pregunta": "¿Puedes mover los dedos y la muñeca, o usar la mano para agarrar objetos?"
+      },
+      {
+        "id_pregunta": 351,
+        "orden": 5,
+        "pregunta": "¿Tienes entumecimiento u hormigueo en la mano o los dedos, o notas que están fríos, pálidos o azulados?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-094",
+    "id_pretriage": 253,
+    "preguntas": [
+      {
+        "id_pregunta": 352,
+        "orden": 2,
+        "pregunta": "¿Cuándo ocurrió la torcedura y cómo sucedió?"
+      },
+      {
+        "id_pregunta": 353,
+        "orden": 3,
+        "pregunta": "¿Puedes apoyar el pie y caminar, aunque sea con dificultad?"
+      },
+      {
+        "id_pregunta": 354,
+        "orden": 4,
+        "pregunta": "¿Has notado hinchazón, moretón, deformidad o una herida en el tobillo?"
+      },
+      {
+        "id_pregunta": 355,
+        "orden": 5,
+        "pregunta": "¿El dolor apareció de inmediato y qué tan intenso es en una escala de 0 a 10?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-097",
+    "id_pretriage": 256,
+    "preguntas": [
+      {
+        "id_pregunta": 356,
+        "orden": 2,
+        "pregunta": "¿Cuándo ocurrió el golpe y cómo sucedió exactamente (por ejemplo, caída, choque o impacto con un objeto)?"
+      },
+      {
+        "id_pregunta": 357,
+        "orden": 3,
+        "pregunta": "¿Tienes dolor en el antebrazo? Si es así, ¿qué intensidad tiene de 0 a 10 y ha aumentado desde el golpe?"
+      },
+      {
+        "id_pregunta": 358,
+        "orden": 4,
+        "pregunta": "¿Notas hinchazón, moretón, herida, sangrado o alguna deformidad en el antebrazo?"
+      },
+      {
+        "id_pregunta": 359,
+        "orden": 5,
+        "pregunta": "¿Puedes mover normalmente la muñeca, el codo y los dedos, y sientes hormigueo, entumecimiento o cambios de color o temperatura en la mano?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-099",
+    "id_pretriage": 258,
+    "preguntas": [
+      {
+        "id_pregunta": 360,
+        "orden": 2,
+        "pregunta": "¿Cuándo ocurrió la torcedura y cómo sucedió (por ejemplo, al caminar, correr o caer)?"
+      },
+      {
+        "id_pregunta": 361,
+        "orden": 3,
+        "pregunta": "¿Puedes apoyar el pie y dar varios pasos, o el dolor te lo impide?"
+      },
+      {
+        "id_pregunta": 362,
+        "orden": 4,
+        "pregunta": "¿Has notado hinchazón, moretón o una deformidad en el tobillo o el pie?"
+      },
+      {
+        "id_pregunta": 363,
+        "orden": 5,
+        "pregunta": "¿Tienes entumecimiento, hormigueo, pérdida de sensibilidad o cambio de color en los dedos del pie?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-100",
+    "id_pretriage": 259,
+    "preguntas": [
+      {
+        "id_pregunta": 364,
+        "orden": 2,
+        "pregunta": "¿Cuándo ocurrió el golpe y cómo sucedió (por ejemplo, caída, choque o impacto directo)?“"
+      },
+      {
+        "id_pregunta": 365,
+        "orden": 3,
+        "pregunta": "¿En qué parte exacta de la pierna está la contusión y el dolor afecta también la rodilla o el tobillo?"
+      },
+      {
+        "id_pregunta": 366,
+        "orden": 4,
+        "pregunta": "¿Hay hinchazón o moretón que esté aumentando, herida abierta o sangrado en la zona?"
+      },
+      {
+        "id_pregunta": 367,
+        "orden": 5,
+        "pregunta": "¿Puedes caminar y mover normalmente la pierna, el tobillo y los dedos, o tienes adormecimiento, debilidad, palidez o sensación de frío en el pie?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  },
+  {
+    "id_caso": "URG-101",
+    "id_pretriage": 260,
+    "preguntas": [
+      {
+        "id_pregunta": 368,
+        "orden": 2,
+        "pregunta": "¿Cuándo ocurrió la lesión y qué sucedió exactamente: golpe, caída, giro brusco o sobreesfuerzo?"
+      },
+      {
+        "id_pregunta": 369,
+        "orden": 3,
+        "pregunta": "¿En qué parte del cuerpo se localiza el dolor y se ha mantenido igual, ha mejorado o ha empeorado desde la lesión?"
+      },
+      {
+        "id_pregunta": 370,
+        "orden": 4,
+        "pregunta": "¿Puedes mover normalmente la zona lesionada y, si afecta una pierna o un pie, puedes apoyarte y caminar?"
+      },
+      {
+        "id_pregunta": 371,
+        "orden": 5,
+        "pregunta": "¿Has notado hinchazón importante, moretón, deformidad, entumecimiento, hormigueo o debilidad en la zona afectada?"
+      }
+    ],
+    "respuestas_confirmadas_previas": 1,
+    "estado": "listo_para_preparar_respuestas"
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "id_caso": "URG-004",
+    "historia_clinica": "Niño de 6 años con temperatura de 40,0 °C desde hace cuatro horas. Su cuidadora refiere somnolencia marcada, dificultad para mantenerlo despierto y respuestas confusas. No se dispone de otros signos vitales.",
+    "datos_confirmados": [
+      "Niño de 6 años",
+      "Temperatura de 40,0 °C",
+      "Fiebre desde hace 4 horas",
+      "Somnolencia marcada",
+      "Dificultad para mantenerlo despierto",
+      "Respuestas confusas"
+    ],
+    "datos_negados": [],
+    "datos_desconocidos": [
+      "Otros signos vitales"
+    ],
+    "estado_revision": "extraccion_propuesta"
+  },
+  {
+    "id_caso": "URG-005",
+    "historia_clinica": "Niña de 11 años con dolor de cabeza súbito de intensidad 10/10 desde hace 40 minutos. Presenta vómitos repetidos y dificultad para mantenerse de pie debido al malestar. Su cuidadora refiere que nunca había presentado un dolor de cabeza de esta intensidad.",
+    "datos_confirmados": [
+      "Niña de 11 años",
+      "Cefalea de inicio súbito",
+      "Dolor de intensidad 10/10",
+      "Duración de 40 minutos",
+      "Vómitos repetidos",
+      "Dificultad para mantenerse de pie debido al malestar",
+      "Nunca había presentado una cefalea de esta intensidad"
+    ],
+    "datos_negados": [],
+    "datos_desconocidos": [],
+    "estado_revision": "extraccion_propuesta"
+  },
+  {
+    "id_caso": "URG-007",
+    "historia_clinica": "Niño de 9 años con dolor abdominal de intensidad 7/10 desde hace ocho horas. Comenzó alrededor del ombligo y posteriormente se localizó en la parte inferior derecha del abdomen. Presenta náuseas, disminución del apetito y dolor al caminar. Niega sangrado.",
+    "datos_confirmados": [
+      "Niño de 9 años",
+      "Dolor abdominal de intensidad 7/10",
+      "Duración de 8 horas",
+      "Dolor inicialmente periumbilical",
+      "Dolor posteriormente localizado en abdomen inferior derecho",
+      "Náuseas",
+      "Disminución del apetito",
+      "Dolor al caminar"
+    ],
+    "datos_negados": [
+      "Sangrado"
+    ],
+    "datos_desconocidos": [],
+    "estado_revision": "extraccion_propuesta"
+  },
+  {
+    "id_caso": "URG-008",
+    "historia_clinica": "Niña de 5 años con fiebre de hasta 39,5 °C desde hace dos días. Presenta cansancio, disminución del apetito y menor consumo de líquidos. Está despierta, responde adecuadamente y no presenta dificultad respiratoria. La cuidadora refiere que ha orinado menos de lo habitual.",
+    "datos_confirmados": [
+      "Niña de 5 años",
+      "Fiebre de hasta 39,5 °C durante 2 días",
+      "Cansancio",
+      "Disminución del apetito",
+      "Menor consumo de líquidos",
+      "Está despierta",
+      "Responde adecuadamente",
+      "Ha orinado menos de lo habitual"
+    ],
+    "datos_negados": [
+      "Dificultad respiratoria"
+    ],
+    "datos_desconocidos": [],
+    "estado_revision": "extraccion_propuesta"
+  },
+  {
+    "id_caso": "URG-010",
+    "historia_clinica": "Niña de 7 años con cefalea de intensidad 8/10 desde hace cuatro horas. El dolor comenzó gradualmente y se acompaña de dos episodios de vómito y sensibilidad a la luz. Está orientada y no presenta pérdida del conocimiento. No se ha documentado si tiene rigidez de cuello.",
+    "datos_confirmados": [
+      "Niña de 7 años",
+      "Cefalea de intensidad 8/10",
+      "Duración de 4 horas",
+      "Inicio gradual",
+      "Dos episodios de vómito",
+      "Sensibilidad a la luz",
+      "Está orientada"
+    ],
+    "datos_negados": [
+      "Pérdida del conocimiento"
+    ],
+    "datos_desconocidos": [
+      "Rigidez de cuello"
+    ],
+    "estado_revision": "extraccion_propuesta"
+  },
+  {
+    "id_caso": "URG-011",
+    "historia_clinica": "Niño de 3 años con fiebre de hasta 39,0 °C desde hace 24 horas y cuatro episodios de vómito. Su cuidadora refiere menor consumo de líquidos y disminución de la cantidad de orina. Está despierto y responde a estímulos, pero se encuentra más decaído de lo habitual.",
+    "datos_confirmados": [
+      "Niño de 3 años",
+      "Fiebre de hasta 39,0 °C durante 24 horas",
+      "Cuatro episodios de vómito",
+      "Menor consumo de líquidos",
+      "Disminución de la cantidad de orina",
+      "Está despierto",
+      "Responde a estímulos",
+      "Más decaído de lo habitual"
+    ],
+    "datos_negados": [],
+    "datos_desconocidos": [],
+    "estado_revision": "extraccion_propuesta"
+  },
+  {
+    "id_caso": "URG-012",
+    "historia_clinica": "Niño de 8 años con dolor abdominal alrededor del ombligo de intensidad 4/10 desde hace cuatro horas. El dolor es intermitente y no ha aumentado. Niega fiebre, vómitos y diarrea. Puede caminar, comer y beber normalmente.",
+    "datos_confirmados": [
+      "Niño de 8 años",
+      "Dolor abdominal periumbilical",
+      "Intensidad 4/10",
+      "Duración de 4 horas",
+      "Dolor intermitente",
+      "Dolor sin aumento de intensidad",
+      "Puede caminar normalmente",
+      "Puede comer normalmente",
+      "Puede beber normalmente"
+    ],
+    "datos_negados": [
+      "Fiebre",
+      "Vómitos",
+      "Diarrea"
+    ],
+    "datos_desconocidos": [],
+    "estado_revision": "extraccion_propuesta"
+  },
+  {
+    "id_caso": "URG-013",
+    "historia_clinica": "Niña de 10 años con dolor de cabeza bilateral de intensidad 5/10 desde hace cinco horas. El dolor comenzó gradualmente y no ha empeorado. Niega fiebre, vómitos, confusión, alteraciones visuales y debilidad. Está activa y orientada.",
+    "datos_confirmados": [
+      "Niña de 10 años",
+      "Cefalea bilateral",
+      "Intensidad 5/10",
+      "Duración de 5 horas",
+      "Inicio gradual",
+      "Dolor sin empeoramiento",
+      "Está activa",
+      "Está orientada"
+    ],
+    "datos_negados": [
+      "Fiebre",
+      "Vómitos",
+      "Confusión",
+      "Alteraciones visuales",
+      "Debilidad"
+    ],
+    "datos_desconocidos": [],
+    "estado_revision": "extraccion_propuesta"
+  }
+]

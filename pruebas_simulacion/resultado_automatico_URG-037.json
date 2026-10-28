@@ -1,0 +1,71 @@
+{
+  "id_caso": "URG-037",
+  "id_pretriage": 197,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 189,
+          "respuesta": "Dolor de cabeza leve después de estudiar."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 4.873,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 197,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "No se identificaron señales de alarma en esta revisión preliminar. Se puede continuar recopilando información, sin considerar el caso clínicamente seguro.",
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 8.4398,
+      "respuesta_backend": {
+        "id_pretriage": 197,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 292,
+              "orden": 2,
+              "pregunta": "¿Desde cuándo comenzó el dolor de cabeza y cuánto tiempo dura cada episodio?"
+            },
+            {
+              "id_pregunta": 293,
+              "orden": 3,
+              "pregunta": "¿En qué parte de la cabeza lo sientes y cómo ha cambiado desde que empezó: está igual, mejorando o empeorando?"
+            },
+            {
+              "id_pregunta": 294,
+              "orden": 4,
+              "pregunta": "Además del dolor, ¿has tenido náuseas o vómitos, sensibilidad a la luz o al ruido, o debilidad u hormigueo en alguna parte del cuerpo?"
+            },
+            {
+              "id_pregunta": 295,
+              "orden": 5,
+              "pregunta": "¿Tomaste algún medicamento, descansaste o hiciste alguna otra medida para aliviarlo? ¿Te ayudó?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:09:52.989382+00:00",
+  "pregunta_pendiente": "¿Desde cuándo comenzó el dolor de cabeza y cuánto tiempo dura cada episodio?"
+}

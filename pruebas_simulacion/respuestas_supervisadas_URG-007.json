@@ -1,0 +1,90 @@
+{
+  "id_caso": "URG-007",
+  "id_pretriage": 168,
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "id_pregunta": 164,
+      "pregunta": "¿Cuál es el principal motivo por el que deseas acudir a urgencias? Explícanos brevemente qué te está pasando.",
+      "respuesta": "S",
+      "fecha": "2026-10-28T05:30:38.512058+00:00"
+    },
+    {
+      "evento": "respuesta_confirmada",
+      "id_pregunta": 164,
+      "duracion_seg": 4.2249,
+      "fecha": "2026-10-28T05:30:42.741944+00:00",
+      "resultado": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 168,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "La respuesta «S» no aporta información clínica suficiente para valorar posibles señales de alarma; es necesario aclarar el motivo de consulta y los síntomas presentes.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "intento_envio_bloque",
+      "respuestas": [
+        {
+          "id_pregunta": 216,
+          "respuesta": "El niño tiene 9 años y el dolor comenzó hace aproximadamente 8 horas."
+        },
+        {
+          "id_pregunta": 217,
+          "respuesta": "Comenzó alrededor del ombligo, se desplazó a la parte inferior derecha y tiene intensidad de 7/10."
+        },
+        {
+          "id_pregunta": 218,
+          "respuesta": "Presenta náuseas y pérdida del apetito. No se reporta sangrado. No hay información confirmada sobre vómitos, diarrea o fiebre."
+        },
+        {
+          "id_pregunta": 219,
+          "respuesta": "Presenta dolor al caminar. No hay información confirmada sobre rigidez o sensibilidad abdominal."
+        }
+      ],
+      "fecha": "2026-10-28T05:46:19.936868+00:00"
+    },
+    {
+      "evento": "respuesta_bloque_confirmada",
+      "ids_preguntas": [
+        216,
+        217,
+        218,
+        219
+      ],
+      "http": 200,
+      "duracion_seg": 10.0955,
+      "resultado": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 168,
+          "respuestas_guardadas": 4
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [
+            "dolor_abdominal_preocupante"
+          ],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Dolor abdominal de 8 horas que comenzó alrededor del ombligo, se desplazó a la parte inferior derecha, es intenso (7/10), se acompaña de náuseas y pérdida del apetito, y empeora al caminar. Estos datos requieren valoración médica urgente.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 5
+        }
+      },
+      "fecha": "2026-10-28T05:46:30.046199+00:00"
+    }
+  ],
+  "estado": "revision_seguridad"
+}

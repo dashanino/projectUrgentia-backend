@@ -1,0 +1,25 @@
+{
+  "id_caso": "URG-085",
+  "id_pretriage": 243,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "alerta",
+    "alta_prioridad": true,
+    "id_pretriage": 243,
+    "ok": true,
+    "origen": "reglas",
+    "resultado": {
+      "accion": "alerta",
+      "alta_prioridad": true,
+      "bandera_activadora": {
+        "id_bandera": 19,
+        "name": "Lesión en cuello, espalda o columna"
+      },
+      "id_pretriage": 243,
+      "regla_activadora": 28
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id_caso": "URG-017",
+  "id_pretriage": 178,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 173,
+          "respuesta": "Dolor de cabeza muy leve después de estudiar."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.8443,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 178,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "No se identificaron señales de alarma en esta revisión preliminar. Se puede continuar recopilando información, sin considerar el caso clínicamente seguro.",
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.9922,
+      "respuesta_backend": {
+        "id_pretriage": 178,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 240,
+              "orden": 2,
+              "pregunta": "¿Desde cuándo tiene el dolor de cabeza y comenzó de forma gradual o repentina?"
+            },
+            {
+              "id_pregunta": 241,
+              "orden": 3,
+              "pregunta": "¿En qué parte de la cabeza le duele, qué intensidad tiene ahora y está empeorando o mejorando?"
+            },
+            {
+              "id_pregunta": 242,
+              "orden": 4,
+              "pregunta": "¿Ha presentado vómitos, fiebre, rigidez en el cuello, somnolencia inusual, desmayo, confusión, visión borrosa o dificultad para hablar o caminar?"
+            },
+            {
+              "id_pregunta": 243,
+              "orden": 5,
+              "pregunta": "¿Tuvo algún golpe en la cabeza recientemente o el dolor aparece después de leer, usar pantallas o hacer alguna actividad específica?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T10:51:04.774007+00:00",
+  "pregunta_pendiente": "¿Ha presentado vómitos, fiebre, rigidez en el cuello, somnolencia inusual, desmayo, confusión, visión borrosa o dificultad para hablar o caminar?"
+}

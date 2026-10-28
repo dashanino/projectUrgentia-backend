@@ -1,0 +1,74 @@
+{
+  "id_caso": "URG-040",
+  "id_pretriage": 199,
+  "estado": "requiere_dato_clinico",
+  "interacciones": [
+    {
+      "evento": "intento_envio",
+      "respuestas": [
+        {
+          "id_pregunta": 191,
+          "respuesta": "Dolor de cabeza leve que mejora con el descanso."
+        }
+      ]
+    },
+    {
+      "evento": "resultado_http",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 3.4174,
+      "respuesta_backend": {
+        "ok": true,
+        "resultado": {
+          "accion": "revision_seguridad_pendiente",
+          "id_pretriage": 199,
+          "respuestas_guardadas": 1
+        },
+        "revision_seguridad": {
+          "accion": "continuar",
+          "categorias_detectadas": [],
+          "estado_seguridad_ia": "continuar",
+          "mensaje": "Se recopilará información adicional antes de asignar una orientación de pretriaje.",
+          "motivo_aclaracion": "Se describe un dolor de cabeza leve que mejora con el descanso, sin otros datos asociados. Con la información disponible no se identifica una señal clara de alarma, pero faltan detalles sobre el inicio, evolución y síntomas acompañantes.",
+          "requiere_aclaracion": true,
+          "respuestas_registradas": 1
+        }
+      }
+    },
+    {
+      "evento": "consulta_siguiente_pregunta",
+      "codigo_http": 200,
+      "tiempo_http_segundos": 6.8889,
+      "respuesta_backend": {
+        "id_pretriage": 199,
+        "ok": true,
+        "resultado": {
+          "accion": "bloque_preguntas",
+          "preguntas": [
+            {
+              "id_pregunta": 300,
+              "orden": 2,
+              "pregunta": "¿Cuándo comenzó el dolor de cabeza y cuánto dura cada episodio?"
+            },
+            {
+              "id_pregunta": 301,
+              "orden": 3,
+              "pregunta": "¿En qué parte de la cabeza lo sientes y qué intensidad tiene de 0 a 10?"
+            },
+            {
+              "id_pregunta": 302,
+              "orden": 4,
+              "pregunta": "¿Has presentado junto con el dolor vómitos, fiebre, rigidez de cuello, desmayo, confusión, debilidad, adormecimiento, cambios en la visión o dificultad para hablar?"
+            },
+            {
+              "id_pregunta": 303,
+              "orden": 5,
+              "pregunta": "¿El dolor comenzó después de un golpe, esfuerzo físico intenso o actividad sexual, o es un dolor diferente a los que has tenido antes?"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fecha_inicio": "2026-10-28T11:10:16.665067+00:00",
+  "pregunta_pendiente": "¿Cuándo comenzó el dolor de cabeza y cuánto dura cada episodio?"
+}

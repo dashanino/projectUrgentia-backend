@@ -1,0 +1,57 @@
+{
+  "id_caso": "URG-003",
+  "id_pretriage": 163,
+  "antecedentes": true,
+  "poblacion": true,
+  "banderas": true,
+  "reglas_evaluadas": true,
+  "resultado_reglas": {
+    "accion": "continuar_submenu",
+    "alta_prioridad": false,
+    "id_pretriage": 163,
+    "ok": true,
+    "origen": "reglas"
+  },
+  "sintomas_registrados": true,
+  "preguntas_ia_enviadas": {
+    "1": {
+      "id_pregunta": 154,
+      "respuesta": "Mi hija tiene ocho años y le duele mucho el abdomen."
+    },
+    "2": {
+      "id_pregunta": 155,
+      "respuesta": "El dolor comenzó hace tres horas y ha ido empeorando progresivamente."
+    },
+    "3": {
+      "id_pregunta": 156,
+      "respuesta": "A mi hija le duele principalmente en la parte inferior derecha del abdomen. No sé si el dolor comenzó en otra zona y después se desplazó."
+    },
+    "4": {
+      "id_pregunta": 157,
+      "respuesta": "Sí, a mi hija le duele mucho cuando camina. No tengo información sobre si empeora al saltar, toser o tocarle el abdomen."
+    },
+    "5": {
+      "id_pregunta": 158,
+      "respuesta": "Sí, mi hija ha vomitado varias veces desde que comenzó el dolor. No tengo información registrada sobre diarrea, fiebre, falta de apetito o dificultades para beber y orinar."
+    },
+    "6": {
+      "id_pregunta": 159,
+      "respuesta": "No tengo información sobre si le han medido la temperatura o ha presentado fiebre."
+    },
+    "7": {
+      "id_pregunta": 160,
+      "respuesta": "Mi hija ha vomitado varias veces. No sé si puede retener líquidos ni cuándo orinó por última vez."
+    },
+    "8": {
+      "id_pregunta": 161,
+      "respuesta": "No tengo información sobre si tiene el abdomen hinchado o duro, ni sobre presencia de sangre en el vómito o las heces."
+    }
+  },
+  "evaluacion_final": {
+    "accion": "revision_clinica",
+    "id_pretriage": 163,
+    "message": "No fue posible establecer una orientación confiable después de recopilar información adicional. Se requiere valoración clínica.",
+    "ok": true,
+    "prioridad": null
+  }
+}

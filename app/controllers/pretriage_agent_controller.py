@@ -388,3 +388,39 @@ class PretriageAgentController:
                 "ok": False,
                 "message": "No fue posible determinar el tipo de urgencia"
             }), 500
+
+    @jwt_required()
+    def evaluate_admin_free_text(self):
+        from flask_jwt_extended import get_jwt_identity
+        from app.models.user import User
+
+        try:
+            data = request.get_json(silent=True)
+            if not isinstance(data, dict):
+                return jsonify({"ok": False, "message": "Debes enviar un objeto JSON."}), 400
+
+            try:
+                id_user = int(get_jwt_identity())
+            except (TypeError, ValueError):
+                return jsonify({"ok": False, "message": "Token inválido."}), 401
+
+            user = db.session.get(User, id_user)
+            if (
+                user is None or not user.is_active or user.role is None
+                or user.role.name.lower() != "admin"
+            ):
+                return jsonify({"ok": False, "message": "Esta función es exclusiva para administradores."}), 403
+
+            motivo = data.get("motivo")
+            if not isinstance(motivo, str) or not motivo.strip():
+                return jsonify({"ok": False, "message": "Debes ingresar el motivo de consulta."}), 400
+
+            resultado = self.service.evaluate_free_text(motivo)
+            return jsonify({"ok": True, "origen": "ia", "resultado": resultado}), 200
+
+        except ValueError as error:
+            return jsonify({"ok": False, "message": str(error)}), 400
+        except Exception:
+            import traceback
+            traceback.print_exc()
+            return jsonify({"ok": False, "message": "No fue posible evaluar el relato."}), 500

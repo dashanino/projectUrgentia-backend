@@ -3,7 +3,7 @@ from io import BytesIO
 from threading import Lock
 from uuid import uuid4
 
-from flask import jsonify, request, send_file
+from flask import current_app, jsonify, request, send_file
 from flask_jwt_extended import get_jwt_identity, jwt_required
 
 from app.extensions import db
@@ -37,18 +37,20 @@ class BulkPretriageController:
         )
         return is_admin, user
 
-    def _run_job(self, job_id, file_bytes):
+    def _run_job(self, job_id, file_bytes, app):
         def update_progress(progress):
             with self._lock:
                 job = self._jobs.get(job_id)
                 if job:
                     job["progress"] = progress
+                    job["status"] = "running"
 
         try:
-            result_bytes, statistics = self.service.process(
-                file_bytes,
-                progress_callback=update_progress,
-            )
+            with app.app_context():
+                result_bytes, statistics = self.service.process(
+                    file_bytes,
+                    progress_callback=update_progress,
+                )
 
             with self._lock:
                 self._jobs[job_id].update({
@@ -125,7 +127,8 @@ class BulkPretriageController:
                 "error": None,
             }
 
-        self._executor.submit(self._run_job, job_id, file_bytes)
+        app = current_app._get_current_object()
+        self._executor.submit(self._run_job, job_id, file_bytes, app)
 
         return jsonify({
             "ok": True,

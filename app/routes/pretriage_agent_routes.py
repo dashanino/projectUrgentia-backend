@@ -75,7 +75,7 @@ def evaluate_admin_free_text():
     return controller.evaluate_admin_free_text()
 
 
-# 6. Evaluación masiva de casos desde Excel para administrador
+# 6. Iniciar evaluación masiva de casos desde Excel para administrador
 @pretriage_agent_bp.route(
     "/pretriage-agent/admin/evaluate-excel",
     methods=["POST"]
@@ -83,3 +83,23 @@ def evaluate_admin_free_text():
 @jwt_required()
 def evaluate_admin_excel():
     return bulk_controller.evaluate_excel()
+
+
+# 7. Consultar avance de una evaluación masiva
+@pretriage_agent_bp.route(
+    "/pretriage-agent/admin/evaluate-excel/<job_id>/progress",
+    methods=["GET"]
+)
+@jwt_required()
+def evaluate_admin_excel_progress(job_id):
+    return bulk_controller.get_progress(job_id)
+
+
+# 8. Descargar el Excel cuando termine la evaluación masiva
+@pretriage_agent_bp.route(
+    "/pretriage-agent/admin/evaluate-excel/<job_id>/result",
+    methods=["GET"]
+)
+@jwt_required()
+def evaluate_admin_excel_result(job_id):
+    return bulk_controller.download_result(job_id)

@@ -4,6 +4,7 @@ from flask_jwt_extended import jwt_required
 from app.controllers.pretriage_agent_controller import (
     PretriageAgentController
 )
+from app.controllers.bulk_pretriage_controller import BulkPretriageController
 
 
 pretriage_agent_bp = Blueprint(
@@ -12,6 +13,7 @@ pretriage_agent_bp = Blueprint(
 )
 
 controller = PretriageAgentController()
+bulk_controller = BulkPretriageController()
 
 
 # 1. Evaluar el pre-triage mediante IA
@@ -43,6 +45,7 @@ def generar_pregunta():
 def guardar_respuesta():
     return controller.guardar_respuesta()
 
+
 @pretriage_agent_bp.route(
     "/pretriage-agent/respuestas",
     methods=["POST"]
@@ -61,6 +64,8 @@ def guardar_respuestas():
 def clasificar_tipo_atencion():
     return controller.clasificar_tipo_atencion()
 
+
+# 5. Evaluación de un relato libre para administrador
 @pretriage_agent_bp.route(
     "/pretriage-agent/admin/evaluate-free-text",
     methods=["POST"]
@@ -68,3 +73,13 @@ def clasificar_tipo_atencion():
 @jwt_required()
 def evaluate_admin_free_text():
     return controller.evaluate_admin_free_text()
+
+
+# 6. Evaluación masiva de casos desde Excel para administrador
+@pretriage_agent_bp.route(
+    "/pretriage-agent/admin/evaluate-excel",
+    methods=["POST"]
+)
+@jwt_required()
+def evaluate_admin_excel():
+    return bulk_controller.evaluate_excel()

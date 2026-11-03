@@ -53,7 +53,8 @@ class BulkPretriageService:
 
         return None
 
-    def process(self, file_bytes):
+    def process(self, file_bytes, progress_callback=None):
+        """Procesa el Excel y reporta el avance mediante progress_callback."""
         try:
             workbook = load_workbook(filename=BytesIO(file_bytes))
         except Exception as error:
@@ -73,7 +74,6 @@ class BulkPretriageService:
                 "'caso', 'caso_clinico', 'motivo_de_consulta' o 'relato'."
             )
 
-        # La prioridad queda inmediatamente después de la columna del caso.
         worksheet.insert_cols(case_column + 1)
         priority_column = case_column + 1
         worksheet.cell(
@@ -82,19 +82,35 @@ class BulkPretriageService:
             value="priorizacion_urgentia",
         )
 
+        cases = []
+        for row in range(2, worksheet.max_row + 1):
+            raw_case = worksheet.cell(row=row, column=case_column).value
+            case_text = str(raw_case or "").strip()
+            if case_text:
+                cases.append((row, case_text))
+
+        total = len(cases)
         processed = 0
         classified = 0
         clinical_review = 0
         errors = 0
 
-        for row in range(2, worksheet.max_row + 1):
-            raw_case = worksheet.cell(row=row, column=case_column).value
-            case_text = str(raw_case or "").strip()
+        def report(status="procesando", current_row=None):
+            if progress_callback:
+                progress_callback(
+                    {
+                        "status": status,
+                        "current": processed,
+                        "total": total,
+                        "row": current_row,
+                        "percentage": round((processed / total) * 100) if total else 100,
+                    }
+                )
 
-            if not case_text:
-                continue
+        report(status="iniciando")
 
-            processed += 1
+        for row, case_text in cases:
+            report(status="procesando", current_row=row)
 
             try:
                 result = self.agent.evaluate_free_text(case_text)
@@ -123,7 +139,6 @@ class BulkPretriageService:
                 )
                 clinical_review += 1
             except Exception:
-                # Un caso con error no bloquea el procesamiento de los demás.
                 worksheet.cell(
                     row=row,
                     column=priority_column,
@@ -131,9 +146,14 @@ class BulkPretriageService:
                 )
                 errors += 1
 
+            processed += 1
+            report(status="procesando", current_row=row)
+
         output = BytesIO()
         workbook.save(output)
         output.seek(0)
+
+        report(status="completado")
 
         return output.getvalue(), {
             "procesados": processed,

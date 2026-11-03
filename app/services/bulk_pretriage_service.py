@@ -13,10 +13,30 @@ from app.services.pretriage_agent_service import (
 class BulkPretriageService:
     """Procesa un Excel de casos y agrega la prioridad de Urgentia."""
 
-    CASE_COLUMN_ALIASES = {
-        "caso", "caso clinico", "caso clínico", "motivo",
-        "motivo de consulta", "motivo consulta", "descripcion",
-        "descripción", "relato", "situacion", "situación",
+    CASE_TEXT_ALIASES = {
+        "motivo de consulta",
+        "motivo consulta",
+        "descripcion",
+        "descripción",
+        "descripcion completa de lo que presenta",
+        "descripción completa de lo que presenta",
+        "relato",
+        "situacion",
+        "situación",
+        "caso clinico",
+        "caso clínico",
+    }
+
+    CONTEXT_ALIASES = {
+        "poblacion": "Población",
+        "población": "Población",
+        "antecedentes": "Antecedentes",
+        "motivo de consulta (en palabras del paciente/familia)": "Motivo de consulta",
+        "motivo de consulta": "Motivo de consulta",
+        "descripcion completa de lo que presenta": "Descripción clínica",
+        "descripción completa de lo que presenta": "Descripción clínica",
+        "descripcion": "Descripción clínica",
+        "descripción": "Descripción clínica",
     }
 
     def __init__(self):
@@ -26,23 +46,69 @@ class BulkPretriageService:
     def _normalize_header(value):
         return str(value or "").strip().lower().replace("_", " ")
 
-    def _find_case_column(self, worksheet):
-        headers = [
-            self._normalize_header(worksheet.cell(row=1, column=column).value)
+    def _get_headers(self, worksheet):
+        return {
+            self._normalize_header(worksheet.cell(row=1, column=column).value): column
             for column in range(1, worksheet.max_column + 1)
+            if worksheet.cell(row=1, column=column).value is not None
+        }
+
+    def _find_case_column(self, worksheet):
+        """Encuentra una columna clínica, evitando la columna identificadora 'Caso'."""
+        headers = self._get_headers(worksheet)
+
+        priority = [
+            "descripcion completa de lo que presenta",
+            "descripción completa de lo que presenta",
+            "motivo de consulta (en palabras del paciente/familia)",
+            "motivo de consulta",
+            "motivo consulta",
+            "relato",
+            "descripcion",
+            "descripción",
+            "situacion",
+            "situación",
+            "caso clinico",
+            "caso clínico",
         ]
 
-        for index, header in enumerate(headers, start=1):
-            if header in self.CASE_COLUMN_ALIASES:
-                return index
+        for alias in priority:
+            if alias in headers:
+                return headers[alias]
 
-        for index, header in enumerate(headers, start=1):
+        for header, column in headers.items():
+            if header == "caso":
+                continue
             if any(term in header for term in (
-                "caso", "motivo", "relato", "descripcion", "situacion"
+                "motivo", "relato", "descripcion", "situacion"
             )):
-                return index
+                return column
 
         return None
+
+    def _build_case_text(self, worksheet, row, headers, case_column):
+        """Construye el texto clínico usando motivo, descripción y contexto disponible."""
+        parts = []
+
+        # Si existen campos clínicos estructurados, los incluimos para no perder contexto.
+        for header, label in self.CONTEXT_ALIASES.items():
+            column = headers.get(header)
+            if column is None:
+                continue
+
+            value = worksheet.cell(row=row, column=column).value
+            text = str(value or "").strip()
+            if text and text not in {part.split(": ", 1)[-1] for part in parts}:
+                parts.append(f"{label}: {text}")
+
+        # Fallback para Excels que solo tengan una columna de caso clínico.
+        if not parts:
+            raw_case = worksheet.cell(row=row, column=case_column).value
+            text = str(raw_case or "").strip()
+            if text:
+                parts.append(text)
+
+        return "\n".join(parts).strip()
 
     def process(self, file_bytes, progress_callback=None):
         """Procesa el Excel, informa el avance y conserva las filas originales."""
@@ -60,26 +126,31 @@ class BulkPretriageService:
         if worksheet.max_row < 2:
             raise ValueError("El Excel no contiene casos para evaluar.")
 
+        headers = self._get_headers(worksheet)
         case_column = self._find_case_column(worksheet)
         if case_column is None:
             raise ValueError(
-                "No encontré la columna de casos. Usa como encabezado "
-                "'caso', 'caso_clinico', 'motivo_de_consulta' o 'relato'."
+                "No encontré una columna clínica. Usa como encabezado "
+                "'motivo de consulta', 'descripción', 'relato' o "
+                "'descripción completa de lo que presenta'."
             )
 
         cases = []
         for row in range(2, worksheet.max_row + 1):
-            raw_case = worksheet.cell(row=row, column=case_column).value
-            case_text = str(raw_case or "").strip()
+            case_text = self._build_case_text(
+                worksheet,
+                row,
+                headers,
+                case_column,
+            )
             if case_text:
                 cases.append((row, case_text))
 
         total = len(cases)
         if total == 0:
-            raise ValueError("No encontré casos con texto para evaluar.")
+            raise ValueError("No encontré casos con texto clínico para evaluar.")
 
-        worksheet.insert_cols(case_column + 1)
-        priority_column = case_column + 1
+        priority_column = worksheet.max_column + 1
         worksheet.cell(row=1, column=priority_column, value="priorizacion_urgentia")
 
         processed = classified = clinical_review = errors = 0
@@ -101,7 +172,7 @@ class BulkPretriageService:
             started_at = time.perf_counter()
             print("\n" + "=" * 58, flush=True)
             print(f"[BULK][CASO {index}/{total}] INICIANDO · Fila Excel {row}", flush=True)
-            print(f"[BULK][CASO {index}/{total}] Texto: {case_text[:300]}", flush=True)
+            print(f"[BULK][CASO {index}/{total}] Texto: {case_text[:500]}", flush=True)
             print(f"[BULK][CASO {index}/{total}] Enviando a evaluate_free_text...", flush=True)
             report(status="procesando", current_row=row)
 

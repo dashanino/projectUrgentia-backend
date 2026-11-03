@@ -2180,37 +2180,6 @@ No agregues ningún otro campo.
 
         }
 
-
-
-def estado_seleccion(completada, disponibles, seleccionados):
-
-    if not completada:
-
-        return "pendiente"
-
-
-
-    if not disponibles:
-
-        return "sin_opciones_disponibles"
-
-
-
-    if not seleccionados:
-
-        return "ninguno_de_los_listados"
-
-
-
-    if len(seleccionados) == len(disponibles):
-
-        return "todos_los_listados_seleccionados"
-
-
-
-    return "algunos_seleccionados"
-
-
     def evaluate_free_text(self, motivo):
         """Evalúa un relato abierto escrito por el administrador."""
         motivo = str(motivo or "").strip()

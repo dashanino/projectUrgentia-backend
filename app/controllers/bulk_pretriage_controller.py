@@ -1,3 +1,4 @@
+import traceback
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
 from threading import Lock
@@ -33,11 +34,13 @@ class BulkPretriageController:
             user is not None
             and user.is_active
             and user.role is not None
-            and user.role.name.lower() == "admin"
+            and str(user.role.name).lower() == "admin"
         )
         return is_admin, user
 
     def _run_job(self, job_id, file_bytes, app):
+        print(f"[BULK][JOB {job_id}] Trabajo iniciado.", flush=True)
+
         def update_progress(progress):
             with self._lock:
                 job = self._jobs.get(job_id)
@@ -64,76 +67,98 @@ class BulkPretriageController:
                     },
                     "result": result_bytes,
                     "statistics": statistics,
+                    "error": None,
                 })
+            print(f"[BULK][JOB {job_id}] Completado: {statistics}", flush=True)
+
         except Exception as error:
+            print(
+                f"[BULK][JOB {job_id}] ERROR {type(error).__name__}: {error}",
+                flush=True,
+            )
+            traceback.print_exc()
             with self._lock:
-                self._jobs[job_id].update({
-                    "status": "error",
-                    "error": str(error),
-                })
+                job = self._jobs.get(job_id)
+                if job:
+                    job.update({"status": "error", "error": str(error)})
 
     @jwt_required()
     def evaluate_excel(self):
-        is_admin, _ = self._is_admin()
-        if not is_admin:
-            try:
-                int(get_jwt_identity())
-            except (TypeError, ValueError):
-                return jsonify({"ok": False, "message": "Token inválido."}), 401
+        print("[BULK][HTTP] POST evaluate_excel recibido.", flush=True)
+        try:
+            is_admin, _ = self._is_admin()
+            print(f"[BULK][HTTP] Usuario administrador: {is_admin}", flush=True)
+
+            if not is_admin:
+                try:
+                    int(get_jwt_identity())
+                except (TypeError, ValueError):
+                    return jsonify({"ok": False, "message": "Token inválido."}), 401
+                return jsonify({
+                    "ok": False,
+                    "message": "Esta función es exclusiva para administradores."
+                }), 403
+
+            uploaded_file = request.files.get("file")
+            if uploaded_file is None or not uploaded_file.filename:
+                return jsonify({
+                    "ok": False,
+                    "message": "Debes seleccionar un archivo Excel."
+                }), 400
+
+            if not uploaded_file.filename.lower().endswith(".xlsx"):
+                return jsonify({
+                    "ok": False,
+                    "message": "El archivo debe estar en formato .xlsx."
+                }), 400
+
+            file_bytes = uploaded_file.read()
+            if not file_bytes:
+                return jsonify({"ok": False, "message": "El archivo está vacío."}), 400
+
+            if len(file_bytes) > 20 * 1024 * 1024:
+                return jsonify({
+                    "ok": False,
+                    "message": "El archivo no puede superar 20 MB."
+                }), 400
+
+            job_id = str(uuid4())
+            with self._lock:
+                self._jobs[job_id] = {
+                    "status": "queued",
+                    "progress": {
+                        "status": "en cola",
+                        "current": 0,
+                        "total": 0,
+                        "row": None,
+                        "percentage": 0,
+                    },
+                    "result": None,
+                    "statistics": None,
+                    "error": None,
+                }
+
+            app = current_app._get_current_object()
+            print(
+                f"[BULK][HTTP] Excel recibido ({len(file_bytes)} bytes). "
+                f"Job: {job_id}. Enviando al executor...",
+                flush=True,
+            )
+            self._executor.submit(self._run_job, job_id, file_bytes, app)
+
+            return jsonify({"ok": True, "job_id": job_id}), 202
+
+        except Exception as error:
+            print(
+                f"[BULK][HTTP] ERROR {type(error).__name__}: {error}",
+                flush=True,
+            )
+            traceback.print_exc()
             return jsonify({
                 "ok": False,
-                "message": "Esta función es exclusiva para administradores."
-            }), 403
-
-        uploaded_file = request.files.get("file")
-        if uploaded_file is None or not uploaded_file.filename:
-            return jsonify({
-                "ok": False,
-                "message": "Debes seleccionar un archivo Excel."
-            }), 400
-
-        if not uploaded_file.filename.lower().endswith(".xlsx"):
-            return jsonify({
-                "ok": False,
-                "message": "El archivo debe estar en formato .xlsx."
-            }), 400
-
-        file_bytes = uploaded_file.read()
-        if not file_bytes:
-            return jsonify({
-                "ok": False,
-                "message": "El archivo está vacío."
-            }), 400
-
-        if len(file_bytes) > 20 * 1024 * 1024:
-            return jsonify({
-                "ok": False,
-                "message": "El archivo no puede superar 20 MB."
-            }), 400
-
-        job_id = str(uuid4())
-        with self._lock:
-            self._jobs[job_id] = {
-                "status": "queued",
-                "progress": {
-                    "status": "en cola",
-                    "current": 0,
-                    "total": 0,
-                    "row": None,
-                    "percentage": 0,
-                },
-                "result": None,
-                "statistics": None,
-                "error": None,
-            }
-
-        app = current_app._get_current_object()
-        self._executor.submit(self._run_job, job_id, file_bytes, app)
-
-        return jsonify({
-            "ok": True,
-            "job_id": job_id,
-        }), 202
+                "message": "No se pudo iniciar la evaluación masiva.",
+                "detail": str(error),
+            }), 500
 
     @jwt_required()
     def get_progress(self, job_id):

@@ -60,3 +60,11 @@ def guardar_respuestas():
 @jwt_required()
 def clasificar_tipo_atencion():
     return controller.clasificar_tipo_atencion()
+
+@pretriage_agent_bp.route(
+    "/pretriage-agent/admin/evaluate-free-text",
+    methods=["POST"]
+)
+@jwt_required()
+def evaluate_admin_free_text():
+    return controller.evaluate_admin_free_text()

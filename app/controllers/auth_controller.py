@@ -84,6 +84,7 @@ def login_controller():
         "access_token": access_token,
         "user": {
             "id": user.id,
+            "role": user.role.name if user.role else None,
             "document_number": user.document_number,
             "first_names": user.first_names,
             "last_names": user.last_names,
